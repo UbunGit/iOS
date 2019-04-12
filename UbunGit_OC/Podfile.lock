@@ -1,0 +1,109 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - BSBacktraceLogger (0.0.1)
+  - CocoaLumberjack (3.5.1):
+    - CocoaLumberjack/Core (= 3.5.1)
+  - CocoaLumberjack/Core (3.5.1)
+  - DoraemonKit/Core (1.1.6):
+    - BSBacktraceLogger
+    - fishhook
+    - PNChart
+    - "UITextView+Placeholder"
+  - DoraemonKit/WithLoad (1.1.6):
+    - BSBacktraceLogger
+    - DoraemonKit/Core
+    - fishhook
+    - PNChart
+    - "UITextView+Placeholder"
+  - DoraemonKit/WithLogger (1.1.6):
+    - BSBacktraceLogger
+    - CocoaLumberjack
+    - DoraemonKit/Core
+    - fishhook
+    - PNChart
+    - "UITextView+Placeholder"
+  - fishhook (0.2)
+  - Masonry (1.1.0)
+  - NIMSDK (6.1.1)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
+  - PPGetAddressBook (0.2.8)
+  - RTRootNavigationController (0.7.1):
+    - RTRootNavigationController/Core (= 0.7.1)
+  - RTRootNavigationController/Core (0.7.1)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
+  - SuperPlayer (2.4.0):
+    - AFNetworking (~> 3.1)
+    - Masonry (~> 1.1.0)
+    - SDWebImage (~> 4.4.0)
+    - SuperPlayer/Player (= 2.4.0)
+  - SuperPlayer/Player (2.4.0):
+    - AFNetworking (~> 3.1)
+    - Masonry (~> 1.1.0)
+    - SDWebImage (~> 4.4.0)
+  - UICountingLabel (1.2.0)
+  - "UITextView+Placeholder (1.2.1)"
+
+DEPENDENCIES:
+  - AFNetworking
+  - DoraemonKit/Core (~> 1.1.6)
+  - DoraemonKit/WithLoad (~> 1.1.6)
+  - DoraemonKit/WithLogger (~> 1.1.6)
+  - NIMSDK
+  - PPGetAddressBook
+  - RTRootNavigationController
+  - SDWebImage
+  - SuperPlayer
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - BSBacktraceLogger
+    - CocoaLumberjack
+    - DoraemonKit
+    - fishhook
+    - Masonry
+    - NIMSDK
+    - PNChart
+    - PPGetAddressBook
+    - RTRootNavigationController
+    - SDWebImage
+    - SuperPlayer
+    - UICountingLabel
+    - "UITextView+Placeholder"
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BSBacktraceLogger: 06b983ee93a9f87d957960e9c73d660d5966b447
+  CocoaLumberjack: 2101f8a5508197a305e737d16c5c2e9e2157628c
+  DoraemonKit: 309c42d828dffb8149942afcfa2af84d8f44bad1
+  fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  NIMSDK: d007a6ea3497867733bb05e21fa059e6960f24bb
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
+  PPGetAddressBook: e4b6b0a87e852df5d5b90c44ecd9ded7f6f1ccf6
+  RTRootNavigationController: afa6913402be26f8326f7f37fc1550aa67baddcc
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  SuperPlayer: 6249e97781920ebaf2cd27e3aec8542a369b10a3
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
+  "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
+
+PODFILE CHECKSUM: 2149f7aeda5911e593a9a57fe1e1f1cce0016c17
+
+COCOAPODS: 1.6.0

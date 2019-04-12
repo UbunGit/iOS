@@ -1,0 +1,14 @@
+//
+//  UbunGit_OC.pch
+//  UbunGit_OC
+//
+//  Created by admin on 2019/3/11.
+//  Copyright © 2019 admin. All rights reserved.
+//
+
+#ifndef UbunGit_OC_pch
+#define UbunGit_OC_pch
+
+#import "Magic.h"
+
+#endif /* UbunGit_OC_pch */
