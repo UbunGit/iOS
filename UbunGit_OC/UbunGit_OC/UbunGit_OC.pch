@@ -10,5 +10,6 @@
 #define UbunGit_OC_pch
 
 #import "Magic.h"
+#import "Category.h"
 
 #endif /* UbunGit_OC_pch */

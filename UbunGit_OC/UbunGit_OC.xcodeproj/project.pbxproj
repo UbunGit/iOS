@@ -23,6 +23,21 @@
 		84380BB922362BE5003E73CC /* AppDelegate+NIMSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 84380BB822362BE5003E73CC /* AppDelegate+NIMSDK.m */; };
 		84380BC22236595A003E73CC /* AddressBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84380BC12236595A003E73CC /* AddressBookController.m */; };
 		84380BC522365AD9003E73CC /* DoraemonAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 84380BC422365AD9003E73CC /* DoraemonAddressBook.m */; };
+		84A2565E2287EA8500F42146 /* DoraemonTZImagePick.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A2565D2287EA8500F42146 /* DoraemonTZImagePick.m */; };
+		84A2566A2287EB7C00F42146 /* UG_TZImagePickSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A256682287EB7C00F42146 /* UG_TZImagePickSwitch.m */; };
+		84A2566B2287EB7C00F42146 /* UG_TZImagePickSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A256692287EB7C00F42146 /* UG_TZImagePickSwitch.xib */; };
+		84A2566F2287EE1800F42146 /* DoraemonSuperPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A2566D2287EE1800F42146 /* DoraemonSuperPlay.m */; };
+		84A2569D2288213800F42146 /* UIImage+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A2567B2288213800F42146 /* UIImage+UG.m */; };
+		84A2569E2288213800F42146 /* UILabel+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A2567E2288213800F42146 /* UILabel+UG.m */; };
+		84A2569F2288213800F42146 /* UIButton+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A256812288213800F42146 /* UIButton+UG.m */; };
+		84A256A02288213800F42146 /* UIControl+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A256822288213800F42146 /* UIControl+UG.m */; };
+		84A256A12288213800F42146 /* UIView+WY_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A256852288213800F42146 /* UIView+WY_Extension.m */; };
+		84A256A22288213800F42146 /* UIView+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A256882288213800F42146 /* UIView+UG.m */; };
+		84A256A32288213800F42146 /* UIView+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A2568A2288213800F42146 /* UIView+Alert.m */; };
+		84A256A52288213800F42146 /* UITextView+WY_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A2568F2288213800F42146 /* UITextView+WY_Extension.m */; };
+		84A256A72288213800F42146 /* NSString+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A256952288213800F42146 /* NSString+Encode.m */; };
+		84A256A82288213900F42146 /* UITextField+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A256992288213800F42146 /* UITextField+UG.m */; };
+		84A256A92288213900F42146 /* NSDate+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A2569C2288213800F42146 /* NSDate+UG.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +92,36 @@
 		84380BC322365AD9003E73CC /* DoraemonAddressBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoraemonAddressBook.h; sourceTree = "<group>"; };
 		84380BC422365AD9003E73CC /* DoraemonAddressBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoraemonAddressBook.m; sourceTree = "<group>"; };
 		84380BC622365CB4003E73CC /* UbunGit_OC.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UbunGit_OC.pch; sourceTree = "<group>"; };
+		84A2565C2287EA8500F42146 /* DoraemonTZImagePick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoraemonTZImagePick.h; sourceTree = "<group>"; };
+		84A2565D2287EA8500F42146 /* DoraemonTZImagePick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoraemonTZImagePick.m; sourceTree = "<group>"; };
+		84A256672287EB7C00F42146 /* UG_TZImagePickSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UG_TZImagePickSwitch.h; sourceTree = "<group>"; };
+		84A256682287EB7C00F42146 /* UG_TZImagePickSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UG_TZImagePickSwitch.m; sourceTree = "<group>"; };
+		84A256692287EB7C00F42146 /* UG_TZImagePickSwitch.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UG_TZImagePickSwitch.xib; sourceTree = "<group>"; };
+		84A2566D2287EE1800F42146 /* DoraemonSuperPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoraemonSuperPlay.m; sourceTree = "<group>"; };
+		84A2566E2287EE1800F42146 /* DoraemonSuperPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoraemonSuperPlay.h; sourceTree = "<group>"; };
+		84A2567A2288213800F42146 /* UIImage+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UG.h"; sourceTree = "<group>"; };
+		84A2567B2288213800F42146 /* UIImage+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UG.m"; sourceTree = "<group>"; };
+		84A2567D2288213800F42146 /* UILabel+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+UG.h"; sourceTree = "<group>"; };
+		84A2567E2288213800F42146 /* UILabel+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+UG.m"; sourceTree = "<group>"; };
+		84A256802288213800F42146 /* UIControl+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+UG.h"; sourceTree = "<group>"; };
+		84A256812288213800F42146 /* UIButton+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+UG.m"; sourceTree = "<group>"; };
+		84A256822288213800F42146 /* UIControl+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+UG.m"; sourceTree = "<group>"; };
+		84A256832288213800F42146 /* UIButton+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+UG.h"; sourceTree = "<group>"; };
+		84A256852288213800F42146 /* UIView+WY_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WY_Extension.m"; sourceTree = "<group>"; };
+		84A256862288213800F42146 /* UIView+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UG.h"; sourceTree = "<group>"; };
+		84A256872288213800F42146 /* UIView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Alert.h"; sourceTree = "<group>"; };
+		84A256882288213800F42146 /* UIView+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UG.m"; sourceTree = "<group>"; };
+		84A256892288213800F42146 /* UIView+WY_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WY_Extension.h"; sourceTree = "<group>"; };
+		84A2568A2288213800F42146 /* UIView+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Alert.m"; sourceTree = "<group>"; };
+		84A2568F2288213800F42146 /* UITextView+WY_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+WY_Extension.m"; sourceTree = "<group>"; };
+		84A256902288213800F42146 /* UITextView+WY_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+WY_Extension.h"; sourceTree = "<group>"; };
+		84A256932288213800F42146 /* NSString+Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encode.h"; sourceTree = "<group>"; };
+		84A256952288213800F42146 /* NSString+Encode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encode.m"; sourceTree = "<group>"; };
+		84A256962288213800F42146 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		84A256982288213800F42146 /* UITextField+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+UG.h"; sourceTree = "<group>"; };
+		84A256992288213800F42146 /* UITextField+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+UG.m"; sourceTree = "<group>"; };
+		84A2569B2288213800F42146 /* NSDate+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+UG.h"; sourceTree = "<group>"; };
+		84A2569C2288213800F42146 /* NSDate+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+UG.m"; sourceTree = "<group>"; };
 		985F57520484DAC01210C56D /* Pods-UbunGit_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UbunGit_OC.debug.xcconfig"; path = "Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +176,7 @@
 		84380B5D2235FA82003E73CC /* UbunGit_OC */ = {
 			isa = PBXGroup;
 			children = (
+				84A256782288213800F42146 /* Category */,
 				84380B9F22361C82003E73CC /* Magic */,
 				84380B5E2235FA82003E73CC /* AppDelegate.h */,
 				84380B5F2235FA82003E73CC /* AppDelegate.m */,
@@ -167,6 +213,8 @@
 		84380B9F22361C82003E73CC /* Magic */ = {
 			isa = PBXGroup;
 			children = (
+				84A2566C2287EE0000F42146 /* SuperPlayPlay */,
+				84A2565B2287EA2800F42146 /* UG_TZImagePickController */,
 				84380BBF223657FC003E73CC /* PPGetAddressBook */,
 				84380BB622362BC3003E73CC /* NIMSDK */,
 				84380BB122362824003E73CC /* RTRootNavigationController */,
@@ -232,6 +280,121 @@
 				84380BC422365AD9003E73CC /* DoraemonAddressBook.m */,
 			);
 			path = PPGetAddressBook;
+			sourceTree = "<group>";
+		};
+		84A2565B2287EA2800F42146 /* UG_TZImagePickController */ = {
+			isa = PBXGroup;
+			children = (
+				84A2565C2287EA8500F42146 /* DoraemonTZImagePick.h */,
+				84A2565D2287EA8500F42146 /* DoraemonTZImagePick.m */,
+				84A256672287EB7C00F42146 /* UG_TZImagePickSwitch.h */,
+				84A256682287EB7C00F42146 /* UG_TZImagePickSwitch.m */,
+				84A256692287EB7C00F42146 /* UG_TZImagePickSwitch.xib */,
+			);
+			path = UG_TZImagePickController;
+			sourceTree = "<group>";
+		};
+		84A2566C2287EE0000F42146 /* SuperPlayPlay */ = {
+			isa = PBXGroup;
+			children = (
+				84A2566E2287EE1800F42146 /* DoraemonSuperPlay.h */,
+				84A2566D2287EE1800F42146 /* DoraemonSuperPlay.m */,
+			);
+			path = SuperPlayPlay;
+			sourceTree = "<group>";
+		};
+		84A256782288213800F42146 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				84A256792288213800F42146 /* UIImage */,
+				84A2567C2288213800F42146 /* UILable */,
+				84A2567F2288213800F42146 /* UIButton */,
+				84A256842288213800F42146 /* UIView */,
+				84A2568E2288213800F42146 /* UITextView */,
+				84A256912288213800F42146 /* NSString */,
+				84A256962288213800F42146 /* Category.h */,
+				84A256972288213800F42146 /* UITextField */,
+				84A2569A2288213800F42146 /* NSDate */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		84A256792288213800F42146 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				84A2567A2288213800F42146 /* UIImage+UG.h */,
+				84A2567B2288213800F42146 /* UIImage+UG.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		84A2567C2288213800F42146 /* UILable */ = {
+			isa = PBXGroup;
+			children = (
+				84A2567D2288213800F42146 /* UILabel+UG.h */,
+				84A2567E2288213800F42146 /* UILabel+UG.m */,
+			);
+			path = UILable;
+			sourceTree = "<group>";
+		};
+		84A2567F2288213800F42146 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				84A256802288213800F42146 /* UIControl+UG.h */,
+				84A256812288213800F42146 /* UIButton+UG.m */,
+				84A256822288213800F42146 /* UIControl+UG.m */,
+				84A256832288213800F42146 /* UIButton+UG.h */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		84A256842288213800F42146 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				84A256852288213800F42146 /* UIView+WY_Extension.m */,
+				84A256862288213800F42146 /* UIView+UG.h */,
+				84A256872288213800F42146 /* UIView+Alert.h */,
+				84A256882288213800F42146 /* UIView+UG.m */,
+				84A256892288213800F42146 /* UIView+WY_Extension.h */,
+				84A2568A2288213800F42146 /* UIView+Alert.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		84A2568E2288213800F42146 /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				84A2568F2288213800F42146 /* UITextView+WY_Extension.m */,
+				84A256902288213800F42146 /* UITextView+WY_Extension.h */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
+		84A256912288213800F42146 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				84A256932288213800F42146 /* NSString+Encode.h */,
+				84A256952288213800F42146 /* NSString+Encode.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		84A256972288213800F42146 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				84A256982288213800F42146 /* UITextField+UG.h */,
+				84A256992288213800F42146 /* UITextField+UG.m */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		84A2569A2288213800F42146 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				84A2569B2288213800F42146 /* NSDate+UG.h */,
+				84A2569C2288213800F42146 /* NSDate+UG.m */,
+			);
+			path = NSDate;
 			sourceTree = "<group>";
 		};
 		E371EDD99817895D25296D3F /* Pods */ = {
@@ -359,6 +522,7 @@
 			files = (
 				84380B6B2235FA85003E73CC /* LaunchScreen.storyboard in Resources */,
 				84380B682235FA85003E73CC /* Assets.xcassets in Resources */,
+				84A2566B2287EB7C00F42146 /* UG_TZImagePickSwitch.xib in Resources */,
 				84380B662235FA82003E73CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +558,7 @@
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework",
 				"${PODS_ROOT}/DoraemonKit/iOS/DoraemonKit/Framework/DoraemonLoadAnalyze.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${PODS_ROOT}/NIMSDK/NIMSDK/NIMSDK.framework",
 				"${PODS_ROOT}/NIMSDK/NIMAVChat/NIMAVChat.framework",
@@ -415,6 +580,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonLoadAnalyze.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMAVChat.framework",
@@ -443,6 +609,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC-resources.sh",
 				"${PODS_ROOT}/NIMSDK/NIMAVChat/Resources/NMCVideoFilter.bundle",
 				"${PODS_ROOT}/SuperPlayer/SuperPlayer/Resource/SuperPlayer.bundle",
+				"${PODS_ROOT}/../Devpods/UGImagePickerController/UGImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
@@ -450,6 +617,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NMCVideoFilter.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SuperPlayer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -487,14 +655,28 @@
 			files = (
 				84380BB42236283B003E73CC /* AppDelegate+RTRootNavigationController.m in Sources */,
 				84380BA622361DB9003E73CC /* AppDelegate+DoraemonKit.m in Sources */,
+				84A2566F2287EE1800F42146 /* DoraemonSuperPlay.m in Sources */,
 				84380BAC22361F64003E73CC /* AppDelegate+CocoaLumberjack.m in Sources */,
+				84A256A92288213900F42146 /* NSDate+UG.m in Sources */,
+				84A2565E2287EA8500F42146 /* DoraemonTZImagePick.m in Sources */,
+				84A256A72288213800F42146 /* NSString+Encode.m in Sources */,
 				84380BB0223624F8003E73CC /* AppDelegate+TavBar.m in Sources */,
+				84A256A12288213800F42146 /* UIView+WY_Extension.m in Sources */,
+				84A2569E2288213800F42146 /* UILabel+UG.m in Sources */,
 				84380BB922362BE5003E73CC /* AppDelegate+NIMSDK.m in Sources */,
+				84A2569D2288213800F42146 /* UIImage+UG.m in Sources */,
+				84A2569F2288213800F42146 /* UIButton+UG.m in Sources */,
+				84A256A52288213800F42146 /* UITextView+WY_Extension.m in Sources */,
+				84A2566A2287EB7C00F42146 /* UG_TZImagePickSwitch.m in Sources */,
 				84380B632235FA82003E73CC /* ViewController.m in Sources */,
+				84A256A82288213900F42146 /* UITextField+UG.m in Sources */,
+				84A256A32288213800F42146 /* UIView+Alert.m in Sources */,
 				84380BC522365AD9003E73CC /* DoraemonAddressBook.m in Sources */,
 				84380BC22236595A003E73CC /* AddressBookController.m in Sources */,
 				84380B6E2235FA85003E73CC /* main.m in Sources */,
 				84380B602235FA82003E73CC /* AppDelegate.m in Sources */,
+				84A256A02288213800F42146 /* UIControl+UG.m in Sources */,
+				84A256A22288213800F42146 /* UIView+UG.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,7 +849,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z53SZ4VAM2;
+				DEVELOPMENT_TEAM = 9SR367C2GB;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//UbunGit_OC/UbunGit_OC.pch";
@@ -688,7 +870,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z53SZ4VAM2;
+				DEVELOPMENT_TEAM = 9SR367C2GB;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//UbunGit_OC/UbunGit_OC.pch";
