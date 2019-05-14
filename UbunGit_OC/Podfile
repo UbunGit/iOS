@@ -10,13 +10,12 @@ target 'UbunGit_OC' do
   
   pod 'PPGetAddressBook'
   pod 'SuperPlayer'
-#  pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
+  pod 'Masonry'
   pod 'AFNetworking'
   pod 'SDWebImage'
   pod 'Masonry'
   
-  
-  pod 'DoraemonKit/Core', '~> 1.1.6', :configurations => ['Debug']
-  pod 'DoraemonKit/WithLogger', '~> 1.1.6', :configurations => ['Debug']
-  pod 'DoraemonKit/WithLoad', '~> 1.1.6', :configurations => ['Debug']
+  pod 'DoraemonKit/Core',  :configurations => ['Debug']
+  pod 'DoraemonKit/WithLogger',  :configurations => ['Debug']
+  pod 'DoraemonKit/WithLoad',  :configurations => ['Debug']
 end

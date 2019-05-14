@@ -556,6 +556,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC-resources.sh",
 				"${PODS_ROOT}/NIMSDK/NIMAVChat/Resources/NMCVideoFilter.bundle",
 				"${PODS_ROOT}/SuperPlayer/SuperPlayer/Resource/SuperPlayer.bundle",
+				"${PODS_ROOT}/../Devpods/UGImagePickerController/UGImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
@@ -563,6 +564,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NMCVideoFilter.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SuperPlayer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -601,12 +603,19 @@
 				84380BB42236283B003E73CC /* AppDelegate+RTRootNavigationController.m in Sources */,
 				84C73A8A2265D2FC00BA5142 /* UIView+Alert.m in Sources */,
 				84380BA622361DB9003E73CC /* AppDelegate+DoraemonKit.m in Sources */,
+				84A2566F2287EE1800F42146 /* DoraemonSuperPlay.m in Sources */,
 				84380BAC22361F64003E73CC /* AppDelegate+CocoaLumberjack.m in Sources */,
 				84C73A7D2265CE2100BA5142 /* MBProgressHUDTableVC.m in Sources */,
 				84C73A802265CF5A00BA5142 /* MessageCenter.m in Sources */,
 				843F334A227838E300F1D950 /* DMViewController.m in Sources */,
 				84380BB0223624F8003E73CC /* AppDelegate+TavBar.m in Sources */,
+				84A256A12288213800F42146 /* UIView+WY_Extension.m in Sources */,
+				84A2569E2288213800F42146 /* UILabel+UG.m in Sources */,
 				84380BB922362BE5003E73CC /* AppDelegate+NIMSDK.m in Sources */,
+				84A2569D2288213800F42146 /* UIImage+UG.m in Sources */,
+				84A2569F2288213800F42146 /* UIButton+UG.m in Sources */,
+				84A256A52288213800F42146 /* UITextView+WY_Extension.m in Sources */,
+				84A2566A2287EB7C00F42146 /* UG_TZImagePickSwitch.m in Sources */,
 				84380B632235FA82003E73CC /* ViewController.m in Sources */,
 				843F33232278151B00F1D950 /* AppDelegate+Welcom.m in Sources */,
 				843F330D2278035300F1D950 /* WelcomViewController.m in Sources */,
@@ -615,6 +624,8 @@
 				84380B6E2235FA85003E73CC /* main.m in Sources */,
 				84C73A872265D13D00BA5142 /* DoraemonMBOrogressHUD.m in Sources */,
 				84380B602235FA82003E73CC /* AppDelegate.m in Sources */,
+				84A256A02288213800F42146 /* UIControl+UG.m in Sources */,
+				84A256A22288213800F42146 /* UIView+UG.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,7 +798,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z53SZ4VAM2;
+				DEVELOPMENT_TEAM = 9SR367C2GB;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//UbunGit_OC/UbunGit_OC.pch";
@@ -808,7 +819,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z53SZ4VAM2;
+				DEVELOPMENT_TEAM = 9SR367C2GB;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//UbunGit_OC/UbunGit_OC.pch";
