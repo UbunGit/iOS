@@ -26,12 +26,12 @@
                   moduleName = "UbunGit_OC"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/admin/Documents/iOS/UbunGit_OC/UbunGit_OC/Magic/PPGetAddressBook/AddressBookController.m"
-                  timestampString = "575535080.115348"
+                  timestampString = "578296869.466655"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "42"
                   endingLineNumber = "42"
-                  offsetFromSymbolStart = "968">
+                  offsetFromSymbolStart = "960">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,27 +41,12 @@
                   moduleName = "UbunGit_OC"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/admin/Documents/iOS/UbunGit_OC/UbunGit_OC/Magic/PPGetAddressBook/AddressBookController.m"
-                  timestampString = "575535080.117309"
+                  timestampString = "578296869.4691221"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "42"
                   endingLineNumber = "42"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_"
-                  moduleName = "UbunGit_OC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Documents/iOS/UbunGit_OC/UbunGit_OC/Magic/PPGetAddressBook/AddressBookController.m"
-                  timestampString = "575535080.119049"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -152,14 +137,94 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
-            timestampString = "575535216.059734"
+            filePath = "Pods/Masonry/Masonry/MASViewConstraint.m"
+            timestampString = "578296602.0698071"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
-            landmarkName = "-URLSession:task:didCompleteWithError:"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-setSecondViewAttribute:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MASViewConstraint setSecondViewAttribute:]"
+                  moduleName = "Masonry"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/iOS/UbunGit_OC/Pods/Masonry/Masonry/MASViewConstraint.m"
+                  timestampString = "578296869.92169"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "544">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MASViewConstraint setSecondViewAttribute:]"
+                  moduleName = "Masonry"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/iOS/UbunGit_OC/Pods/Masonry/Masonry/MASViewConstraint.m"
+                  timestampString = "578296869.9235229"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "572">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UbunGit_OC/Components/Welcom/WelcomViewController.m"
+            timestampString = "578304981.482375"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "-viewLayoutMarginsDidChange"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WelcomViewController viewLayoutMarginsDidChange]"
+                  moduleName = "UbunGit_OC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/iOS/UbunGit_OC/UbunGit_OC/Components/Welcom/WelcomViewController.m"
+                  timestampString = "578296869.593828"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__50-[WelcomViewController viewLayoutMarginsDidChange]_block_invoke"
+                  moduleName = "UbunGit_OC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/iOS/UbunGit_OC/UbunGit_OC/Components/Welcom/WelcomViewController.m"
+                  timestampString = "578296869.595355"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

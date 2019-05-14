@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DMViewController">
+            <connections>
+                <outlet property="view" destination="ega-UI-EFU" id="uDv-u9-din"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ega-UI-EFU">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beijing.png" translatesAutoresizingMaskIntoConstraints="NO" id="8DN-Se-6vZ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-uJ-lxZ">
+                    <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guanyuwomen-yunpan.png" translatesAutoresizingMaskIntoConstraints="NO" id="IAd-Xx-8fg">
+                            <rect key="frame" x="152" y="18" width="33" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="GeL-ET-cqE"/>
+                                <constraint firstAttribute="width" constant="33" id="tVB-kR-KVC"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="伴随你的每一天，数据不再丢失" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L47-Eb-JYT">
+                            <rect key="frame" x="0.0" y="52" width="375" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="sAL-S0-b2Z"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网盘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wK-Fy-BJS">
+                            <rect key="frame" x="195" y="21.5" width="37" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="dBH-LT-yOm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="A4f-Nr-sBr"/>
+                        <constraint firstAttribute="trailing" secondItem="L47-Eb-JYT" secondAttribute="trailing" id="RdD-pP-a1C"/>
+                        <constraint firstItem="2wK-Fy-BJS" firstAttribute="centerY" secondItem="IAd-Xx-8fg" secondAttribute="centerY" id="SyG-hh-aib"/>
+                        <constraint firstItem="IAd-Xx-8fg" firstAttribute="centerX" secondItem="g0n-uJ-lxZ" secondAttribute="centerX" constant="-19" id="gVy-DI-D33"/>
+                        <constraint firstAttribute="bottom" secondItem="L47-Eb-JYT" secondAttribute="bottom" constant="27" id="iyI-X1-BMm"/>
+                        <constraint firstItem="L47-Eb-JYT" firstAttribute="leading" secondItem="g0n-uJ-lxZ" secondAttribute="leading" id="jvP-De-UlG"/>
+                        <constraint firstItem="2wK-Fy-BJS" firstAttribute="leading" secondItem="IAd-Xx-8fg" secondAttribute="trailing" constant="10" id="oZb-y7-HNK"/>
+                        <constraint firstItem="L47-Eb-JYT" firstAttribute="top" secondItem="IAd-Xx-8fg" secondAttribute="bottom" constant="5" id="qZf-B0-4Tc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="g0n-uJ-lxZ" firstAttribute="top" secondItem="8DN-Se-6vZ" secondAttribute="bottom" id="8Uw-dt-0ff"/>
+                <constraint firstItem="g0n-uJ-lxZ" firstAttribute="bottom" secondItem="K8u-qK-sab" secondAttribute="bottom" id="JEY-Pm-reD"/>
+                <constraint firstItem="g0n-uJ-lxZ" firstAttribute="leading" secondItem="K8u-qK-sab" secondAttribute="leading" id="OhS-bT-OnV"/>
+                <constraint firstItem="8DN-Se-6vZ" firstAttribute="trailing" secondItem="K8u-qK-sab" secondAttribute="trailing" id="Ypy-d9-4Wo"/>
+                <constraint firstItem="g0n-uJ-lxZ" firstAttribute="trailing" secondItem="K8u-qK-sab" secondAttribute="trailing" id="b1N-x9-o2S"/>
+                <constraint firstItem="8DN-Se-6vZ" firstAttribute="leading" secondItem="K8u-qK-sab" secondAttribute="leading" id="soL-ia-1V8"/>
+                <constraint firstItem="8DN-Se-6vZ" firstAttribute="top" secondItem="ega-UI-EFU" secondAttribute="top" id="y6j-j4-Fb9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="K8u-qK-sab"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="beijing.png" width="375" height="567.5"/>
+        <image name="guanyuwomen-yunpan.png" width="32.5" height="29"/>
+    </resources>
+</document>

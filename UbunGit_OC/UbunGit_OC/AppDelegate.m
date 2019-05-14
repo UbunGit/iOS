@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AppDelegate+Welcom.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,14 @@
     [self configRTRootNavigationController];
     [self configTabBar];//配置tabbar
     [self configNIMSDK];//配置网易云信
+    [self configDMViewController:^(UIButton * _Nullable sender) {
+        [self configWelcom:^(UIButton * _Nullable sender) {
+            UIViewController *viewController = [UIViewController new];
+            self.window.rootViewController = viewController;
+            [self.window makeKeyAndVisible];
+        }];
+    }];
+  
     return YES;
 }
 
