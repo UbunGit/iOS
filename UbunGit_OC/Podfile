@@ -5,11 +5,15 @@ target 'UbunGit_OC' do
   
   pod "RTRootNavigationController"
   pod 'NIMSDK'
+  pod 'MBProgressHUD'
+  pod 'SDWebImage'
+  
   pod 'PPGetAddressBook'
   pod 'SuperPlayer'
 #  pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
   pod 'AFNetworking'
   pod 'SDWebImage'
+  pod 'Masonry'
   
   
   pod 'DoraemonKit/Core', '~> 1.1.6', :configurations => ['Debug']

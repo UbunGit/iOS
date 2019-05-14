@@ -23,6 +23,26 @@
 		84380BB922362BE5003E73CC /* AppDelegate+NIMSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 84380BB822362BE5003E73CC /* AppDelegate+NIMSDK.m */; };
 		84380BC22236595A003E73CC /* AddressBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84380BC12236595A003E73CC /* AddressBookController.m */; };
 		84380BC522365AD9003E73CC /* DoraemonAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 84380BC422365AD9003E73CC /* DoraemonAddressBook.m */; };
+		843F330D2278035300F1D950 /* WelcomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F330C2278035300F1D950 /* WelcomViewController.m */; };
+		843F33232278151B00F1D950 /* AppDelegate+Welcom.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F33222278151B00F1D950 /* AppDelegate+Welcom.m */; };
+		843F334A227838E300F1D950 /* DMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F3348227838E300F1D950 /* DMViewController.m */; };
+		843F334B227838E300F1D950 /* DMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843F3349227838E300F1D950 /* DMViewController.xib */; };
+		843F335A22783AFA00F1D950 /* iosyingdaoye3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335022783AFA00F1D950 /* iosyingdaoye3@2x.png */; };
+		843F335B22783AFA00F1D950 /* beijing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335122783AFA00F1D950 /* beijing@2x.png */; };
+		843F335C22783AFA00F1D950 /* iosyingdaoye3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335222783AFA00F1D950 /* iosyingdaoye3@3x.png */; };
+		843F335D22783AFA00F1D950 /* beijing@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335322783AFA00F1D950 /* beijing@3x.png */; };
+		843F335E22783AFA00F1D950 /* guanyuwomen-yunpan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335422783AFA00F1D950 /* guanyuwomen-yunpan@2x.png */; };
+		843F335F22783AFA00F1D950 /* guanyuwomen-yunpan@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335522783AFA00F1D950 /* guanyuwomen-yunpan@3x.png */; };
+		843F336022783AFA00F1D950 /* iosyingdaoye1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335622783AFA00F1D950 /* iosyingdaoye1@3x.png */; };
+		843F336122783AFA00F1D950 /* iosyingdaoye1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335722783AFA00F1D950 /* iosyingdaoye1@2x.png */; };
+		843F336222783AFA00F1D950 /* iosyingdaoye2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335822783AFA00F1D950 /* iosyingdaoye2@2x.png */; };
+		843F336322783AFA00F1D950 /* iosyingdaoye2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335922783AFA00F1D950 /* iosyingdaoye2@3x.png */; };
+		84C73A7D2265CE2100BA5142 /* MBProgressHUDTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73A7C2265CE2100BA5142 /* MBProgressHUDTableVC.m */; };
+		84C73A802265CF5A00BA5142 /* MessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73A7E2265CF5A00BA5142 /* MessageCenter.m */; };
+		84C73A832265CFC200BA5142 /* zhucechenggong-tanchuang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C73A812265CFC200BA5142 /* zhucechenggong-tanchuang@2x.png */; };
+		84C73A842265CFC200BA5142 /* zhucechenggong-tanchuang@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C73A822265CFC200BA5142 /* zhucechenggong-tanchuang@3x.png */; };
+		84C73A872265D13D00BA5142 /* DoraemonMBOrogressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73A862265D13D00BA5142 /* DoraemonMBOrogressHUD.m */; };
+		84C73A8A2265D2FC00BA5142 /* UIView+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C73A892265D2FC00BA5142 /* UIView+Alert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +97,33 @@
 		84380BC322365AD9003E73CC /* DoraemonAddressBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoraemonAddressBook.h; sourceTree = "<group>"; };
 		84380BC422365AD9003E73CC /* DoraemonAddressBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoraemonAddressBook.m; sourceTree = "<group>"; };
 		84380BC622365CB4003E73CC /* UbunGit_OC.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UbunGit_OC.pch; sourceTree = "<group>"; };
+		843F330B2278035300F1D950 /* WelcomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomViewController.h; sourceTree = "<group>"; };
+		843F330C2278035300F1D950 /* WelcomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomViewController.m; sourceTree = "<group>"; };
+		843F33212278151B00F1D950 /* AppDelegate+Welcom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Welcom.h"; sourceTree = "<group>"; };
+		843F33222278151B00F1D950 /* AppDelegate+Welcom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Welcom.m"; sourceTree = "<group>"; };
+		843F3347227838E300F1D950 /* DMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMViewController.h; sourceTree = "<group>"; };
+		843F3348227838E300F1D950 /* DMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMViewController.m; sourceTree = "<group>"; };
+		843F3349227838E300F1D950 /* DMViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DMViewController.xib; sourceTree = "<group>"; };
+		843F335022783AFA00F1D950 /* iosyingdaoye3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iosyingdaoye3@2x.png"; sourceTree = "<group>"; };
+		843F335122783AFA00F1D950 /* beijing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beijing@2x.png"; sourceTree = "<group>"; };
+		843F335222783AFA00F1D950 /* iosyingdaoye3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iosyingdaoye3@3x.png"; sourceTree = "<group>"; };
+		843F335322783AFA00F1D950 /* beijing@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beijing@3x.png"; sourceTree = "<group>"; };
+		843F335422783AFA00F1D950 /* guanyuwomen-yunpan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guanyuwomen-yunpan@2x.png"; sourceTree = "<group>"; };
+		843F335522783AFA00F1D950 /* guanyuwomen-yunpan@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guanyuwomen-yunpan@3x.png"; sourceTree = "<group>"; };
+		843F335622783AFA00F1D950 /* iosyingdaoye1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iosyingdaoye1@3x.png"; sourceTree = "<group>"; };
+		843F335722783AFA00F1D950 /* iosyingdaoye1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iosyingdaoye1@2x.png"; sourceTree = "<group>"; };
+		843F335822783AFA00F1D950 /* iosyingdaoye2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iosyingdaoye2@2x.png"; sourceTree = "<group>"; };
+		843F335922783AFA00F1D950 /* iosyingdaoye2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iosyingdaoye2@3x.png"; sourceTree = "<group>"; };
+		84C73A7B2265CE2100BA5142 /* MBProgressHUDTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUDTableVC.h; sourceTree = "<group>"; };
+		84C73A7C2265CE2100BA5142 /* MBProgressHUDTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUDTableVC.m; sourceTree = "<group>"; };
+		84C73A7E2265CF5A00BA5142 /* MessageCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCenter.m; sourceTree = "<group>"; };
+		84C73A7F2265CF5A00BA5142 /* MessageCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCenter.h; sourceTree = "<group>"; };
+		84C73A812265CFC200BA5142 /* zhucechenggong-tanchuang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhucechenggong-tanchuang@2x.png"; sourceTree = "<group>"; };
+		84C73A822265CFC200BA5142 /* zhucechenggong-tanchuang@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhucechenggong-tanchuang@3x.png"; sourceTree = "<group>"; };
+		84C73A852265D13D00BA5142 /* DoraemonMBOrogressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoraemonMBOrogressHUD.h; sourceTree = "<group>"; };
+		84C73A862265D13D00BA5142 /* DoraemonMBOrogressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoraemonMBOrogressHUD.m; sourceTree = "<group>"; };
+		84C73A882265D2FC00BA5142 /* UIView+Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Alert.h"; sourceTree = "<group>"; };
+		84C73A892265D2FC00BA5142 /* UIView+Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Alert.m"; sourceTree = "<group>"; };
 		985F57520484DAC01210C56D /* Pods-UbunGit_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UbunGit_OC.debug.xcconfig"; path = "Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +178,7 @@
 		84380B5D2235FA82003E73CC /* UbunGit_OC */ = {
 			isa = PBXGroup;
 			children = (
+				843F33092278030100F1D950 /* Components */,
 				84380B9F22361C82003E73CC /* Magic */,
 				84380B5E2235FA82003E73CC /* AppDelegate.h */,
 				84380B5F2235FA82003E73CC /* AppDelegate.m */,
@@ -167,6 +215,7 @@
 		84380B9F22361C82003E73CC /* Magic */ = {
 			isa = PBXGroup;
 			children = (
+				84C73A7A2265CDE900BA5142 /* MBProgressHUD */,
 				84380BBF223657FC003E73CC /* PPGetAddressBook */,
 				84380BB622362BC3003E73CC /* NIMSDK */,
 				84380BB122362824003E73CC /* RTRootNavigationController */,
@@ -232,6 +281,55 @@
 				84380BC422365AD9003E73CC /* DoraemonAddressBook.m */,
 			);
 			path = PPGetAddressBook;
+			sourceTree = "<group>";
+		};
+		843F33092278030100F1D950 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				843F330A2278031600F1D950 /* Welcom */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		843F330A2278031600F1D950 /* Welcom */ = {
+			isa = PBXGroup;
+			children = (
+				843F335122783AFA00F1D950 /* beijing@2x.png */,
+				843F335322783AFA00F1D950 /* beijing@3x.png */,
+				843F335422783AFA00F1D950 /* guanyuwomen-yunpan@2x.png */,
+				843F335522783AFA00F1D950 /* guanyuwomen-yunpan@3x.png */,
+				843F335722783AFA00F1D950 /* iosyingdaoye1@2x.png */,
+				843F335622783AFA00F1D950 /* iosyingdaoye1@3x.png */,
+				843F335822783AFA00F1D950 /* iosyingdaoye2@2x.png */,
+				843F335922783AFA00F1D950 /* iosyingdaoye2@3x.png */,
+				843F335022783AFA00F1D950 /* iosyingdaoye3@2x.png */,
+				843F335222783AFA00F1D950 /* iosyingdaoye3@3x.png */,
+				843F330B2278035300F1D950 /* WelcomViewController.h */,
+				843F330C2278035300F1D950 /* WelcomViewController.m */,
+				843F3347227838E300F1D950 /* DMViewController.h */,
+				843F3348227838E300F1D950 /* DMViewController.m */,
+				843F3349227838E300F1D950 /* DMViewController.xib */,
+				843F33212278151B00F1D950 /* AppDelegate+Welcom.h */,
+				843F33222278151B00F1D950 /* AppDelegate+Welcom.m */,
+			);
+			path = Welcom;
+			sourceTree = "<group>";
+		};
+		84C73A7A2265CDE900BA5142 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				84C73A812265CFC200BA5142 /* zhucechenggong-tanchuang@2x.png */,
+				84C73A822265CFC200BA5142 /* zhucechenggong-tanchuang@3x.png */,
+				84C73A7B2265CE2100BA5142 /* MBProgressHUDTableVC.h */,
+				84C73A7C2265CE2100BA5142 /* MBProgressHUDTableVC.m */,
+				84C73A7F2265CF5A00BA5142 /* MessageCenter.h */,
+				84C73A7E2265CF5A00BA5142 /* MessageCenter.m */,
+				84C73A852265D13D00BA5142 /* DoraemonMBOrogressHUD.h */,
+				84C73A862265D13D00BA5142 /* DoraemonMBOrogressHUD.m */,
+				84C73A882265D2FC00BA5142 /* UIView+Alert.h */,
+				84C73A892265D2FC00BA5142 /* UIView+Alert.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		E371EDD99817895D25296D3F /* Pods */ = {
@@ -357,9 +455,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843F335C22783AFA00F1D950 /* iosyingdaoye3@3x.png in Resources */,
+				843F335A22783AFA00F1D950 /* iosyingdaoye3@2x.png in Resources */,
+				843F336122783AFA00F1D950 /* iosyingdaoye1@2x.png in Resources */,
+				843F334B227838E300F1D950 /* DMViewController.xib in Resources */,
 				84380B6B2235FA85003E73CC /* LaunchScreen.storyboard in Resources */,
+				843F335B22783AFA00F1D950 /* beijing@2x.png in Resources */,
+				84C73A832265CFC200BA5142 /* zhucechenggong-tanchuang@2x.png in Resources */,
+				843F335F22783AFA00F1D950 /* guanyuwomen-yunpan@3x.png in Resources */,
+				843F336322783AFA00F1D950 /* iosyingdaoye2@3x.png in Resources */,
+				843F335D22783AFA00F1D950 /* beijing@3x.png in Resources */,
 				84380B682235FA85003E73CC /* Assets.xcassets in Resources */,
+				84C73A842265CFC200BA5142 /* zhucechenggong-tanchuang@3x.png in Resources */,
+				843F336222783AFA00F1D950 /* iosyingdaoye2@2x.png in Resources */,
 				84380B662235FA82003E73CC /* Main.storyboard in Resources */,
+				843F335E22783AFA00F1D950 /* guanyuwomen-yunpan@2x.png in Resources */,
+				843F336022783AFA00F1D950 /* iosyingdaoye1@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +505,7 @@
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework",
 				"${PODS_ROOT}/DoraemonKit/iOS/DoraemonKit/Framework/DoraemonLoadAnalyze.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${PODS_ROOT}/NIMSDK/NIMSDK/NIMSDK.framework",
 				"${PODS_ROOT}/NIMSDK/NIMAVChat/NIMAVChat.framework",
@@ -415,6 +527,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonLoadAnalyze.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NIMAVChat.framework",
@@ -486,14 +599,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				84380BB42236283B003E73CC /* AppDelegate+RTRootNavigationController.m in Sources */,
+				84C73A8A2265D2FC00BA5142 /* UIView+Alert.m in Sources */,
 				84380BA622361DB9003E73CC /* AppDelegate+DoraemonKit.m in Sources */,
 				84380BAC22361F64003E73CC /* AppDelegate+CocoaLumberjack.m in Sources */,
+				84C73A7D2265CE2100BA5142 /* MBProgressHUDTableVC.m in Sources */,
+				84C73A802265CF5A00BA5142 /* MessageCenter.m in Sources */,
+				843F334A227838E300F1D950 /* DMViewController.m in Sources */,
 				84380BB0223624F8003E73CC /* AppDelegate+TavBar.m in Sources */,
 				84380BB922362BE5003E73CC /* AppDelegate+NIMSDK.m in Sources */,
 				84380B632235FA82003E73CC /* ViewController.m in Sources */,
+				843F33232278151B00F1D950 /* AppDelegate+Welcom.m in Sources */,
+				843F330D2278035300F1D950 /* WelcomViewController.m in Sources */,
 				84380BC522365AD9003E73CC /* DoraemonAddressBook.m in Sources */,
 				84380BC22236595A003E73CC /* AddressBookController.m in Sources */,
 				84380B6E2235FA85003E73CC /* main.m in Sources */,
+				84C73A872265D13D00BA5142 /* DoraemonMBOrogressHUD.m in Sources */,
 				84380B602235FA82003E73CC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

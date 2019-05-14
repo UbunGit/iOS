@@ -38,6 +38,7 @@ PODS:
     - "UITextView+Placeholder"
   - fishhook (0.2)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
   - NIMSDK (6.1.1)
   - PNChart (0.8.9):
     - UICountingLabel (~> 1.2.0)
@@ -65,6 +66,8 @@ DEPENDENCIES:
   - DoraemonKit/Core (~> 1.1.6)
   - DoraemonKit/WithLoad (~> 1.1.6)
   - DoraemonKit/WithLogger (~> 1.1.6)
+  - Masonry
+  - MBProgressHUD
   - NIMSDK
   - PPGetAddressBook
   - RTRootNavigationController
@@ -79,6 +82,7 @@ SPEC REPOS:
     - DoraemonKit
     - fishhook
     - Masonry
+    - MBProgressHUD
     - NIMSDK
     - PNChart
     - PPGetAddressBook
@@ -95,6 +99,7 @@ SPEC CHECKSUMS:
   DoraemonKit: 309c42d828dffb8149942afcfa2af84d8f44bad1
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   NIMSDK: d007a6ea3497867733bb05e21fa059e6960f24bb
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   PPGetAddressBook: e4b6b0a87e852df5d5b90c44ecd9ded7f6f1ccf6
@@ -104,6 +109,6 @@ SPEC CHECKSUMS:
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
 
-PODFILE CHECKSUM: 2149f7aeda5911e593a9a57fe1e1f1cce0016c17
+PODFILE CHECKSUM: 90597318032c34f4bcf084c2b23a5adc0f3e4c62
 
 COCOAPODS: 1.6.0
