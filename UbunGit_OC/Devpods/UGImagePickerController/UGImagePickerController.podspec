@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
 
-   s.name         = "UGImagePickerController"
+  s.name         = "UGImagePickerController"
   s.version      = "0.1.0"
   s.summary      = "A beautiful photo browser with interactive dismissal animation."
 
