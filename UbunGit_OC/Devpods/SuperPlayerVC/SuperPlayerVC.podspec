@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
 
   s.source_files  = "SuperPlayerVC", "**/*.{h,m}"
-
+  s.static_framework = true
 
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }

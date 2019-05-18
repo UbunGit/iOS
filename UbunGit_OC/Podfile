@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '11.0'
 use_frameworks!
 
 target 'UbunGit_OC' do
@@ -7,7 +7,9 @@ target 'UbunGit_OC' do
   pod 'NIMSDK'
   pod 'PPGetAddressBook'
   pod 'SuperPlayer'
-#  pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
+  pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
+  pod 'Mobileffmpeg', :path => './Devpods/Mobileffmpeg/'
+  
   pod 'AFNetworking'
   pod 'SDWebImage'
   
