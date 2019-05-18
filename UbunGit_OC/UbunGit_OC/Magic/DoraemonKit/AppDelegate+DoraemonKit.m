@@ -20,6 +20,8 @@
     [[DoraemonManager shareInstance] addPluginWithTitle:@"通讯录" icon:@"doraemon_netflow_list_select" desc:@"用于app内部环境切换功能" pluginName:@"DoraemonAddressBook" atModule:@"功能测试"];
     [[DoraemonManager shareInstance] addPluginWithTitle:@"腾讯视频" icon:@"doraemon_netflow_list_select" desc:@"用于腾讯SuperPlayer集成测试" pluginName:@"DoraemonSuperPlay" atModule:@"功能测试"];
 //常用功能
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"弹框" icon:@"doraemon_netflow_list_select" desc:@"用于弹框测试" pluginName:@"DoraemonMBOrogressHUD" atModule:@"功能测试"];
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"相册选择" icon:@"doraemon_netflow_list_select" desc:@"用于TZimagePickviewcontroll" pluginName:@"DoraemonTZImagePick" atModule:@"功能测试"];
 
     [[DoraemonManager shareInstance] install];
 #endif

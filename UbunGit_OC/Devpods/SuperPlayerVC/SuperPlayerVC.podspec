@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://twitter.com/skx926"
 
   s.source       = { :git => "https://github.com/skx926/SuperPlayerVC.git", :tag => "#{s.version}" }
-
+  s.static_framework = true
 
 
   s.source_files  = "SuperPlayerVC", "**/*.{h,m}"
@@ -24,6 +24,5 @@ Pod::Spec.new do |s|
 
   s.dependency 'SuperPlayer'
 
-  
 
 end
