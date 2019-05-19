@@ -29,12 +29,21 @@ typedef void(^AlertViewFinesh)(BOOL finished);
 -(void)alertimageType:(NSString*)imagestr;
 -(void)alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block;
 
+//弹出给定的view，自带取消按钮
++(void)ug_alertview:(UIView*)aview;
++(void)ug_alertview:(UIView*)aview complete:(nullable AlertViewFinesh)block;
+
+//弹出给定的view，自带取消按钮
+-(void)ug_alertview:(UIView*)aview;
+-(void)ug_alertview:(UIView*)aview complete:(nullable AlertViewFinesh)block;
+
 
 +(void)starloading;
 +(void)stoploading;
 
 -(void)starloading;
 -(void)stoploading;
+
 @end
 
 NS_ASSUME_NONNULL_END

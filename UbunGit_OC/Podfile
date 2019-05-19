@@ -7,21 +7,21 @@ target 'UbunGit_OC' do
   pod 'NIMSDK'
   pod 'MBProgressHUD'
   pod 'SDWebImage'
-  
-  pod 'PPGetAddressBook'
-  pod 'SuperPlayer'
-  pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
-  pod 'Mobileffmpeg', :path => './Devpods/Mobileffmpeg/'
-  
   pod 'Masonry'
   pod 'AFNetworking'
-  pod 'SDWebImage'
-  pod 'Masonry'
   
+  pod 'PPGetAddressBook'
+
+  pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
+#
+
   pod 'DoraemonKit/Core',  :configurations => ['Debug']
   pod 'DoraemonKit/WithLogger',  :configurations => ['Debug']
   pod 'DoraemonKit/WithLoad',  :configurations => ['Debug']
   
   pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
   pod 'UGImagePickerController', :path => './Devpods/UGImagePickerController/'
+#  pod 'UIMagic', :path => './UIMagic/'
+
+  #  pod 'Mobileffmpeg', :path => './Devpods/Mobileffmpeg/'
 end

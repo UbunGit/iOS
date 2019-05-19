@@ -9,6 +9,8 @@
 #import "UIView+Alert.h"
 #import "MBProgressHUD.h"
 #import "UIImageView+WebCache.h"
+#import "Masonry.h"
+
 #include <objc/runtime.h>
 
 #ifndef dispatch_main_async_safe
@@ -82,6 +84,61 @@
         block(YES);
     }
 }
+
+//弹出给定的view，自带取消按钮
++(void)ug_alertview:(UIView*)aview{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [window ug_alertview:aview complete:nil];
+}
++(void)ug_alertview:(UIView*)aview complete:(nullable AlertViewFinesh)block{
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [window ug_alertview:aview complete:block];
+}
+
+//弹出给定的view，自带取消按钮
+-(void)ug_alertview:(UIView*)aview{
+    [self ug_alertview:aview complete:nil];
+}
+-(void)ug_alertview:(UIView*)aview complete:(nullable AlertViewFinesh)block{
+    
+    UIView *cancelview = [UIView new];
+    [cancelview addSubview:aview];
+    
+    UIButton *abutton = [UIButton new];
+    [cancelview addSubview:abutton];
+    [abutton setTitle:@"关闭" forState:UIControlStateNormal];
+
+    cancelview.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    abutton.backgroundColor = [UIColor redColor];
+   
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    hud.mode = MBProgressHUDModeCustomView;
+    hud.customView = cancelview;
+    hud.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0];
+    
+    [abutton ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
+        [hud hideAnimated:YES afterDelay:0.2];
+    }];
+    [cancelview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self);
+        make.width.mas_equalTo(aview);
+    }];
+    [aview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(cancelview);
+        make.left.right.mas_equalTo(cancelview);
+    }];
+    [abutton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(aview.mas_bottom).mas_offset(8);
+        make.width.mas_equalTo(cancelview);
+        make.height.mas_equalTo(44);
+        make.bottom.mas_equalTo(cancelview);
+    }];
+    
+}
+
 
 +(void)starloading{
     UIWindow *window = [UIApplication sharedApplication].keyWindow;

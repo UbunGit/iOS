@@ -7,7 +7,6 @@
 //
 
 #import "MBProgressHUDTableVC.h"
-#import "MessageCenter.h"
 #import "UIView+Alert.h"
 @interface MBProgressHUDTableVC ()
 @property(strong, nonatomic)NSArray *tableviewArr;

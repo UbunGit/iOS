@@ -38,8 +38,8 @@ PODS:
     - "UITextView+Placeholder"
   - fishhook (0.2)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
   - MMLayout (0.1.0)
-  - Mobileffmpeg (0.1.0)
   - NIMSDK (6.4.1)
   - PNChart (0.8.9):
     - UICountingLabel (~> 1.2.0)
@@ -50,34 +50,37 @@ PODS:
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
-  - SuperPlayer (3.0.1):
+  - SuperPlayer (3.0.2):
     - AFNetworking (~> 3.1)
     - Masonry (~> 1.1.0)
     - MMLayout
     - SDWebImage (~> 4.4.0)
-    - SuperPlayer/Player (= 3.0.1)
-  - SuperPlayer/Player (3.0.1):
+    - SuperPlayer/Player (= 3.0.2)
+  - SuperPlayer/Player (3.0.2):
     - AFNetworking (~> 3.1)
     - Masonry (~> 1.1.0)
     - MMLayout
     - SDWebImage (~> 4.4.0)
   - SuperPlayerVC (0.1.0):
     - SuperPlayer
+  - UGImagePickerController (0.1.0):
+    - SuperPlayer
   - UICountingLabel (1.2.0)
   - "UITextView+Placeholder (1.2.1)"
 
 DEPENDENCIES:
   - AFNetworking
-  - DoraemonKit/Core (~> 1.1.6)
-  - DoraemonKit/WithLoad (~> 1.1.6)
-  - DoraemonKit/WithLogger (~> 1.1.6)
-  - Mobileffmpeg (from `./Devpods/Mobileffmpeg/`)
+  - DoraemonKit/Core
+  - DoraemonKit/WithLoad
+  - DoraemonKit/WithLogger
+  - Masonry
+  - MBProgressHUD
   - NIMSDK
   - PPGetAddressBook
   - RTRootNavigationController
   - SDWebImage
-  - SuperPlayer
   - SuperPlayerVC (from `./Devpods/SuperPlayerVC/`)
+  - UGImagePickerController (from `./Devpods/UGImagePickerController/`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -87,6 +90,7 @@ SPEC REPOS:
     - DoraemonKit
     - fishhook
     - Masonry
+    - MBProgressHUD
     - MMLayout
     - NIMSDK
     - PNChart
@@ -98,10 +102,10 @@ SPEC REPOS:
     - "UITextView+Placeholder"
 
 EXTERNAL SOURCES:
-  Mobileffmpeg:
-    :path: "./Devpods/Mobileffmpeg/"
   SuperPlayerVC:
     :path: "./Devpods/SuperPlayerVC/"
+  UGImagePickerController:
+    :path: "./Devpods/UGImagePickerController/"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -110,18 +114,19 @@ SPEC CHECKSUMS:
   DoraemonKit: 63d23b938b11ae2c04c8c2caba2112da7d5bda83
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MMLayout: 7caa6fe2ebfd018ec49ab3ac2409b454c3687995
-  Mobileffmpeg: 4a6de98a613149f3acfa2b5d4d836112e039e415
   NIMSDK: a5d714fa9808f2fbeaa161dfcaaf6a9742d58bd1
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   PPGetAddressBook: e4b6b0a87e852df5d5b90c44ecd9ded7f6f1ccf6
   RTRootNavigationController: afa6913402be26f8326f7f37fc1550aa67baddcc
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
-  SuperPlayer: bc61a8f692979d0da34fcb99c726d0123a6d1733
-  SuperPlayerVC: f47108e8a184b76899a0d87a3c2bd638a1795143
+  SuperPlayer: cd2ecad5d265871f2d1de0c467c33cb5bcea4368
+  SuperPlayerVC: 47ab131f53c5899c75259e735b44667c2664c4ee
+  UGImagePickerController: f09ca54127dfe220920941683b51a7fcf4b12222
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
 
-PODFILE CHECKSUM: a49ea11154dc1624e86e6c8806f3f5eef4d59318
+PODFILE CHECKSUM: 8c4388cef4d571d2f9fedc627335fb78ae7daf84
 
 COCOAPODS: 1.5.3
