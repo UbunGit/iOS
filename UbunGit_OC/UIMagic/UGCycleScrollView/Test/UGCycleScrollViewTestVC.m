@@ -8,10 +8,9 @@
 
 #import "UGCycleScrollViewTestVC.h"
 #import "Masonry.h"
-#import "MBProgressHUD.h"
 #import "UIView+Alert.h"
 #import "UGCycleScrollView.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImageView.h"
 
 @interface UGCycleScrollViewTestVC ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -100,7 +99,7 @@
             cell.backgroundColor = [UIColor whiteColor];
             NSString *urlstr = [array objectAtIndex:indexPath.row%array.count];
             NSURL *url = [NSURL URLWithString:urlstr];
-            [cell.imageView sd_setImageWithURL:url];
+//            [cell.imageView sd_setImageWithURL:url];
             return cell;
         }];
         temview.backgroundColor = [UIColor yellowColor];
@@ -117,15 +116,15 @@
         [temview setItemSize:CGSizeMake(300, 200)];
         [temview setItemSpacing:12];
         [temview setUg_numberOfItemsInSection:^NSInteger(UICollectionView * _Nonnull collectionView, NSInteger section) {
-            return MAXFLOAT;
+            return 145673;
         }];
         [temview setUg_cellForItemAtIndexPath:^__kindof UICollectionViewCell * _Nonnull(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
-            
+
             UGCycleScrollViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
             NSString *urlstr = [array objectAtIndex:indexPath.row%array.count];
             NSURL *url = [NSURL URLWithString:urlstr];
-            [cell.imageView sd_setImageWithURL:url];
-            cell.imageView.cornerRadius = 8;
+//            [cell.imageView sd_setImageWithURL:url];
+//            cell.imageView.cornerRadius = 8;
             return cell;
         }];
      

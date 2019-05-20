@@ -1,4 +1,4 @@
-platform :ios, '11.0'
+platform :ios, '10.0'
 use_frameworks!
 
 target 'UbunGit_OC' do
@@ -11,17 +11,20 @@ target 'UbunGit_OC' do
   pod 'AFNetworking'
   
   pod 'PPGetAddressBook'
+  
+  pod 'DoraemonKit/Core'
+  pod 'DoraemonKit/WithLogger'
+  pod 'DoraemonKit/WithLoad'
 
   pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
+  pod 'Mobileffmpeg', :path => './Devpods/Mobileffmpeg/'
+  pod 'UGImagePickerController', :path => './Devpods/UGImagePickerController/'
+  
+  pod 'UGCategory', :path => './UIMagic/UGCategory'
+  pod 'UGCycleScrollView/Test', :path => './UIMagic/UGCycleScrollView'
+
+  
+
 #
 
-  pod 'DoraemonKit/Core',  :configurations => ['Debug']
-  pod 'DoraemonKit/WithLogger',  :configurations => ['Debug']
-  pod 'DoraemonKit/WithLoad',  :configurations => ['Debug']
-  
-  pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
-  pod 'UGImagePickerController', :path => './Devpods/UGImagePickerController/'
-#  pod 'UIMagic', :path => './UIMagic/'
-
-  #  pod 'Mobileffmpeg', :path => './Devpods/Mobileffmpeg/'
 end

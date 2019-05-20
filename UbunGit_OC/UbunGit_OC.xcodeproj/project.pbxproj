@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		05BC280AF85232F52EBC08E8 /* Pods_UbunGit_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688ECF0ECCAAC1617C90C3DF /* Pods_UbunGit_OC.framework */; };
-		2C191133228FC24E001A35A2 /* UGCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C19112F228FC24D001A35A2 /* UGCycleScrollView.m */; };
-		2C191134228FC24E001A35A2 /* UGCycleScrollViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C191132228FC24D001A35A2 /* UGCycleScrollViewFlowLayout.m */; };
-		2C19113B228FC3AE001A35A2 /* DoraemonUGCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C191139228FC3AE001A35A2 /* DoraemonUGCycleScrollView.m */; };
-		2C191141228FC489001A35A2 /* UGCycleScrollViewTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C191140228FC489001A35A2 /* UGCycleScrollViewTestVC.m */; };
-		2C191144228FE2E0001A35A2 /* UGCycleScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C191143228FE2E0001A35A2 /* UGCycleScrollViewCell.m */; };
 		84380B602235FA82003E73CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84380B5F2235FA82003E73CC /* AppDelegate.m */; };
 		84380B632235FA82003E73CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84380B622235FA82003E73CC /* ViewController.m */; };
 		84380B662235FA82003E73CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84380B642235FA82003E73CC /* Main.storyboard */; };
@@ -42,17 +37,7 @@
 		843F336122783AFA00F1D950 /* iosyingdaoye1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335722783AFA00F1D950 /* iosyingdaoye1@2x.png */; };
 		843F336222783AFA00F1D950 /* iosyingdaoye2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335822783AFA00F1D950 /* iosyingdaoye2@2x.png */; };
 		843F336322783AFA00F1D950 /* iosyingdaoye2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843F335922783AFA00F1D950 /* iosyingdaoye2@3x.png */; };
-		84AACD37228A6BFB00A327DD /* UIImage+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD1A228A6BFB00A327DD /* UIImage+UG.m */; };
-		84AACD38228A6BFB00A327DD /* UILabel+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD1D228A6BFB00A327DD /* UILabel+UG.m */; };
-		84AACD39228A6BFB00A327DD /* UIButton+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD20228A6BFB00A327DD /* UIButton+UG.m */; };
-		84AACD3A228A6BFB00A327DD /* UIControl+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD21228A6BFB00A327DD /* UIControl+UG.m */; };
-		84AACD3B228A6BFB00A327DD /* UIView+WY_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD24228A6BFB00A327DD /* UIView+WY_Extension.m */; };
-		84AACD3C228A6BFB00A327DD /* UIView+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD27228A6BFB00A327DD /* UIView+UG.m */; };
-		84AACD3D228A6BFB00A327DD /* UIView+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD29228A6BFB00A327DD /* UIView+Alert.m */; };
-		84AACD3E228A6BFB00A327DD /* UITextView+WY_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD2B228A6BFB00A327DD /* UITextView+WY_Extension.m */; };
-		84AACD3F228A6BFB00A327DD /* NSString+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD2F228A6BFB00A327DD /* NSString+Encode.m */; };
-		84AACD40228A6BFB00A327DD /* UITextField+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD33228A6BFB00A327DD /* UITextField+UG.m */; };
-		84AACD41228A6BFB00A327DD /* NSDate+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD36228A6BFB00A327DD /* NSDate+UG.m */; };
+		8459AC582292A4E200472542 /* DoraemonUGCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459AC562292A4E200472542 /* DoraemonUGCycleScrollView.m */; };
 		84AACD45228A6D1700A327DD /* DoraemonSuperPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD43228A6D1700A327DD /* DoraemonSuperPlay.m */; };
 		84AACD4C228A6EAF00A327DD /* UG_TZImagePickSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AACD49228A6EAF00A327DD /* UG_TZImagePickSwitch.m */; };
 		84AACD4D228A6EAF00A327DD /* UG_TZImagePickSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84AACD4A228A6EAF00A327DD /* UG_TZImagePickSwitch.xib */; };
@@ -81,19 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C19112F228FC24D001A35A2 /* UGCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGCycleScrollView.m; sourceTree = "<group>"; };
-		2C191130228FC24D001A35A2 /* UGCycleScrollViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGCycleScrollViewFlowLayout.h; sourceTree = "<group>"; };
-		2C191131228FC24D001A35A2 /* UGCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGCycleScrollView.h; sourceTree = "<group>"; };
-		2C191132228FC24D001A35A2 /* UGCycleScrollViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGCycleScrollViewFlowLayout.m; sourceTree = "<group>"; };
-		2C191139228FC3AE001A35A2 /* DoraemonUGCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoraemonUGCycleScrollView.m; sourceTree = "<group>"; };
-		2C19113A228FC3AE001A35A2 /* DoraemonUGCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoraemonUGCycleScrollView.h; sourceTree = "<group>"; };
-		2C19113F228FC489001A35A2 /* UGCycleScrollViewTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGCycleScrollViewTestVC.h; sourceTree = "<group>"; };
-		2C191140228FC489001A35A2 /* UGCycleScrollViewTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGCycleScrollViewTestVC.m; sourceTree = "<group>"; };
-		2C191142228FE2E0001A35A2 /* UGCycleScrollViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGCycleScrollViewCell.h; sourceTree = "<group>"; };
-		2C191143228FE2E0001A35A2 /* UGCycleScrollViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGCycleScrollViewCell.m; sourceTree = "<group>"; };
+		5F231292DCC1A06F3F9E6747 /* Pods-UbunGit_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UbunGit_OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC.release.xcconfig"; sourceTree = "<group>"; };
 		688ECF0ECCAAC1617C90C3DF /* Pods_UbunGit_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UbunGit_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		69ACBB59EE782E4B4175EF8B /* Pods-UbunGit_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UbunGit_OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC.debug.xcconfig"; sourceTree = "<group>"; };
-		712C60860FA579C7BAADA4F3 /* Pods-UbunGit_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UbunGit_OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC.release.xcconfig"; sourceTree = "<group>"; };
 		84380B5B2235FA82003E73CC /* UbunGit_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UbunGit_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84380B5E2235FA82003E73CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84380B5F2235FA82003E73CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,29 +117,8 @@
 		843F335722783AFA00F1D950 /* iosyingdaoye1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iosyingdaoye1@2x.png"; sourceTree = "<group>"; };
 		843F335822783AFA00F1D950 /* iosyingdaoye2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iosyingdaoye2@2x.png"; sourceTree = "<group>"; };
 		843F335922783AFA00F1D950 /* iosyingdaoye2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iosyingdaoye2@3x.png"; sourceTree = "<group>"; };
-		84AACD19228A6BFB00A327DD /* UIImage+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UG.h"; sourceTree = "<group>"; };
-		84AACD1A228A6BFB00A327DD /* UIImage+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UG.m"; sourceTree = "<group>"; };
-		84AACD1C228A6BFB00A327DD /* UILabel+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+UG.h"; sourceTree = "<group>"; };
-		84AACD1D228A6BFB00A327DD /* UILabel+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+UG.m"; sourceTree = "<group>"; };
-		84AACD1F228A6BFB00A327DD /* UIControl+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+UG.h"; sourceTree = "<group>"; };
-		84AACD20228A6BFB00A327DD /* UIButton+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+UG.m"; sourceTree = "<group>"; };
-		84AACD21228A6BFB00A327DD /* UIControl+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+UG.m"; sourceTree = "<group>"; };
-		84AACD22228A6BFB00A327DD /* UIButton+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+UG.h"; sourceTree = "<group>"; };
-		84AACD24228A6BFB00A327DD /* UIView+WY_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WY_Extension.m"; sourceTree = "<group>"; };
-		84AACD25228A6BFB00A327DD /* UIView+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UG.h"; sourceTree = "<group>"; };
-		84AACD26228A6BFB00A327DD /* UIView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Alert.h"; sourceTree = "<group>"; };
-		84AACD27228A6BFB00A327DD /* UIView+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UG.m"; sourceTree = "<group>"; };
-		84AACD28228A6BFB00A327DD /* UIView+WY_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WY_Extension.h"; sourceTree = "<group>"; };
-		84AACD29228A6BFB00A327DD /* UIView+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Alert.m"; sourceTree = "<group>"; };
-		84AACD2B228A6BFB00A327DD /* UITextView+WY_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+WY_Extension.m"; sourceTree = "<group>"; };
-		84AACD2C228A6BFB00A327DD /* UITextView+WY_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+WY_Extension.h"; sourceTree = "<group>"; };
-		84AACD2E228A6BFB00A327DD /* NSString+Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encode.h"; sourceTree = "<group>"; };
-		84AACD2F228A6BFB00A327DD /* NSString+Encode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encode.m"; sourceTree = "<group>"; };
-		84AACD30228A6BFB00A327DD /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
-		84AACD32228A6BFB00A327DD /* UITextField+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+UG.h"; sourceTree = "<group>"; };
-		84AACD33228A6BFB00A327DD /* UITextField+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+UG.m"; sourceTree = "<group>"; };
-		84AACD35228A6BFB00A327DD /* NSDate+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+UG.h"; sourceTree = "<group>"; };
-		84AACD36228A6BFB00A327DD /* NSDate+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+UG.m"; sourceTree = "<group>"; };
+		8459AC562292A4E200472542 /* DoraemonUGCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoraemonUGCycleScrollView.m; path = UbunGit_OC/Magic/CocoaLumberjack/DoraemonUGCycleScrollView.m; sourceTree = SOURCE_ROOT; };
+		8459AC572292A4E200472542 /* DoraemonUGCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoraemonUGCycleScrollView.h; path = UbunGit_OC/Magic/CocoaLumberjack/DoraemonUGCycleScrollView.h; sourceTree = SOURCE_ROOT; };
 		84AACD43228A6D1700A327DD /* DoraemonSuperPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoraemonSuperPlay.m; sourceTree = "<group>"; };
 		84AACD44228A6D1700A327DD /* DoraemonSuperPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoraemonSuperPlay.h; sourceTree = "<group>"; };
 		84AACD47228A6EAF00A327DD /* UG_TZImagePickSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UG_TZImagePickSwitch.h; sourceTree = "<group>"; };
@@ -179,6 +132,7 @@
 		84C73A822265CFC200BA5142 /* zhucechenggong-tanchuang@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhucechenggong-tanchuang@3x.png"; sourceTree = "<group>"; };
 		84C73A852265D13D00BA5142 /* DoraemonMBOrogressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoraemonMBOrogressHUD.h; sourceTree = "<group>"; };
 		84C73A862265D13D00BA5142 /* DoraemonMBOrogressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoraemonMBOrogressHUD.m; sourceTree = "<group>"; };
+		9135DFA5F6663568849DE325 /* Pods-UbunGit_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UbunGit_OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,37 +161,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C19112E228FC24D001A35A2 /* UGCycleScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				2C191138228FC3AE001A35A2 /* Test */,
-				2C19112F228FC24D001A35A2 /* UGCycleScrollView.m */,
-				2C191131228FC24D001A35A2 /* UGCycleScrollView.h */,
-				2C191130228FC24D001A35A2 /* UGCycleScrollViewFlowLayout.h */,
-				2C191132228FC24D001A35A2 /* UGCycleScrollViewFlowLayout.m */,
-				2C191142228FE2E0001A35A2 /* UGCycleScrollViewCell.h */,
-				2C191143228FE2E0001A35A2 /* UGCycleScrollViewCell.m */,
-			);
-			name = UGCycleScrollView;
-			path = UIMagic/UGCycleScrollView;
-			sourceTree = SOURCE_ROOT;
-		};
-		2C191138228FC3AE001A35A2 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				2C191139228FC3AE001A35A2 /* DoraemonUGCycleScrollView.m */,
-				2C19113A228FC3AE001A35A2 /* DoraemonUGCycleScrollView.h */,
-				2C19113F228FC489001A35A2 /* UGCycleScrollViewTestVC.h */,
-				2C191140228FC489001A35A2 /* UGCycleScrollViewTestVC.m */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
 		6CFCFF9B4563BB9A638BB489 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				69ACBB59EE782E4B4175EF8B /* Pods-UbunGit_OC.debug.xcconfig */,
-				712C60860FA579C7BAADA4F3 /* Pods-UbunGit_OC.release.xcconfig */,
+				9135DFA5F6663568849DE325 /* Pods-UbunGit_OC.debug.xcconfig */,
+				5F231292DCC1A06F3F9E6747 /* Pods-UbunGit_OC.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -267,8 +195,6 @@
 		84380B5D2235FA82003E73CC /* UbunGit_OC */ = {
 			isa = PBXGroup;
 			children = (
-				2C19112E228FC24D001A35A2 /* UGCycleScrollView */,
-				84AACD17228A6BFB00A327DD /* Category */,
 				843F33092278030100F1D950 /* Components */,
 				84380B9F22361C82003E73CC /* Magic */,
 				84380B5E2235FA82003E73CC /* AppDelegate.h */,
@@ -323,6 +249,8 @@
 		84380BA722361E14003E73CC /* DoraemonKit */ = {
 			isa = PBXGroup;
 			children = (
+				8459AC572292A4E200472542 /* DoraemonUGCycleScrollView.h */,
+				8459AC562292A4E200472542 /* DoraemonUGCycleScrollView.m */,
 				84380BA422361DB9003E73CC /* AppDelegate+DoraemonKit.h */,
 				84380BA522361DB9003E73CC /* AppDelegate+DoraemonKit.m */,
 			);
@@ -406,100 +334,6 @@
 				843F33222278151B00F1D950 /* AppDelegate+Welcom.m */,
 			);
 			path = Welcom;
-			sourceTree = "<group>";
-		};
-		84AACD17228A6BFB00A327DD /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				84AACD18228A6BFB00A327DD /* UIImage */,
-				84AACD1B228A6BFB00A327DD /* UILable */,
-				84AACD1E228A6BFB00A327DD /* UIButton */,
-				84AACD23228A6BFB00A327DD /* UIView */,
-				84AACD2A228A6BFB00A327DD /* UITextView */,
-				84AACD2D228A6BFB00A327DD /* NSString */,
-				84AACD30228A6BFB00A327DD /* Category.h */,
-				84AACD31228A6BFB00A327DD /* UITextField */,
-				84AACD34228A6BFB00A327DD /* NSDate */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		84AACD18228A6BFB00A327DD /* UIImage */ = {
-			isa = PBXGroup;
-			children = (
-				84AACD19228A6BFB00A327DD /* UIImage+UG.h */,
-				84AACD1A228A6BFB00A327DD /* UIImage+UG.m */,
-			);
-			path = UIImage;
-			sourceTree = "<group>";
-		};
-		84AACD1B228A6BFB00A327DD /* UILable */ = {
-			isa = PBXGroup;
-			children = (
-				84AACD1C228A6BFB00A327DD /* UILabel+UG.h */,
-				84AACD1D228A6BFB00A327DD /* UILabel+UG.m */,
-			);
-			path = UILable;
-			sourceTree = "<group>";
-		};
-		84AACD1E228A6BFB00A327DD /* UIButton */ = {
-			isa = PBXGroup;
-			children = (
-				84AACD1F228A6BFB00A327DD /* UIControl+UG.h */,
-				84AACD20228A6BFB00A327DD /* UIButton+UG.m */,
-				84AACD21228A6BFB00A327DD /* UIControl+UG.m */,
-				84AACD22228A6BFB00A327DD /* UIButton+UG.h */,
-			);
-			path = UIButton;
-			sourceTree = "<group>";
-		};
-		84AACD23228A6BFB00A327DD /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				84AACD24228A6BFB00A327DD /* UIView+WY_Extension.m */,
-				84AACD25228A6BFB00A327DD /* UIView+UG.h */,
-				84AACD26228A6BFB00A327DD /* UIView+Alert.h */,
-				84AACD27228A6BFB00A327DD /* UIView+UG.m */,
-				84AACD28228A6BFB00A327DD /* UIView+WY_Extension.h */,
-				84AACD29228A6BFB00A327DD /* UIView+Alert.m */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
-		84AACD2A228A6BFB00A327DD /* UITextView */ = {
-			isa = PBXGroup;
-			children = (
-				84AACD2B228A6BFB00A327DD /* UITextView+WY_Extension.m */,
-				84AACD2C228A6BFB00A327DD /* UITextView+WY_Extension.h */,
-			);
-			path = UITextView;
-			sourceTree = "<group>";
-		};
-		84AACD2D228A6BFB00A327DD /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-				84AACD2E228A6BFB00A327DD /* NSString+Encode.h */,
-				84AACD2F228A6BFB00A327DD /* NSString+Encode.m */,
-			);
-			path = NSString;
-			sourceTree = "<group>";
-		};
-		84AACD31228A6BFB00A327DD /* UITextField */ = {
-			isa = PBXGroup;
-			children = (
-				84AACD32228A6BFB00A327DD /* UITextField+UG.h */,
-				84AACD33228A6BFB00A327DD /* UITextField+UG.m */,
-			);
-			path = UITextField;
-			sourceTree = "<group>";
-		};
-		84AACD34228A6BFB00A327DD /* NSDate */ = {
-			isa = PBXGroup;
-			children = (
-				84AACD35228A6BFB00A327DD /* NSDate+UG.h */,
-				84AACD36228A6BFB00A327DD /* NSDate+UG.m */,
-			);
-			path = NSDate;
 			sourceTree = "<group>";
 		};
 		84AACD42228A6D1700A327DD /* SuperPlayPlay */ = {
@@ -695,7 +529,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC-resources.sh",
 				"${PODS_ROOT}/NIMSDK/NIMAVChat/Resources/NMCVideoFilter.bundle",
 				"${PODS_ROOT}/SuperPlayer/SuperPlayer/Resource/SuperPlayer.bundle",
 				"${PODS_ROOT}/../Devpods/UGImagePickerController/UGImagePickerController/TZImagePickerController.bundle",
@@ -710,7 +544,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9B799A5FD3047E5F6AB460C0 /* [CP] Embed Pods Frameworks */ = {
@@ -721,12 +555,12 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/BSBacktraceLogger/BSBacktraceLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
-				"${PODS_ROOT}/DoraemonKit/iOS/DoraemonKit/Framework/DoraemonLoadAnalyze.framework",
 				"${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework",
+				"${PODS_ROOT}/DoraemonKit/iOS/DoraemonKit/Framework/DoraemonLoadAnalyze.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MMLayout/MMLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
@@ -737,6 +571,8 @@
 				"${BUILT_PRODUCTS_DIR}/PPGetAddressBook/PPGetAddressBook.framework",
 				"${BUILT_PRODUCTS_DIR}/RTRootNavigationController/RTRootNavigationController.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UGCategory/UGCategory.framework",
+				"${BUILT_PRODUCTS_DIR}/UGCycleScrollView/UGCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 				"${BUILT_PRODUCTS_DIR}/fishhook/fishhook.framework",
@@ -748,8 +584,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSBacktraceLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonLoadAnalyze.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonLoadAnalyze.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
@@ -760,13 +596,15 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPGetAddressBook.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTRootNavigationController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UGCategory.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UGCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICountingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fishhook.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UbunGit_OC/Pods-UbunGit_OC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6CEE8E0C835CE2C085E78E7 /* [CP] Check Pods Manifest.lock */ = {
@@ -800,35 +638,20 @@
 			files = (
 				84AACD4C228A6EAF00A327DD /* UG_TZImagePickSwitch.m in Sources */,
 				84380BB42236283B003E73CC /* AppDelegate+RTRootNavigationController.m in Sources */,
-				2C191134228FC24E001A35A2 /* UGCycleScrollViewFlowLayout.m in Sources */,
-				84AACD40228A6BFB00A327DD /* UITextField+UG.m in Sources */,
-				2C191133228FC24E001A35A2 /* UGCycleScrollView.m in Sources */,
 				84380BA622361DB9003E73CC /* AppDelegate+DoraemonKit.m in Sources */,
 				84380BAC22361F64003E73CC /* AppDelegate+CocoaLumberjack.m in Sources */,
 				84C73A7D2265CE2100BA5142 /* MBProgressHUDTableVC.m in Sources */,
-				84AACD3A228A6BFB00A327DD /* UIControl+UG.m in Sources */,
-				84AACD3C228A6BFB00A327DD /* UIView+UG.m in Sources */,
 				84AACD45228A6D1700A327DD /* DoraemonSuperPlay.m in Sources */,
+				8459AC582292A4E200472542 /* DoraemonUGCycleScrollView.m in Sources */,
 				843F334A227838E300F1D950 /* DMViewController.m in Sources */,
-				84AACD3F228A6BFB00A327DD /* NSString+Encode.m in Sources */,
 				84380BB0223624F8003E73CC /* AppDelegate+TavBar.m in Sources */,
-				84AACD41228A6BFB00A327DD /* NSDate+UG.m in Sources */,
-				2C191141228FC489001A35A2 /* UGCycleScrollViewTestVC.m in Sources */,
-				2C191144228FE2E0001A35A2 /* UGCycleScrollViewCell.m in Sources */,
 				84380BB922362BE5003E73CC /* AppDelegate+NIMSDK.m in Sources */,
-				84AACD37228A6BFB00A327DD /* UIImage+UG.m in Sources */,
 				84380B632235FA82003E73CC /* ViewController.m in Sources */,
-				84AACD3D228A6BFB00A327DD /* UIView+Alert.m in Sources */,
 				843F33232278151B00F1D950 /* AppDelegate+Welcom.m in Sources */,
 				843F330D2278035300F1D950 /* WelcomViewController.m in Sources */,
 				84AACD4E228A6EAF00A327DD /* DoraemonTZImagePick.m in Sources */,
-				84AACD3B228A6BFB00A327DD /* UIView+WY_Extension.m in Sources */,
-				84AACD39228A6BFB00A327DD /* UIButton+UG.m in Sources */,
 				84380BC522365AD9003E73CC /* DoraemonAddressBook.m in Sources */,
-				2C19113B228FC3AE001A35A2 /* DoraemonUGCycleScrollView.m in Sources */,
-				84AACD3E228A6BFB00A327DD /* UITextView+WY_Extension.m in Sources */,
 				84380BC22236595A003E73CC /* AddressBookController.m in Sources */,
-				84AACD38228A6BFB00A327DD /* UILabel+UG.m in Sources */,
 				84380B6E2235FA85003E73CC /* main.m in Sources */,
 				84C73A872265D13D00BA5142 /* DoraemonMBOrogressHUD.m in Sources */,
 				84380B602235FA82003E73CC /* AppDelegate.m in Sources */,
@@ -1000,9 +823,10 @@
 		};
 		84380B882235FA85003E73CC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69ACBB59EE782E4B4175EF8B /* Pods-UbunGit_OC.debug.xcconfig */;
+			baseConfigurationReference = 9135DFA5F6663568849DE325 /* Pods-UbunGit_OC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SR367C2GB;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -1021,9 +845,10 @@
 		};
 		84380B892235FA85003E73CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 712C60860FA579C7BAADA4F3 /* Pods-UbunGit_OC.release.xcconfig */;
+			baseConfigurationReference = 5F231292DCC1A06F3F9E6747 /* Pods-UbunGit_OC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SR367C2GB;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;

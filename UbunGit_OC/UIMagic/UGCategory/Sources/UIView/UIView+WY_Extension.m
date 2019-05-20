@@ -11,7 +11,6 @@
 
 #import "UITextView+WY_Extension.h"
 
-#import "AppDelegate.h"
 
 @interface UIView ()
 
@@ -110,11 +109,6 @@
     return nil;
 }
 
-- (UIViewController *)wy_currentViewController {
-    
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;;
-    return [self wy_getCurrentViewController:appDelegate.window.rootViewController];
-}
 
 //递归查找
 - (UIViewController *)wy_getCurrentViewController:(UIViewController *)controller {

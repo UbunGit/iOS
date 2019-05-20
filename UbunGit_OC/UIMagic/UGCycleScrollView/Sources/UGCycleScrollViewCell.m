@@ -26,9 +26,7 @@
         [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             
             make.left.right.top.bottom.mas_equalTo(self.contentView);
-        }];
-      
-        
+        }];  
 
     }
     return self;

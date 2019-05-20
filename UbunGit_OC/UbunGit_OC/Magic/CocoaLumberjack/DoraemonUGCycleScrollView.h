@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DoraemonPluginProtocol.h"
+
+#import <DoraemonKit/DoraemonPluginProtocol.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 

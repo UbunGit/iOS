@@ -8,7 +8,6 @@
 
 #import "UIView+Alert.h"
 #import "MBProgressHUD.h"
-#import "UIImageView+WebCache.h"
 #import "Masonry.h"
 
 #include <objc/runtime.h>
@@ -47,7 +46,7 @@
 }
 
 -(void)alert:(NSString*)msg complete:(nullable AlertViewFinesh)block{
-    dispatch_main_async_safe(^{
+
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
         hud.mode = MBProgressHUDModeText;
         hud.bezelView.backgroundColor = [UIColor blackColor];
@@ -56,7 +55,7 @@
         [hud hideAnimated:YES afterDelay:1.75];
         objc_setAssociatedObject(self, "finishedblock", block, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         [self performSelector:@selector(finishedblockDoit) withObject:nil afterDelay:1.75];
-    });
+ 
 }
 
 -(void)alertimageType:(NSString*)imagestr{
@@ -64,7 +63,7 @@
 }
 
 -(void)alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block{
-    dispatch_main_async_safe(^{
+   
         UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:imagestr]];
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
         hud.mode = MBProgressHUDModeCustomView;
@@ -75,7 +74,7 @@
         objc_setAssociatedObject(self, "finishedblock", block, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         [self performSelector:@selector(finishedblockDoit) withObject:nil afterDelay:1.75];
         [hud hideAnimated:YES afterDelay:1.75];
-    });
+  
 }
 
 -(void)finishedblockDoit{
@@ -119,9 +118,9 @@
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     hud.bezelView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0];
     
-    [abutton ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-        [hud hideAnimated:YES afterDelay:0.2];
-    }];
+//    [abutton ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
+//        [hud hideAnimated:YES afterDelay:0.2];
+//    }];
     [cancelview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.mas_equalTo(self);
         make.width.mas_equalTo(aview);
@@ -150,15 +149,15 @@
 }
 static MBProgressHUD *loadinghud = nil;
 -(void)starloading{
-    dispatch_main_async_safe(^{
+
         loadinghud = [MBProgressHUD showHUDAddedTo:self animated:YES];
         loadinghud.mode = MBProgressHUDModeIndeterminate;
-    });
+ 
 }
 -(void)stoploading{
-    dispatch_main_async_safe(^{
+
         [loadinghud hideAnimated:YES];
-    });
+ 
 }
 
 @end

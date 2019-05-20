@@ -130,6 +130,7 @@
 
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
 {
+    
     NSInteger index = [self currentIndex];
     UICollectionViewScrollPosition position = [self scrollPosition];
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];

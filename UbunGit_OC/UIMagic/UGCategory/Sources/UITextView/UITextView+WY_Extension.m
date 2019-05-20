@@ -89,15 +89,7 @@
     return [obj integerValue];
 }
 
-- (void)setWy_characterLengthPrompt:(BOOL)wy_characterLengthPrompt {
-    
-    objc_setAssociatedObject(self, &@selector(wy_characterLengthPrompt), [NSNumber numberWithBool:wy_characterLengthPrompt], OBJC_ASSOCIATION_ASSIGN);
-    [self wy_fixMessyDisplay];
-    
-    self.wy_height = (wy_characterLengthPrompt == YES) ? self.wy_height-25 : self.wy_height+25;
-    self.wy_charactersLengthLable.text = [NSString stringWithFormat:@"%lu/%ld\t",(unsigned long)self.text.length > (long)self.wy_maximumLimit ? (long)self.wy_maximumLimit : (unsigned long)self.text.length ,(long)self.wy_maximumLimit];
-    self.wy_charactersLengthLable.hidden = !wy_characterLengthPrompt;
-}
+
 
 - (BOOL)wy_characterLengthPrompt {
     
@@ -130,24 +122,7 @@
     return obj;
 }
 
-- (UILabel *)wy_charactersLengthLable {
-    
-    UILabel *obj = objc_getAssociatedObject(self, @selector(wy_charactersLengthLable));
-    if(obj == nil) {
-        
-        obj = [[UILabel alloc]initWithFrame:CGRectMake(self.wy_left, self.wy_bottom, self.wy_width, 25)];
-        obj.backgroundColor = self.backgroundColor;
-        obj.textAlignment = NSTextAlignmentRight;
-        obj.userInteractionEnabled = YES;
-        
-        objc_setAssociatedObject(self, @selector(wy_charactersLengthLable), obj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    
-    obj.font = self.wy_placeholderFont ? self.wy_placeholderFont : self.font;
-    obj.textColor = self.wy_placeholderColor ? self.wy_placeholderColor : [UIColor lightGrayColor];
-    
-    return obj;
-}
+
 
 - (void)setWy_textHandle:(void (^)(NSString *))wy_textHandle {
     
@@ -236,19 +211,7 @@
     self.wy_addNoti = YES;
 }
 
-- (void)layoutSubviews {
-    
-    [super layoutSubviews];
-    
-    if(self.wy_characterLengthPrompt == YES) {
-        
-        self.wy_charactersLengthLable.layer.borderWidth = self.layer.borderWidth;
-        self.wy_charactersLengthLable.layer.borderColor = self.layer.borderColor;
-        if(self.wy_charactersLengthLable.superview == nil) {
-            [self.superview addSubview:self.wy_charactersLengthLable];
-        }
-    }
-}
+
 
 - (void)dealloc {
     

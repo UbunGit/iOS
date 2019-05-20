@@ -8,7 +8,7 @@
 
 #import "UIButton+UG.h"
 
-
+#define UGIMAGE(str) [UIImage imageNamed:str]
 @implementation UIButton (UG)
 
 
@@ -23,7 +23,7 @@
  *  imagestr_Reserved
  */
 -(void)ug_setImage:(NSString *)imagestr{
-    
+   
     UIImage *image = UGIMAGE(imagestr);
     if (!image) {
         return;
