@@ -1,22 +1,21 @@
 //
-//  UGCycleScrollView.m
+//  BlockCollectionView.m
 //  AFNetworking
 //
 //  Created by MBA on 2019/5/18.
 //
 
-#import "UGCycleScrollView.h"
+#import "BlockCollectionView.h"
 #import "Masonry.h"
 
 
-@interface UGCycleScrollView() <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface BlockCollectionView() <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
 @property (nonatomic, assign) NSInteger indexOffset;
 
 @end
 
-
-
-@implementation UGCycleScrollView
+@implementation BlockCollectionView
 
 #pragma mark -- Init
 - (instancetype)initWithFrame:(CGRect)frame
@@ -40,7 +39,7 @@
 - (void)initialization
 {
 
-    _flowLayout = [[UGCycleScrollViewFlowLayout alloc] init];
+    _flowLayout = [[BlockCollectionViewFlowLayout alloc] init];
     _flowLayout.minimumLineSpacing = 0.f;
     _flowLayout.minimumInteritemSpacing = 0.f;
     _flowLayout.headerReferenceSize = CGSizeZero;
@@ -48,7 +47,7 @@
     _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:_flowLayout];
-    _collectionView.backgroundColor = nil;
+    _collectionView.backgroundColor = UIColor.clearColor;
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     _collectionView.bounces = NO;
@@ -56,28 +55,10 @@
     _collectionView.pagingEnabled = YES;
     _collectionView.showsHorizontalScrollIndicator = NO;
     _collectionView.showsVerticalScrollIndicator = NO;
-    [_collectionView registerClass:[UGCycleScrollViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [_collectionView registerClass:[BlockCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     [self addSubview:_collectionView];
 }
 
-- (void)setItemSize:(CGSize)itemSize{
-   
-    _itemSize = itemSize;
-    _flowLayout.itemSize = itemSize;
-    
-}
-
-- (void)setItemSpacing:(CGFloat)itemSpacing
-{
-    _itemSpacing = itemSpacing;
-    _flowLayout.minimumLineSpacing = itemSpacing;
-}
-
-- (void)setItemZoomScale:(CGFloat)itemZoomScale
-{
-    _itemZoomScale = itemZoomScale;
-    _flowLayout.zoomScale = itemZoomScale;
-}
 
 - (CGPoint)contentOffset
 {
@@ -105,11 +86,18 @@
     if (self.ug_cellForItemAtIndexPath) {
         return self.ug_cellForItemAtIndexPath(collectionView,indexPath);
     }else{
-        UGCycleScrollViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+        BlockCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
         cell.backgroundColor = [UIColor whiteColor];
         return cell;
     }
     
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.ug_sizeForItemAtIndexPath) {
+        return self.ug_sizeForItemAtIndexPath(collectionView, collectionViewLayout,indexPath);
+    }else{
+        return _flowLayout.itemSize;
+    }
 }
 
 #pragma mark -- UICollectionView Delegate
@@ -122,15 +110,21 @@
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
+    if (!_isSetcenten) {
+        return;
+    }
     NSInteger index = [self currentIndex];
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
     [_collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:[self scrollPosition]  animated:NO];
    
 }
 
+#pragma mark -- UIScrollViewDelegate Delegate
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
 {
-    
+    if (!_isSetcenten) {
+        return;
+    }
     NSInteger index = [self currentIndex];
     UICollectionViewScrollPosition position = [self scrollPosition];
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
@@ -166,7 +160,5 @@
     [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.bottom.mas_equalTo(self);
     }];
-    _flowLayout.headerReferenceSize = CGSizeMake((self.bounds.size.width - _itemSize.width) / 2, (self.bounds.size.height - _itemSize.height) / 2);
-    _flowLayout.footerReferenceSize = CGSizeMake((self.bounds.size.width - _itemSize.width) / 2, (self.bounds.size.height - _itemSize.height) / 2);
 }
 @end

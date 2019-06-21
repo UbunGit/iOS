@@ -40,9 +40,6 @@ PODS:
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MMLayout (0.1.0)
-  - mobile-ffmpeg-full (4.2.1)
-  - Mobileffmpeg (0.1.0):
-    - mobile-ffmpeg-full
   - NIMSDK (6.4.1)
   - PNChart (0.8.9):
     - UICountingLabel (~> 1.2.0)
@@ -66,21 +63,6 @@ PODS:
     - SDWebImage (~> 4.4.0)
   - SuperPlayerVC (0.1.0):
     - SuperPlayer
-  - UGCategory (1.0.0):
-    - Masonry
-    - MBProgressHUD
-  - UGCycleScrollView/Core (1.0.0):
-    - Masonry
-    - SDWebImage
-    - UGCategory
-  - UGCycleScrollView/Test (1.0.0):
-    - DoraemonKit/Core
-    - DoraemonKit/WithLoad
-    - DoraemonKit/WithLogger
-    - Masonry
-    - SDWebImage
-    - UGCategory
-    - UGCycleScrollView/Core
   - UGImagePickerController (0.1.0):
     - SuperPlayer
   - UICountingLabel (1.2.0)
@@ -93,14 +75,11 @@ DEPENDENCIES:
   - DoraemonKit/WithLogger
   - Masonry
   - MBProgressHUD
-  - Mobileffmpeg (from `./Devpods/Mobileffmpeg/`)
   - NIMSDK
   - PPGetAddressBook
   - RTRootNavigationController
   - SDWebImage
   - SuperPlayerVC (from `./Devpods/SuperPlayerVC/`)
-  - UGCategory (from `./UIMagic/UGCategory`)
-  - UGCycleScrollView/Test (from `./UIMagic/UGCycleScrollView`)
   - UGImagePickerController (from `./Devpods/UGImagePickerController/`)
 
 SPEC REPOS:
@@ -113,7 +92,6 @@ SPEC REPOS:
     - Masonry
     - MBProgressHUD
     - MMLayout
-    - mobile-ffmpeg-full
     - NIMSDK
     - PNChart
     - PPGetAddressBook
@@ -124,14 +102,8 @@ SPEC REPOS:
     - "UITextView+Placeholder"
 
 EXTERNAL SOURCES:
-  Mobileffmpeg:
-    :path: "./Devpods/Mobileffmpeg/"
   SuperPlayerVC:
     :path: "./Devpods/SuperPlayerVC/"
-  UGCategory:
-    :path: "./UIMagic/UGCategory"
-  UGCycleScrollView:
-    :path: "./UIMagic/UGCycleScrollView"
   UGImagePickerController:
     :path: "./Devpods/UGImagePickerController/"
 
@@ -144,8 +116,6 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MMLayout: 7caa6fe2ebfd018ec49ab3ac2409b454c3687995
-  mobile-ffmpeg-full: 2a2cca559a0e9b909b431b810cd8c184077b3f41
-  Mobileffmpeg: 5c127294226080314f7a5c6896f60559725b52ac
   NIMSDK: a5d714fa9808f2fbeaa161dfcaaf6a9742d58bd1
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   PPGetAddressBook: e4b6b0a87e852df5d5b90c44ecd9ded7f6f1ccf6
@@ -153,12 +123,10 @@ SPEC CHECKSUMS:
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SuperPlayer: cd2ecad5d265871f2d1de0c467c33cb5bcea4368
   SuperPlayerVC: 38260e5e41beb1beeaf0674dad4a68d654e9b794
-  UGCategory: b592053553fbf3c764cadfca3fc10b1e6b8f761c
-  UGCycleScrollView: d7d9b05c3f107060de073470c7d2eca6e92b2352
   UGImagePickerController: 9b57b227891d10ec05b1fdc7c46b0e5d3e163302
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
 
-PODFILE CHECKSUM: b06bfac01c44018c5118ba4aed1a1ffc72c423b5
+PODFILE CHECKSUM: 649ceec701023c888b67770bfec2e5737fced8cb
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.6.1

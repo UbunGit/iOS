@@ -1,13 +1,13 @@
 //
-//  UGCycleScrollViewFlowLayout.m
+//  BlockCollectionViewFlowLayout.m
 //  AFNetworking
 //
 //  Created by MBA on 2019/5/18.
 //
 
-#import "UGCycleScrollViewFlowLayout.h"
+#import "BlockCollectionViewFlowLayout.h"
 
-@implementation UGCycleScrollViewFlowLayout
+@implementation BlockCollectionViewFlowLayout
 
 - (instancetype)init
 {

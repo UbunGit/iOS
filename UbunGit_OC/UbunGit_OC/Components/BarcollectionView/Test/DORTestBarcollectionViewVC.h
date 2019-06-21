@@ -1,8 +1,8 @@
 //
-//  UGCycleScrollViewTestVC.h
+//  DORTestBarcollectionViewVC.h
 //  UbunGit_OC
 //
-//  Created by MBA on 2019/5/18.
+//  Created by admin on 2019/6/21.
 //  Copyright © 2019 admin. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UGCycleScrollViewTestVC : UIViewController
+@interface DORTestBarcollectionViewVC : UIViewController
 
 @end
 

@@ -118,9 +118,9 @@
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     hud.bezelView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0];
     
-//    [abutton ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-//        [hud hideAnimated:YES afterDelay:0.2];
-//    }];
+    [abutton ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
+        [hud hideAnimated:YES afterDelay:0.2];
+    }];
     [cancelview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.mas_equalTo(self);
         make.width.mas_equalTo(aview);

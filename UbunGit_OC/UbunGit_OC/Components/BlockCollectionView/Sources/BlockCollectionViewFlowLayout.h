@@ -1,5 +1,5 @@
 //
-//  UGCycleScrollViewFlowLayout.h
+//  BlockCollectionViewFlowLayout.h
 //  AFNetworking
 //
 //  Created by MBA on 2019/5/18.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UGCycleScrollViewFlowLayout : UICollectionViewFlowLayout
+@interface BlockCollectionViewFlowLayout : UICollectionViewFlowLayout
 
 @property (nonatomic, assign) CGFloat zoomScale; // default 1.f, it ranges from 0.f to 1.f
 

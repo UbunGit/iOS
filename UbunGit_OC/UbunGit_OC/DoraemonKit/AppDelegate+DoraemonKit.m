@@ -19,13 +19,14 @@
 //UI
     [[DoraemonManager shareInstance] addPluginWithTitle:@"TabBar" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"UI"];
     [[DoraemonManager shareInstance] addPluginWithTitle:@"导航" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"UI"];
-    [[DoraemonManager shareInstance] addPluginWithTitle:@"轮播图" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonUGCycleScrollView" atModule:@"UI"];
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"轮播图" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonBlockCollectionView" atModule:@"UI"];
  
    
 //常用功能
     [[DoraemonManager shareInstance] addPluginWithTitle:@"启动页" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"常用功能"];
     [[DoraemonManager shareInstance] addPluginWithTitle:@"广告页" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"常用功能"];
-    [[DoraemonManager shareInstance] addPluginWithTitle:@"导航页" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"常用功能"];
+    
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"选择栏" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DorBarcollectionView" atModule:@"常用功能"];
     
     [[DoraemonManager shareInstance] addPluginWithTitle:@"通讯录" icon:@"doraemon_netflow_list_select" desc:@"用于app内部环境切换功能" pluginName:@"DoraemonAddressBook" atModule:@"常用功能"];
     

@@ -17,11 +17,9 @@ target 'UbunGit_OC' do
   pod 'DoraemonKit/WithLoad'
 
   pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
-  pod 'Mobileffmpeg', :path => './Devpods/Mobileffmpeg/'
+  # pod 'Mobileffmpeg', :path => './Devpods/Mobileffmpeg/'
   pod 'UGImagePickerController', :path => './Devpods/UGImagePickerController/'
-  
-  pod 'UGCategory', :path => './UIMagic/UGCategory'
-  pod 'UGCycleScrollView/Test', :path => './UIMagic/UGCycleScrollView'
+#  pod 'BlockCollectionView/Test', :path => './UIMagic/BlockCollectionView'
 
   
 

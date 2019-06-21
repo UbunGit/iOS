@@ -1,15 +1,15 @@
 //
-//  UGCycleScrollViewCell.m
+//  BlockCollectionViewCell.m
 //  UbunGit_OC
 //
 //  Created by MBA on 2019/5/18.
 //  Copyright © 2019 admin. All rights reserved.
 //
 
-#import "UGCycleScrollViewCell.h"
+#import "BlockCollectionViewCell.h"
 #import "Masonry.h"
 
-@implementation UGCycleScrollViewCell
+@implementation BlockCollectionViewCell
 
 
 - (instancetype)initWithFrame:(CGRect)frame

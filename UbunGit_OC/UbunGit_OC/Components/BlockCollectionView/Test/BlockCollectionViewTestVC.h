@@ -1,5 +1,5 @@
 //
-//  UGCycleScrollViewCell.h
+//  BlockCollectionViewTestVC.h
 //  UbunGit_OC
 //
 //  Created by MBA on 2019/5/18.
@@ -10,11 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UGCycleScrollViewCell : UICollectionViewCell
-
-@property (nonatomic, strong) UIImageView *imageView;
-
-@property (nonatomic, strong) UIView *layview;
+@interface BlockCollectionViewTestVC : UIViewController
 
 @end
 
