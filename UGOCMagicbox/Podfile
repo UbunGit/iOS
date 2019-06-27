@@ -1,0 +1,28 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'UGOCMagicbox' do
+  
+  pod "RTRootNavigationController"
+  pod 'NIMSDK'
+  pod 'MBProgressHUD'
+  pod 'SDWebImage'
+  pod 'Masonry'
+  pod 'AFNetworking'
+  
+  pod 'PPGetAddressBook'
+  
+  pod 'DoraemonKit/Core'
+  pod 'DoraemonKit/WithLogger'
+  pod 'DoraemonKit/WithLoad'
+
+  pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
+  # pod 'Mobileffmpeg', :path => './Devpods/Mobileffmpeg/'
+  pod 'UGImagePickerController', :path => './Devpods/UGImagePickerController/'
+#  pod 'BlockCollectionView/Test', :path => './UIMagic/BlockCollectionView'
+
+  
+
+#
+
+end

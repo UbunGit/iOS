@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  UGOCMagicbox
+//
+//  Created by admin on 2019/6/26.
+//  Copyright © 2019 UG. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Magic.h"
+#import "Masonry.h"
+#import "Category.h"
+#import "AppDelegate+CocoaLumberjack.h"
+
+#endif /* PrefixHeader_pch */
