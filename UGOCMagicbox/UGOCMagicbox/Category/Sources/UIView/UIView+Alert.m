@@ -46,16 +46,16 @@
 }
 
 -(void)alert:(NSString*)msg complete:(nullable AlertViewFinesh)block{
-
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
-        hud.mode = MBProgressHUDModeText;
-        hud.bezelView.backgroundColor = [UIColor blackColor];
-        hud.label.text = msg;
-        hud.label.textColor = [UIColor whiteColor];
-        [hud hideAnimated:YES afterDelay:1.75];
-        objc_setAssociatedObject(self, "finishedblock", block, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        [self performSelector:@selector(finishedblockDoit) withObject:nil afterDelay:1.75];
- 
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.bezelView.backgroundColor = [UIColor blackColor];
+    hud.label.text = msg;
+    hud.label.textColor = [UIColor whiteColor];
+    [hud hideAnimated:YES afterDelay:1.75];
+    objc_setAssociatedObject(self, "finishedblock", block, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self performSelector:@selector(finishedblockDoit) withObject:nil afterDelay:1.75];
+    
 }
 
 -(void)alertimageType:(NSString*)imagestr{
@@ -63,18 +63,18 @@
 }
 
 -(void)alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block{
-   
-        UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:imagestr]];
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
-        hud.mode = MBProgressHUDModeCustomView;
-        hud.customView = imageView;
-        hud.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
-        hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-        hud.bezelView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0];
-        objc_setAssociatedObject(self, "finishedblock", block, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        [self performSelector:@selector(finishedblockDoit) withObject:nil afterDelay:1.75];
-        [hud hideAnimated:YES afterDelay:1.75];
-  
+    
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:imagestr]];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    hud.mode = MBProgressHUDModeCustomView;
+    hud.customView = imageView;
+    hud.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0];
+    objc_setAssociatedObject(self, "finishedblock", block, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self performSelector:@selector(finishedblockDoit) withObject:nil afterDelay:1.75];
+    [hud hideAnimated:YES afterDelay:1.75];
+    
 }
 
 -(void)finishedblockDoit{
@@ -107,10 +107,10 @@
     UIButton *abutton = [UIButton new];
     [cancelview addSubview:abutton];
     [abutton setTitle:@"关闭" forState:UIControlStateNormal];
-
+    
     cancelview.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     abutton.backgroundColor = [UIColor redColor];
-   
+    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
     hud.mode = MBProgressHUDModeCustomView;
     hud.customView = cancelview;
@@ -147,17 +147,23 @@
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window stoploading];
 }
+
 static MBProgressHUD *loadinghud = nil;
 -(void)starloading{
 
-        loadinghud = [MBProgressHUD showHUDAddedTo:self animated:YES];
-        loadinghud.mode = MBProgressHUDModeIndeterminate;
- 
+    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        obj.alpha = 0.0;
+    }];
+    loadinghud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    loadinghud.mode = MBProgressHUDModeIndeterminate;
+    
 }
 -(void)stoploading{
-
-        [loadinghud hideAnimated:YES];
- 
+    
+    [loadinghud hideAnimated:YES];
+    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        obj.alpha = 1.0;
+    }];
 }
 
 @end

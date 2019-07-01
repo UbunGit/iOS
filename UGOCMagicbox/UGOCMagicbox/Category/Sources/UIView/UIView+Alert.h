@@ -15,16 +15,18 @@ typedef void(^AlertViewFinesh)(BOOL finished);
 
 @interface UIView (Alert)
 
+//提示文字
 +(void)alert:(NSString*)msg;
+//提示文字 结束后调用block
 +(void)alert:(NSString*)msg complete:(nullable AlertViewFinesh)block;
-
-+(void)alertimageType:(NSString*)imagestr;
-+(void)alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block;
-
-
 
 -(void)alert:(NSString*)msg;
 -(void)alert:(NSString*)msg complete:(nullable AlertViewFinesh)block;
+
+//提示图片
++(void)alertimageType:(NSString*)imagestr;
+//提示图片 结束后调用block
++(void)alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block;
 
 -(void)alertimageType:(NSString*)imagestr;
 -(void)alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block;
@@ -39,9 +41,9 @@ typedef void(^AlertViewFinesh)(BOOL finished);
 
 
 +(void)starloading;
-+(void)stoploading;
-
 -(void)starloading;
+
++(void)stoploading;
 -(void)stoploading;
 
 @end

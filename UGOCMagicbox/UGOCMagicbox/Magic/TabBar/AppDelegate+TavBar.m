@@ -9,12 +9,13 @@
 #import "AppDelegate+TavBar.h"
 #import "RTRootNavigationController.h"
 #import "ViewController.h"
+#import "HomeViewController.h"
+#import "AboutMeVC.h"
 @implementation AppDelegate (TavBar)
 
 -(void)configTabBar{
     
-    ViewController *vc1 = [ViewController new];
-    vc1.view.backgroundColor = [UIColor redColor];
+    HomeViewController *vc1 = [HomeViewController new];
     vc1.title = @"VC1";
     RTRootNavigationController *nav1 = [[RTRootNavigationController alloc] initWithRootViewController:vc1];
     
@@ -23,8 +24,7 @@
     // 视图控制器的分栏按钮，如果没有被显示创建，并且被使用了，则会自动根据视图控制器的title来创建
     //vc1.tabBarItem;
     
-    UIViewController *vc2 = [[UIViewController alloc] init];
-    vc2.view.backgroundColor = [UIColor yellowColor];
+    AboutMeVC *vc2 = [[AboutMeVC alloc] init];
     vc2.title = @"VC2";
     RTRootNavigationController *nav2 = [[RTRootNavigationController alloc] initWithRootViewController:vc2];
     

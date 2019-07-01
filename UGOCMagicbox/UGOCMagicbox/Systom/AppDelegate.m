@@ -19,17 +19,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self configDoraemonKit];//配置DoraemonKit 测试工具
     [self configCocoaLumberjack];//配置CocoaLumberjack 日志
+    [[UIApplication sharedApplication]configTABAnimated];
     [self configRTRootNavigationController];
     [self configTabBar];//配置tabbar
     [self configNIMSDK];//配置网易云信
-    //配置广告页
-    [self configDMViewController:^(UIButton * _Nullable sender) {
-        //配置欢迎页
-        [self configWelcom:^(UIButton * _Nullable sender) {
-            //配置tabbar
-            [self configTabBar];
-        }];
-    }];
+//    
+//    //配置广告页
+//    [self configDMViewController:^(UIButton * _Nullable sender) {
+//        //配置欢迎页
+//        [self configWelcom:^(UIButton * _Nullable sender) {
+//            //配置tabbar
+//            [self configTabBar];
+//        }];
+//    }];
+    
+    [self configTabBar];
+
+
+    // open log
+    [TABAnimated sharedAnimated].openLog = YES;
     return YES;
 }
 

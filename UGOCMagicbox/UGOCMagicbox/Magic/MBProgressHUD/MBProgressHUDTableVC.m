@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableviewArr = @[@"自定义view"];
+    self.tableviewArr = @[@"alert",@"alertimageType",@"alertview", @"loading"];
 
 }
 
@@ -28,6 +28,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     return _tableviewArr.count;
 }
 
@@ -46,51 +47,33 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    [MessageCenter alertimageYype:@"zhucechenggong-tanchuang"];
-    [self.view alertimageType:@"zhucechenggong-tanchuang"];
+    
+    NSString *titlestr = [_tableviewArr objectAtIndex:indexPath.row];
+    if([titlestr isEqualToString:@"alert"]){
+        
+        [self.view alert:@"alert"];
+        
+    }else if([titlestr isEqualToString:@"alertimageType"]){
+        
+       [self.view alertimageType:@"tanchuang"];
+        
+    }else if([titlestr isEqualToString:@"alertview"]){
+        
+        UIView * temview = [UIView new];
+        temview.backgroundColor = [UIColor yellowColor];
+        [self.view ug_alertview:temview];
+        [temview mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(350);
+            make.height.mas_equalTo(200);
+        }];
+        
+    }else if ([titlestr isEqualToString:@"loading"]) {
+        
+        [self.view starloading];
+        [self.view performSelector:@selector(stoploading) withObject:nil afterDelay:3];
+    }
+    
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

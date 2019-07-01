@@ -9,7 +9,7 @@ target 'UGOCMagicbox' do
   pod 'SDWebImage'
   pod 'Masonry'
   pod 'AFNetworking'
-  
+  pod 'TABAnimated'
   pod 'PPGetAddressBook'
   
   pod 'DoraemonKit/Core'

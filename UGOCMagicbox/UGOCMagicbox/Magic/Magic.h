@@ -14,5 +14,9 @@
 #import "AppDelegate+TavBar.h"
 #import "AppDelegate+RTRootNavigationController.h"
 #import "AppDelegate+NIMSDK.h"
+#import "UIApplication+TABAnimated.h"
+//pod
+
+
 
 #endif /* Magic_h */

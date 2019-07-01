@@ -46,4 +46,15 @@
     [DoraemonUtil openPlugin:vc];
 }
 
+
+@end
+
+#import "MBProgressHUDTableVC.h"
+// 常用Tableview
+@implementation DoraemonMBOrogressHUD
+
+- (void)pluginDidLoad{
+    MBProgressHUDTableVC *vc = [[MBProgressHUDTableVC alloc] init];
+    [DoraemonUtil openPlugin:vc];
+}
 @end
