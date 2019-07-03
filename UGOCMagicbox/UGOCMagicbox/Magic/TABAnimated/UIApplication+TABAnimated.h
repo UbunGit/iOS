@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIApplication (TABAnimated)
 
+/**
+ * 骨架配置
+ */
 -(void)configTABAnimated;
 
 @end

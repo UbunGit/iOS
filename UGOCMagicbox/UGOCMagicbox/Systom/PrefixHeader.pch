@@ -13,5 +13,8 @@
 #import "Masonry.h"
 #import "Category.h"
 #import "AppDelegate+CocoaLumberjack.h"
+#import "UIImage+FontAwesome.h"
+#import "NSString+FontAwesome.h"
+#import <BlocksKit/BlocksKit.h>
 
 #endif /* PrefixHeader_pch */

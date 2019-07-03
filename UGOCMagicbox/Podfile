@@ -12,9 +12,20 @@ target 'UGOCMagicbox' do
   pod 'TABAnimated'
   pod 'PPGetAddressBook'
   
-  pod 'DoraemonKit/Core'
-  pod 'DoraemonKit/WithLogger'
-  pod 'DoraemonKit/WithLoad'
+  pod 'DoraemonKit/Core',  :configurations => ['Debug']
+  pod 'DoraemonKit/WithLogger', :configurations => ['Debug']
+  pod 'DoraemonKit/WithGPS',  :configurations => ['Debug']
+  pod 'DoraemonKit/WithLoad',  :configurations => ['Debug']
+#  pod 'DoraemonKit/WithWeex',  :configurations => ['Debug']
+
+  pod 'Realm'
+  pod 'BlocksKit'
+  
+  pod 'FontAwesome+iOS', :git => 'https://github.com/alexdrone/ios-fontawesome' #fontawesome字体
+  
+  pod 'AMapLocation-NO-IDFA'
+  pod 'AMap3DMap-NO-IDFA'
+  pod 'AMapSearch-NO-IDFA'
 
   pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
   # pod 'Mobileffmpeg', :path => './Devpods/Mobileffmpeg/'

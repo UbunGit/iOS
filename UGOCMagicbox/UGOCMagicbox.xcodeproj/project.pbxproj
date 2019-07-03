@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841B5EE222CB2C5B00F6DC04 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE122CB2C5B00F6DC04 /* MapView.m */; };
+		841B5EE622CB2DB300F6DC04 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE522CB2DB300F6DC04 /* MapViewController.m */; };
+		841B5EEA22CB363700F6DC04 /* Userinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE922CB363700F6DC04 /* Userinfo.m */; };
+		841B712722CC956100F6DC04 /* LocView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B712622CC956100F6DC04 /* LocView.m */; };
 		84AB5B7222C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5B7122C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m */; };
 		84AB5B7822C9FE3F002CDEF2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5B7722C9FE3F002CDEF2 /* HomeViewController.m */; };
 		84AB5B7C22CA0469002CDEF2 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5B7B22CA0469002CDEF2 /* TestTableViewCell.m */; };
@@ -14,6 +18,11 @@
 		84AB5B8622CA08F4002CDEF2 /* comic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AB5B8522CA08F4002CDEF2 /* comic.jpg */; };
 		84AB5B8822CA0BC0002CDEF2 /* TABKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AB5B8722CA0BC0002CDEF2 /* TABKit.framework */; };
 		84AB5B8D22CA121C002CDEF2 /* AboutMeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5B8C22CA121C002CDEF2 /* AboutMeVC.m */; };
+		84BA50BB22CCAF06004F6621 /* fontawesome-github.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84BA50B922CCAF06004F6621 /* fontawesome-github.jpg */; };
+		84BA50BC22CCAF06004F6621 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84BA50BA22CCAF06004F6621 /* FontAwesome.ttf */; };
+		84BA50C422CCB0B9004F6621 /* FATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA50BF22CCB0B8004F6621 /* FATableViewCell.m */; };
+		84BA50C522CCB0B9004F6621 /* FATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA50C022CCB0B8004F6621 /* FATableViewController.m */; };
+		84BA50C622CCB0B9004F6621 /* FAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA50C222CCB0B8004F6621 /* FAViewController.m */; };
 		84DB96A422C33E7F0034A927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DB96A322C33E7F0034A927 /* Assets.xcassets */; };
 		84DB96B422C33E800034A927 /* UGOCMagicboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB96B322C33E800034A927 /* UGOCMagicboxTests.m */; };
 		84DB96BF22C33E800034A927 /* UGOCMagicboxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB96BE22C33E800034A927 /* UGOCMagicboxUITests.m */; };
@@ -102,6 +111,14 @@
 /* Begin PBXFileReference section */
 		5B5268EFBFD3D7289AB4B056 /* Pods-UGOCMagicbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UGOCMagicbox.release.xcconfig"; path = "Target Support Files/Pods-UGOCMagicbox/Pods-UGOCMagicbox.release.xcconfig"; sourceTree = "<group>"; };
 		736A3F8F8181158053A95729 /* Pods_UGOCMagicbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UGOCMagicbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		841B5EE022CB2C5B00F6DC04 /* MapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		841B5EE122CB2C5B00F6DC04 /* MapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		841B5EE422CB2DB300F6DC04 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		841B5EE522CB2DB300F6DC04 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		841B5EE822CB363700F6DC04 /* Userinfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Userinfo.h; sourceTree = "<group>"; };
+		841B5EE922CB363700F6DC04 /* Userinfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Userinfo.m; sourceTree = "<group>"; };
+		841B712522CC956100F6DC04 /* LocView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocView.h; sourceTree = "<group>"; };
+		841B712622CC956100F6DC04 /* LocView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocView.m; sourceTree = "<group>"; };
 		84AB5B7022C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+BlockDelayedPerforming.h"; sourceTree = "<group>"; };
 		84AB5B7122C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BlockDelayedPerforming.m"; sourceTree = "<group>"; };
 		84AB5B7622C9FE3F002CDEF2 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -114,6 +131,14 @@
 		84AB5B8722CA0BC0002CDEF2 /* TABKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TABKit.framework; sourceTree = "<group>"; };
 		84AB5B8B22CA121C002CDEF2 /* AboutMeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutMeVC.h; sourceTree = "<group>"; };
 		84AB5B8C22CA121C002CDEF2 /* AboutMeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutMeVC.m; sourceTree = "<group>"; };
+		84BA50B922CCAF06004F6621 /* fontawesome-github.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fontawesome-github.jpg"; sourceTree = "<group>"; };
+		84BA50BA22CCAF06004F6621 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		84BA50BE22CCB0B7004F6621 /* FATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FATableViewCell.h; sourceTree = "<group>"; };
+		84BA50BF22CCB0B8004F6621 /* FATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FATableViewCell.m; sourceTree = "<group>"; };
+		84BA50C022CCB0B8004F6621 /* FATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FATableViewController.m; sourceTree = "<group>"; };
+		84BA50C122CCB0B8004F6621 /* FAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAViewController.h; sourceTree = "<group>"; };
+		84BA50C222CCB0B8004F6621 /* FAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAViewController.m; sourceTree = "<group>"; };
+		84BA50C322CCB0B9004F6621 /* FATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FATableViewController.h; sourceTree = "<group>"; };
 		84DB969722C33E710034A927 /* UGOCMagicbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGOCMagicbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB96A322C33E7F0034A927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DB96AF22C33E800034A927 /* UGOCMagicboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UGOCMagicboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,6 +300,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		841B5EDF22CB2C3600F6DC04 /* MAP */ = {
+			isa = PBXGroup;
+			children = (
+				841B5EE022CB2C5B00F6DC04 /* MapView.h */,
+				841B5EE122CB2C5B00F6DC04 /* MapView.m */,
+			);
+			path = MAP;
+			sourceTree = "<group>";
+		};
+		841B5EE322CB2D8900F6DC04 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				841B712122CC93E400F6DC04 /* View */,
+				841B5EE722CB361200F6DC04 /* Moden */,
+				841B5EE422CB2DB300F6DC04 /* MapViewController.h */,
+				841B5EE522CB2DB300F6DC04 /* MapViewController.m */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		841B5EE722CB361200F6DC04 /* Moden */ = {
+			isa = PBXGroup;
+			children = (
+				841B5EE822CB363700F6DC04 /* Userinfo.h */,
+				841B5EE922CB363700F6DC04 /* Userinfo.m */,
+			);
+			path = Moden;
+			sourceTree = "<group>";
+		};
+		841B712122CC93E400F6DC04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				841B712522CC956100F6DC04 /* LocView.h */,
+				841B712622CC956100F6DC04 /* LocView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		84AB5B7322C9F1CA002CDEF2 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +350,8 @@
 		84AB5B7422C9FDEA002CDEF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84BA50BD22CCB0A1004F6621 /* FontAwesome */,
+				841B5EE322CB2D8900F6DC04 /* MapViewController */,
 				84AB5B8922CA11D3002CDEF2 /* Seting */,
 				84AB5B7522C9FE31002CDEF2 /* Home */,
 			);
@@ -339,6 +404,28 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		84BA50B822CCAF06004F6621 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84BA50B922CCAF06004F6621 /* fontawesome-github.jpg */,
+				84BA50BA22CCAF06004F6621 /* FontAwesome.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84BA50BD22CCB0A1004F6621 /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				84BA50BE22CCB0B7004F6621 /* FATableViewCell.h */,
+				84BA50BF22CCB0B8004F6621 /* FATableViewCell.m */,
+				84BA50C322CCB0B9004F6621 /* FATableViewController.h */,
+				84BA50C022CCB0B8004F6621 /* FATableViewController.m */,
+				84BA50C122CCB0B8004F6621 /* FAViewController.h */,
+				84BA50C222CCB0B8004F6621 /* FAViewController.m */,
+			);
+			path = FontAwesome;
+			sourceTree = "<group>";
+		};
 		84DB968E22C33E710034A927 = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +435,7 @@
 				84DB969822C33E710034A927 /* Products */,
 				2ACF7559EC1C145583A05D3A /* Pods */,
 				5690AFE9D97DCD065C2E5393 /* Frameworks */,
+				84BA50B822CCAF06004F6621 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -405,6 +493,7 @@
 		84DB96CD22C33F470034A927 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				841B5EDF22CB2C3600F6DC04 /* MAP */,
 				84DB96CE22C33F470034A927 /* BarcollectionView */,
 				84DB96D422C33F480034A927 /* BlockTableview */,
 				84DB96DB22C33F480034A927 /* BlockCollectionView */,
@@ -874,6 +963,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DB974222C33F480034A927 /* iosyingdaoye3@2x.png in Resources */,
+				84BA50BC22CCAF06004F6621 /* FontAwesome.ttf in Resources */,
 				84DB974522C33F480034A927 /* iosyingdaoye1@2x.png in Resources */,
 				84DB973F22C33F480034A927 /* beijing@3x.png in Resources */,
 				84AB5B8622CA08F4002CDEF2 /* comic.jpg in Resources */,
@@ -897,6 +987,7 @@
 				84DB974622C33F480034A927 /* guanyuwomen-yunpan@2x.png in Resources */,
 				84DB974B22C33F480034A927 /* iosyingdaoye2@3x.png in Resources */,
 				84DB974422C33F480034A927 /* iosyingdaoye3@3x.png in Resources */,
+				84BA50BB22CCAF06004F6621 /* fontawesome-github.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,9 +1019,11 @@
 				"${PODS_ROOT}/Target Support Files/Pods-UGOCMagicbox/Pods-UGOCMagicbox-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/BSBacktraceLogger/BSBacktraceLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework",
 				"${PODS_ROOT}/DoraemonKit/iOS/DoraemonKit/Framework/DoraemonLoadAnalyze.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome+iOS/FontAwesome_iOS.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MMLayout/MMLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
@@ -940,6 +1033,7 @@
 				"${BUILT_PRODUCTS_DIR}/PNChart/PNChart.framework",
 				"${BUILT_PRODUCTS_DIR}/PPGetAddressBook/PPGetAddressBook.framework",
 				"${BUILT_PRODUCTS_DIR}/RTRootNavigationController/RTRootNavigationController.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TABAnimated/TABAnimated.framework",
 				"${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework",
@@ -952,9 +1046,11 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSBacktraceLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonLoadAnalyze.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_iOS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
@@ -964,6 +1060,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PNChart.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPGetAddressBook.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTRootNavigationController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TABAnimated.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICountingLabel.framework",
@@ -984,6 +1081,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UGOCMagicbox/Pods-UGOCMagicbox-resources.sh",
+				"${PODS_ROOT}/AMap3DMap-NO-IDFA/MAMapKit.framework/AMap.bundle",
 				"${PODS_ROOT}/NIMSDK/NIMAVChat/Resources/NMCVideoFilter.bundle",
 				"${PODS_ROOT}/SuperPlayer/SuperPlayer/Resource/SuperPlayer.bundle",
 				"${PODS_ROOT}/../Devpods/UGImagePickerController/UGImagePickerController/TZImagePickerController.bundle",
@@ -992,6 +1090,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NMCVideoFilter.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SuperPlayer.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
@@ -1032,9 +1131,11 @@
 			files = (
 				84DB979122C347B10034A927 /* DoraemonTZImagePick.m in Sources */,
 				84DB975622C33F480034A927 /* UITextView+WY_Extension.m in Sources */,
+				84BA50C422CCB0B9004F6621 /* FATableViewCell.m in Sources */,
 				84DB976322C3400E0034A927 /* ViewController.m in Sources */,
 				84DB978E22C347B10034A927 /* AppDelegate+TavBar.m in Sources */,
 				84DB973B22C33F480034A927 /* BlockCollectionViewFlowLayout.m in Sources */,
+				84BA50C522CCB0B9004F6621 /* FATableViewController.m in Sources */,
 				84AB5B7C22CA0469002CDEF2 /* TestTableViewCell.m in Sources */,
 				84DB973322C33F480034A927 /* TabbarCollectionCell.m in Sources */,
 				84DB979722C347B10034A927 /* MBProgressHUDTableVC.m in Sources */,
@@ -1056,11 +1157,13 @@
 				84AB5B8422CA0789002CDEF2 /* UIApplication+TABAnimated.m in Sources */,
 				84DB975222C33F480034A927 /* UIControl+UG.m in Sources */,
 				84DB973522C33F480034A927 /* BlockCollectionViewTestVC.m in Sources */,
+				841B5EE622CB2DB300F6DC04 /* MapViewController.m in Sources */,
 				84DB979822C347B10034A927 /* DoraemonSuperPlay.m in Sources */,
 				84DB973E22C33F480034A927 /* DMViewController.m in Sources */,
 				84DB974D22C33F480034A927 /* UIImage+UG.m in Sources */,
 				84DB972F22C33F480034A927 /* DORTestBarcollectionViewVC.m in Sources */,
 				84DB974822C33F480034A927 /* WelcomViewController.m in Sources */,
+				841B5EEA22CB363700F6DC04 /* Userinfo.m in Sources */,
 				84DB974F22C33F480034A927 /* UIButton+UG.m in Sources */,
 				84DB975722C33F480034A927 /* NSString+Encode.m in Sources */,
 				84DB973D22C33F480034A927 /* BlockCollectionViewCell.m in Sources */,
@@ -1069,9 +1172,12 @@
 				84DB974A22C33F480034A927 /* AppDelegate+Welcom.m in Sources */,
 				84DB975A22C33F480034A927 /* AppDelegate+DoraemonKit.m in Sources */,
 				84DB973C22C33F480034A927 /* BlockCollectionView.m in Sources */,
+				84BA50C622CCB0B9004F6621 /* FAViewController.m in Sources */,
+				841B5EE222CB2C5B00F6DC04 /* MapView.m in Sources */,
 				84DB975822C33F480034A927 /* UITextField+UG.m in Sources */,
 				84DB975922C33F480034A927 /* NSDate+UG.m in Sources */,
 				84AB5B8D22CA121C002CDEF2 /* AboutMeVC.m in Sources */,
+				841B712722CC956100F6DC04 /* LocView.m in Sources */,
 				84AB5B7222C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m in Sources */,
 				84DB975422C33F480034A927 /* UIView+UG.m in Sources */,
 				84DB973222C33F480034A927 /* BlockTableView.m in Sources */,

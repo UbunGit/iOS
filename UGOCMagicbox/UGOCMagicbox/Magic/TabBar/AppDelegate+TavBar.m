@@ -11,6 +11,10 @@
 #import "ViewController.h"
 #import "HomeViewController.h"
 #import "AboutMeVC.h"
+#import "MapViewController.h"
+#import "FATableViewController.h"
+
+
 @implementation AppDelegate (TavBar)
 
 -(void)configTabBar{
@@ -28,15 +32,13 @@
     vc2.title = @"VC2";
     RTRootNavigationController *nav2 = [[RTRootNavigationController alloc] initWithRootViewController:vc2];
     
-    UIViewController *vc3 = [[UIViewController alloc] init];
-    vc3.view.backgroundColor = [UIColor blueColor];
-    vc3.title = @"VC3";
+    MapViewController *vc3 = [[MapViewController alloc] init];
+    vc3.title = @"地图";
     RTRootNavigationController *nav3 = [[RTRootNavigationController alloc] initWithRootViewController:vc3];
     
     
-    UIViewController *vc4 = [[UIViewController alloc] init];
-    vc4.view.backgroundColor = [UIColor greenColor];
-    vc4.title = @"VC4";
+    FATableViewController *vc4 = [[FATableViewController alloc] init];
+    vc4.title = [NSString fontAwesomeIconStringForIconIdentifier:@"fa-user"];
     RTRootNavigationController *nav4 = [[RTRootNavigationController alloc] initWithRootViewController:vc4];
     
     // 创建分栏(标签栏)控制器, 和导航控制器一样，都是用来管理视图控制器的容器类型的控制器。
