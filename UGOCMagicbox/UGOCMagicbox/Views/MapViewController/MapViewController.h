@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MapView.h"
+#import "BlockMAMapView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MapViewController : UIViewController
 
-@property(strong, nonnull) MapView* mapview;
+@property(strong, nonnull) BlockMAMapView* mapview;//地图view
 
 @end
 

@@ -1,20 +1,18 @@
 //
-//  MapView.m
+//  BlockMAMapView.m
 //  UGOCMagicbox
 //
 //  Created by admin on 2019/7/2.
 //  Copyright © 2019 UG. All rights reserved.
 //
 
-#import "MapView.h"
+#import "BlockMAMapView.h"
 
-@interface MapView()
-
-
+@interface BlockMAMapView()<MAMapViewDelegate>
 
 @end
 
-@implementation MapView
+@implementation BlockMAMapView
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self == [super initWithFrame:frame]) {
@@ -29,11 +27,19 @@
 }
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation
 {
-    if (_viewForAnnotation) {
-        return _viewForAnnotation(mapView,annotation);
+    if (_ug_viewForAnnotation) {
+        return _ug_viewForAnnotation(mapView,annotation);
     }
     return nil;
     
+}
+
+- (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id <MAOverlay>)overlay
+{
+    if (_ug_rendererForOverlay) {
+        return _ug_rendererForOverlay(mapView, overlay);
+    }
+    return nil;
 }
 
 -(void)layoutSubviews{

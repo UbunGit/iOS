@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BlockMAMapView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LocView : UIView
+@interface LocView : MAAnnotationView
 
-@property(strong, nonnull) UILabel* titleLab;
+@property(strong, nonnull) UILabel* titleLab;//用户名
+
+@property(strong, nonnull) UIImageView* headImageview;//头像
+
+@property(strong, nonnull) UIButton* clickbtn;//点击btn
 
 @end
 

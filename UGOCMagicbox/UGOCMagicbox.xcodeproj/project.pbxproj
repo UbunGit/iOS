@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		841B5EE222CB2C5B00F6DC04 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE122CB2C5B00F6DC04 /* MapView.m */; };
+		841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE122CB2C5B00F6DC04 /* BlockMAMapView.m */; };
 		841B5EE622CB2DB300F6DC04 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE522CB2DB300F6DC04 /* MapViewController.m */; };
 		841B5EEA22CB363700F6DC04 /* Userinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE922CB363700F6DC04 /* Userinfo.m */; };
 		841B712722CC956100F6DC04 /* LocView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B712622CC956100F6DC04 /* LocView.m */; };
@@ -111,8 +111,8 @@
 /* Begin PBXFileReference section */
 		5B5268EFBFD3D7289AB4B056 /* Pods-UGOCMagicbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UGOCMagicbox.release.xcconfig"; path = "Target Support Files/Pods-UGOCMagicbox/Pods-UGOCMagicbox.release.xcconfig"; sourceTree = "<group>"; };
 		736A3F8F8181158053A95729 /* Pods_UGOCMagicbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UGOCMagicbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		841B5EE022CB2C5B00F6DC04 /* MapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
-		841B5EE122CB2C5B00F6DC04 /* MapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		841B5EE022CB2C5B00F6DC04 /* BlockMAMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockMAMapView.h; sourceTree = "<group>"; };
+		841B5EE122CB2C5B00F6DC04 /* BlockMAMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockMAMapView.m; sourceTree = "<group>"; };
 		841B5EE422CB2DB300F6DC04 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		841B5EE522CB2DB300F6DC04 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		841B5EE822CB363700F6DC04 /* Userinfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Userinfo.h; sourceTree = "<group>"; };
@@ -303,8 +303,8 @@
 		841B5EDF22CB2C3600F6DC04 /* MAP */ = {
 			isa = PBXGroup;
 			children = (
-				841B5EE022CB2C5B00F6DC04 /* MapView.h */,
-				841B5EE122CB2C5B00F6DC04 /* MapView.m */,
+				841B5EE022CB2C5B00F6DC04 /* BlockMAMapView.h */,
+				841B5EE122CB2C5B00F6DC04 /* BlockMAMapView.m */,
 			);
 			path = MAP;
 			sourceTree = "<group>";
@@ -1173,7 +1173,7 @@
 				84DB975A22C33F480034A927 /* AppDelegate+DoraemonKit.m in Sources */,
 				84DB973C22C33F480034A927 /* BlockCollectionView.m in Sources */,
 				84BA50C622CCB0B9004F6621 /* FAViewController.m in Sources */,
-				841B5EE222CB2C5B00F6DC04 /* MapView.m in Sources */,
+				841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */,
 				84DB975822C33F480034A927 /* UITextField+UG.m in Sources */,
 				84DB975922C33F480034A927 /* NSDate+UG.m in Sources */,
 				84AB5B8D22CA121C002CDEF2 /* AboutMeVC.m in Sources */,
