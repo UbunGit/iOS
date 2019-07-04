@@ -764,7 +764,6 @@
 			isa = PBXGroup;
 			children = (
 				84AB5B7E22CA06B8002CDEF2 /* TABAnimated */,
-				84DB976922C347B10034A927 /* Magic.h */,
 				84DB976A22C347B10034A927 /* RTRootNavigationController */,
 				84DB976D22C347B10034A927 /* NIMSDK */,
 				84DB977022C347B10034A927 /* CocoaLumberjack */,
@@ -773,6 +772,7 @@
 				84DB977C22C347B10034A927 /* PPGetAddressBook */,
 				84DB978122C347B10034A927 /* MBProgressHUD */,
 				84DB978822C347B10034A927 /* SuperPlayPlay */,
+				84DB976922C347B10034A927 /* Magic.h */,
 			);
 			path = Magic;
 			sourceTree = "<group>";

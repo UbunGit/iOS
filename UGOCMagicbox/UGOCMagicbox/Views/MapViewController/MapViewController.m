@@ -99,7 +99,7 @@
             [realm addObject:userinfo];
             [self mapaddAnnotationUserinfo:userinfo];
         }];
-        [self.view alert:[NSString stringWithFormat:@"经%f 维%f",touchMapCoordinate.latitude,touchMapCoordinate.longitude]];
+        [self.view ug_msg:[NSString stringWithFormat:@"经%f 维%f",touchMapCoordinate.latitude,touchMapCoordinate.longitude]];
     }]];
     //长按手势
     __block CGPoint beginpoint;
@@ -126,7 +126,7 @@
             
             //在地图上添加圆
             [self.mapview.mapView addOverlay: circle];
-            [self.view alert:[NSString stringWithFormat:@"%f",distance]];
+            [self.view ug_msg:[NSString stringWithFormat:@"%f",distance]];
         }
     }]];
 

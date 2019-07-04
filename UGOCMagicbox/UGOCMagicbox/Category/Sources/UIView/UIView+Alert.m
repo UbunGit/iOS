@@ -18,34 +18,34 @@
 
 @implementation UIView (Alert)
 
-+(void)alert:(NSString*)msg{
++(void)ug_msg:(NSString*)msg{
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [window alert:msg];
+    [window ug_msg:msg];
 }
-+(void)alert:(NSString*)msg complete:(AlertViewFinesh)block{
++(void)ug_msg:(NSString*)msg complete:(AlertViewFinesh)block{
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [window alert:msg complete:block];
+    [window ug_msg:msg complete:block];
 }
 
-+(void)alertimageType:(NSString*)imagestr{
++(void)ug_alertimageType:(NSString*)imagestr{
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [window alertimageType:imagestr];
+    [window ug_alertimageType:imagestr];
     
 }
 
-+(void)alertimageType:(NSString*)imagestr complete:(AlertViewFinesh)block{
++(void)ug_alertimageType:(NSString*)imagestr complete:(AlertViewFinesh)block{
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [window alertimageType:imagestr complete:block];
+    [window ug_alertimageType:imagestr complete:block];
 }
 
 
 
--(void)alert:(NSString*)msg{
-    [self alert:msg complete:nil];
+-(void)ug_msg:(NSString*)msg{
+    [self ug_msg:msg complete:nil];
 }
 
--(void)alert:(NSString*)msg complete:(nullable AlertViewFinesh)block{
+-(void)ug_msg:(NSString*)msg complete:(nullable AlertViewFinesh)block{
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
     hud.mode = MBProgressHUDModeText;
@@ -58,11 +58,11 @@
     
 }
 
--(void)alertimageType:(NSString*)imagestr{
-    [self alertimageType:imagestr complete:nil];
+-(void)ug_alertimageType:(NSString*)imagestr{
+    [self ug_alertimageType:imagestr complete:nil];
 }
 
--(void)alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block{
+-(void)ug_alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block{
     
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:imagestr]];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
@@ -139,17 +139,17 @@
 }
 
 
-+(void)starloading{
++(void)ug_starloading{
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [window starloading];
+    [window ug_starloading];
 }
-+(void)stoploading{
++(void)ug_stoploading{
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    [window stoploading];
+    [window ug_stoploading];
 }
 
 static MBProgressHUD *loadinghud = nil;
--(void)starloading{
+-(void)ug_starloading{
 
     [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.alpha = 0.0;
@@ -158,7 +158,7 @@ static MBProgressHUD *loadinghud = nil;
     loadinghud.mode = MBProgressHUDModeIndeterminate;
     
 }
--(void)stoploading{
+-(void)ug_stoploading{
     
     [loadinghud hideAnimated:YES];
     [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

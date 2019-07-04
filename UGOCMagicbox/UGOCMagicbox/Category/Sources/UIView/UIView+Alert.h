@@ -16,35 +16,35 @@ typedef void(^AlertViewFinesh)(BOOL finished);
 @interface UIView (Alert)
 
 //提示文字
-+(void)alert:(NSString*)msg;
-//提示文字 结束后调用block
-+(void)alert:(NSString*)msg complete:(nullable AlertViewFinesh)block;
++(void)ug_msg:(NSString*)msg;
+-(void)ug_msg:(NSString*)msg;
 
--(void)alert:(NSString*)msg;
--(void)alert:(NSString*)msg complete:(nullable AlertViewFinesh)block;
+//提示文字 结束后调用block
++(void)ug_msg:(NSString*)msg complete:(nullable AlertViewFinesh)block;
+-(void)ug_msg:(NSString*)msg complete:(nullable AlertViewFinesh)block;
 
 //提示图片
-+(void)alertimageType:(NSString*)imagestr;
-//提示图片 结束后调用block
-+(void)alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block;
++(void)ug_alertimageType:(NSString*)imagestr;
+-(void)ug_alertimageType:(NSString*)imagestr;
 
--(void)alertimageType:(NSString*)imagestr;
--(void)alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block;
+//提示图片 结束后调用block
++(void)ug_alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block;
+-(void)ug_alertimageType:(NSString*)imagestr complete:(nullable AlertViewFinesh)block;
 
 //弹出给定的view，自带取消按钮
 +(void)ug_alertview:(UIView*)aview;
-+(void)ug_alertview:(UIView*)aview complete:(nullable AlertViewFinesh)block;
-
-//弹出给定的view，自带取消按钮
 -(void)ug_alertview:(UIView*)aview;
+
+//弹出给定的view，自带取消按钮 结束后调用block
++(void)ug_alertview:(UIView*)aview complete:(nullable AlertViewFinesh)block;
 -(void)ug_alertview:(UIView*)aview complete:(nullable AlertViewFinesh)block;
 
+// loading框
++(void)ug_starloading;
+-(void)ug_starloading;
 
-+(void)starloading;
--(void)starloading;
-
-+(void)stoploading;
--(void)stoploading;
++(void)ug_stoploading;
+-(void)ug_stoploading;
 
 @end
 

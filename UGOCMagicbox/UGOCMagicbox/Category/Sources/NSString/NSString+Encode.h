@@ -38,6 +38,9 @@
  */
 -(NSString *)ug_urldecodedString;
 
+/**
+ * md5
+ */
 -(NSString *)md5;
 
 @end

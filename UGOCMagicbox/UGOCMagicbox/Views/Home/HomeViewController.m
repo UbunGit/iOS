@@ -65,7 +65,7 @@
         return 44;
     };
     _blockTableView.didSelectRowAtIndexPath = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
-        [self.view alert:@"00"];
+        [self.view ug_msg:@"00"];
     };
 
 }

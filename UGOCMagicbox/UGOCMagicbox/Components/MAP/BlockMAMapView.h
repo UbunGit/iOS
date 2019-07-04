@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(copy, nonatomic) MAAnnotationView* (^ug_viewForAnnotation)(MAMapView* mapView,id <MAAnnotation> annotation);
 
 @property(copy, nonatomic) MAOverlayRenderer* (^ug_rendererForOverlay)(MAMapView* mapView,id <MAOverlay> overlay);
+
 @end
 
 NS_ASSUME_NONNULL_END

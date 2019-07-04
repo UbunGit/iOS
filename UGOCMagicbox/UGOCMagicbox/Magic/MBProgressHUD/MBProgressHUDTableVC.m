@@ -51,11 +51,11 @@
     NSString *titlestr = [_tableviewArr objectAtIndex:indexPath.row];
     if([titlestr isEqualToString:@"alert"]){
         
-        [self.view alert:@"alert"];
+        [self.view ug_msg:@"alert"];
         
     }else if([titlestr isEqualToString:@"alertimageType"]){
         
-       [self.view alertimageType:@"tanchuang"];
+       [self.view ug_alertimageType:@"tanchuang"];
         
     }else if([titlestr isEqualToString:@"alertview"]){
         
@@ -69,8 +69,8 @@
         
     }else if ([titlestr isEqualToString:@"loading"]) {
         
-        [self.view starloading];
-        [self.view performSelector:@selector(stoploading) withObject:nil afterDelay:3];
+        [self.view ug_starloading];
+        [self.view performSelector:@selector(ug_stoploading) withObject:nil afterDelay:3];
     }
     
 }
