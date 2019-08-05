@@ -47,7 +47,7 @@
 }
 
 
-@end
+@end 
 
 #import "MBProgressHUDTableVC.h"
 // 常用Tableview
@@ -58,3 +58,14 @@
     [DoraemonUtil openPlugin:vc];
 }
 @end
+
+#import "UGDrawingVC.h"
+// 常用Tableview
+@implementation DorUGDrawingView
+
+- (void)pluginDidLoad{
+    UGDrawingVC *vc = [[UGDrawingVC alloc] init];
+    [DoraemonUtil openPlugin:vc];
+}
+@end
+

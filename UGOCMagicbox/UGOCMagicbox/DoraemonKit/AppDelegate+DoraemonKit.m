@@ -37,6 +37,10 @@
     [[DoraemonManager shareInstance] addPluginWithTitle:@"弹框" icon:@"doraemon_netflow_list_select" desc:@"用于弹框测试" pluginName:@"DoraemonMBOrogressHUD" atModule:@"常用功能"];
     
     [[DoraemonManager shareInstance] addPluginWithTitle:@"相册选择" icon:@"doraemon_netflow_list_select" desc:@"用于TZimagePickviewcontroll" pluginName:@"DoraemonTZImagePick" atModule:@"常用功能"];
+    
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"画图" icon:@"doraemon_netflow_list_select" desc:@"绘图" pluginName:@"DorUGDrawingView" atModule:@"常用功能"];
+    
+    
 
     [[DoraemonManager shareInstance] install];
 #endif

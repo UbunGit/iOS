@@ -9,7 +9,7 @@
 #import "AboutMeVC.h"
 #import <TABKit/TABKit.h>
 #import "TABAnimated.h"
-
+#import <AVFoundation/AVFoundation.h>
 
 #define imgWidth kHeight(100)
 
@@ -20,7 +20,7 @@
 @property (nonatomic,strong) UILabel *titleLab;
 @property (nonatomic,strong) UILabel *firstInfoLab;
 @property (nonatomic,strong) UILabel *secondInfoLab;
-
+@property (nonatomic,strong) UITextView *testtfview;
 @property (nonatomic,strong) UIButton *commitBtn;
 
 @end
@@ -39,17 +39,8 @@
         view.animation(2).width(220);
         view.animation(3).width(180);
     };
-    
-    // 启动动画
-    // 默认延迟时间0.4s
-//    [self.mainView tab_startAnimationWithCompletion:^{
-//        // 请求数据
-//        // ...
-//        // 获得数据
-//        // ...
-//        [self afterGetData];
-//    }];
-    [self.mainView tab_startAnimationWithDelayTime:5 completion:^{
+
+    [self.mainView tab_startAnimationWithDelayTime:2 completion:^{
         [self afterGetData];
         [self.mainView tab_endAnimationEaseOut];
     }];
@@ -85,6 +76,7 @@
     [self.mainView addSubview:self.firstInfoLab];
     [self.mainView addSubview:self.secondInfoLab];
     [self.mainView addSubview:self.commitBtn];
+    [self.mainView addSubview:self.testtfview];
 }
 
 #pragma mark - Lazy Method
@@ -132,7 +124,14 @@
     }
     return _secondInfoLab;
 }
-
+static AVPlayer *player = nil;
+-(AVPlayer *)getplayer{
+    if (!player) {
+        player = [[AVPlayer alloc] init];
+        player.volume = 1.0; // 默认最大音量
+    }
+    return player;
+}
 - (UIButton *)commitBtn {
     if (!_commitBtn) {
         _commitBtn = [[UIButton alloc] init];
@@ -141,10 +140,31 @@
         _commitBtn.layer.cornerRadius = 5.0f;
         [_commitBtn.titleLabel setFont:kFont(16)];
         [_commitBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-//            [self.view alert:@"加入我们"];
+            
+            NSURL *url0 = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"test.mp3" ofType:nil]];
+            NSURL * url1  = [NSURL URLWithString:@"http://diangoucomment-1258058953.cos.ap-guangzhou.myqcloud.com/WishDate/30925441562912197264.mp3".ug_urlencodedString];
+            NSURL * url2  = [NSURL URLWithString:@"http://diangoucomment-1258058953.cos.ap-guangzhou.myqcloud.com/WishDate/30925441562912197264.mp3"];
+            NSURL * url3  = [NSURL URLWithString:@"http://diangoucomment-1258058953.cos.ap-guangzhou.myqcloud.com/WishDate/15607419948613092544.amr"];
+            AVPlayerItem * songItem = [[AVPlayerItem alloc]initWithURL:url3];
+            AVPlayer * templayer = [self getplayer];
+            [templayer play];
+            [templayer replaceCurrentItemWithPlayerItem:songItem];
+            
         }];
     }
     return _commitBtn;
+}
+-(UITextView *)testtfview{
+    if (!_testtfview) {
+        _testtfview = [UITextView new];
+        _testtfview.frame = CGRectMake(kWidth(28), CGRectGetMaxY(self.topImg.frame)-kHeight(80), kScreenWidth - kWidth(28)*2, 200);
+        _testtfview.ug_maximumLimit = 10;
+        _testtfview.ug_placeholderStr = @"我是谁？";
+        _testtfview.ug_placeholderColor = UIColor.ug_random;
+        _testtfview.ug_characterLengthPrompt = YES;
+    }
+    return _testtfview;
+    
 }
 
 

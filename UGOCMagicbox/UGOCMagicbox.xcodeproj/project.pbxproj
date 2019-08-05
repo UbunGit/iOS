@@ -23,6 +23,9 @@
 		84BA50C422CCB0B9004F6621 /* FATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA50BF22CCB0B8004F6621 /* FATableViewCell.m */; };
 		84BA50C522CCB0B9004F6621 /* FATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA50C022CCB0B8004F6621 /* FATableViewController.m */; };
 		84BA50C622CCB0B9004F6621 /* FAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA50C222CCB0B8004F6621 /* FAViewController.m */; };
+		84BA50D022D2DBED004F6621 /* UGDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA50CF22D2DBEC004F6621 /* UGDrawingView.m */; };
+		84BA50D422D2DF50004F6621 /* UGDrawingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA50D322D2DF50004F6621 /* UGDrawingVC.m */; };
+		84CDF3EA22D86D5A00D2EE07 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84CDF3E922D86D5A00D2EE07 /* test.mp3 */; };
 		84DB96A422C33E7F0034A927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DB96A322C33E7F0034A927 /* Assets.xcassets */; };
 		84DB96B422C33E800034A927 /* UGOCMagicboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB96B322C33E800034A927 /* UGOCMagicboxTests.m */; };
 		84DB96BF22C33E800034A927 /* UGOCMagicboxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB96BE22C33E800034A927 /* UGOCMagicboxUITests.m */; };
@@ -64,7 +67,7 @@
 		84DB975322C33F480034A927 /* UIView+WY_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB971722C33F480034A927 /* UIView+WY_Extension.m */; };
 		84DB975422C33F480034A927 /* UIView+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB971A22C33F480034A927 /* UIView+UG.m */; };
 		84DB975522C33F480034A927 /* UIView+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB971C22C33F480034A927 /* UIView+Alert.m */; };
-		84DB975622C33F480034A927 /* UITextView+WY_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB971E22C33F480034A927 /* UITextView+WY_Extension.m */; };
+		84DB975622C33F480034A927 /* UITextView+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB971E22C33F480034A927 /* UITextView+UG.m */; };
 		84DB975722C33F480034A927 /* NSString+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB972222C33F480034A927 /* NSString+Encode.m */; };
 		84DB975822C33F480034A927 /* UITextField+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB972622C33F480034A927 /* UITextField+UG.m */; };
 		84DB975922C33F480034A927 /* NSDate+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB972922C33F480034A927 /* NSDate+UG.m */; };
@@ -139,6 +142,11 @@
 		84BA50C122CCB0B8004F6621 /* FAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAViewController.h; sourceTree = "<group>"; };
 		84BA50C222CCB0B8004F6621 /* FAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAViewController.m; sourceTree = "<group>"; };
 		84BA50C322CCB0B9004F6621 /* FATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FATableViewController.h; sourceTree = "<group>"; };
+		84BA50CE22D2DBEC004F6621 /* UGDrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGDrawingView.h; sourceTree = "<group>"; };
+		84BA50CF22D2DBEC004F6621 /* UGDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGDrawingView.m; sourceTree = "<group>"; };
+		84BA50D222D2DF50004F6621 /* UGDrawingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGDrawingVC.h; sourceTree = "<group>"; };
+		84BA50D322D2DF50004F6621 /* UGDrawingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGDrawingVC.m; sourceTree = "<group>"; };
+		84CDF3E922D86D5A00D2EE07 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
 		84DB969722C33E710034A927 /* UGOCMagicbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGOCMagicbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB96A322C33E7F0034A927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DB96AF22C33E800034A927 /* UGOCMagicboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UGOCMagicboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,8 +214,8 @@
 		84DB971A22C33F480034A927 /* UIView+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UG.m"; sourceTree = "<group>"; };
 		84DB971B22C33F480034A927 /* UIView+WY_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WY_Extension.h"; sourceTree = "<group>"; };
 		84DB971C22C33F480034A927 /* UIView+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Alert.m"; sourceTree = "<group>"; };
-		84DB971E22C33F480034A927 /* UITextView+WY_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+WY_Extension.m"; sourceTree = "<group>"; };
-		84DB971F22C33F480034A927 /* UITextView+WY_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+WY_Extension.h"; sourceTree = "<group>"; };
+		84DB971E22C33F480034A927 /* UITextView+UG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+UG.m"; sourceTree = "<group>"; };
+		84DB971F22C33F480034A927 /* UITextView+UG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+UG.h"; sourceTree = "<group>"; };
 		84DB972122C33F480034A927 /* NSString+Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encode.h"; sourceTree = "<group>"; };
 		84DB972222C33F480034A927 /* NSString+Encode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encode.m"; sourceTree = "<group>"; };
 		84DB972322C33F480034A927 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -407,6 +415,7 @@
 		84BA50B822CCAF06004F6621 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84CDF3E922D86D5A00D2EE07 /* test.mp3 */,
 				84BA50B922CCAF06004F6621 /* fontawesome-github.jpg */,
 				84BA50BA22CCAF06004F6621 /* FontAwesome.ttf */,
 			);
@@ -424,6 +433,25 @@
 				84BA50C222CCB0B8004F6621 /* FAViewController.m */,
 			);
 			path = FontAwesome;
+			sourceTree = "<group>";
+		};
+		84BA50CD22D2DBCD004F6621 /* UGDrawingView */ = {
+			isa = PBXGroup;
+			children = (
+				84BA50D122D2DF2A004F6621 /* Test */,
+				84BA50CE22D2DBEC004F6621 /* UGDrawingView.h */,
+				84BA50CF22D2DBEC004F6621 /* UGDrawingView.m */,
+			);
+			path = UGDrawingView;
+			sourceTree = "<group>";
+		};
+		84BA50D122D2DF2A004F6621 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				84BA50D222D2DF50004F6621 /* UGDrawingVC.h */,
+				84BA50D322D2DF50004F6621 /* UGDrawingVC.m */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		84DB968E22C33E710034A927 = {
@@ -701,8 +729,8 @@
 		84DB971D22C33F480034A927 /* UITextView */ = {
 			isa = PBXGroup;
 			children = (
-				84DB971E22C33F480034A927 /* UITextView+WY_Extension.m */,
-				84DB971F22C33F480034A927 /* UITextView+WY_Extension.h */,
+				84DB971E22C33F480034A927 /* UITextView+UG.m */,
+				84DB971F22C33F480034A927 /* UITextView+UG.h */,
 			);
 			path = UITextView;
 			sourceTree = "<group>";
@@ -763,6 +791,7 @@
 		84DB976822C347B10034A927 /* Magic */ = {
 			isa = PBXGroup;
 			children = (
+				84BA50CD22D2DBCD004F6621 /* UGDrawingView */,
 				84AB5B7E22CA06B8002CDEF2 /* TABAnimated */,
 				84DB976A22C347B10034A927 /* RTRootNavigationController */,
 				84DB976D22C347B10034A927 /* NIMSDK */,
@@ -973,6 +1002,7 @@
 				84DB973922C33F480034A927 /* 家-icon-橙色@2x.png in Resources */,
 				84DB979422C347B10034A927 /* tanchuang@2x.png in Resources */,
 				84DB979022C347B10034A927 /* UG_TZImagePickSwitch.xib in Resources */,
+				84CDF3EA22D86D5A00D2EE07 /* test.mp3 in Resources */,
 				84DB97A522C349C00034A927 /* LaunchScreen.storyboard in Resources */,
 				84DB974922C33F480034A927 /* iosyingdaoye2@2x.png in Resources */,
 				84DB974322C33F480034A927 /* DMViewController.xib in Resources */,
@@ -1130,7 +1160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DB979122C347B10034A927 /* DoraemonTZImagePick.m in Sources */,
-				84DB975622C33F480034A927 /* UITextView+WY_Extension.m in Sources */,
+				84DB975622C33F480034A927 /* UITextView+UG.m in Sources */,
 				84BA50C422CCB0B9004F6621 /* FATableViewCell.m in Sources */,
 				84DB976322C3400E0034A927 /* ViewController.m in Sources */,
 				84DB978E22C347B10034A927 /* AppDelegate+TavBar.m in Sources */,
@@ -1179,6 +1209,8 @@
 				84AB5B8D22CA121C002CDEF2 /* AboutMeVC.m in Sources */,
 				841B712722CC956100F6DC04 /* LocView.m in Sources */,
 				84AB5B7222C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m in Sources */,
+				84BA50D022D2DBED004F6621 /* UGDrawingView.m in Sources */,
+				84BA50D422D2DF50004F6621 /* UGDrawingVC.m in Sources */,
 				84DB975422C33F480034A927 /* UIView+UG.m in Sources */,
 				84DB973222C33F480034A927 /* BlockTableView.m in Sources */,
 			);

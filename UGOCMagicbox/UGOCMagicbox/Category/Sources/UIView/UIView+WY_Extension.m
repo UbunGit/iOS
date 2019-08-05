@@ -9,7 +9,6 @@
 #import "UIView+WY_Extension.h"
 #include <objc/runtime.h>
 
-#import "UITextView+WY_Extension.h"
 
 
 @interface UIView ()
@@ -196,7 +195,7 @@
         if([self isKindOfClass:[UITextView class]]) {
             
             UITextView *textView = (UITextView *)self;
-            if(textView.wy_characterLengthPrompt == YES) {
+            if(textView.ug_characterLengthPrompt == YES) {
                 
                 bottom = bottom+25;
             }

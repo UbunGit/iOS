@@ -14,7 +14,7 @@
 #import "UITextField+UG.h"
 #import "UIView+Alert.h"
 #import "NSDate+UG.h"
-#import "UITextView+WY_Extension.h"
+#import "UITextView+UG.h"
 #import "UIView+WY_Extension.h"
 #import "UIButton+UG.h"
 #import "UIControl+UG.h"

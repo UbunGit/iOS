@@ -95,4 +95,13 @@
     }
     return md5Str;
 }
+
++ (NSString *)emptyStr:(NSString *)str {
+    
+    if(([str isKindOfClass:[NSNull class]]) || ([str isEqual:[NSNull null]]) || (str == nil) || (!str)) {
+        
+        str = @"";
+    }
+    return str;
+}
 @end

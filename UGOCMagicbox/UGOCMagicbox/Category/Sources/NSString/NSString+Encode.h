@@ -43,4 +43,9 @@
  */
 -(NSString *)md5;
 
+/**
+ 验证非空字符串
+ */
++ (NSString *)emptyStr:(NSString *)str;
+
 @end
