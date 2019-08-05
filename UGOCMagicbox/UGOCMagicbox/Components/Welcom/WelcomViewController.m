@@ -14,13 +14,19 @@
 @end
 
 @implementation WelcomViewController
-
+-(instancetype)init{
+    if (self  == [super init]) {
+        [self setUI];
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUI];
 }
 
 -(void)setUI{
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     self.scrollerView = [UIScrollView new];
     [self.view addSubview:_scrollerView];
     _scrollerView.bounces = NO;
@@ -86,7 +92,7 @@
                     make.top.mas_equalTo(self.scrollerView);
                     make.left.mas_equalTo(self.scrollerView);
                     make.height.mas_equalTo(self.scrollerView.mas_height);
-                    make.width.mas_equalTo(self.scrollerView.mas_width);
+                    make.width.mas_equalTo(self.scrollerView.mas_width); 
                 }];
             }
             temview = aimage;

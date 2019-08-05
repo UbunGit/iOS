@@ -69,3 +69,29 @@
 }
 @end
 
+#import "WelcomViewController.h"
+// 常用引导页
+@implementation DorWelcomViewController
+
+- (void)pluginDidLoad{
+    WelcomViewController *vc = [[WelcomViewController alloc]init];
+    [DoraemonUtil openPlugin:vc];
+    [vc.navigationController setNavigationBarHidden:YES];
+    [vc setImageArr:@[@"iosyingdaoye1",@"iosyingdaoye2",@"iosyingdaoye3"]];
+    [vc.welcombtn setTitle:@"立即开启" forState:UIControlStateNormal];
+}
+@end
+
+#import "DMViewController.h"
+// 常用欢迎页面
+@implementation DorDMViewController
+
+- (void)pluginDidLoad{
+    DMViewController *vc = [DMViewController new];
+    [DoraemonUtil openPlugin:vc];
+}
+@end
+
+
+
+

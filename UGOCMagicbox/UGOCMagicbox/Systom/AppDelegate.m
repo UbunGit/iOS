@@ -23,15 +23,15 @@
     [self configRTRootNavigationController];
     [self configTabBar];//配置tabbar
     [self configNIMSDK];//配置网易云信
-//    
-//    //配置广告页
-//    [self configDMViewController:^(UIButton * _Nullable sender) {
-//        //配置欢迎页
-//        [self configWelcom:^(UIButton * _Nullable sender) {
-//            //配置tabbar
-//            [self configTabBar];
-//        }];
-//    }];
+    
+    //配置广告页
+    [self configDMViewController:^(UIButton * _Nullable sender) {
+        //配置欢迎页
+        [self configWelcom:^(UIButton * _Nullable sender) {
+            //配置tabbar
+            [self configTabBar];
+        }];
+    }];
     
     [self configTabBar];
 

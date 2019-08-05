@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES];
     self.cancelbtn = [UIButton new];
     [self.view addSubview:_cancelbtn];
     UIColor *titleColoe = [UIColor colorWithRed:((float)((0x666666 & 0xFF0000) >> 16))/255.0

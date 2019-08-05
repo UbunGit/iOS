@@ -39,5 +39,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+//启动页
+@interface DorWelcomViewController : NSObject<DoraemonPluginProtocol>
+
+@end
+
+//广告页
+@interface DorDMViewController : NSObject<DoraemonPluginProtocol>
+
+@end
+
+
 
 NS_ASSUME_NONNULL_END

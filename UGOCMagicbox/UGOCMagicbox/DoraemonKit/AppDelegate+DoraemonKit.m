@@ -17,8 +17,8 @@
 -(void)configDoraemonKit{
 #ifdef DEBUG
 //UI
-    [[DoraemonManager shareInstance] addPluginWithTitle:@"TabBar" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"UI"];
-    [[DoraemonManager shareInstance] addPluginWithTitle:@"导航" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"UI"];
+//    [[DoraemonManager shareInstance] addPluginWithTitle:@"TabBar" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"UI"];
+//    [[DoraemonManager shareInstance] addPluginWithTitle:@"导航" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"UI"];
     [[DoraemonManager shareInstance] addPluginWithTitle:@"轮播图" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonBlockCollectionView" atModule:@"UI"];
     [[DoraemonManager shareInstance] addPluginWithTitle:@"BlockTabview" icon:@"doraemon_ui" desc:@"BlockTabview" pluginName:@"DorBlockTableviewTestVC" atModule:@"UI"];
     
@@ -26,8 +26,8 @@
  
    
 //常用功能
-    [[DoraemonManager shareInstance] addPluginWithTitle:@"启动页" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"常用功能"];
-    [[DoraemonManager shareInstance] addPluginWithTitle:@"广告页" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"常用功能"];
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"启动页" icon:@"doraemon_ui" desc:@"启动页" pluginName:@"DorWelcomViewController" atModule:@"常用功能"];
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"广告页" icon:@"doraemon_ui" desc:@"广告页" pluginName:@"DorDMViewController" atModule:@"常用功能"];
     
     [[DoraemonManager shareInstance] addPluginWithTitle:@"选择栏" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DorBarcollectionView" atModule:@"常用功能"];
     
