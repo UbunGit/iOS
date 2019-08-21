@@ -40,6 +40,11 @@
     
     [[DoraemonManager shareInstance] addPluginWithTitle:@"画图" icon:@"doraemon_netflow_list_select" desc:@"绘图" pluginName:@"DorUGDrawingView" atModule:@"常用功能"];
     
+     [[DoraemonManager shareInstance] addPluginWithTitle:@"SVGA动画" icon:@"doraemon_netflow_list_select" desc:@"SVGA动画" pluginName:@"DorSVGAPlayer" atModule:@"常用功能"];
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"lottie动画" icon:@"doraemon_netflow_list_select" desc:@"SVGA动画" pluginName:@"DorLOTViewController" atModule:@"常用功能"];
+   
+    
+    
     
 
     [[DoraemonManager shareInstance] install];

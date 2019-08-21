@@ -49,6 +49,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+//SVGAPlayer svg动画
+@interface DorSVGAPlayer : NSObject<DoraemonPluginProtocol>
 
+@end
+
+//
+@interface DorLOTViewController : NSObject<DoraemonPluginProtocol>
+
+@end
 
 NS_ASSUME_NONNULL_END

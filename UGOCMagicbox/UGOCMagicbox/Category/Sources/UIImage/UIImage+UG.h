@@ -8,6 +8,7 @@
 
 
 #define UGIMAGE(str) [UIImage imageNamed:str]
+#define UGURL(str) [NSURL URLWithString:str]
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
  * \return 改变尺寸后的图
  */
 - (UIImage *)reSize:(CGSize)reSize;
+
+// 图片裁剪圆角
+- (UIImage *)ug_cornerRadius:(CGFloat)cornerRadius;
 @end
 
 NS_ASSUME_NONNULL_END

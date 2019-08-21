@@ -16,5 +16,6 @@
 #import "UIImage+FontAwesome.h"
 #import "NSString+FontAwesome.h"
 #import <BlocksKit/BlocksKit.h>
+#import <BlocksKit/BlocksKit+UIKit.h>
 
 #endif /* PrefixHeader_pch */

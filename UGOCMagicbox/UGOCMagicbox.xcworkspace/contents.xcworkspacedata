@@ -4,16 +4,6 @@
    <FileRef
       location = "group:UGOCMagicbox.xcodeproj">
    </FileRef>
-   <Group
-      location = "group:Resources"
-      name = "Resources">
-      <FileRef
-         location = "group:fontawesome-github.jpg">
-      </FileRef>
-      <FileRef
-         location = "group:FontAwesome.ttf">
-      </FileRef>
-   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>

@@ -92,6 +92,27 @@
 }
 @end
 
+#import "SVGViewController.h"
+// 常用欢迎页面
+@implementation DorSVGAPlayer
+
+- (void)pluginDidLoad{
+    SVGViewController *vc = [SVGViewController new];
+    [DoraemonUtil openPlugin:vc];
+}
+@end
+
+#import "LOTViewController.h"
+
+// 常用欢迎页面
+@implementation DorLOTViewController
+
+- (void)pluginDidLoad{
+    LOTViewController *vc = [LOTViewController new];
+    [DoraemonUtil openPlugin:vc];
+}
+@end
+
 
 
 
