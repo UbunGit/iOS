@@ -49,6 +49,6 @@
     return [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f) blue:((float) b / 255.0f) alpha:1.0f];
 }
 +(UIColor*)ug_random{
-   return  [UIColor ug_R:random()%255 G:random()%255 B:random()%255 A:1];
+   return  [UIColor ug_R:random()%255 G:random()%255 B:random()%255 A:random()%100*0.01];
 }
 @end

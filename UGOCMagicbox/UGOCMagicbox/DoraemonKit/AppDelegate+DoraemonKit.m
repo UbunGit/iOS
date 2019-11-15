@@ -19,13 +19,15 @@
 //UI
 //    [[DoraemonManager shareInstance] addPluginWithTitle:@"TabBar" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"UI"];
 //    [[DoraemonManager shareInstance] addPluginWithTitle:@"导航" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonAddressBook" atModule:@"UI"];
+#pragma -- UI
     [[DoraemonManager shareInstance] addPluginWithTitle:@"轮播图" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonBlockCollectionView" atModule:@"UI"];
     [[DoraemonManager shareInstance] addPluginWithTitle:@"BlockTabview" icon:@"doraemon_ui" desc:@"BlockTabview" pluginName:@"DorBlockTableviewTestVC" atModule:@"UI"];
     
     
  
    
-//常用功能
+
+#pragma -- 常用功能
     [[DoraemonManager shareInstance] addPluginWithTitle:@"启动页" icon:@"doraemon_ui" desc:@"启动页" pluginName:@"DorWelcomViewController" atModule:@"常用功能"];
     [[DoraemonManager shareInstance] addPluginWithTitle:@"广告页" icon:@"doraemon_ui" desc:@"广告页" pluginName:@"DorDMViewController" atModule:@"常用功能"];
     
@@ -40,8 +42,11 @@
     
     [[DoraemonManager shareInstance] addPluginWithTitle:@"画图" icon:@"doraemon_netflow_list_select" desc:@"绘图" pluginName:@"DorUGDrawingView" atModule:@"常用功能"];
     
-     [[DoraemonManager shareInstance] addPluginWithTitle:@"SVGA动画" icon:@"doraemon_netflow_list_select" desc:@"SVGA动画" pluginName:@"DorSVGAPlayer" atModule:@"常用功能"];
-    [[DoraemonManager shareInstance] addPluginWithTitle:@"lottie动画" icon:@"doraemon_netflow_list_select" desc:@"SVGA动画" pluginName:@"DorLOTViewController" atModule:@"常用功能"];
+#pragma -- 动画
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"常见动画" icon:@"doraemon_netflow_list_select" desc:@"SVGA动画" pluginName:@"DorAnimationPlugin" atModule:@"动画"];
+    
+     [[DoraemonManager shareInstance] addPluginWithTitle:@"SVGA动画" icon:@"doraemon_netflow_list_select" desc:@"SVGA动画" pluginName:@"DorSVGAPlayer" atModule:@"动画"];
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"lottie动画" icon:@"doraemon_netflow_list_select" desc:@"SVGA动画" pluginName:@"DorLOTViewController" atModule:@"动画"];
    
     
     

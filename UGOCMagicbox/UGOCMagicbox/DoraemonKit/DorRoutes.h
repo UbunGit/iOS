@@ -59,4 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface DorAnimationPlugin : NSObject<DoraemonPluginProtocol>
+
+@end
+
+
 NS_ASSUME_NONNULL_END

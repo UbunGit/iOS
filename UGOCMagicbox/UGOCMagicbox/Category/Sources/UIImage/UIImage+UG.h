@@ -7,8 +7,7 @@
 //
 
 
-#define UGIMAGE(str) [UIImage imageNamed:str]
-#define UGURL(str) [NSURL URLWithString:str]
+
 
 NS_ASSUME_NONNULL_BEGIN
 

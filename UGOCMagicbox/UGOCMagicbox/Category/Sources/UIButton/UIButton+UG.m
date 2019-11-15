@@ -8,7 +8,8 @@
 
 #import "UIButton+UG.h"
 
-#define UGIMAGE(str) [UIImage imageNamed:str]
+
+
 @implementation UIButton (UG)
 
 

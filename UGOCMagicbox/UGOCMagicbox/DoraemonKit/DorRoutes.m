@@ -36,7 +36,6 @@
 @end
 
 
-
 #import "BlockTableviewTestVC.h"
 // 常用Tableview
 @implementation DorBlockTableviewTestVC
@@ -112,6 +111,19 @@
     [DoraemonUtil openPlugin:vc];
 }
 @end
+
+#import "DorAnimationTestVC.h"
+
+// 常用欢迎页面
+@implementation DorAnimationPlugin
+
+- (void)pluginDidLoad{
+    DorAnimationTestVC *vc = [DorAnimationTestVC new];
+    [DoraemonUtil openPlugin:vc];
+}
+@end
+
+
 
 
 

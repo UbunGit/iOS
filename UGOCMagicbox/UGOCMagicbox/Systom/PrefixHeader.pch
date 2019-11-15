@@ -17,5 +17,6 @@
 #import "NSString+FontAwesome.h"
 #import <BlocksKit/BlocksKit.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
+#import "Defind.h"
 
 #endif /* PrefixHeader_pch */

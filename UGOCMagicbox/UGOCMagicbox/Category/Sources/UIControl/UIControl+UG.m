@@ -41,7 +41,6 @@ static char * const ug_eventUnavailableKey = "ug_eventUnavailableKey";
     [self ug_addEvents:event andBlock:block];
 }
 
-
 -(void)buttonClicked:(UIButton *)sender{
     
     ug_ButtonActionBlock block=objc_getAssociatedObject(sender, ug_buttonBlockKey);
@@ -53,12 +52,19 @@ static char * const ug_eventUnavailableKey = "ug_eventUnavailableKey";
 - (void)ug_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
     
     if (self.ug_eventUnavailable == NO) {
-        self.ug_eventUnavailable = YES;
+        if(self.ug_eventInterval>0){
+            self.ug_eventUnavailable = YES;
+            [self performSelector:@selector(perseteventUnavailable) withObject:nil afterDelay:self.ug_eventInterval];
+        }
         [self ug_sendAction:action to:target forEvent:event];
-        [self performSelector:@selector(setUg_eventUnavailable:) withObject:@(NO) afterDelay:self.ug_eventInterval];
+        
+    }else{
+        printf("/n error 点击事件被暂停响应%f s /n",self.ug_eventInterval);
     }
 }
-
+-(void)perseteventUnavailable{
+    self.ug_eventUnavailable = NO;
+}
 
 #pragma mark - Setter & Getter functions
 
@@ -73,12 +79,12 @@ static char * const ug_eventUnavailableKey = "ug_eventUnavailableKey";
 }
 
 - (BOOL)ug_eventUnavailable {
-    
-    return [objc_getAssociatedObject(self, ug_eventUnavailableKey) boolValue];
+    BOOL isyes = [objc_getAssociatedObject(self, ug_eventUnavailableKey) boolValue];
+    return isyes;
 }
 
 - (void)setUg_eventUnavailable:(BOOL)ug_eventUnavailable{
     
-    objc_setAssociatedObject(self, ug_eventUnavailableKey, @(ug_eventUnavailableKey), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, ug_eventUnavailableKey, @(ug_eventUnavailable), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 @end
