@@ -44,15 +44,8 @@
 }
 
 -(void)configUI{
+    
     self.title = @"常见动画";
-    /*
-     * 导航栏返回Btn
-     */
-    UIButton *itemButtom = [UIButton  buttonWithType:UIButtonTypeContactAdd];
-    [itemButtom setFrame:CGRectMake(0, 0, 30, 40)];
-    UIBarButtonItem *button = [[UIBarButtonItem alloc]
-                               initWithCustomView:itemButtom];
-    [self.navigationItem setRightBarButtonItems:@[button]];
     self.view.backgroundColor = COLORF0F2F5;
     
     self.blocktableview = [BlockTableView new];
