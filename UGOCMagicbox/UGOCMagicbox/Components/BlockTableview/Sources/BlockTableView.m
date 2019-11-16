@@ -71,7 +71,7 @@
     if (_heightForRowAtIndexPath) {
        return _heightForRowAtIndexPath(tableView, indexPath);
     }else{
-        return 0;
+        return 44;
     }
 }
 

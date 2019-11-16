@@ -42,6 +42,10 @@
     
     [[DoraemonManager shareInstance] addPluginWithTitle:@"画图" icon:@"doraemon_netflow_list_select" desc:@"绘图" pluginName:@"DorUGDrawingView" atModule:@"常用功能"];
     
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"朋友圈" icon:@"doraemon_netflow_list_select" desc:@"朋友圈" pluginName:@"DorZoneViewPlugin" atModule:@"常用功能"];
+    
+    
+    
 #pragma -- 动画
     [[DoraemonManager shareInstance] addPluginWithTitle:@"常见动画" icon:@"doraemon_netflow_list_select" desc:@"SVGA动画" pluginName:@"DorAnimationPlugin" atModule:@"动画"];
     

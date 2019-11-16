@@ -7,7 +7,7 @@
 //
 
 #import "DorRoutes.h"
-#import "DoraemonUtil.h"
+#import "DoraemonHomeWindow.h"
 #import "BlockCollectionViewTestVC.h"
 
 @implementation DorRoutes
@@ -19,7 +19,7 @@
 
 - (void)pluginDidLoad{
     BlockCollectionViewTestVC *vc = [[BlockCollectionViewTestVC alloc] init];
-    [DoraemonUtil openPlugin:vc];
+    [DoraemonHomeWindow openPlugin:vc];
 }
 
 @end
@@ -30,7 +30,7 @@
 
 - (void)pluginDidLoad{
     DORTestBarcollectionViewVC *vc = [[DORTestBarcollectionViewVC alloc] init];
-    [DoraemonUtil openPlugin:vc];
+    [DoraemonHomeWindow openPlugin:vc];
 }
 
 @end
@@ -42,7 +42,7 @@
 
 - (void)pluginDidLoad{
     BlockTableviewTestVC *vc = [[BlockTableviewTestVC alloc] init];
-    [DoraemonUtil openPlugin:vc];
+    [DoraemonHomeWindow openPlugin:vc];
 }
 
 
@@ -54,7 +54,7 @@
 
 - (void)pluginDidLoad{
     MBProgressHUDTableVC *vc = [[MBProgressHUDTableVC alloc] init];
-    [DoraemonUtil openPlugin:vc];
+    [DoraemonHomeWindow openPlugin:vc];
 }
 @end
 
@@ -64,7 +64,7 @@
 
 - (void)pluginDidLoad{
     UGDrawingVC *vc = [[UGDrawingVC alloc] init];
-    [DoraemonUtil openPlugin:vc];
+    [DoraemonHomeWindow openPlugin:vc];
 }
 @end
 
@@ -74,7 +74,7 @@
 
 - (void)pluginDidLoad{
     WelcomViewController *vc = [[WelcomViewController alloc]init];
-    [DoraemonUtil openPlugin:vc];
+    [DoraemonHomeWindow openPlugin:vc];
     [vc.navigationController setNavigationBarHidden:YES];
     [vc setImageArr:@[@"iosyingdaoye1",@"iosyingdaoye2",@"iosyingdaoye3"]];
     [vc.welcombtn setTitle:@"立即开启" forState:UIControlStateNormal];
@@ -87,7 +87,7 @@
 
 - (void)pluginDidLoad{
     DMViewController *vc = [DMViewController new];
-    [DoraemonUtil openPlugin:vc];
+    [DoraemonHomeWindow openPlugin:vc];
 }
 @end
 
@@ -97,7 +97,7 @@
 
 - (void)pluginDidLoad{
     SVGViewController *vc = [SVGViewController new];
-    [DoraemonUtil openPlugin:vc];
+    [DoraemonHomeWindow openPlugin:vc];
 }
 @end
 
@@ -108,7 +108,7 @@
 
 - (void)pluginDidLoad{
     LOTViewController *vc = [LOTViewController new];
-    [DoraemonUtil openPlugin:vc];
+    [DoraemonHomeWindow openPlugin:vc];
 }
 @end
 
@@ -119,9 +119,21 @@
 
 - (void)pluginDidLoad{
     DorAnimationTestVC *vc = [DorAnimationTestVC new];
-    [DoraemonUtil openPlugin:vc];
+    [DoraemonHomeWindow openPlugin:vc];
 }
 @end
+
+
+#import "UGZoneViewController.h"
+// 朋友圈
+@implementation DorZoneViewPlugin
+
+- (void)pluginDidLoad{
+    UGZoneViewController *vc = [UGZoneViewController new];
+    [DoraemonHomeWindow openPlugin:vc];
+}
+@end
+
 
 
 

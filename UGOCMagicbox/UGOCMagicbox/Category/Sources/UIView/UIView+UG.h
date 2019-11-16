@@ -15,7 +15,20 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 设置圆角
  */
-- (void)setCornerRadius:(CGFloat)radius;
+- (void)ug_radius:(CGFloat)radius;
+
+/**
+ * setCornerRadius   给view设置圆角
+ * @param radius      圆角大小
+ * @param rectCorner 圆角位置
+ **/
+- (void)ug_radius:(CGFloat)radius addcorners:(UIRectCorner)rectCorner;
+
+
+/**
+ * 设置边框与边框颜色
+ */
+-(void)ug_borderColor:(UIColor *)acolor width:(CGFloat)width;
 
 @end
 

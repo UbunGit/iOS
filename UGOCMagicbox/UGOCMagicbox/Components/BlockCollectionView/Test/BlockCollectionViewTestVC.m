@@ -83,26 +83,22 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSArray *array = @[@"http://static1.pezy.cn/img/2019-02-01/5932241902444072231.jpg", @"http://static1.pezy.cn/img/2019-03-01/1206059142424414231.jpg",@"http://static1.pezy.cn/img/2019-02-01/5932241902444072231.jpg", @"http://static1.pezy.cn/img/2019-03-01/1206059142424414231.jpg"];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSString *title = [_tableDatas objectAtIndex:indexPath.row];
     if ([title isEqualToString:@"小轮播"]) {
         
         BlockCollectionView *temview = [BlockCollectionView new];
+        temview.isSetcenten = YES;
         temview.ug_sizeForItemAtIndexPath = ^CGSize(UICollectionView * _Nonnull collectionView, UICollectionViewLayout * _Nonnull layout, NSIndexPath * _Nonnull indexPath) {
             return CGSizeMake(350, 200);
         };
         [temview setUg_numberOfItemsInSection:^NSInteger(UICollectionView * _Nonnull collectionView, NSInteger section) {
-            return array.count*1000;
+            return 10;
         }];
         [temview setUg_cellForItemAtIndexPath:^__kindof UICollectionViewCell * _Nonnull(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
             BlockCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-            cell.backgroundColor = [UIColor whiteColor];
-            NSString *urlstr = [array objectAtIndex:indexPath.row%array.count];
-            NSURL *url = [NSURL URLWithString:urlstr];
-            cell.backgroundColor = UIColor.ug_random;
+            [cell.imageView sd_setImageWithURL:UGURL(@"https://github.com/UbunGit/TestImage/blob/master/animal/0.jpg?raw=true")];
             return cell;
         }];
         temview.backgroundColor = [UIColor yellowColor];
@@ -116,19 +112,18 @@
         
         
         BlockCollectionView *temview = [BlockCollectionView new];
-
+        temview.isSetcenten = YES;
+        temview.flowLayout.minimumLineSpacing = 10;
         temview.ug_sizeForItemAtIndexPath = ^CGSize(UICollectionView * _Nonnull collectionView, UICollectionViewLayout * _Nonnull layout, NSIndexPath * _Nonnull indexPath) {
             return CGSizeMake(300, 200);
         };
         [temview setUg_numberOfItemsInSection:^NSInteger(UICollectionView * _Nonnull collectionView, NSInteger section) {
-            return 145673;
+            return 100;
         }];
         [temview setUg_cellForItemAtIndexPath:^__kindof UICollectionViewCell * _Nonnull(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
 
             BlockCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-            NSString *urlstr = [array objectAtIndex:indexPath.row%array.count];
-            NSURL *url = [NSURL URLWithString:urlstr];
-            cell.backgroundColor = UIColor.ug_random;
+            [cell.imageView sd_setImageWithURL:UGURL(@"https://github.com/UbunGit/TestImage/blob/master/animal/0.jpg?raw=true")];
             return cell;
         }];
      

@@ -46,6 +46,12 @@ typedef void(^AlertViewFinesh)(BOOL finished);
 +(void)ug_stoploading;
 -(void)ug_stoploading;
 
+// present UGPersentView
++(void)ug_persentView:(UIView*)customView;
+-(void)ug_persentView:(UIView*)customView;
+
++(void)ug_dismisPersentView;
+-(void)ug_dismisPersentView;
 @end
 
 NS_ASSUME_NONNULL_END

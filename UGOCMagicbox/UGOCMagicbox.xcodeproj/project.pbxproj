@@ -13,6 +13,10 @@
 		20083D32237E9BAF00D3F6D3 /* jqr_by@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20083D30237E9BAF00D3F6D3 /* jqr_by@3x.png */; };
 		20083D33237E9BAF00D3F6D3 /* jqr_zy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20083D31237E9BAF00D3F6D3 /* jqr_zy@2x.png */; };
 		20083D37237EA58E00D3F6D3 /* UGWaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20083D36237EA58E00D3F6D3 /* UGWaverView.m */; };
+		20083D43237FA66900D3F6D3 /* UGZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20083D42237FA66900D3F6D3 /* UGZoneViewController.m */; };
+		20083D48237FA6F900D3F6D3 /* UGZoneData.m in Sources */ = {isa = PBXBuildFile; fileRef = 20083D47237FA6F900D3F6D3 /* UGZoneData.m */; };
+		20F8EA28237FAC0900AAD62A /* UGZoneTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8EA27237FAC0900AAD62A /* UGZoneTableCell.m */; };
+		20F8EA2C237FDB5900AAD62A /* UGPersentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8EA2B237FDB5900AAD62A /* UGPersentView.m */; };
 		841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE122CB2C5B00F6DC04 /* BlockMAMapView.m */; };
 		841B5EE622CB2DB300F6DC04 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE522CB2DB300F6DC04 /* MapViewController.m */; };
 		841B5EEA22CB363700F6DC04 /* Userinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE922CB363700F6DC04 /* Userinfo.m */; };
@@ -145,6 +149,14 @@
 		20083D31237E9BAF00D3F6D3 /* jqr_zy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jqr_zy@2x.png"; sourceTree = "<group>"; };
 		20083D35237EA58E00D3F6D3 /* UGWaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGWaverView.h; sourceTree = "<group>"; };
 		20083D36237EA58E00D3F6D3 /* UGWaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGWaverView.m; sourceTree = "<group>"; };
+		20083D41237FA66900D3F6D3 /* UGZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGZoneViewController.h; sourceTree = "<group>"; };
+		20083D42237FA66900D3F6D3 /* UGZoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGZoneViewController.m; sourceTree = "<group>"; };
+		20083D46237FA6F900D3F6D3 /* UGZoneData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGZoneData.h; sourceTree = "<group>"; };
+		20083D47237FA6F900D3F6D3 /* UGZoneData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGZoneData.m; sourceTree = "<group>"; };
+		20F8EA26237FAC0900AAD62A /* UGZoneTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGZoneTableCell.h; sourceTree = "<group>"; };
+		20F8EA27237FAC0900AAD62A /* UGZoneTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGZoneTableCell.m; sourceTree = "<group>"; };
+		20F8EA2A237FDB5900AAD62A /* UGPersentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGPersentView.h; sourceTree = "<group>"; };
+		20F8EA2B237FDB5900AAD62A /* UGPersentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGPersentView.m; sourceTree = "<group>"; };
 		5B5268EFBFD3D7289AB4B056 /* Pods-UGOCMagicbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UGOCMagicbox.release.xcconfig"; path = "Target Support Files/Pods-UGOCMagicbox/Pods-UGOCMagicbox.release.xcconfig"; sourceTree = "<group>"; };
 		736A3F8F8181158053A95729 /* Pods_UGOCMagicbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UGOCMagicbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		841B5EE022CB2C5B00F6DC04 /* BlockMAMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockMAMapView.h; sourceTree = "<group>"; };
@@ -369,6 +381,8 @@
 		20083D26237E930900D3F6D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				20F8EA29237FDB1900AAD62A /* UGPersentView */,
+				20083D38237FA59300D3F6D3 /* UGZoneView */,
 				20083D34237EA56400D3F6D3 /* UGWaveView */,
 				20083D2A237E9A2E00D3F6D3 /* UGSpeekView */,
 			);
@@ -402,6 +416,51 @@
 				20083D36237EA58E00D3F6D3 /* UGWaverView.m */,
 			);
 			path = UGWaveView;
+			sourceTree = "<group>";
+		};
+		20083D38237FA59300D3F6D3 /* UGZoneView */ = {
+			isa = PBXGroup;
+			children = (
+				20F8EA26237FAC0900AAD62A /* UGZoneTableCell.h */,
+				20F8EA27237FAC0900AAD62A /* UGZoneTableCell.m */,
+			);
+			path = UGZoneView;
+			sourceTree = "<group>";
+		};
+		20083D3C237FA61400D3F6D3 /* UGZoneViewController */ = {
+			isa = PBXGroup;
+			children = (
+				20083D45237FA6C400D3F6D3 /* VC */,
+				20083D44237FA6B900D3F6D3 /* Moden */,
+			);
+			path = UGZoneViewController;
+			sourceTree = "<group>";
+		};
+		20083D44237FA6B900D3F6D3 /* Moden */ = {
+			isa = PBXGroup;
+			children = (
+				20083D46237FA6F900D3F6D3 /* UGZoneData.h */,
+				20083D47237FA6F900D3F6D3 /* UGZoneData.m */,
+			);
+			path = Moden;
+			sourceTree = "<group>";
+		};
+		20083D45237FA6C400D3F6D3 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				20083D41237FA66900D3F6D3 /* UGZoneViewController.h */,
+				20083D42237FA66900D3F6D3 /* UGZoneViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		20F8EA29237FDB1900AAD62A /* UGPersentView */ = {
+			isa = PBXGroup;
+			children = (
+				20F8EA2A237FDB5900AAD62A /* UGPersentView.h */,
+				20F8EA2B237FDB5900AAD62A /* UGPersentView.m */,
+			);
+			path = UGPersentView;
 			sourceTree = "<group>";
 		};
 		2ACF7559EC1C145583A05D3A /* Pods */ = {
@@ -491,6 +550,7 @@
 		84AB5B7422C9FDEA002CDEF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				20083D3C237FA61400D3F6D3 /* UGZoneViewController */,
 				8461E1CF2306B10900764748 /* SVGAPlayer */,
 				84BA50BD22CCB0A1004F6621 /* FontAwesome */,
 				841B5EE322CB2D8900F6DC04 /* MapViewController */,
@@ -1284,6 +1344,7 @@
 			files = (
 				84DB979122C347B10034A927 /* DoraemonTZImagePick.m in Sources */,
 				84DB975622C33F480034A927 /* UITextView+UG.m in Sources */,
+				20F8EA2C237FDB5900AAD62A /* UGPersentView.m in Sources */,
 				84BA50C422CCB0B9004F6621 /* FATableViewCell.m in Sources */,
 				84DB976322C3400E0034A927 /* ViewController.m in Sources */,
 				84DB978E22C347B10034A927 /* AppDelegate+TavBar.m in Sources */,
@@ -1293,8 +1354,10 @@
 				84AB5B7C22CA0469002CDEF2 /* TestTableViewCell.m in Sources */,
 				84DB973322C33F480034A927 /* TabbarCollectionCell.m in Sources */,
 				84DB979722C347B10034A927 /* MBProgressHUDTableVC.m in Sources */,
+				20F8EA28237FAC0900AAD62A /* UGZoneTableCell.m in Sources */,
 				84DB975522C33F480034A927 /* UIView+Alert.m in Sources */,
 				84DB978F22C347B10034A927 /* UG_TZImagePickSwitch.m in Sources */,
+				20083D43237FA66900D3F6D3 /* UGZoneViewController.m in Sources */,
 				84ADE551230BF3ED00BE9215 /* LOTViewController.m in Sources */,
 				20083D37237EA58E00D3F6D3 /* UGWaverView.m in Sources */,
 				84DB973022C33F480034A927 /* BarcollectionView.m in Sources */,
@@ -1308,6 +1371,7 @@
 				20083D29237E936700D3F6D3 /* UGSpeekView.m in Sources */,
 				84DB978D22C347B10034A927 /* AppDelegate+CocoaLumberjack.m in Sources */,
 				84DB978C22C347B10034A927 /* AppDelegate+NIMSDK.m in Sources */,
+				20083D48237FA6F900D3F6D3 /* UGZoneData.m in Sources */,
 				84DB975322C33F480034A927 /* UIView+WY_Extension.m in Sources */,
 				84DB976422C3400E0034A927 /* main.m in Sources */,
 				84DB979322C347B10034A927 /* AddressBookController.m in Sources */,
