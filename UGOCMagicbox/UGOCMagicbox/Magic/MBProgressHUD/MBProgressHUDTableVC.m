@@ -8,6 +8,7 @@
 
 #import "MBProgressHUDTableVC.h"
 #import "UIView+Alert.h"
+#import "UGPersentView.h"
 @interface MBProgressHUDTableVC ()
 @property(strong, nonatomic)NSArray *tableviewArr;
 @end
@@ -16,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableviewArr = @[@"alert",@"alertimageType",@"alertview", @"loading"];
+    self.title = @"弹框";
+    self.tableviewArr = @[@"alert",@"alertimageType",@"alertview", @"loading",@"UGPersentView"];
 
 }
 
@@ -71,6 +73,14 @@
         
         [self.view ug_starloading];
         [self.view performSelector:@selector(ug_stoploading) withObject:nil afterDelay:3];
+    }else if([titlestr isEqualToString:@"UGPersentView"]){
+         UGPersentView *perview = [UGPersentView new];
+        [self.tableView addSubview:perview];
+        [perview mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.top.bottom.mas_equalTo(perview.superview);
+        }];
+
+
     }
     
 }

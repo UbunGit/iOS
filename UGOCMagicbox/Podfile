@@ -11,6 +11,8 @@ target 'UGOCMagicbox' do
   pod 'AFNetworking'
   pod 'TABAnimated'
   pod 'PPGetAddressBook'
+  pod 'SVGAPlayer'
+  pod 'lottie-ios', '~> 2.5.3'
   
   pod 'DoraemonKit/Core',  :configurations => ['Debug']
   pod 'DoraemonKit/WithLogger', :configurations => ['Debug']

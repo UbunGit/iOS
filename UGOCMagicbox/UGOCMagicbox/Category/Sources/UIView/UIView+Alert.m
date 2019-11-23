@@ -9,13 +9,14 @@
 #import "UIView+Alert.h"
 #import "MBProgressHUD.h"
 #import "Masonry.h"
+#import "UGPersentView.h"
 
 #include <objc/runtime.h>
 
 #ifndef dispatch_main_async_safe
 #define dispatch_main_async_safe(block) dispatch_queue_async_safe(dispatch_get_main_queue(), block)
 #endif
-
+static UGPersentView *perview = nil;
 @implementation UIView (Alert)
 
 +(void)ug_msg:(NSString*)msg{
@@ -163,6 +164,62 @@ static MBProgressHUD *loadinghud = nil;
     [loadinghud hideAnimated:YES];
     [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.alpha = 1.0;
+    }];
+}
+
+
+// present UGPersentView
++(void)ug_persentView:(UIView*)customView{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [window ug_persentView:customView];
+}
+-(void)ug_persentView:(UIView*)customView{
+    if (!perview) {
+        perview = [UGPersentView new];
+    }
+    perview.contentView = customView;
+    [perview addSubview:customView];
+    [self addSubview:perview];
+    [perview mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self);
+    }];
+
+    [customView setNeedsLayout];
+    [perview setNeedsLayout];
+ 
+    [self bk_performBlock:^(id obj) {
+        
+        [UIView animateWithDuration:5 animations:^{
+            
+            [customView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.bottom.mas_equalTo(perview.mas_bottom);
+                make.left.mas_equalTo(perview);
+                make.right.mas_equalTo(perview);
+                make.height.mas_equalTo(300);
+            }];
+            
+        } completion:^(BOOL finished) {
+            DDLogVerbose(@"--");
+        }];
+        [customView setNeedsLayout];
+    } afterDelay:0.2];
+  
+}
+
++(void)ug_dismisPersentView{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [window ug_dismisPersentView];
+}
+-(void)ug_dismisPersentView{
+    
+    [UIView animateWithDuration:0.3 animations:^{
+
+       [perview setFrame:CGRectMake(0, self.bounds.size.height, self.bounds.size.width, self.bounds.size.height)];
+       [perview.contentView setFrame:CGRectMake(0, self.bounds.size.height, perview.contentView.bounds.size.width, perview.contentView.bounds.size.height)];
+         
+    } completion:^(BOOL finished) {
+        [perview.contentView removeFromSuperview];
+        perview.contentView = nil;
     }];
 }
 

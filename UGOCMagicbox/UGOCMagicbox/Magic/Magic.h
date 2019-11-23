@@ -15,6 +15,7 @@
 #import "AppDelegate+RTRootNavigationController.h"
 #import "AppDelegate+NIMSDK.h"
 #import "UIApplication+TABAnimated.h"
+#import "UIView+Animation.h"
 //pod
 
 

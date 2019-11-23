@@ -71,7 +71,7 @@
     if (_heightForRowAtIndexPath) {
        return _heightForRowAtIndexPath(tableView, indexPath);
     }else{
-        return 0;
+        return 44;
     }
 }
 
@@ -103,6 +103,28 @@
       return  _viewForFooterInSection(tableView, section);
     }else{
         return nil;
+    }
+}
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    return YES;
+
+}
+
+// 修改编辑按钮文字
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath*)indexPath {
+    if (_titleForDeleteConfirmationButtonForRowAtIndexPath) {
+        return  _titleForDeleteConfirmationButtonForRowAtIndexPath(tableView, indexPath);
+    }else{
+        return @"删除";
+    }
+    
+}
+
+// 进入编辑模式，按下出现的编辑按钮后,进行删除操作
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (_commitEditingStyle) {
+        _commitEditingStyle(tableView,editingStyle,indexPath);
     }
 }
 @end

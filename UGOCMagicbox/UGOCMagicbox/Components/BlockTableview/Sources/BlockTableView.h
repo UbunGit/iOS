@@ -22,11 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(copy, nonatomic) CGFloat (^heightForFooterInSection)(UITableView* tableView, NSInteger section);//defual 0
 @property(copy, nonatomic) UIView* (^viewForHeaderInSection)(UITableView* tableView, NSInteger section);//defual nil
 @property(copy, nonatomic) UIView* (^viewForFooterInSection)(UITableView* tableView, NSInteger section);//defual nil
-
-
+@property(copy, nonatomic) NSString * (^titleForDeleteConfirmationButtonForRowAtIndexPath)(UITableView* tableView, NSIndexPath* indexPath);//defual @"删除"
+@property(copy, nonatomic) void (^commitEditingStyle)(UITableView* tableView, UITableViewCellEditingStyle editingStyle,NSIndexPath* indexPath);
 @property(copy, nonatomic) void (^didSelectRowAtIndexPath)(UITableView* tableView, NSIndexPath* indexPath);
-
-
 
 
 @end
