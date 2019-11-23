@@ -13,7 +13,7 @@
 /**
  * 设置圆角
  */
--(void)setCornerRadius:(CGFloat)radius{
+-(void)ug_Radius:(CGFloat)radius{
     
     self.layer.cornerRadius = radius;
     self.layer.masksToBounds = YES;

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 设置圆角
  */
-- (void)setCornerRadius:(CGFloat)radius;
+- (void)ug_Radius:(CGFloat)radius;
 
 @end
 
