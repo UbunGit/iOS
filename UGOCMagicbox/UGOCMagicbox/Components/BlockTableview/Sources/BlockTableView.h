@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BlockTableView : UIView<UITableViewDelegate,UITableViewDataSource>
-
-@property(strong, nonatomic) UITableView *tableview;
+@interface BlockTableView : UITableView<UITableViewDelegate,UITableViewDataSource>
 
 @property(copy, nonatomic) NSInteger (^numberOfSectionsInTableView)(UITableView *tableView); //defual 1
 @property(copy, nonatomic) UITableViewCell * (^cellForRowAtIndexPath)(UITableView* tableView, NSIndexPath* indexPath); //defual UITableViewCell

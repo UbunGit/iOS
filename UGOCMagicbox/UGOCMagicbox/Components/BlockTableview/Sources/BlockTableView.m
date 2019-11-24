@@ -25,14 +25,10 @@
 
 -(void)configUI{
     
-    self.tableview = [UITableView new];
-    [self addSubview:_tableview];
-    _tableview.dataSource = self;
-    _tableview.delegate = self;
-    [_tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    [_tableview mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
-    }];
+    self.dataSource = self;
+    self.delegate = self;
+    [self registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+ 
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

@@ -22,6 +22,15 @@
 		841B5EEA22CB363700F6DC04 /* Userinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE922CB363700F6DC04 /* Userinfo.m */; };
 		841B712722CC956100F6DC04 /* LocView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B712622CC956100F6DC04 /* LocView.m */; };
 		8461E1D32306B14600764748 /* SVGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461E1D22306B14600764748 /* SVGViewController.m */; };
+		849485BE238A585E00846F46 /* SharesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485BD238A585E00846F46 /* SharesViewController.m */; };
+		849485CA238A66A200846F46 /* SharesTargetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485C9238A66A200846F46 /* SharesTargetData.m */; };
+		849485CD238A688C00846F46 /* SharesTargetSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485CC238A688C00846F46 /* SharesTargetSettingVC.m */; };
+		849485D0238A6A3C00846F46 /* UGRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485CF238A6A3C00846F46 /* UGRemarkView.m */; };
+		849485D5238A719500846F46 /* SupleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485D4238A719500846F46 /* SupleViewController.m */; };
+		849485D8238A830800846F46 /* SharesCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485D7238A830800846F46 /* SharesCollectionCell.m */; };
+		849485DB238AC82D00846F46 /* SharesListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485DA238AC82D00846F46 /* SharesListVC.m */; };
+		849485DE238AC89C00846F46 /* SharesAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485DD238AC89C00846F46 /* SharesAddView.m */; };
+		849485E1238ACB7500846F46 /* PersentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485E0238ACB7500846F46 /* PersentViewController.m */; };
 		84AB5B7222C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5B7122C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m */; };
 		84AB5B7822C9FE3F002CDEF2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5B7722C9FE3F002CDEF2 /* HomeViewController.m */; };
 		84AB5B7C22CA0469002CDEF2 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5B7B22CA0469002CDEF2 /* TestTableViewCell.m */; };
@@ -169,6 +178,25 @@
 		841B712622CC956100F6DC04 /* LocView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocView.m; sourceTree = "<group>"; };
 		8461E1D12306B14600764748 /* SVGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVGViewController.h; sourceTree = "<group>"; };
 		8461E1D22306B14600764748 /* SVGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVGViewController.m; sourceTree = "<group>"; };
+		849485BC238A585E00846F46 /* SharesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesViewController.h; sourceTree = "<group>"; };
+		849485BD238A585E00846F46 /* SharesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesViewController.m; sourceTree = "<group>"; };
+		849485BF238A58AE00846F46 /* Components.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Components.h; sourceTree = "<group>"; };
+		849485C8238A66A200846F46 /* SharesTargetData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesTargetData.h; sourceTree = "<group>"; };
+		849485C9238A66A200846F46 /* SharesTargetData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesTargetData.m; sourceTree = "<group>"; };
+		849485CB238A688C00846F46 /* SharesTargetSettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesTargetSettingVC.h; sourceTree = "<group>"; };
+		849485CC238A688C00846F46 /* SharesTargetSettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesTargetSettingVC.m; sourceTree = "<group>"; };
+		849485CE238A6A3C00846F46 /* UGRemarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UGRemarkView.h; path = "UGOCMagicbox/Magic/New Group/UGRemarkView/UGRemarkView.h"; sourceTree = SOURCE_ROOT; };
+		849485CF238A6A3C00846F46 /* UGRemarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UGRemarkView.m; path = "UGOCMagicbox/Magic/New Group/UGRemarkView/UGRemarkView.m"; sourceTree = SOURCE_ROOT; };
+		849485D3238A719500846F46 /* SupleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupleViewController.h; sourceTree = "<group>"; };
+		849485D4238A719500846F46 /* SupleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupleViewController.m; sourceTree = "<group>"; };
+		849485D6238A830800846F46 /* SharesCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesCollectionCell.h; sourceTree = "<group>"; };
+		849485D7238A830800846F46 /* SharesCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesCollectionCell.m; sourceTree = "<group>"; };
+		849485D9238AC82D00846F46 /* SharesListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesListVC.h; sourceTree = "<group>"; };
+		849485DA238AC82D00846F46 /* SharesListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesListVC.m; sourceTree = "<group>"; };
+		849485DC238AC89C00846F46 /* SharesAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesAddView.h; sourceTree = "<group>"; };
+		849485DD238AC89C00846F46 /* SharesAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesAddView.m; sourceTree = "<group>"; };
+		849485DF238ACB7500846F46 /* PersentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersentViewController.h; sourceTree = "<group>"; };
+		849485E0238ACB7500846F46 /* PersentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersentViewController.m; sourceTree = "<group>"; };
 		84AB5B7022C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+BlockDelayedPerforming.h"; sourceTree = "<group>"; };
 		84AB5B7122C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BlockDelayedPerforming.m"; sourceTree = "<group>"; };
 		84AB5B7622C9FE3F002CDEF2 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -381,6 +409,7 @@
 		20083D26237E930900D3F6D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				849485D1238A6A4700846F46 /* UGRemarkView */,
 				20F8EA29237FDB1900AAD62A /* UGPersentView */,
 				20083D38237FA59300D3F6D3 /* UGZoneView */,
 				20083D34237EA56400D3F6D3 /* UGWaveView */,
@@ -538,6 +567,69 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		849485BA238A583400846F46 /* Shares  */ = {
+			isa = PBXGroup;
+			children = (
+				849485C7238A665300846F46 /* Moden */,
+				849485C0238A62AF00846F46 /* View */,
+				849485BB238A583E00846F46 /* Controller */,
+			);
+			path = "Shares ";
+			sourceTree = "<group>";
+		};
+		849485BB238A583E00846F46 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				849485BC238A585E00846F46 /* SharesViewController.h */,
+				849485BD238A585E00846F46 /* SharesViewController.m */,
+				849485CB238A688C00846F46 /* SharesTargetSettingVC.h */,
+				849485CC238A688C00846F46 /* SharesTargetSettingVC.m */,
+				849485D9238AC82D00846F46 /* SharesListVC.h */,
+				849485DA238AC82D00846F46 /* SharesListVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		849485C0238A62AF00846F46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				849485D6238A830800846F46 /* SharesCollectionCell.h */,
+				849485D7238A830800846F46 /* SharesCollectionCell.m */,
+				849485DC238AC89C00846F46 /* SharesAddView.h */,
+				849485DD238AC89C00846F46 /* SharesAddView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		849485C7238A665300846F46 /* Moden */ = {
+			isa = PBXGroup;
+			children = (
+				849485C8238A66A200846F46 /* SharesTargetData.h */,
+				849485C9238A66A200846F46 /* SharesTargetData.m */,
+			);
+			path = Moden;
+			sourceTree = "<group>";
+		};
+		849485D1238A6A4700846F46 /* UGRemarkView */ = {
+			isa = PBXGroup;
+			children = (
+				849485CE238A6A3C00846F46 /* UGRemarkView.h */,
+				849485CF238A6A3C00846F46 /* UGRemarkView.m */,
+			);
+			path = UGRemarkView;
+			sourceTree = "<group>";
+		};
+		849485D2238A717500846F46 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				849485D3238A719500846F46 /* SupleViewController.h */,
+				849485D4238A719500846F46 /* SupleViewController.m */,
+				849485DF238ACB7500846F46 /* PersentViewController.h */,
+				849485E0238ACB7500846F46 /* PersentViewController.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		84AB5B7322C9F1CA002CDEF2 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +642,7 @@
 		84AB5B7422C9FDEA002CDEF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				849485BA238A583400846F46 /* Shares  */,
 				20083D3C237FA61400D3F6D3 /* UGZoneViewController */,
 				8461E1CF2306B10900764748 /* SVGAPlayer */,
 				84BA50BD22CCB0A1004F6621 /* FontAwesome */,
@@ -745,6 +838,7 @@
 		84DB96CD22C33F470034A927 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				849485BF238A58AE00846F46 /* Components.h */,
 				841B5EDF22CB2C3600F6DC04 /* MAP */,
 				84DB96CE22C33F470034A927 /* BarcollectionView */,
 				84DB96D422C33F480034A927 /* BlockTableview */,
@@ -1016,6 +1110,7 @@
 		84DB976822C347B10034A927 /* Magic */ = {
 			isa = PBXGroup;
 			children = (
+				849485D2238A717500846F46 /* UIViewController */,
 				20083D26237E930900D3F6D3 /* View */,
 				20083D1A237E707900D3F6D3 /* Animation  */,
 				84BA50CD22D2DBCD004F6621 /* UGDrawingView */,
@@ -1344,15 +1439,18 @@
 			files = (
 				84DB979122C347B10034A927 /* DoraemonTZImagePick.m in Sources */,
 				84DB975622C33F480034A927 /* UITextView+UG.m in Sources */,
+				849485BE238A585E00846F46 /* SharesViewController.m in Sources */,
 				20F8EA2C237FDB5900AAD62A /* UGPersentView.m in Sources */,
 				84BA50C422CCB0B9004F6621 /* FATableViewCell.m in Sources */,
 				84DB976322C3400E0034A927 /* ViewController.m in Sources */,
+				849485CA238A66A200846F46 /* SharesTargetData.m in Sources */,
 				84DB978E22C347B10034A927 /* AppDelegate+TavBar.m in Sources */,
 				84DB973B22C33F480034A927 /* BlockCollectionViewFlowLayout.m in Sources */,
 				20083D1D237E70C900D3F6D3 /* UIView+Animation.m in Sources */,
 				84BA50C522CCB0B9004F6621 /* FATableViewController.m in Sources */,
 				84AB5B7C22CA0469002CDEF2 /* TestTableViewCell.m in Sources */,
 				84DB973322C33F480034A927 /* TabbarCollectionCell.m in Sources */,
+				849485CD238A688C00846F46 /* SharesTargetSettingVC.m in Sources */,
 				84DB979722C347B10034A927 /* MBProgressHUDTableVC.m in Sources */,
 				20F8EA28237FAC0900AAD62A /* UGZoneTableCell.m in Sources */,
 				84DB975522C33F480034A927 /* UIView+Alert.m in Sources */,
@@ -1362,17 +1460,20 @@
 				20083D37237EA58E00D3F6D3 /* UGWaverView.m in Sources */,
 				84DB973022C33F480034A927 /* BarcollectionView.m in Sources */,
 				84DB975B22C33F480034A927 /* DorRoutes.m in Sources */,
+				849485D8238A830800846F46 /* SharesCollectionCell.m in Sources */,
 				84DB973422C33F480034A927 /* TabbarCollectionCenCell.m in Sources */,
 				84DB978B22C347B10034A927 /* AppDelegate+RTRootNavigationController.m in Sources */,
 				84DB979222C347B10034A927 /* DoraemonAddressBook.m in Sources */,
 				84AB5B7822C9FE3F002CDEF2 /* HomeViewController.m in Sources */,
 				84DB973122C33F480034A927 /* BlockTableviewTestVC.m in Sources */,
 				20083D21237E742800D3F6D3 /* DorAnimationTestVC.m in Sources */,
+				849485DB238AC82D00846F46 /* SharesListVC.m in Sources */,
 				20083D29237E936700D3F6D3 /* UGSpeekView.m in Sources */,
 				84DB978D22C347B10034A927 /* AppDelegate+CocoaLumberjack.m in Sources */,
 				84DB978C22C347B10034A927 /* AppDelegate+NIMSDK.m in Sources */,
 				20083D48237FA6F900D3F6D3 /* UGZoneData.m in Sources */,
 				84DB975322C33F480034A927 /* UIView+WY_Extension.m in Sources */,
+				849485D0238A6A3C00846F46 /* UGRemarkView.m in Sources */,
 				84DB976422C3400E0034A927 /* main.m in Sources */,
 				84DB979322C347B10034A927 /* AddressBookController.m in Sources */,
 				84DB974E22C33F480034A927 /* UILabel+UG.m in Sources */,
@@ -1383,10 +1484,13 @@
 				84DB979822C347B10034A927 /* DoraemonSuperPlay.m in Sources */,
 				84DB973E22C33F480034A927 /* DMViewController.m in Sources */,
 				84DB974D22C33F480034A927 /* UIImage+UG.m in Sources */,
+				849485E1238ACB7500846F46 /* PersentViewController.m in Sources */,
+				849485D5238A719500846F46 /* SupleViewController.m in Sources */,
 				84DB972F22C33F480034A927 /* DORTestBarcollectionViewVC.m in Sources */,
 				84DB974822C33F480034A927 /* WelcomViewController.m in Sources */,
 				841B5EEA22CB363700F6DC04 /* Userinfo.m in Sources */,
 				84DB974F22C33F480034A927 /* UIButton+UG.m in Sources */,
+				849485DE238AC89C00846F46 /* SharesAddView.m in Sources */,
 				84DB975722C33F480034A927 /* NSString+Encode.m in Sources */,
 				84DB973D22C33F480034A927 /* BlockCollectionViewCell.m in Sources */,
 				84DB975122C33F480034A927 /* UIColor+UG.m in Sources */,

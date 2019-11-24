@@ -138,8 +138,8 @@
         
         BlockCollectionView *temview = [BlockCollectionView new];
         temview.backgroundColor = [UIColor ug_R:0 G:0 B:0 A:0.7];
-        [temview.collectionView registerClass:[TabbarCollectionCell class] forCellWithReuseIdentifier:@"TabbarCollectionCell"];
-        [temview.collectionView registerClass:[TabbarCollectionCenCell class] forCellWithReuseIdentifier:@"TabbarCollectionCenCell"];
+        [temview registerClass:[TabbarCollectionCell class] forCellWithReuseIdentifier:@"TabbarCollectionCell"];
+        [temview registerClass:[TabbarCollectionCenCell class] forCellWithReuseIdentifier:@"TabbarCollectionCenCell"];
         
         [temview setUg_numberOfItemsInSection:^NSInteger(UICollectionView * _Nonnull collectionView, NSInteger section) {
             return 5;

@@ -13,6 +13,7 @@
 #import "AboutMeVC.h"
 #import "MapViewController.h"
 #import "FATableViewController.h"
+#import "SharesListVC.h"
 
 
 @implementation AppDelegate (TavBar)
@@ -36,15 +37,20 @@
     vc3.title = @"地图";
     RTRootNavigationController *nav3 = [[RTRootNavigationController alloc] initWithRootViewController:vc3];
     
-    
-    FATableViewController *vc4 = [[FATableViewController alloc] init];
-    vc4.title = [NSString fontAwesomeIconStringForIconIdentifier:@"fa-user"];
+    SharesListVC *vc4 = [[SharesListVC alloc] init];
+    vc4.title = @"股票";
+ 
     RTRootNavigationController *nav4 = [[RTRootNavigationController alloc] initWithRootViewController:vc4];
+ 
+    
+    FATableViewController *vc5 = [[FATableViewController alloc] init];
+    vc5.title = [NSString fontAwesomeIconStringForIconIdentifier:@"fa-user"];
+    RTRootNavigationController *nav5 = [[RTRootNavigationController alloc] initWithRootViewController:vc5];
     
     // 创建分栏(标签栏)控制器, 和导航控制器一样，都是用来管理视图控制器的容器类型的控制器。
     // 分栏控制器和导航控制器一样，也是通过viewControllers来管理其子视图控制器
     UITabBarController *tabBarCtrl = [[UITabBarController alloc] init];
-    
+  
     tabBarCtrl.view.backgroundColor = [UIColor cyanColor];
     
     // 把数据中得视图器交给分栏控制器管理

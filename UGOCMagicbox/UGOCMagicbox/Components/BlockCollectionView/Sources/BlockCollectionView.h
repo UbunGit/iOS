@@ -12,11 +12,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface BlockCollectionView : UIView
+@interface BlockCollectionView : UICollectionView
 
-@property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) BlockCollectionViewFlowLayout *flowLayout;
+
 
 @property (assign, nonatomic) BOOL isSetcenten;//是否设置选中的内容正中间 defual=NO
 
@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(copy, nonatomic) void (^ug_didSelectItemAtIndexPath)(UICollectionView*collectionView, NSIndexPath* indexPath);
 @property(copy, nonatomic) CGSize (^ug_sizeForItemAtIndexPath)(UICollectionView* collectionView, UICollectionViewLayout* layout, NSIndexPath* indexPath);
+
 
 @end
 

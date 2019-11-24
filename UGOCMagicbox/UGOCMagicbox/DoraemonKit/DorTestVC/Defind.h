@@ -19,8 +19,14 @@
 
 #define KWidth [UIScreen mainScreen].bounds.size.width
 #define KHeight [UIScreen mainScreen].bounds.size.height
+
 //根据屏幕宽度计算对应尺寸
 #define KAutoAcale(x) x*(KWidth/375)
+
+//间距
+#define KPAND_DEF 15 //默认间距
+#define KPAND_MID 10 //小间距
+#define KPAND_MIN 5 //小间距
 
 //弱引用
 #define UG_WEAKSELF __weak typeof(self) weakSelf = self;

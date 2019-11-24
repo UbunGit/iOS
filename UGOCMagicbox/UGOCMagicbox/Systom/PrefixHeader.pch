@@ -19,5 +19,6 @@
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "Defind.h"
+#import "Components.h"
 
 #endif /* PrefixHeader_pch */
