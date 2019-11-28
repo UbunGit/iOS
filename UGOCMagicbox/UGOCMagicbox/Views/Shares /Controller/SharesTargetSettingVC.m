@@ -9,6 +9,7 @@
 #import "SharesTargetSettingVC.h"
 #import "UGRemarkView.h"
 
+
 @interface SharesTargetSettingVC ()
 
 @property(strong, nonatomic) UGRemarkView *titleTF;
@@ -30,6 +31,10 @@
 -(void)initData{
     if (!_data) {
         self.data = [SharesTargetData new];
+    }else{
+        _titleTF.text = _data.title;
+        _remarkTV.text = _data.remark;
+        _contentTV.text = _data.cotent;
     }
 }
 -(void)configUI{

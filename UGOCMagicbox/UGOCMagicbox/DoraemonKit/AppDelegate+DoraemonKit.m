@@ -28,6 +28,8 @@
    
 
 #pragma -- 常用功能
+    
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"登陆" icon:@"doraemon_ui" desc:@"登陆" pluginName:@"DorLoginPlugin" atModule:@"常用功能"];
     [[DoraemonManager shareInstance] addPluginWithTitle:@"启动页" icon:@"doraemon_ui" desc:@"启动页" pluginName:@"DorWelcomViewController" atModule:@"常用功能"];
     [[DoraemonManager shareInstance] addPluginWithTitle:@"广告页" icon:@"doraemon_ui" desc:@"广告页" pluginName:@"DorDMViewController" atModule:@"常用功能"];
     

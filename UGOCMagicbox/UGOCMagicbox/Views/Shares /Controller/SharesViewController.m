@@ -10,11 +10,14 @@
 
 #import "SharesTargetSettingVC.h"
 #import "SharesCollectionCell.h"
+#import "SharesResuleVC.h"
 
 @interface SharesViewController ()
+
 @property(strong,nonatomic)BlockCollectionView *collectionView;
 @property(strong, nonatomic)RLMResults<SharesTargetData *> *datalist;
-@property(strong, nonatomic)NSMutableDictionary *editDic;
+
+
 @end
 
 @implementation SharesViewController
@@ -26,8 +29,18 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-     self.editDic = [NSMutableDictionary new];
+    if (!_editDic) {
+        self.editDic = [NSMutableDictionary new];
+    }
+    
     [self updataData];
+}
+-(void)setEditDic:(NSMutableDictionary *)editDic{
+    if (![editDic isKindOfClass:[NSMutableDictionary class]]) {
+        _editDic = [NSMutableDictionary dictionaryWithDictionary:editDic];
+    }else{
+        _editDic = editDic; 
+    }
 }
 
 
@@ -38,6 +51,7 @@
 }
 -(void)configUI{
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    self.title = [NSString stringWithFormat:@"%@(%zd)",_sharesdata.name,_sharesdata.date];
     //导航拦
     UIButton *itemButtom = [UIButton  buttonWithType:UIButtonTypeContactAdd];
     [itemButtom setFrame:CGRectMake(0, 0, 30, 40)];
@@ -78,17 +92,30 @@
         [cell.toolView.upBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
             [weakSelf.editDic setObject:@100 forKey:data.title];
             cell.valueLab.text =[NSString stringWithFormat:@"%@",[weakSelf.editDic objectForKey:data.title]];
+              [weakSelf cellHandleEnd:indexPath];
         }];
         [cell.toolView.downBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
             [weakSelf.editDic setObject:@0 forKey:data.title];
             cell.valueLab.text =[NSString stringWithFormat:@"%@",[weakSelf.editDic objectForKey:data.title]];
+              [weakSelf cellHandleEnd:indexPath];
         }];
         [cell.toolView.igoBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
             [weakSelf.editDic setObject:@50 forKey:data.title];
             cell.valueLab.text =[NSString stringWithFormat:@"%@",[weakSelf.editDic objectForKey:data.title]];
+            [weakSelf cellHandleEnd:indexPath];
         }];
         return cell;
     };
+    
+}
+
+-(void)cellHandleEnd:(NSIndexPath *)indexPath{
+    if (indexPath.row == _datalist.count-1) {
+        SharesResuleVC *sharesResuleVC = [SharesResuleVC new];
+        sharesResuleVC.sharesdata = _sharesdata;
+        sharesResuleVC.editDic = _editDic;
+        [self.navigationController pushViewController:sharesResuleVC animated:YES];
+    }
     
 }
 -(void)viewWillLayoutSubviews{

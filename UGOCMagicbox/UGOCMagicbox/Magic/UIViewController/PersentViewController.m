@@ -25,11 +25,19 @@
     if (_cotentView) {
         [self.view addSubview:_cotentView];
         [_cotentView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.mas_equalTo(self.view);
+            make.centerY.mas_equalTo(self.view.centerY).mas_offset(-80);
             make.left.mas_equalTo(self.view).mas_offset(KPAND_DEF);
             make.right.mas_equalTo(self.view).mas_offset(-KPAND_DEF);
         }];
     }
+    [_cotentView addGestureRecognizer:[UIGestureRecognizer bk_recognizerWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+        
+        CALayer *testViewLayer = self.cotentView.layer.presentationLayer;
+       
+        if (!CGRectContainsPoint(testViewLayer.frame, location)) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }]];
 }
 
 -(void)viewWillLayoutSubviews{

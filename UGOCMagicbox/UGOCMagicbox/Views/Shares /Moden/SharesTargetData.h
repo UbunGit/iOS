@@ -9,7 +9,9 @@
 #import <Realm/Realm.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+/**
+ 测评标准
+ */
 @interface SharesTargetData : RLMObject
 
 @property(strong, nonatomic) NSString *title;

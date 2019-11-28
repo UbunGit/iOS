@@ -44,6 +44,15 @@
   
 }
 
+-(SharesSimpleData *)data{
+    
+    SharesSimpleData *temdata = [SharesSimpleData new];
+    temdata.name = _titleTF.text;
+    temdata.number = _numberTF.text;
+    temdata.date =  [_timeTF.text intValue];
+    return temdata;
+}
+
 -(void)layoutSubviews{
     [super layoutSubviews];
     [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {

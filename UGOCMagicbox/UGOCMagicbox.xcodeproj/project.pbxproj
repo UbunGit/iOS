@@ -17,6 +17,13 @@
 		20083D48237FA6F900D3F6D3 /* UGZoneData.m in Sources */ = {isa = PBXBuildFile; fileRef = 20083D47237FA6F900D3F6D3 /* UGZoneData.m */; };
 		20F8EA28237FAC0900AAD62A /* UGZoneTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8EA27237FAC0900AAD62A /* UGZoneTableCell.m */; };
 		20F8EA2C237FDB5900AAD62A /* UGPersentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8EA2B237FDB5900AAD62A /* UGPersentView.m */; };
+		2C1330DC238B948900575155 /* SharesSimpleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1330DB238B948900575155 /* SharesSimpleData.m */; };
+		2C1330DF238B971500575155 /* SharesResuleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1330DE238B971500575155 /* SharesResuleVC.m */; };
+		2C510832238CFE1100F527C0 /* NetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C510830238CFE1100F527C0 /* NetWorkRequest.m */; };
+		2C510836238D7E9200F527C0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C510835238D7E9200F527C0 /* LoginViewController.m */; };
+		2C51083D238D850100F527C0 /* NetWorkRequest+Shares.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C51083C238D850100F527C0 /* NetWorkRequest+Shares.m */; };
+		2CFDD019238EC14400E36BD0 /* SharesHistoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */; };
+		2CFDD0202390203700E36BD0 /* SharesTargetListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDD01F2390203700E36BD0 /* SharesTargetListVC.m */; };
 		841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE122CB2C5B00F6DC04 /* BlockMAMapView.m */; };
 		841B5EE622CB2DB300F6DC04 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE522CB2DB300F6DC04 /* MapViewController.m */; };
 		841B5EEA22CB363700F6DC04 /* Userinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE922CB363700F6DC04 /* Userinfo.m */; };
@@ -166,6 +173,20 @@
 		20F8EA27237FAC0900AAD62A /* UGZoneTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGZoneTableCell.m; sourceTree = "<group>"; };
 		20F8EA2A237FDB5900AAD62A /* UGPersentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGPersentView.h; sourceTree = "<group>"; };
 		20F8EA2B237FDB5900AAD62A /* UGPersentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGPersentView.m; sourceTree = "<group>"; };
+		2C1330DA238B948900575155 /* SharesSimpleData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesSimpleData.h; sourceTree = "<group>"; };
+		2C1330DB238B948900575155 /* SharesSimpleData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesSimpleData.m; sourceTree = "<group>"; };
+		2C1330DD238B971500575155 /* SharesResuleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesResuleVC.h; sourceTree = "<group>"; };
+		2C1330DE238B971500575155 /* SharesResuleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesResuleVC.m; sourceTree = "<group>"; };
+		2C510830238CFE1100F527C0 /* NetWorkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkRequest.m; sourceTree = "<group>"; };
+		2C510831238CFE1100F527C0 /* NetWorkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkRequest.h; sourceTree = "<group>"; };
+		2C510834238D7E9200F527C0 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2C510835238D7E9200F527C0 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2C51083B238D850100F527C0 /* NetWorkRequest+Shares.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetWorkRequest+Shares.h"; sourceTree = "<group>"; };
+		2C51083C238D850100F527C0 /* NetWorkRequest+Shares.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NetWorkRequest+Shares.m"; sourceTree = "<group>"; };
+		2CFDD017238EC14400E36BD0 /* SharesHistoryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesHistoryData.h; sourceTree = "<group>"; };
+		2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesHistoryData.m; sourceTree = "<group>"; };
+		2CFDD01E2390203700E36BD0 /* SharesTargetListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesTargetListVC.h; sourceTree = "<group>"; };
+		2CFDD01F2390203700E36BD0 /* SharesTargetListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesTargetListVC.m; sourceTree = "<group>"; };
 		5B5268EFBFD3D7289AB4B056 /* Pods-UGOCMagicbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UGOCMagicbox.release.xcconfig"; path = "Target Support Files/Pods-UGOCMagicbox/Pods-UGOCMagicbox.release.xcconfig"; sourceTree = "<group>"; };
 		736A3F8F8181158053A95729 /* Pods_UGOCMagicbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UGOCMagicbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		841B5EE022CB2C5B00F6DC04 /* BlockMAMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockMAMapView.h; sourceTree = "<group>"; };
@@ -501,6 +522,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2C51082F238CFCD800F527C0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2C510831238CFE1100F527C0 /* NetWorkRequest.h */,
+				2C510830238CFE1100F527C0 /* NetWorkRequest.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2C510833238D7E6F00F527C0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2C510834238D7E9200F527C0 /* LoginViewController.h */,
+				2C510835238D7E9200F527C0 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2C510837238D840400F527C0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2C51083B238D850100F527C0 /* NetWorkRequest+Shares.h */,
+				2C51083C238D850100F527C0 /* NetWorkRequest+Shares.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		5690AFE9D97DCD065C2E5393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -570,6 +618,7 @@
 		849485BA238A583400846F46 /* Shares  */ = {
 			isa = PBXGroup;
 			children = (
+				2C510837238D840400F527C0 /* API */,
 				849485C7238A665300846F46 /* Moden */,
 				849485C0238A62AF00846F46 /* View */,
 				849485BB238A583E00846F46 /* Controller */,
@@ -584,8 +633,12 @@
 				849485BD238A585E00846F46 /* SharesViewController.m */,
 				849485CB238A688C00846F46 /* SharesTargetSettingVC.h */,
 				849485CC238A688C00846F46 /* SharesTargetSettingVC.m */,
+				2CFDD01E2390203700E36BD0 /* SharesTargetListVC.h */,
+				2CFDD01F2390203700E36BD0 /* SharesTargetListVC.m */,
 				849485D9238AC82D00846F46 /* SharesListVC.h */,
 				849485DA238AC82D00846F46 /* SharesListVC.m */,
+				2C1330DD238B971500575155 /* SharesResuleVC.h */,
+				2C1330DE238B971500575155 /* SharesResuleVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -606,6 +659,10 @@
 			children = (
 				849485C8238A66A200846F46 /* SharesTargetData.h */,
 				849485C9238A66A200846F46 /* SharesTargetData.m */,
+				2C1330DA238B948900575155 /* SharesSimpleData.h */,
+				2C1330DB238B948900575155 /* SharesSimpleData.m */,
+				2CFDD017238EC14400E36BD0 /* SharesHistoryData.h */,
+				2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */,
 			);
 			path = Moden;
 			sourceTree = "<group>";
@@ -642,6 +699,7 @@
 		84AB5B7422C9FDEA002CDEF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2C510833238D7E6F00F527C0 /* Login */,
 				849485BA238A583400846F46 /* Shares  */,
 				20083D3C237FA61400D3F6D3 /* UGZoneViewController */,
 				8461E1CF2306B10900764748 /* SVGAPlayer */,
@@ -838,6 +896,7 @@
 		84DB96CD22C33F470034A927 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2C51082F238CFCD800F527C0 /* Network */,
 				849485BF238A58AE00846F46 /* Components.h */,
 				841B5EDF22CB2C3600F6DC04 /* MAP */,
 				84DB96CE22C33F470034A927 /* BarcollectionView */,
@@ -1277,6 +1336,7 @@
 				TargetAttributes = {
 					84DB969622C33E710034A927 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1120;
 					};
 					84DB96AE22C33E800034A927 = {
 						CreatedOnToolsVersion = 10.2;
@@ -1443,6 +1503,7 @@
 				20F8EA2C237FDB5900AAD62A /* UGPersentView.m in Sources */,
 				84BA50C422CCB0B9004F6621 /* FATableViewCell.m in Sources */,
 				84DB976322C3400E0034A927 /* ViewController.m in Sources */,
+				2C1330DF238B971500575155 /* SharesResuleVC.m in Sources */,
 				849485CA238A66A200846F46 /* SharesTargetData.m in Sources */,
 				84DB978E22C347B10034A927 /* AppDelegate+TavBar.m in Sources */,
 				84DB973B22C33F480034A927 /* BlockCollectionViewFlowLayout.m in Sources */,
@@ -1462,6 +1523,7 @@
 				84DB975B22C33F480034A927 /* DorRoutes.m in Sources */,
 				849485D8238A830800846F46 /* SharesCollectionCell.m in Sources */,
 				84DB973422C33F480034A927 /* TabbarCollectionCenCell.m in Sources */,
+				2C510832238CFE1100F527C0 /* NetWorkRequest.m in Sources */,
 				84DB978B22C347B10034A927 /* AppDelegate+RTRootNavigationController.m in Sources */,
 				84DB979222C347B10034A927 /* DoraemonAddressBook.m in Sources */,
 				84AB5B7822C9FE3F002CDEF2 /* HomeViewController.m in Sources */,
@@ -1485,9 +1547,11 @@
 				84DB973E22C33F480034A927 /* DMViewController.m in Sources */,
 				84DB974D22C33F480034A927 /* UIImage+UG.m in Sources */,
 				849485E1238ACB7500846F46 /* PersentViewController.m in Sources */,
+				2C51083D238D850100F527C0 /* NetWorkRequest+Shares.m in Sources */,
 				849485D5238A719500846F46 /* SupleViewController.m in Sources */,
 				84DB972F22C33F480034A927 /* DORTestBarcollectionViewVC.m in Sources */,
 				84DB974822C33F480034A927 /* WelcomViewController.m in Sources */,
+				2C510836238D7E9200F527C0 /* LoginViewController.m in Sources */,
 				841B5EEA22CB363700F6DC04 /* Userinfo.m in Sources */,
 				84DB974F22C33F480034A927 /* UIButton+UG.m in Sources */,
 				849485DE238AC89C00846F46 /* SharesAddView.m in Sources */,
@@ -1498,6 +1562,7 @@
 				84DB974A22C33F480034A927 /* AppDelegate+Welcom.m in Sources */,
 				84DB975A22C33F480034A927 /* AppDelegate+DoraemonKit.m in Sources */,
 				84DB973C22C33F480034A927 /* BlockCollectionView.m in Sources */,
+				2CFDD0202390203700E36BD0 /* SharesTargetListVC.m in Sources */,
 				84BA50C622CCB0B9004F6621 /* FAViewController.m in Sources */,
 				8461E1D32306B14600764748 /* SVGViewController.m in Sources */,
 				841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */,
@@ -1505,7 +1570,9 @@
 				84DB975922C33F480034A927 /* NSDate+UG.m in Sources */,
 				84AB5B8D22CA121C002CDEF2 /* AboutMeVC.m in Sources */,
 				841B712722CC956100F6DC04 /* LocView.m in Sources */,
+				2CFDD019238EC14400E36BD0 /* SharesHistoryData.m in Sources */,
 				84AB5B7222C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m in Sources */,
+				2C1330DC238B948900575155 /* SharesSimpleData.m in Sources */,
 				84BA50D022D2DBED004F6621 /* UGDrawingView.m in Sources */,
 				84BA50D422D2DF50004F6621 /* UGDrawingVC.m in Sources */,
 				84DB975422C33F480034A927 /* UIView+UG.m in Sources */,
@@ -1681,6 +1748,7 @@
 			baseConfigurationReference = A687B4F0B99828260BDE8B00 /* Pods-UGOCMagicbox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LG55CZHSNP;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1696,6 +1764,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.UGOCMagicbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1705,6 +1775,7 @@
 			baseConfigurationReference = 5B5268EFBFD3D7289AB4B056 /* Pods-UGOCMagicbox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LG55CZHSNP;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1720,6 +1791,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.UGOCMagicbox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

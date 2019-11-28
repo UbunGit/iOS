@@ -31,4 +31,6 @@
 //弱引用
 #define UG_WEAKSELF __weak typeof(self) weakSelf = self;
 
+#define PATHDOCUMENT [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
 #endif /* Defind_h */

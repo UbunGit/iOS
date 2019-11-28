@@ -55,7 +55,7 @@
     
     // 把数据中得视图器交给分栏控制器管理
     // 分栏控制器会自动将其管理的视图控制器的分栏按钮(UITabBarItem)放到分栏上显示
-    tabBarCtrl.viewControllers = @[nav1, nav2, nav3, nav4];
+    tabBarCtrl.viewControllers = @[nav4, nav2, nav3, nav1,nav5];
     
     // 设置窗口的跟视图控制器为分栏控制器
     self.window.rootViewController = tabBarCtrl;

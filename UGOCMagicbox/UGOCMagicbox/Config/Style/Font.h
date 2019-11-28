@@ -25,4 +25,7 @@
 #define FONT_SYS12 [UIFont systemFontOfSize:12]
 #define FONT_SYS10 [UIFont systemFontOfSize:10]
 
+#define FONT_FA20 [UIFont fontWithName:kFontAwesomeFamilyName size:20]
+
+
 #endif /* Font_h */

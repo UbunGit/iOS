@@ -68,6 +68,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface DorLoginPlugin : NSObject<DoraemonPluginProtocol>
+
+@end
+
 
 
 NS_ASSUME_NONNULL_END

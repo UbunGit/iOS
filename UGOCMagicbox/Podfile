@@ -13,6 +13,8 @@ target 'UGOCMagicbox' do
   pod 'PPGetAddressBook'
   pod 'SVGAPlayer'
   pod 'lottie-ios', '~> 2.5.3'
+  pod 'IQKeyboardManager'
+  pod 'YYKit'
   
   pod 'DoraemonKit/Core',  :configurations => ['Debug']
   pod 'DoraemonKit/WithLogger', :configurations => ['Debug']

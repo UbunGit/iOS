@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "UGRemarkView.h"
+#import "SharesSimpleData.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SharesAddView : UIView
+@property(strong, readonly) SharesSimpleData* data;
 
 @property(strong, nonatomic) UILabel *titleLab; // 股票名称
 
