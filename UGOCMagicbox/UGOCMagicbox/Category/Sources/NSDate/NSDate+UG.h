@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSDate (UG)
 
 /**
+ * 按指定样式返回，nil返回 yyyy-MM-dd hh:mm
+ */
+-(NSString*)ug_formatter:(NSString*)formatstr;
+/**
  * hh:mm
  */
 -(NSString*)ug_hourTime;

@@ -48,6 +48,7 @@
     self.blockTableView = [BlockTableView new];
     [self.view addSubview:_blockTableView];
     
+    
     _blockTableView.numberOfRowsInSection = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
         return weakSelf.datalist.count;
     };
@@ -72,7 +73,6 @@
         SharesTargetSettingVC *sharesTargetSettingVC = [SharesTargetSettingVC new];
         sharesTargetSettingVC.data = data;
         [weakSelf.navigationController pushViewController:sharesTargetSettingVC animated:YES];
-        
     };
     
     

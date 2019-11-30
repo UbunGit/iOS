@@ -22,6 +22,15 @@
 
 -(void)configUI{
     self.view.backgroundColor = COLOR00_04;
+    self.closeBtn = [UIButton new];
+    [self.view addSubview:_closeBtn];
+    NSString *bcaktitle = [NSString fontAwesomeIconStringForEnum:FADotCircleO];
+    [_closeBtn.titleLabel setFont:FONT_FA20];
+    [_closeBtn setTitle:bcaktitle forState:UIControlStateNormal];
+    [_closeBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    _closeBtn.backgroundColor = UIColor.redColor;
     if (_cotentView) {
         [self.view addSubview:_cotentView];
         [_cotentView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -29,19 +38,18 @@
             make.left.mas_equalTo(self.view).mas_offset(KPAND_DEF);
             make.right.mas_equalTo(self.view).mas_offset(-KPAND_DEF);
         }];
+        [_closeBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.mas_equalTo(self.cotentView).mas_offset(-KPAND_DEF);
+            make.right.mas_equalTo(self.cotentView).mas_offset(-KPAND_DEF);
+            make.size.mas_equalTo(CGSizeMake(40, 40));
+        }];
     }
-    [_cotentView addGestureRecognizer:[UIGestureRecognizer bk_recognizerWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
-        
-        CALayer *testViewLayer = self.cotentView.layer.presentationLayer;
-       
-        if (!CGRectContainsPoint(testViewLayer.frame, location)) {
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
-    }]];
+
 }
 
 -(void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
+
 
 }
 

@@ -27,7 +27,7 @@
 
 -(void)configUI{
     [self ug_radius:5];
-  
+    self.text = @"编辑指标";
     self.textView = [UITextView new];
     [self addSubview:_textView];
     [_textView ug_borderColor:COLOREE width:1];

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Welcom.h"
+#import "UIAppdelegate+Realm.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self configDoraemonKit];//配置DoraemonKit 测试工具
     [self configCocoaLumberjack];//配置CocoaLumberjack 日志
+    [[UIApplication sharedApplication] configRealm];
     [[UIApplication sharedApplication]configTABAnimated];
     [self configRTRootNavigationController];
     [self configTabBar];//配置tabbar

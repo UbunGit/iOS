@@ -9,6 +9,19 @@
 #import "NSDate+UG.h"
 
 @implementation NSDate (UG)
+
+/**
+ * 按指定样式返回，nil返回 yyyy-MM-dd hh:mm
+ */
+-(NSString*)ug_formatter:(NSString*)formatstr{
+    if (!formatstr) {
+        formatstr = @"yyyy-MM-dd hh:mm";
+    }
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:formatstr];
+    NSString* timeString=[formatter stringFromDate:self];
+    return timeString;
+}
 /**
  *
  */

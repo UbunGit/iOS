@@ -22,6 +22,8 @@
 		2C510832238CFE1100F527C0 /* NetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C510830238CFE1100F527C0 /* NetWorkRequest.m */; };
 		2C510836238D7E9200F527C0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C510835238D7E9200F527C0 /* LoginViewController.m */; };
 		2C51083D238D850100F527C0 /* NetWorkRequest+Shares.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C51083C238D850100F527C0 /* NetWorkRequest+Shares.m */; };
+		2C9760CA239233B2003999BA /* NSObject+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9760C9239233B2003999BA /* NSObject+UG.m */; };
+		2C9760CE23925F53003999BA /* UIAppdelegate+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9760CD23925F52003999BA /* UIAppdelegate+Realm.m */; };
 		2CFDD019238EC14400E36BD0 /* SharesHistoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */; };
 		2CFDD0202390203700E36BD0 /* SharesTargetListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDD01F2390203700E36BD0 /* SharesTargetListVC.m */; };
 		841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE122CB2C5B00F6DC04 /* BlockMAMapView.m */; };
@@ -38,7 +40,6 @@
 		849485DB238AC82D00846F46 /* SharesListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485DA238AC82D00846F46 /* SharesListVC.m */; };
 		849485DE238AC89C00846F46 /* SharesAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485DD238AC89C00846F46 /* SharesAddView.m */; };
 		849485E1238ACB7500846F46 /* PersentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485E0238ACB7500846F46 /* PersentViewController.m */; };
-		84AB5B7222C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5B7122C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m */; };
 		84AB5B7822C9FE3F002CDEF2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5B7722C9FE3F002CDEF2 /* HomeViewController.m */; };
 		84AB5B7C22CA0469002CDEF2 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5B7B22CA0469002CDEF2 /* TestTableViewCell.m */; };
 		84AB5B8422CA0789002CDEF2 /* UIApplication+TABAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5B8322CA0789002CDEF2 /* UIApplication+TABAnimated.m */; };
@@ -183,6 +184,10 @@
 		2C510835238D7E9200F527C0 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2C51083B238D850100F527C0 /* NetWorkRequest+Shares.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetWorkRequest+Shares.h"; sourceTree = "<group>"; };
 		2C51083C238D850100F527C0 /* NetWorkRequest+Shares.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NetWorkRequest+Shares.m"; sourceTree = "<group>"; };
+		2C9760C8239233B2003999BA /* NSObject+UG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+UG.h"; sourceTree = "<group>"; };
+		2C9760C9239233B2003999BA /* NSObject+UG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+UG.m"; sourceTree = "<group>"; };
+		2C9760CC23925F52003999BA /* UIAppdelegate+Realm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAppdelegate+Realm.h"; sourceTree = "<group>"; };
+		2C9760CD23925F52003999BA /* UIAppdelegate+Realm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAppdelegate+Realm.m"; sourceTree = "<group>"; };
 		2CFDD017238EC14400E36BD0 /* SharesHistoryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesHistoryData.h; sourceTree = "<group>"; };
 		2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesHistoryData.m; sourceTree = "<group>"; };
 		2CFDD01E2390203700E36BD0 /* SharesTargetListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesTargetListVC.h; sourceTree = "<group>"; };
@@ -218,8 +223,6 @@
 		849485DD238AC89C00846F46 /* SharesAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesAddView.m; sourceTree = "<group>"; };
 		849485DF238ACB7500846F46 /* PersentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersentViewController.h; sourceTree = "<group>"; };
 		849485E0238ACB7500846F46 /* PersentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersentViewController.m; sourceTree = "<group>"; };
-		84AB5B7022C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+BlockDelayedPerforming.h"; sourceTree = "<group>"; };
-		84AB5B7122C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BlockDelayedPerforming.m"; sourceTree = "<group>"; };
 		84AB5B7622C9FE3F002CDEF2 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		84AB5B7722C9FE3F002CDEF2 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		84AB5B7A22CA0469002CDEF2 /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
@@ -549,6 +552,15 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		2C9760CB23925F18003999BA /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				2C9760CC23925F52003999BA /* UIAppdelegate+Realm.h */,
+				2C9760CD23925F52003999BA /* UIAppdelegate+Realm.m */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		5690AFE9D97DCD065C2E5393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -690,8 +702,8 @@
 		84AB5B7322C9F1CA002CDEF2 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
-				84AB5B7022C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.h */,
-				84AB5B7122C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m */,
+				2C9760C8239233B2003999BA /* NSObject+UG.h */,
+				2C9760C9239233B2003999BA /* NSObject+UG.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -1169,6 +1181,7 @@
 		84DB976822C347B10034A927 /* Magic */ = {
 			isa = PBXGroup;
 			children = (
+				2C9760CB23925F18003999BA /* Realm */,
 				849485D2238A717500846F46 /* UIViewController */,
 				20083D26237E930900D3F6D3 /* View */,
 				20083D1A237E707900D3F6D3 /* Animation  */,
@@ -1538,6 +1551,7 @@
 				849485D0238A6A3C00846F46 /* UGRemarkView.m in Sources */,
 				84DB976422C3400E0034A927 /* main.m in Sources */,
 				84DB979322C347B10034A927 /* AddressBookController.m in Sources */,
+				2C9760CE23925F53003999BA /* UIAppdelegate+Realm.m in Sources */,
 				84DB974E22C33F480034A927 /* UILabel+UG.m in Sources */,
 				84AB5B8422CA0789002CDEF2 /* UIApplication+TABAnimated.m in Sources */,
 				84DB975222C33F480034A927 /* UIControl+UG.m in Sources */,
@@ -1568,10 +1582,10 @@
 				841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */,
 				84DB975822C33F480034A927 /* UITextField+UG.m in Sources */,
 				84DB975922C33F480034A927 /* NSDate+UG.m in Sources */,
+				2C9760CA239233B2003999BA /* NSObject+UG.m in Sources */,
 				84AB5B8D22CA121C002CDEF2 /* AboutMeVC.m in Sources */,
 				841B712722CC956100F6DC04 /* LocView.m in Sources */,
 				2CFDD019238EC14400E36BD0 /* SharesHistoryData.m in Sources */,
-				84AB5B7222C9E909002CDEF2 /* NSObject+BlockDelayedPerforming.m in Sources */,
 				2C1330DC238B948900575155 /* SharesSimpleData.m in Sources */,
 				84BA50D022D2DBED004F6621 /* UGDrawingView.m in Sources */,
 				84BA50D422D2DF50004F6621 /* UGDrawingVC.m in Sources */,

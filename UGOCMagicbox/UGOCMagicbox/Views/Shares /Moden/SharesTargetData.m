@@ -10,7 +10,14 @@
 
 @implementation SharesTargetData
 
++(NSString *)primaryKey{
+     return @"key";
+}
 +(void)install{
     
+}
+-(NSString*)makeKey{
+    NSDate *date = [NSDate date];
+    return [NSString stringWithFormat:[date ug_formatter:@"yyyyMMddhhmmss"]];
 }
 @end

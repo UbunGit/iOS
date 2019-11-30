@@ -9,13 +9,15 @@
 #import "SharesResuleVC.h"
 
 #import "SharesHistoryData.h"
+#import "SharesTargetData.h"
 
 @interface SharesResuleVC ()
 
-@property(strong, nonatomic) UILabel *titleLab;
 
 @property(strong, nonatomic) UIButton *saveBtn;
 @property(strong, nonatomic) UIButton *cancleBtn;
+@property(strong,nonatomic) NSDictionary *resultDic;
+@property(strong,nonatomic) BlockCollectionView *collectionView;
 
 @end
 
@@ -24,31 +26,55 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configUI];
+    self.resultDic = [self calculate];
+    [self.collectionView reloadData];
 }
 -(void)configUI{
-    
-    self.titleLab = [UILabel new];
-    [self.view addSubview:_titleLab];
-    
+    self.title = @"测评结果";
+    // 保存
     self.saveBtn = [UIButton new];
     [self.view addSubview:_saveBtn];
     [_saveBtn setTitle:@"保存" forState:UIControlStateNormal];
     [_saveBtn setBackgroundColor:COLORDANGER];
-    
     [_saveBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
         [self savedata];
     }];
     
+    //放弃
     self.cancleBtn = [UIButton new];
     [self.view addSubview:_cancleBtn];
     [_cancleBtn setTitle:@"放弃返回" forState:UIControlStateNormal];
-    [_saveBtn setBackgroundColor:COLORWARNING];
+    [_saveBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
+          [self.navigationController popToRootViewControllerAnimated:YES];
+      }];
+    [_cancleBtn setBackgroundColor:COLORWARNING];
+    
+    //
+    self.collectionView = [BlockCollectionView new];
+    [self.view addSubview:_collectionView];
+    
+    UG_WEAKSELF
+    _collectionView.flowLayout.minimumLineSpacing = 0;
+    _collectionView.flowLayout.minimumInteritemSpacing = 0;
+    _collectionView.flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    _collectionView.ug_numberOfItemsInSection = ^NSInteger(UICollectionView * _Nonnull collectionView, NSInteger section) {
+        return weakSelf.resultDic.allKeys.count;
+    };
+    _collectionView.ug_sizeForItemAtIndexPath = ^CGSize(UICollectionView * _Nonnull collectionView, UICollectionViewLayout * _Nonnull layout, NSIndexPath * _Nonnull indexPath) {
+       
+            return CGSizeMake(KWidth/4, KWidth/4);
+        
+    };
+    _collectionView.ug_cellForItemAtIndexPath = ^__kindof UICollectionViewCell * _Nonnull(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
+         BlockCollectionViewCell*cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+        [cell ug_borderColor:COLOR23 width:0.5];
+        NSString *key = [weakSelf.resultDic.allKeys objectAtIndex:indexPath.row];
+        NSArray *temarr = [weakSelf.resultDic objectForKey:key];
+        cell.titleLab.text = [NSString stringWithFormat:@"%@\n%zd",key,temarr.count];
+        return cell;
+    };
 }
 
--(void)updateUI{
-    
-    _titleLab.text = [NSString stringWithFormat:@"测评结果\n%@ %@",_sharesdata.name,_sharesdata.number];
-}
 
 -(void)savedata{
     NSString *savestr = [_editDic jsonStringEncoded];
@@ -61,7 +87,7 @@
     NSString *filePaths =  [NSString stringWithFormat:@"%@/%@.json",path,fileName];
     
     NSFileManager *defaultManager = [NSFileManager defaultManager];
-    [defaultManager removeItemAtPath:path error:nil];
+    [defaultManager removeItemAtPath:filePaths error:nil];
     [defaultManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
     
     NSError *err = [NSError new];
@@ -83,6 +109,32 @@
     }else{
         [self.view ug_msg:@"保存失败"];
     }
+}
+
+-(NSDictionary *)calculate{
+    
+    NSMutableDictionary *remarkDic = [NSMutableDictionary new];
+    for (SharesTargetData *data in [SharesTargetData allObjects]) {
+        
+        //获取该指标下股票的测评内容
+        NSString *value = [_editDic objectForKey:data.key];
+        
+        // 总数组添加
+        NSMutableArray *dataarr = [remarkDic objectForKey:@"all"];
+        if (!dataarr) {
+            dataarr = [NSMutableArray new];
+        }
+        [dataarr addObject:value];
+        
+        for (NSString *remark in [data.remark componentsSeparatedByString:@","]) {
+            NSMutableArray *dataarr = [remarkDic objectForKey:remark];
+            if (!dataarr) {
+                dataarr = [NSMutableArray new];
+            }
+            [dataarr addObject:value];
+        }
+    }
+    return remarkDic;
 }
 
 -(void)viewWillLayoutSubviews{

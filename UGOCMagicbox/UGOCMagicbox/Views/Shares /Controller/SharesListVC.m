@@ -47,7 +47,7 @@
     //导航拦
     UIButton *itemButtom0 = [UIButton  new];
     [itemButtom0 setFrame:CGRectMake(0, 0, 30, 40)];
-    NSString *bcaktitle = [NSString fontAwesomeIconStringForEnum:FAFlask];
+    NSString *bcaktitle = [NSString fontAwesomeIconStringForEnum:FACog];
     [itemButtom0.titleLabel setFont:FONT_FA20];
     [itemButtom0 setTitle:bcaktitle forState:UIControlStateNormal];
     [itemButtom0 ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
@@ -95,13 +95,36 @@
     _blockTableView.didSelectRowAtIndexPath = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
         SharesHistoryData *data = [weakSelf.datalist objectAtIndex:indexPath.row];
         NSData *filedata = [[NSFileManager defaultManager] contentsAtPath:data.absfilePath];
-        NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:filedata options:NSJSONReadingMutableLeaves error:nil];
-    
-        SharesViewController *sharesViewController = [SharesViewController new];
-        sharesViewController.sharesdata = data;
-        sharesViewController.editDic = dic;
-        [weakSelf.navigationController pushViewController:sharesViewController animated:YES];
+        if(filedata){
+            NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:filedata options:NSJSONReadingMutableLeaves error:nil];
+             
+                 SharesViewController *sharesViewController = [SharesViewController new];
+                 sharesViewController.sharesdata = data;
+                 sharesViewController.editDic = dic;
+                 [weakSelf.navigationController pushViewController:sharesViewController animated:YES];
+        }else{
+            [weakSelf.view ug_msg:@"文件不存在或丢失"];
+            RLMRealm *realm = [RLMRealm defaultRealm];
+            // 删除单个模型
+            [realm transactionWithBlock:^{
+               [realm deleteObject:data];
+                [weakSelf updataData];
+            }];
+        }
+     
         
+    };
+    _blockTableView.commitEditingStyle = ^(UITableView * _Nonnull tableView, UITableViewCellEditingStyle editingStyle, NSIndexPath * _Nonnull indexPath) {
+        
+        SharesHistoryData *data = [weakSelf.datalist objectAtIndex:indexPath.row];
+        NSFileManager *defaultManager = [NSFileManager defaultManager];
+        [defaultManager removeItemAtPath:data.absfilePath error:nil];
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        // 删除单个模型
+        [realm transactionWithBlock:^{
+            [realm deleteObject:data];
+            [weakSelf updataData];
+        }];
     };
     
     

@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PersentViewController : UIViewController
 
 @property(strong, nonatomic)UIView *cotentView;
+@property(strong, nonatomic)UIButton *closeBtn;
 
 @end
 
