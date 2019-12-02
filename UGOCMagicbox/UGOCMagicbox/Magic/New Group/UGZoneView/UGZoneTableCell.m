@@ -73,7 +73,7 @@
     [_headImageview sd_setImageWithURL:UGURL(data.headimg)];
     _nickLab.text =[NSString stringWithFormat:@"%@(%zdf)",data.nick,data.sourctArr.count] ;
     _commentLab.text = data.comment;
-    [_collectionView.collectionView reloadData];
+    [_collectionView reloadData];
     [self setNeedsUpdateConstraints];
     [self updateConstraintsIfNeeded];
     CGFloat height = _collectionView.flowLayout.collectionViewContentSize.height;

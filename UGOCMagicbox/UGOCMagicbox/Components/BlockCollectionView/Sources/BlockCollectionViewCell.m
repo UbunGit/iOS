@@ -22,8 +22,14 @@
         [self.contentView addSubview:_imageView];
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
         _imageView.clipsToBounds = YES;
-        [_imageView ug_radius: 3];
+        [_imageView ug_radius:3];
         
+        
+        self.titleLab = [UILabel new];
+        [self.contentView addSubview:_titleLab];
+        [_titleLab setFont:FONT_SYS14];
+        _titleLab.textAlignment = NSTextAlignmentCenter;
+        _titleLab.numberOfLines = 0;
         
     }
     return self;
@@ -33,6 +39,11 @@
     [super layoutSubviews];
     
     [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.right.top.bottom.mas_equalTo(self.contentView);
+    }];
+    
+    [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.left.right.top.bottom.mas_equalTo(self.contentView);
     }];

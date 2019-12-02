@@ -17,47 +17,32 @@
 
 @implementation BlockCollectionView
 
-#pragma mark -- Init
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    if (self = [super initWithFrame:frame]) {
-        
-        [self initialization];
+-(instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout{
+    if (!layout) {
+        layout = self.flowLayout;
+    }
+    if (self ==[super initWithFrame:frame collectionViewLayout:layout]) {
+            self.backgroundColor = UIColor.clearColor;
+            self.delegate = self;
+            self.dataSource = self;
+            self.scrollsToTop = NO;
+            self.pagingEnabled = YES;
+            self.showsHorizontalScrollIndicator = NO;
+            self.showsVerticalScrollIndicator = NO;
+            [self registerClass:[BlockCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     }
     return self;
 }
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    if (self = [super initWithCoder:aDecoder]) {
-        
-        [self initialization];
+-(BlockCollectionViewFlowLayout *)flowLayout{
+    if (!_flowLayout) {
+        _flowLayout = [[BlockCollectionViewFlowLayout alloc] init];
+        _flowLayout.minimumLineSpacing = 0.f;
+        _flowLayout.minimumInteritemSpacing = 0.f;
+        _flowLayout.headerReferenceSize = CGSizeZero;
+        _flowLayout.footerReferenceSize = CGSizeZero;
+        _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     }
-    return self;
-}
-
-- (void)initialization
-{
-
-    _flowLayout = [[BlockCollectionViewFlowLayout alloc] init];
-    _flowLayout.minimumLineSpacing = 0.f;
-    _flowLayout.minimumInteritemSpacing = 0.f;
-    _flowLayout.headerReferenceSize = CGSizeZero;
-    _flowLayout.footerReferenceSize = CGSizeZero;
-    _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:_flowLayout];
-    _collectionView.backgroundColor = UIColor.clearColor;
-    _collectionView.delegate = self;
-    _collectionView.dataSource = self;
-//    _collectionView.bounces = NO;
-//    _collectionView.clipsToBounds = NO;
-    _collectionView.scrollsToTop = NO;
-    _collectionView.pagingEnabled = YES;
-    _collectionView.showsHorizontalScrollIndicator = NO;
-    _collectionView.showsVerticalScrollIndicator = NO;
-    [_collectionView registerClass:[BlockCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
-    [self addSubview:_collectionView];
+    return _flowLayout;
 }
 
 
@@ -117,10 +102,10 @@
     if (!_isSetcenten) {
         return;
     }
-    NSArray *cellarr = [_collectionView indexPathsForVisibleItems];
+    NSArray *cellarr = [self indexPathsForVisibleItems];
     if (cellarr.count>0) {
         NSIndexPath *indexPath = [cellarr objectAtIndex:(cellarr.count/2)+(cellarr.count%2)-1];
-        [_collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:[self scrollPosition]  animated:YES];
+        [self scrollToItemAtIndexPath:indexPath atScrollPosition:[self scrollPosition]  animated:YES];
     }
 }
 
@@ -137,8 +122,5 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.bottom.mas_equalTo(self);
-    }];
 }
 @end

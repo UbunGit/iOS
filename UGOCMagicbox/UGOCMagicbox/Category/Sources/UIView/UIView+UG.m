@@ -14,7 +14,7 @@
 /**
  * 设置圆角
  */
-- (void)ug_radius:(CGFloat)radius{
+-(void)ug_radius:(CGFloat)radius{
     
     [self layoutIfNeeded];//这句代码很重要，不能忘了
     self.layer.cornerRadius = radius;

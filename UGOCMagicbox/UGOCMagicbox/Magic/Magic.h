@@ -16,6 +16,7 @@
 #import "AppDelegate+NIMSDK.h"
 #import "UIApplication+TABAnimated.h"
 #import "UIView+Animation.h"
+#import "SupleViewController.h"
 //pod
 
 

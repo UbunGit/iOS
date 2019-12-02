@@ -68,7 +68,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface DorLoginPlugin : NSObject<DoraemonPluginProtocol>
+
+@end
+
 @interface DorUGAlignmentButtonPlugin : NSObject<DoraemonPluginProtocol>
+
 
 @end
 

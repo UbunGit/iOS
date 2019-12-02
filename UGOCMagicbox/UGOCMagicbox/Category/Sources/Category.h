@@ -21,7 +21,7 @@
 #import "NSString+Encode.h"
 #import "UIImage+UG.h"
 #import "UIColor+UG.h"
-#import "NSObject+BlockDelayedPerforming.h"
+#import "NSObject+UG.h"
 
 
 

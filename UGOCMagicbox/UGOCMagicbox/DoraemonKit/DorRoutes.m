@@ -146,6 +146,20 @@
 
 
 
+#import "LoginViewController.h"
+@implementation DorLoginPlugin
+
+- (void)pluginDidLoad{
+    LoginViewController *vc = [LoginViewController new];
+    [DoraemonHomeWindow openPlugin:vc];
+}
+@end
+
+
+
+
+
+
 
 
 

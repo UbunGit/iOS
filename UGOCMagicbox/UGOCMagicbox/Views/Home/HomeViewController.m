@@ -40,9 +40,9 @@
     imageV.layer.cornerRadius = 80/2.0;
     imageV.layer.masksToBounds = YES;
     [view addSubview:imageV];
-    _blockTableView.tableview.tableHeaderView = view;
+    _blockTableView.tableHeaderView = view;
     
-    [_blockTableView.tableview registerClass:[TestTableViewCell class] forCellReuseIdentifier:@"TestTableViewCell"];
+    [_blockTableView registerClass:[TestTableViewCell class] forCellReuseIdentifier:@"TestTableViewCell"];
     _blockTableView.numberOfRowsInSection = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
         return self.datalist.count;
     };
@@ -70,16 +70,16 @@
 
 }
 -(void)tabAnimated{
-     _blockTableView.tableview.tabAnimated = [TABTableAnimated animatedWithCellClass:[TestTableViewCell class] cellHeight:100];
-    _blockTableView.tableview.tabAnimated.categoryBlock = ^(UIView * _Nonnull view) {
+     _blockTableView.tabAnimated = [TABTableAnimated animatedWithCellClass:[TestTableViewCell class] cellHeight:100];
+    _blockTableView.tabAnimated.categoryBlock = ^(UIView * _Nonnull view) {
         view.animation(1).down(3).height(12);
         view.animation(2).height(12).width(110);
         view.animation(3).down(-5).height(12);
     };
    
-    [_blockTableView.tableview tab_startAnimationWithDelayTime:5. completion:^{
+    [_blockTableView tab_startAnimationWithDelayTime:5. completion:^{
         [self afterGetData];
-        [self.blockTableView.tableview tab_endAnimationEaseOut];
+        [self.blockTableView tab_endAnimationEaseOut];
     }];
     
    
@@ -95,7 +95,7 @@
                                @"def":@""
                                }];
     }
-    [_blockTableView.tableview reloadData];
+    [_blockTableView reloadData];
 }
 -(void)viewLayoutMarginsDidChange{
     [super viewLayoutMarginsDidChange];

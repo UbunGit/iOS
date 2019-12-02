@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) NSArray *iconIdentiferArray;
 @property (nonatomic, strong) NSArray *iconSearchArray;
-@property (nonatomic, strong) UISearchDisplayController *searchDisplayController;
+@property (nonatomic, strong) UIViewController *searchDisplayController;
 @property (nonatomic, strong) UISearchBar *searchBar;
 
 @end
