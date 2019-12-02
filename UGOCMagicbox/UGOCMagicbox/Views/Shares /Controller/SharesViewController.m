@@ -15,6 +15,7 @@
 @interface SharesViewController ()
 
 @property(strong,nonatomic)BlockCollectionView *collectionView;
+@property(strong,nonatomic)UIButton *commitBtn;
 @property(strong, nonatomic)RLMResults<SharesTargetData *> *datalist;
 
 
@@ -50,6 +51,7 @@
     [_collectionView reloadData];
 }
 -(void)configUI{
+     UG_WEAKSELF
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     self.title = [NSString stringWithFormat:@"%@(%zd)",_sharesdata.name,_sharesdata.date];
     //导航拦
@@ -66,8 +68,7 @@
     
     self.collectionView = [BlockCollectionView new];
     [self.view addSubview:_collectionView];
-    
-    UG_WEAKSELF
+
     _collectionView.flowLayout.minimumLineSpacing = 0;
     _collectionView.flowLayout.minimumInteritemSpacing = 0;
     [_collectionView registerClass:[SharesCollectionCell class] forCellWithReuseIdentifier:@"SharesCollectionCell"];
@@ -90,7 +91,7 @@
         cell.titleLab.text = [NSString stringWithFormat:@"%@",data.title];
         cell.numberLab.text = [NSString stringWithFormat:@"%zd/%zd",indexPath.row+1,weakSelf.datalist.count];
         [cell reloadData:data];
-        UG_WEAKSELF
+       
         __weak typeof(cell) weakcell = cell;
         cell.toolView.blockTableView.didSelectRowAtIndexPath = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
             SharesTargetOption *data = [weakcell.toolView.datalist objectAtIndex:indexPath.row];
@@ -98,10 +99,17 @@
             [weakcell.toolView.blockTableView reloadData];
             weakcell.valueLab.text = data.value;
             [weakSelf.editDic setObject:@100 forKey:data.key];
+             [weakSelf cellHandleEnd:indexPath];
         };
         return cell;
     };
     
+    self.commitBtn = [UIButton new];
+    [self.view addSubview:_commitBtn];
+    [_commitBtn setBackgroundColor:[UIColor ug_random]];
+    [_commitBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
+       
+    }];
 }
 
 -(void)cellHandleEnd:(NSIndexPath *)indexPath{
@@ -118,6 +126,11 @@
     [super viewWillLayoutSubviews];
     [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
+    }];
+    [_commitBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(self.view);
+        make.right.mas_equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(30, 30));
     }];
 }
 @end
