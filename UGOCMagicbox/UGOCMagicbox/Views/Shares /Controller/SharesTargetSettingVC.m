@@ -8,6 +8,7 @@
 
 #import "SharesTargetSettingVC.h"
 #import "UGRemarkView.h"
+#import "TargetOptionHeadView.h"
 
 
 @interface SharesTargetSettingVC ()
@@ -16,6 +17,7 @@
 @property(strong, nonatomic) UGRemarkView *titleTF;
 @property(strong, nonatomic) UGRemarkView *remarkTV;
 @property(strong, nonatomic) UGRemarkView *contentTV;
+@property(strong, nonatomic) TargetOptionHeadView* targetOptionHeadView;
 @property(strong, nonatomic) BlockTableView *blockTableView;
 
 @property(strong, nonatomic) UIButton *saveBtn;
@@ -60,8 +62,13 @@
     [_scrollerView addSubview:_contentTV];
     _contentTV.titlaLabel.text = @"指标规则";
     
+    self.targetOptionHeadView = [TargetOptionHeadView new];
+    [self.view addSubview:_targetOptionHeadView];
+    
     _blockTableView = [BlockTableView new];
-    [self.scrollerView addSubview:_blockTableView];
+    [_scrollerView addSubview:_blockTableView];
+    [_blockTableView ug_radius:5];
+    
     _blockTableView.numberOfRowsInSection = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
         return 5;
     };
@@ -82,13 +89,12 @@
     };
     _blockTableView.didSelectRowAtIndexPath = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
         
-     
-        
     };
     _blockTableView.commitEditingStyle = ^(UITableView * _Nonnull tableView, UITableViewCellEditingStyle editingStyle, NSIndexPath * _Nonnull indexPath) {
         
       
     };
+    _blockTableView.backgroundColor = UIColor.ug_random;
     
     self.saveBtn = [UIButton new];
     [self.view addSubview:_saveBtn];
@@ -100,14 +106,20 @@
     [_saveBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
         
         if ([weakSelf updataData]) {
-            weakSelf.data.key  = [weakSelf.data makeKey];
-            weakSelf.data.title  = weakSelf.titleTF.text;
-            weakSelf.data.remark  = weakSelf.remarkTV.text;
-            weakSelf.data.cotent  = weakSelf.contentTV.text;
+           
+         
             RLMRealm *realm = [RLMRealm defaultRealm];
-            
+               
             [realm transactionWithBlock:^{
-                [realm addOrUpdateObject:weakSelf.data];
+                NSString *key = weakSelf.data.key?:[weakSelf.data makeKey];
+                [SharesTargetData createOrUpdateInRealm:realm withValue:@{@"key": key,
+                                                                          @"title": weakSelf.titleTF.text,
+                                                                          @"remark": weakSelf.remarkTV.text,
+                                                                          @"cotent": weakSelf.contentTV.text,
+                                                                          @"valueType":@0
+                                                                          
+                }];
+              
                 [self.view ug_msg:@"保存成功"];
             }];
         }
@@ -145,27 +157,35 @@
     }];
     [_titleTF mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.scrollerView).mas_offset(KPAND_DEF);
-        make.left.mas_equalTo(self.scrollerView).mas_offset(KPAND_DEF);
-        make.right.mas_equalTo(self.scrollerView).mas_offset(-KPAND_DEF);
+        make.left.mas_equalTo(self.view).mas_offset(KPAND_DEF);
+        make.right.mas_equalTo(self.view).mas_offset(-KPAND_DEF);
         make.height.mas_equalTo(60);
     }];
     [_remarkTV mas_makeConstraints:^(MASConstraintMaker *make) {
           make.top.mas_equalTo(self.titleTF.mas_bottom).mas_offset(KPAND_DEF);
-          make.left.mas_equalTo(self.scrollerView).mas_offset(KPAND_DEF);
-          make.right.mas_equalTo(self.scrollerView).mas_offset(-KPAND_DEF);
-          make.height.mas_equalTo(120);
+          make.left.mas_equalTo(self.view).mas_offset(KPAND_DEF);
+          make.right.mas_equalTo(self.view).mas_offset(-KPAND_DEF);
+          make.height.mas_equalTo(80);
       }];
     [_contentTV mas_makeConstraints:^(MASConstraintMaker *make) {
           make.top.mas_equalTo(self.remarkTV.mas_bottom).mas_offset(KPAND_DEF);
-          make.left.mas_equalTo(self.scrollerView).mas_offset(KPAND_DEF);
-          make.right.mas_equalTo(self.scrollerView).mas_offset(-KPAND_DEF);
+          make.left.mas_equalTo(self.view).mas_offset(KPAND_DEF);
+          make.right.mas_equalTo(self.view).mas_offset(-KPAND_DEF);
           make.height.mas_equalTo(150);
       }];
+    
+    [_targetOptionHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.contentTV.mas_bottom).mas_offset(KPAND_DEF);
+            make.left.mas_equalTo(self.view).mas_offset(KPAND_DEF);
+            make.right.mas_equalTo(self.view).mas_offset(-KPAND_DEF);
+            make.height.mas_equalTo(40);
+        }];
     [_blockTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.contentTV.mas_bottom).mas_offset(KPAND_DEF);
+        make.top.mas_equalTo(self.targetOptionHeadView.mas_bottom).mas_offset(KPAND_DEF);
         make.left.mas_equalTo(self.view).mas_offset(KPAND_DEF);
         make.right.mas_equalTo(self.view).mas_offset(-KPAND_DEF);
-        make.bottom.mas_equalTo(self.scrollerView.mas_bottom);
+        make.height.mas_equalTo(_blockTableView.contentSize.height);
+        make.bottom.mas_equalTo(self.scrollerView.mas_bottom).mas_offset(-68);
     }];
     [_saveBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(self.view).mas_offset(-KPAND_DEF);

@@ -24,6 +24,7 @@
 		2C51083D238D850100F527C0 /* NetWorkRequest+Shares.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C51083C238D850100F527C0 /* NetWorkRequest+Shares.m */; };
 		2C9760CA239233B2003999BA /* NSObject+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9760C9239233B2003999BA /* NSObject+UG.m */; };
 		2C9760CE23925F53003999BA /* UIAppdelegate+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9760CD23925F52003999BA /* UIAppdelegate+Realm.m */; };
+		2C9760D5239396B5003999BA /* TargetOptionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9760D4239396B5003999BA /* TargetOptionHeadView.m */; };
 		2CFDD019238EC14400E36BD0 /* SharesHistoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */; };
 		2CFDD0202390203700E36BD0 /* SharesTargetListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDD01F2390203700E36BD0 /* SharesTargetListVC.m */; };
 		841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE122CB2C5B00F6DC04 /* BlockMAMapView.m */; };
@@ -188,6 +189,8 @@
 		2C9760C9239233B2003999BA /* NSObject+UG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+UG.m"; sourceTree = "<group>"; };
 		2C9760CC23925F52003999BA /* UIAppdelegate+Realm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAppdelegate+Realm.h"; sourceTree = "<group>"; };
 		2C9760CD23925F52003999BA /* UIAppdelegate+Realm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAppdelegate+Realm.m"; sourceTree = "<group>"; };
+		2C9760D3239396B5003999BA /* TargetOptionHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetOptionHeadView.h; sourceTree = "<group>"; };
+		2C9760D4239396B5003999BA /* TargetOptionHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetOptionHeadView.m; sourceTree = "<group>"; };
 		2CFDD017238EC14400E36BD0 /* SharesHistoryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesHistoryData.h; sourceTree = "<group>"; };
 		2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesHistoryData.m; sourceTree = "<group>"; };
 		2CFDD01E2390203700E36BD0 /* SharesTargetListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesTargetListVC.h; sourceTree = "<group>"; };
@@ -662,6 +665,8 @@
 				849485D7238A830800846F46 /* SharesCollectionCell.m */,
 				849485DC238AC89C00846F46 /* SharesAddView.h */,
 				849485DD238AC89C00846F46 /* SharesAddView.m */,
+				2C9760D3239396B5003999BA /* TargetOptionHeadView.h */,
+				2C9760D4239396B5003999BA /* TargetOptionHeadView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1542,6 +1547,7 @@
 				84AB5B7822C9FE3F002CDEF2 /* HomeViewController.m in Sources */,
 				84DB973122C33F480034A927 /* BlockTableviewTestVC.m in Sources */,
 				20083D21237E742800D3F6D3 /* DorAnimationTestVC.m in Sources */,
+				2C9760D5239396B5003999BA /* TargetOptionHeadView.m in Sources */,
 				849485DB238AC82D00846F46 /* SharesListVC.m in Sources */,
 				20083D29237E936700D3F6D3 /* UGSpeekView.m in Sources */,
 				84DB978D22C347B10034A927 /* AppDelegate+CocoaLumberjack.m in Sources */,

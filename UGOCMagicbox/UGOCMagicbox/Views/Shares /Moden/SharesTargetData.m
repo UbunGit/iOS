@@ -8,6 +8,19 @@
 
 #import "SharesTargetData.h"
 
+
+@implementation SharesTargetOption
+
++(NSString *)primaryKey{
+     return @"key";
+}
+
+-(NSString*)makeKey{
+    NSDate *date = [NSDate date];
+    return [NSString stringWithFormat:@"%@", [date ug_formatter:@"yyyyMMddhhmmss"]];
+}
+@end
+
 @implementation SharesTargetData
 
 +(NSString *)primaryKey{
@@ -18,6 +31,6 @@
 }
 -(NSString*)makeKey{
     NSDate *date = [NSDate date];
-    return [NSString stringWithFormat:[date ug_formatter:@"yyyyMMddhhmmss"]];
+    return [NSString stringWithFormat:@"%@", [date ug_formatter:@"yyyyMMddhhmmss"]];
 }
 @end

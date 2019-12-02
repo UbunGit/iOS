@@ -24,6 +24,7 @@
         [itemButtom setFrame:CGRectMake(0, 0, 30, 40)];
         NSString *bcaktitle = [NSString fontAwesomeIconStringForEnum:FAAngleLeft];
         [itemButtom.titleLabel setFont:FONT_FA20];
+        [itemButtom setTitleColor:COLOR23 forState:UIControlStateNormal];
         [itemButtom setTitle:bcaktitle forState:UIControlStateNormal];
         [itemButtom ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
            

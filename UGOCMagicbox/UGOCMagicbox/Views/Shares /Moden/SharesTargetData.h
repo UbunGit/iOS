@@ -10,6 +10,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 /**
+ 测评选项
+ */
+@interface SharesTargetOption : RLMObject
+
+@property(strong, nonatomic) NSString *key; //key
+
+@property(strong, nonatomic) NSString *targetKey; //key
+
+@property(strong, nonatomic) NSString *title; // 标题
+
+@property(strong, nonatomic) NSString *remark; // 备注
+
+@property(strong, nonatomic) NSString *value; //值
+-(NSString*)makeKey;
+@end
+/**
  测评标准
  */
 @interface SharesTargetData : RLMObject
@@ -22,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(strong, nonatomic) NSString *cotent; // 说明文字
 
-@property(strong, nonatomic) NSString *valueType; // 值类型 0 
+@property NSInteger valueType; // 值类型 0
 
 -(NSString*)makeKey;
 
