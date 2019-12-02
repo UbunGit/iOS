@@ -49,7 +49,7 @@
         UGZoneSourctData *tdata = [weakSelf.data.sourctArr objectAtIndex:indexPath.row];
        
         if (tdata.type == 0 ) {
-            return CGSizeMake(80, 80);
+            return CGSizeMake(140, 140);
         }else{
             return CGSizeMake(100, 100);
         }
@@ -61,6 +61,9 @@
         [cell setNeedsUpdateConstraints];
         [cell updateConstraintsIfNeeded];
         return cell;
+    };
+    _collectionView.ug_didSelectItemAtIndexPath = ^(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
+        DDLogVerbose(@"---");
     };
 
 }

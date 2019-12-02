@@ -134,6 +134,17 @@
 }
 @end
 
+#import "UGAlignmentButtonVC.h"
+// 朋友圈
+@implementation DorUGAlignmentButtonPlugin
+
+- (void)pluginDidLoad{
+    UGAlignmentButtonVC *vc = [UGAlignmentButtonVC new];
+    [DoraemonHomeWindow openPlugin:vc];
+}
+@end
+
+
 
 
 

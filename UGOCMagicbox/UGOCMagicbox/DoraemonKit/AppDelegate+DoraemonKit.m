@@ -23,6 +23,10 @@
     [[DoraemonManager shareInstance] addPluginWithTitle:@"轮播图" icon:@"doraemon_ui" desc:@"类似网易切换" pluginName:@"DoraemonBlockCollectionView" atModule:@"UI"];
     [[DoraemonManager shareInstance] addPluginWithTitle:@"BlockTabview" icon:@"doraemon_ui" desc:@"BlockTabview" pluginName:@"DorBlockTableviewTestVC" atModule:@"UI"];
     
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"btn 布局" icon:@"doraemon_ui" desc:@"BlockTabview" pluginName:@"DorUGAlignmentButtonPlugin" atModule:@"UI"];
+    
+    
+    
     
  
    

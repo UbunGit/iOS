@@ -68,6 +68,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface DorUGAlignmentButtonPlugin : NSObject<DoraemonPluginProtocol>
 
+@end
 
 NS_ASSUME_NONNULL_END
