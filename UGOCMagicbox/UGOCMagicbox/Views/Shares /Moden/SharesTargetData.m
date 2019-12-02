@@ -19,6 +19,11 @@
     NSDate *date = [NSDate date];
     return [NSString stringWithFormat:@"%@", [date ug_formatter:@"yyyyMMddhhmmss"]];
 }
+
++ (NSArray *)ignoredProperties {
+    return @[@"isSelect"];
+}
+
 @end
 
 @implementation SharesTargetData

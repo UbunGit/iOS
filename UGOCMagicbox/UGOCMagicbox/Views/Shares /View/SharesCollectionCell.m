@@ -7,7 +7,7 @@
 //
 
 #import "SharesCollectionCell.h"
-
+#import "ShareOptionCell.h"
 
 @implementation ToolView
 
@@ -17,33 +17,51 @@
     }
     return self;
 }
+-(void)setKey:(NSString *)key{
+    _key = key;
+    [self updateDatalist];
+}
+-(void)updateDatalist{
+    if (_key) {
+        self.datalist = [SharesTargetOption objectsWhere:[NSString stringWithFormat:@"targetKey='%@'",_key]];
+    }
+    [_blockTableView reloadData];
+    
+}
 -(void)configUI{
     [self ug_radius:22];
     self.blockTableView = [BlockTableView new];
-       [self addSubview:_blockTableView];
-       
-       
-       _blockTableView.numberOfRowsInSection = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
-           return 5;
-       };
-       _blockTableView.cellForRowAtIndexPath = ^UITableViewCell * _Nonnull(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
-           
-           UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellid"];
-           if (cell == nil) {
-               cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault
-                                             reuseIdentifier: @"cellid"];
-               cell.selectionStyle = UITableViewCellSelectionStyleNone;
-           }
-//           SharesTargetData *data = [weakSelf.datalist objectAtIndex:indexPath.row];
-//           cell.textLabel.text = [NSString stringWithFormat:@"%@",data.title];
-           cell.textLabel.text = @"---";
-           return cell;
-       };
-       _blockTableView.heightForRowAtIndexPath = ^CGFloat(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
-           return 44;
-       };
+    [self addSubview:_blockTableView];
     
-
+    UG_WEAKSELF
+    _blockTableView.numberOfRowsInSection = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
+        return weakSelf.datalist.count;
+    };
+    _blockTableView.cellForRowAtIndexPath = ^UITableViewCell * _Nonnull(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
+        
+        ShareOptionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ShareOptionCell"];
+        if (cell == nil) {
+            cell = [[ShareOptionCell alloc] initWithStyle: UITableViewCellStyleDefault
+                                          reuseIdentifier: @"ShareOptionCell"];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        SharesTargetOption *data = [weakSelf.datalist objectAtIndex:indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)",data.title,data.value];
+        if([data isEqual:weakSelf.selectData]){
+            [cell.selectImage setBackgroundColor:UIColor.redColor];
+            [cell.textLabel setTextColor:COLOR00_04];
+        }else{
+            [cell.selectImage setBackgroundColor:UIColor.clearColor];
+            [cell.textLabel setTextColor:COLOR23];
+        }
+        
+        return cell;
+    };
+    _blockTableView.heightForRowAtIndexPath = ^CGFloat(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
+        return 44;
+    };
+  
+    
 }
 
 -(void)layoutSubviews{
@@ -88,9 +106,13 @@
     _valueLab.backgroundColor = COLORDANGER;
     _valueLab.text = @"未评分";
     [_valueLab ug_radius:60];
-    
+ 
 }
 
+-(void)reloadData:(SharesTargetData*)data{
+    _titleLab.text = [NSString stringWithFormat:@"%@",data.title];
+    _toolView.key = data.key;
+}
 
 -(void)layoutSubviews{
     [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -98,7 +120,7 @@
         make.center.mas_equalTo(self);
         make.left.mas_equalTo(self.contentView).mas_equalTo(KPAND_DEF);
         make.right.mas_equalTo(self.contentView).mas_equalTo(-KPAND_DEF);
-
+        
     }];
     [_valueLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(self.titleLab.mas_top).mas_equalTo(-100);

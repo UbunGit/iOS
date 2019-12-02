@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(strong, nonatomic) NSString *remark; // 备注
 
 @property(strong, nonatomic) NSString *value; //值
+
+@property(assign, nonatomic) BOOL isSelect; //是否被选中
+
 -(NSString*)makeKey;
 @end
 /**

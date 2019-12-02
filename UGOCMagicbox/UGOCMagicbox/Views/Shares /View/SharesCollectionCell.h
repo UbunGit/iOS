@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(strong, nonatomic)BlockTableView *blockTableView;
 
-
+@property(strong, nonatomic) NSString *key;
+@property(strong, nonatomic) RLMResults <SharesTargetOption*>*datalist;
+@property(strong, nonatomic) SharesTargetOption *selectData;
 @end
 
 
@@ -25,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) UILabel * valueLab;
 @property (strong, nonatomic) ToolView * toolView;
 @property (strong, nonatomic) UILabel * numberLab;
+
+-(void)reloadData:(SharesTargetData*)data;
 
 @end
 

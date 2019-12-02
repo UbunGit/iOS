@@ -21,6 +21,7 @@
 		2066049E2394AF470012D263 /* UGZoneTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206604952394AF470012D263 /* UGZoneTableCell.m */; };
 		206604A12394B01F0012D263 /* TargetOptionAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 206604A02394B01F0012D263 /* TargetOptionAddView.m */; };
 		20B629D12394BD180007885F /* UGAlignmentButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B629CF2394BD180007885F /* UGAlignmentButtonVC.m */; };
+		20B629D4239506BF0007885F /* ShareOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B629D3239506BF0007885F /* ShareOptionCell.m */; };
 		2C1330DC238B948900575155 /* SharesSimpleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1330DB238B948900575155 /* SharesSimpleData.m */; };
 		2C1330DF238B971500575155 /* SharesResuleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1330DE238B971500575155 /* SharesResuleVC.m */; };
 		2C510832238CFE1100F527C0 /* NetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C510830238CFE1100F527C0 /* NetWorkRequest.m */; };
@@ -186,6 +187,8 @@
 		206604A02394B01F0012D263 /* TargetOptionAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetOptionAddView.m; sourceTree = "<group>"; };
 		20B629CF2394BD180007885F /* UGAlignmentButtonVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAlignmentButtonVC.m; sourceTree = "<group>"; };
 		20B629D02394BD180007885F /* UGAlignmentButtonVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAlignmentButtonVC.h; sourceTree = "<group>"; };
+		20B629D2239506BF0007885F /* ShareOptionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareOptionCell.h; sourceTree = "<group>"; };
+		20B629D3239506BF0007885F /* ShareOptionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareOptionCell.m; sourceTree = "<group>"; };
 		2C1330DA238B948900575155 /* SharesSimpleData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesSimpleData.h; sourceTree = "<group>"; };
 		2C1330DB238B948900575155 /* SharesSimpleData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesSimpleData.m; sourceTree = "<group>"; };
 		2C1330DD238B971500575155 /* SharesResuleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesResuleVC.h; sourceTree = "<group>"; };
@@ -698,6 +701,8 @@
 				2C9760D4239396B5003999BA /* TargetOptionHeadView.m */,
 				2066049F2394B01F0012D263 /* TargetOptionAddView.h */,
 				206604A02394B01F0012D263 /* TargetOptionAddView.m */,
+				20B629D2239506BF0007885F /* ShareOptionCell.h */,
+				20B629D3239506BF0007885F /* ShareOptionCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1587,6 +1592,7 @@
 				84DB973E22C33F480034A927 /* DMViewController.m in Sources */,
 				84DB974D22C33F480034A927 /* UIImage+UG.m in Sources */,
 				849485E1238ACB7500846F46 /* PersentViewController.m in Sources */,
+				20B629D4239506BF0007885F /* ShareOptionCell.m in Sources */,
 				2C51083D238D850100F527C0 /* NetWorkRequest+Shares.m in Sources */,
 				849485D5238A719500846F46 /* SupleViewController.m in Sources */,
 				84DB972F22C33F480034A927 /* DORTestBarcollectionViewVC.m in Sources */,

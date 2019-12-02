@@ -89,21 +89,16 @@
         }
         cell.titleLab.text = [NSString stringWithFormat:@"%@",data.title];
         cell.numberLab.text = [NSString stringWithFormat:@"%zd/%zd",indexPath.row+1,weakSelf.datalist.count];
-//        [cell.toolView.upBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-//            [weakSelf.editDic setObject:@100 forKey:data.title];
-//            cell.valueLab.text =[NSString stringWithFormat:@"%@",[weakSelf.editDic objectForKey:data.title]];
-//              [weakSelf cellHandleEnd:indexPath];
-//        }];
-//        [cell.toolView.downBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-//            [weakSelf.editDic setObject:@0 forKey:data.title];
-//            cell.valueLab.text =[NSString stringWithFormat:@"%@",[weakSelf.editDic objectForKey:data.title]];
-//              [weakSelf cellHandleEnd:indexPath];
-//        }];
-//        [cell.toolView.igoBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-//            [weakSelf.editDic setObject:@50 forKey:data.title];
-//            cell.valueLab.text =[NSString stringWithFormat:@"%@",[weakSelf.editDic objectForKey:data.title]];
-//            [weakSelf cellHandleEnd:indexPath];
-//        }];
+        [cell reloadData:data];
+        UG_WEAKSELF
+        __weak typeof(cell) weakcell = cell;
+        cell.toolView.blockTableView.didSelectRowAtIndexPath = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
+            SharesTargetOption *data = [weakcell.toolView.datalist objectAtIndex:indexPath.row];
+            weakcell.toolView.selectData = data;
+            [weakcell.toolView.blockTableView reloadData];
+            weakcell.valueLab.text = data.value;
+            [weakSelf.editDic setObject:@100 forKey:data.key];
+        };
         return cell;
     };
     
