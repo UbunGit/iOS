@@ -8,6 +8,7 @@
 
 #import "UIAppdelegate+Realm.h"
 
+#import "NetWorkRequest+Shares.h"
 
 @implementation UIApplication (Realm)
 
@@ -38,5 +39,20 @@
     // 打开文件将会自动执行迁移
     [RLMRealm defaultRealm];
 }
+-(NSString*)getsha{
+    
+    NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultRealm"];
+    return  [dic objectForKey:@"sha"];
+}
 
+-(void)updateRealInfo{
+    [[NetWorkRequest share] getfileInfo:@"default.realm" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+        if (error) {
+            [UIView ug_msg:@"获取realm info 失败"];
+        }else{
+            [[NSUserDefaults standardUserDefaults]setObject:dataDict forKey:@"defaultRealm"];
+        }
+    }];
+    
+}
 @end

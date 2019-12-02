@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 
 #import "UGRemarkView.h"
+#import "UIAppdelegate+Realm.h"
 
 @interface LoginViewController ()
 
@@ -28,9 +29,7 @@
 }
 
 -(void)configUI{
-
-    
-    
+    self.view.backgroundColor = UIColor.whiteColor;
     self.usernameTF = [UGRemarkView new];
     [self.view addSubview:_usernameTF];
     _usernameTF.titlaLabel.text = @"用户名";
@@ -39,6 +38,7 @@
     self.passwordTF = [UGRemarkView new];
     [self.view addSubview:_passwordTF];
     _passwordTF.titlaLabel.text = @"密码";
+    _passwordTF.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"LPASSWORD"];
     
   
     self.commitBtn = [UIButton new];
@@ -48,8 +48,9 @@
     [_commitBtn ug_radius:5];
     UG_WEAKSELF
     [_commitBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-
+        [[NSUserDefaults standardUserDefaults]setObject:weakSelf.passwordTF.text forKey:@"LPASSWORD"];
         [[NetWorkRequest share].afManager.requestSerializer setAuthorizationHeaderFieldWithUsername:weakSelf.usernameTF.text password:weakSelf.passwordTF.text];
+        [[UIApplication sharedApplication] updateRealInfo];
     }];
   
 }
@@ -73,7 +74,7 @@
         make.top.mas_equalTo(self.passwordTF.mas_bottom).mas_offset(KPAND_MID);
         make.left.mas_equalTo(self.view).mas_offset(KPAND_DEF);
         make.right.mas_equalTo(self.view).mas_offset(-KPAND_DEF);
-        make.height.mas_equalTo(60);
+        make.height.mas_equalTo(40);
     }];
 }
 

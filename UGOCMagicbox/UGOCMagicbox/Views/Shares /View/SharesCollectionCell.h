@@ -13,9 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ToolView : UIView
 
-@property(strong, nonatomic) UIButton *upBtn; // 涨
-@property(strong, nonatomic) UIButton *downBtn; // 跌
-@property(strong, nonatomic) UIButton *igoBtn; // 忽略
+@property(strong, nonatomic)BlockTableView *blockTableView;
+
 
 @end
 

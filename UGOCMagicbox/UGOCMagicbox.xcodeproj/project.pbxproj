@@ -9,14 +9,18 @@
 /* Begin PBXBuildFile section */
 		20083D1D237E70C900D3F6D3 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 20083D1C237E70C900D3F6D3 /* UIView+Animation.m */; };
 		20083D21237E742800D3F6D3 /* DorAnimationTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 20083D20237E742800D3F6D3 /* DorAnimationTestVC.m */; };
-		20083D29237E936700D3F6D3 /* UGSpeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20083D28237E936700D3F6D3 /* UGSpeekView.m */; };
-		20083D32237E9BAF00D3F6D3 /* jqr_by@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20083D30237E9BAF00D3F6D3 /* jqr_by@3x.png */; };
-		20083D33237E9BAF00D3F6D3 /* jqr_zy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20083D31237E9BAF00D3F6D3 /* jqr_zy@2x.png */; };
-		20083D37237EA58E00D3F6D3 /* UGWaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20083D36237EA58E00D3F6D3 /* UGWaverView.m */; };
 		20083D43237FA66900D3F6D3 /* UGZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20083D42237FA66900D3F6D3 /* UGZoneViewController.m */; };
 		20083D48237FA6F900D3F6D3 /* UGZoneData.m in Sources */ = {isa = PBXBuildFile; fileRef = 20083D47237FA6F900D3F6D3 /* UGZoneData.m */; };
-		20F8EA28237FAC0900AAD62A /* UGZoneTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8EA27237FAC0900AAD62A /* UGZoneTableCell.m */; };
-		20F8EA2C237FDB5900AAD62A /* UGPersentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8EA2B237FDB5900AAD62A /* UGPersentView.m */; };
+		206604972394AF470012D263 /* UGRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 206604832394AF470012D263 /* UGRemarkView.m */; };
+		206604982394AF470012D263 /* jqr_zy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206604872394AF470012D263 /* jqr_zy@2x.png */; };
+		206604992394AF470012D263 /* jqr_by@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206604882394AF470012D263 /* jqr_by@3x.png */; };
+		2066049A2394AF470012D263 /* UGSpeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2066048A2394AF470012D263 /* UGSpeekView.m */; };
+		2066049B2394AF470012D263 /* UGPersentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2066048D2394AF470012D263 /* UGPersentView.m */; };
+		2066049C2394AF470012D263 /* UGAlignmentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2066048F2394AF470012D263 /* UGAlignmentButton.m */; };
+		2066049D2394AF470012D263 /* UGWaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 206604922394AF470012D263 /* UGWaverView.m */; };
+		2066049E2394AF470012D263 /* UGZoneTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206604952394AF470012D263 /* UGZoneTableCell.m */; };
+		206604A12394B01F0012D263 /* TargetOptionAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 206604A02394B01F0012D263 /* TargetOptionAddView.m */; };
+		20B629D12394BD180007885F /* UGAlignmentButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B629CF2394BD180007885F /* UGAlignmentButtonVC.m */; };
 		2C1330DC238B948900575155 /* SharesSimpleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1330DB238B948900575155 /* SharesSimpleData.m */; };
 		2C1330DF238B971500575155 /* SharesResuleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1330DE238B971500575155 /* SharesResuleVC.m */; };
 		2C510832238CFE1100F527C0 /* NetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C510830238CFE1100F527C0 /* NetWorkRequest.m */; };
@@ -35,7 +39,6 @@
 		849485BE238A585E00846F46 /* SharesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485BD238A585E00846F46 /* SharesViewController.m */; };
 		849485CA238A66A200846F46 /* SharesTargetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485C9238A66A200846F46 /* SharesTargetData.m */; };
 		849485CD238A688C00846F46 /* SharesTargetSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485CC238A688C00846F46 /* SharesTargetSettingVC.m */; };
-		849485D0238A6A3C00846F46 /* UGRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485CF238A6A3C00846F46 /* UGRemarkView.m */; };
 		849485D5238A719500846F46 /* SupleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485D4238A719500846F46 /* SupleViewController.m */; };
 		849485D8238A830800846F46 /* SharesCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485D7238A830800846F46 /* SharesCollectionCell.m */; };
 		849485DB238AC82D00846F46 /* SharesListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485DA238AC82D00846F46 /* SharesListVC.m */; };
@@ -161,20 +164,28 @@
 		20083D22237E754D00D3F6D3 /* Defind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Defind.h; path = UGOCMagicbox/DoraemonKit/DorTestVC/Defind.h; sourceTree = SOURCE_ROOT; };
 		20083D24237E779800D3F6D3 /* Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Font.h; sourceTree = "<group>"; };
 		20083D25237E77AF00D3F6D3 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
-		20083D27237E936700D3F6D3 /* UGSpeekView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGSpeekView.h; sourceTree = "<group>"; };
-		20083D28237E936700D3F6D3 /* UGSpeekView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGSpeekView.m; sourceTree = "<group>"; };
-		20083D30237E9BAF00D3F6D3 /* jqr_by@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jqr_by@3x.png"; sourceTree = "<group>"; };
-		20083D31237E9BAF00D3F6D3 /* jqr_zy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jqr_zy@2x.png"; sourceTree = "<group>"; };
-		20083D35237EA58E00D3F6D3 /* UGWaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGWaverView.h; sourceTree = "<group>"; };
-		20083D36237EA58E00D3F6D3 /* UGWaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGWaverView.m; sourceTree = "<group>"; };
 		20083D41237FA66900D3F6D3 /* UGZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGZoneViewController.h; sourceTree = "<group>"; };
 		20083D42237FA66900D3F6D3 /* UGZoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGZoneViewController.m; sourceTree = "<group>"; };
 		20083D46237FA6F900D3F6D3 /* UGZoneData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGZoneData.h; sourceTree = "<group>"; };
 		20083D47237FA6F900D3F6D3 /* UGZoneData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGZoneData.m; sourceTree = "<group>"; };
-		20F8EA26237FAC0900AAD62A /* UGZoneTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGZoneTableCell.h; sourceTree = "<group>"; };
-		20F8EA27237FAC0900AAD62A /* UGZoneTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGZoneTableCell.m; sourceTree = "<group>"; };
-		20F8EA2A237FDB5900AAD62A /* UGPersentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGPersentView.h; sourceTree = "<group>"; };
-		20F8EA2B237FDB5900AAD62A /* UGPersentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGPersentView.m; sourceTree = "<group>"; };
+		206604832394AF470012D263 /* UGRemarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGRemarkView.m; sourceTree = "<group>"; };
+		206604842394AF470012D263 /* UGRemarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGRemarkView.h; sourceTree = "<group>"; };
+		206604872394AF470012D263 /* jqr_zy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jqr_zy@2x.png"; sourceTree = "<group>"; };
+		206604882394AF470012D263 /* jqr_by@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jqr_by@3x.png"; sourceTree = "<group>"; };
+		206604892394AF470012D263 /* UGSpeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGSpeekView.h; sourceTree = "<group>"; };
+		2066048A2394AF470012D263 /* UGSpeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGSpeekView.m; sourceTree = "<group>"; };
+		2066048C2394AF470012D263 /* UGPersentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGPersentView.h; sourceTree = "<group>"; };
+		2066048D2394AF470012D263 /* UGPersentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGPersentView.m; sourceTree = "<group>"; };
+		2066048F2394AF470012D263 /* UGAlignmentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAlignmentButton.m; sourceTree = "<group>"; };
+		206604902394AF470012D263 /* UGAlignmentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAlignmentButton.h; sourceTree = "<group>"; };
+		206604922394AF470012D263 /* UGWaverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGWaverView.m; sourceTree = "<group>"; };
+		206604932394AF470012D263 /* UGWaverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGWaverView.h; sourceTree = "<group>"; };
+		206604952394AF470012D263 /* UGZoneTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGZoneTableCell.m; sourceTree = "<group>"; };
+		206604962394AF470012D263 /* UGZoneTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGZoneTableCell.h; sourceTree = "<group>"; };
+		2066049F2394B01F0012D263 /* TargetOptionAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetOptionAddView.h; sourceTree = "<group>"; };
+		206604A02394B01F0012D263 /* TargetOptionAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetOptionAddView.m; sourceTree = "<group>"; };
+		20B629CF2394BD180007885F /* UGAlignmentButtonVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGAlignmentButtonVC.m; sourceTree = "<group>"; };
+		20B629D02394BD180007885F /* UGAlignmentButtonVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGAlignmentButtonVC.h; sourceTree = "<group>"; };
 		2C1330DA238B948900575155 /* SharesSimpleData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesSimpleData.h; sourceTree = "<group>"; };
 		2C1330DB238B948900575155 /* SharesSimpleData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesSimpleData.m; sourceTree = "<group>"; };
 		2C1330DD238B971500575155 /* SharesResuleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesResuleVC.h; sourceTree = "<group>"; };
@@ -214,8 +225,6 @@
 		849485C9238A66A200846F46 /* SharesTargetData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesTargetData.m; sourceTree = "<group>"; };
 		849485CB238A688C00846F46 /* SharesTargetSettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesTargetSettingVC.h; sourceTree = "<group>"; };
 		849485CC238A688C00846F46 /* SharesTargetSettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesTargetSettingVC.m; sourceTree = "<group>"; };
-		849485CE238A6A3C00846F46 /* UGRemarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UGRemarkView.h; path = "UGOCMagicbox/Magic/New Group/UGRemarkView/UGRemarkView.h"; sourceTree = SOURCE_ROOT; };
-		849485CF238A6A3C00846F46 /* UGRemarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UGRemarkView.m; path = "UGOCMagicbox/Magic/New Group/UGRemarkView/UGRemarkView.m"; sourceTree = SOURCE_ROOT; };
 		849485D3238A719500846F46 /* SupleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupleViewController.h; sourceTree = "<group>"; };
 		849485D4238A719500846F46 /* SupleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupleViewController.m; sourceTree = "<group>"; };
 		849485D6238A830800846F46 /* SharesCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesCollectionCell.h; sourceTree = "<group>"; };
@@ -418,6 +427,8 @@
 		20083D1E237E73D900D3F6D3 /* DorTestVC */ = {
 			isa = PBXGroup;
 			children = (
+				20B629D02394BD180007885F /* UGAlignmentButtonVC.h */,
+				20B629CF2394BD180007885F /* UGAlignmentButtonVC.m */,
 				20083D1F237E742800D3F6D3 /* DorAnimationTestVC.h */,
 				20083D20237E742800D3F6D3 /* DorAnimationTestVC.m */,
 			);
@@ -431,56 +442,6 @@
 				20083D25237E77AF00D3F6D3 /* Color.h */,
 			);
 			path = Style;
-			sourceTree = "<group>";
-		};
-		20083D26237E930900D3F6D3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				849485D1238A6A4700846F46 /* UGRemarkView */,
-				20F8EA29237FDB1900AAD62A /* UGPersentView */,
-				20083D38237FA59300D3F6D3 /* UGZoneView */,
-				20083D34237EA56400D3F6D3 /* UGWaveView */,
-				20083D2A237E9A2E00D3F6D3 /* UGSpeekView */,
-			);
-			name = View;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		20083D2A237E9A2E00D3F6D3 /* UGSpeekView */ = {
-			isa = PBXGroup;
-			children = (
-				20083D2B237E9B5800D3F6D3 /* source */,
-				20083D27237E936700D3F6D3 /* UGSpeekView.h */,
-				20083D28237E936700D3F6D3 /* UGSpeekView.m */,
-			);
-			path = UGSpeekView;
-			sourceTree = "<group>";
-		};
-		20083D2B237E9B5800D3F6D3 /* source */ = {
-			isa = PBXGroup;
-			children = (
-				20083D30237E9BAF00D3F6D3 /* jqr_by@3x.png */,
-				20083D31237E9BAF00D3F6D3 /* jqr_zy@2x.png */,
-			);
-			path = source;
-			sourceTree = "<group>";
-		};
-		20083D34237EA56400D3F6D3 /* UGWaveView */ = {
-			isa = PBXGroup;
-			children = (
-				20083D35237EA58E00D3F6D3 /* UGWaverView.h */,
-				20083D36237EA58E00D3F6D3 /* UGWaverView.m */,
-			);
-			path = UGWaveView;
-			sourceTree = "<group>";
-		};
-		20083D38237FA59300D3F6D3 /* UGZoneView */ = {
-			isa = PBXGroup;
-			children = (
-				20F8EA26237FAC0900AAD62A /* UGZoneTableCell.h */,
-				20F8EA27237FAC0900AAD62A /* UGZoneTableCell.m */,
-			);
-			path = UGZoneView;
 			sourceTree = "<group>";
 		};
 		20083D3C237FA61400D3F6D3 /* UGZoneViewController */ = {
@@ -510,13 +471,81 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
-		20F8EA29237FDB1900AAD62A /* UGPersentView */ = {
+		206604812394AF470012D263 /* UGView */ = {
 			isa = PBXGroup;
 			children = (
-				20F8EA2A237FDB5900AAD62A /* UGPersentView.h */,
-				20F8EA2B237FDB5900AAD62A /* UGPersentView.m */,
+				206604822394AF470012D263 /* UGRemarkView */,
+				206604852394AF470012D263 /* UGSpeekView */,
+				2066048B2394AF470012D263 /* UGPersentView */,
+				2066048E2394AF470012D263 /* UGAlignmentButton */,
+				206604912394AF470012D263 /* UGWaveView */,
+				206604942394AF470012D263 /* UGZoneView */,
+			);
+			path = UGView;
+			sourceTree = "<group>";
+		};
+		206604822394AF470012D263 /* UGRemarkView */ = {
+			isa = PBXGroup;
+			children = (
+				206604832394AF470012D263 /* UGRemarkView.m */,
+				206604842394AF470012D263 /* UGRemarkView.h */,
+			);
+			path = UGRemarkView;
+			sourceTree = "<group>";
+		};
+		206604852394AF470012D263 /* UGSpeekView */ = {
+			isa = PBXGroup;
+			children = (
+				206604862394AF470012D263 /* source */,
+				206604892394AF470012D263 /* UGSpeekView.h */,
+				2066048A2394AF470012D263 /* UGSpeekView.m */,
+			);
+			path = UGSpeekView;
+			sourceTree = "<group>";
+		};
+		206604862394AF470012D263 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				206604872394AF470012D263 /* jqr_zy@2x.png */,
+				206604882394AF470012D263 /* jqr_by@3x.png */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		2066048B2394AF470012D263 /* UGPersentView */ = {
+			isa = PBXGroup;
+			children = (
+				2066048C2394AF470012D263 /* UGPersentView.h */,
+				2066048D2394AF470012D263 /* UGPersentView.m */,
 			);
 			path = UGPersentView;
+			sourceTree = "<group>";
+		};
+		2066048E2394AF470012D263 /* UGAlignmentButton */ = {
+			isa = PBXGroup;
+			children = (
+				2066048F2394AF470012D263 /* UGAlignmentButton.m */,
+				206604902394AF470012D263 /* UGAlignmentButton.h */,
+			);
+			path = UGAlignmentButton;
+			sourceTree = "<group>";
+		};
+		206604912394AF470012D263 /* UGWaveView */ = {
+			isa = PBXGroup;
+			children = (
+				206604922394AF470012D263 /* UGWaverView.m */,
+				206604932394AF470012D263 /* UGWaverView.h */,
+			);
+			path = UGWaveView;
+			sourceTree = "<group>";
+		};
+		206604942394AF470012D263 /* UGZoneView */ = {
+			isa = PBXGroup;
+			children = (
+				206604952394AF470012D263 /* UGZoneTableCell.m */,
+				206604962394AF470012D263 /* UGZoneTableCell.h */,
+			);
+			path = UGZoneView;
 			sourceTree = "<group>";
 		};
 		2ACF7559EC1C145583A05D3A /* Pods */ = {
@@ -667,6 +696,8 @@
 				849485DD238AC89C00846F46 /* SharesAddView.m */,
 				2C9760D3239396B5003999BA /* TargetOptionHeadView.h */,
 				2C9760D4239396B5003999BA /* TargetOptionHeadView.m */,
+				2066049F2394B01F0012D263 /* TargetOptionAddView.h */,
+				206604A02394B01F0012D263 /* TargetOptionAddView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -682,15 +713,6 @@
 				2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */,
 			);
 			path = Moden;
-			sourceTree = "<group>";
-		};
-		849485D1238A6A4700846F46 /* UGRemarkView */ = {
-			isa = PBXGroup;
-			children = (
-				849485CE238A6A3C00846F46 /* UGRemarkView.h */,
-				849485CF238A6A3C00846F46 /* UGRemarkView.m */,
-			);
-			path = UGRemarkView;
 			sourceTree = "<group>";
 		};
 		849485D2238A717500846F46 /* UIViewController */ = {
@@ -1186,9 +1208,9 @@
 		84DB976822C347B10034A927 /* Magic */ = {
 			isa = PBXGroup;
 			children = (
+				206604812394AF470012D263 /* UGView */,
 				2C9760CB23925F18003999BA /* Realm */,
 				849485D2238A717500846F46 /* UIViewController */,
-				20083D26237E930900D3F6D3 /* View */,
 				20083D1A237E707900D3F6D3 /* Animation  */,
 				84BA50CD22D2DBCD004F6621 /* UGDrawingView */,
 				84AB5B7E22CA06B8002CDEF2 /* TABAnimated */,
@@ -1393,7 +1415,6 @@
 			files = (
 				84ADE587230C0B9200BE9215 /* img_6.png in Resources */,
 				84DB974222C33F480034A927 /* iosyingdaoye3@2x.png in Resources */,
-				20083D32237E9BAF00D3F6D3 /* jqr_by@3x.png in Resources */,
 				84DB974522C33F480034A927 /* iosyingdaoye1@2x.png in Resources */,
 				84DB973F22C33F480034A927 /* beijing@3x.png in Resources */,
 				84AB5B8622CA08F4002CDEF2 /* comic.jpg in Resources */,
@@ -1414,8 +1435,8 @@
 				84DB973822C33F480034A927 /* 家-icon-橙色@3x.png in Resources */,
 				84AF2428230A3B380032CA58 /* FontAwesome.ttf in Resources */,
 				84DB974122C33F480034A927 /* iosyingdaoye1@3x.png in Resources */,
+				206604982394AF470012D263 /* jqr_zy@2x.png in Resources */,
 				84DB973A22C33F480034A927 /* UGCycleScrollView.podspec in Resources */,
-				20083D33237E9BAF00D3F6D3 /* jqr_zy@2x.png in Resources */,
 				84ADE58B230C0B9200BE9215 /* PingFang Heavy.ttf in Resources */,
 				84DB974722C33F480034A927 /* guanyuwomen-yunpan@3x.png in Resources */,
 				84DB974C22C33F480034A927 /* UGCategory.podspec in Resources */,
@@ -1425,6 +1446,7 @@
 				84ADE583230C0B9200BE9215 /* img_1.png in Resources */,
 				84DB96A422C33E7F0034A927 /* Assets.xcassets in Resources */,
 				84DB974622C33F480034A927 /* guanyuwomen-yunpan@2x.png in Resources */,
+				206604992394AF470012D263 /* jqr_by@3x.png in Resources */,
 				84DB974B22C33F480034A927 /* iosyingdaoye2@3x.png in Resources */,
 				84ADE5EE230CE43B00BE9215 /* feiji.svga in Resources */,
 				84DB974422C33F480034A927 /* iosyingdaoye3@3x.png in Resources */,
@@ -1518,25 +1540,25 @@
 				84DB979122C347B10034A927 /* DoraemonTZImagePick.m in Sources */,
 				84DB975622C33F480034A927 /* UITextView+UG.m in Sources */,
 				849485BE238A585E00846F46 /* SharesViewController.m in Sources */,
-				20F8EA2C237FDB5900AAD62A /* UGPersentView.m in Sources */,
 				84BA50C422CCB0B9004F6621 /* FATableViewCell.m in Sources */,
 				84DB976322C3400E0034A927 /* ViewController.m in Sources */,
+				2066049B2394AF470012D263 /* UGPersentView.m in Sources */,
 				2C1330DF238B971500575155 /* SharesResuleVC.m in Sources */,
 				849485CA238A66A200846F46 /* SharesTargetData.m in Sources */,
 				84DB978E22C347B10034A927 /* AppDelegate+TavBar.m in Sources */,
 				84DB973B22C33F480034A927 /* BlockCollectionViewFlowLayout.m in Sources */,
 				20083D1D237E70C900D3F6D3 /* UIView+Animation.m in Sources */,
+				2066049A2394AF470012D263 /* UGSpeekView.m in Sources */,
 				84BA50C522CCB0B9004F6621 /* FATableViewController.m in Sources */,
 				84AB5B7C22CA0469002CDEF2 /* TestTableViewCell.m in Sources */,
+				2066049C2394AF470012D263 /* UGAlignmentButton.m in Sources */,
 				84DB973322C33F480034A927 /* TabbarCollectionCell.m in Sources */,
 				849485CD238A688C00846F46 /* SharesTargetSettingVC.m in Sources */,
 				84DB979722C347B10034A927 /* MBProgressHUDTableVC.m in Sources */,
-				20F8EA28237FAC0900AAD62A /* UGZoneTableCell.m in Sources */,
 				84DB975522C33F480034A927 /* UIView+Alert.m in Sources */,
 				84DB978F22C347B10034A927 /* UG_TZImagePickSwitch.m in Sources */,
 				20083D43237FA66900D3F6D3 /* UGZoneViewController.m in Sources */,
 				84ADE551230BF3ED00BE9215 /* LOTViewController.m in Sources */,
-				20083D37237EA58E00D3F6D3 /* UGWaverView.m in Sources */,
 				84DB973022C33F480034A927 /* BarcollectionView.m in Sources */,
 				84DB975B22C33F480034A927 /* DorRoutes.m in Sources */,
 				849485D8238A830800846F46 /* SharesCollectionCell.m in Sources */,
@@ -1549,12 +1571,10 @@
 				20083D21237E742800D3F6D3 /* DorAnimationTestVC.m in Sources */,
 				2C9760D5239396B5003999BA /* TargetOptionHeadView.m in Sources */,
 				849485DB238AC82D00846F46 /* SharesListVC.m in Sources */,
-				20083D29237E936700D3F6D3 /* UGSpeekView.m in Sources */,
 				84DB978D22C347B10034A927 /* AppDelegate+CocoaLumberjack.m in Sources */,
 				84DB978C22C347B10034A927 /* AppDelegate+NIMSDK.m in Sources */,
 				20083D48237FA6F900D3F6D3 /* UGZoneData.m in Sources */,
 				84DB975322C33F480034A927 /* UIView+WY_Extension.m in Sources */,
-				849485D0238A6A3C00846F46 /* UGRemarkView.m in Sources */,
 				84DB976422C3400E0034A927 /* main.m in Sources */,
 				84DB979322C347B10034A927 /* AddressBookController.m in Sources */,
 				2C9760CE23925F53003999BA /* UIAppdelegate+Realm.m in Sources */,
@@ -1572,6 +1592,8 @@
 				84DB972F22C33F480034A927 /* DORTestBarcollectionViewVC.m in Sources */,
 				84DB974822C33F480034A927 /* WelcomViewController.m in Sources */,
 				2C510836238D7E9200F527C0 /* LoginViewController.m in Sources */,
+				20B629D12394BD180007885F /* UGAlignmentButtonVC.m in Sources */,
+				2066049E2394AF470012D263 /* UGZoneTableCell.m in Sources */,
 				841B5EEA22CB363700F6DC04 /* Userinfo.m in Sources */,
 				84DB974F22C33F480034A927 /* UIButton+UG.m in Sources */,
 				849485DE238AC89C00846F46 /* SharesAddView.m in Sources */,
@@ -1585,6 +1607,8 @@
 				2CFDD0202390203700E36BD0 /* SharesTargetListVC.m in Sources */,
 				84BA50C622CCB0B9004F6621 /* FAViewController.m in Sources */,
 				8461E1D32306B14600764748 /* SVGViewController.m in Sources */,
+				2066049D2394AF470012D263 /* UGWaverView.m in Sources */,
+				206604A12394B01F0012D263 /* TargetOptionAddView.m in Sources */,
 				841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */,
 				84DB975822C33F480034A927 /* UITextField+UG.m in Sources */,
 				84DB975922C33F480034A927 /* NSDate+UG.m in Sources */,
@@ -1594,6 +1618,7 @@
 				2CFDD019238EC14400E36BD0 /* SharesHistoryData.m in Sources */,
 				2C1330DC238B948900575155 /* SharesSimpleData.m in Sources */,
 				84BA50D022D2DBED004F6621 /* UGDrawingView.m in Sources */,
+				206604972394AF470012D263 /* UGRemarkView.m in Sources */,
 				84BA50D422D2DF50004F6621 /* UGDrawingVC.m in Sources */,
 				84DB975422C33F480034A927 /* UIView+UG.m in Sources */,
 				84DB973222C33F480034A927 /* BlockTableView.m in Sources */,

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SharesAddView : UIView
 @property(strong, readonly) SharesSimpleData* data;
 
-@property(strong, nonatomic) UILabel *titleLab; // 股票名称
+@property(strong, nonatomic) UILabel *titleLab; // 标题
 
 @property(strong, nonatomic) UGRemarkView *titleTF; // 股票名称
 

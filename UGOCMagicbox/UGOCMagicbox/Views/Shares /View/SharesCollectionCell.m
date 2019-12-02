@@ -19,40 +19,37 @@
 }
 -(void)configUI{
     [self ug_radius:22];
-    self.upBtn = [UIButton new];
-    [self addSubview:_upBtn];
-    [_upBtn setTitle:@"看涨" forState:UIControlStateNormal];
-    [_upBtn setBackgroundColor:UIColor.redColor];
+    self.blockTableView = [BlockTableView new];
+       [self addSubview:_blockTableView];
+       
+       
+       _blockTableView.numberOfRowsInSection = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
+           return 5;
+       };
+       _blockTableView.cellForRowAtIndexPath = ^UITableViewCell * _Nonnull(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
+           
+           UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellid"];
+           if (cell == nil) {
+               cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault
+                                             reuseIdentifier: @"cellid"];
+               cell.selectionStyle = UITableViewCellSelectionStyleNone;
+           }
+//           SharesTargetData *data = [weakSelf.datalist objectAtIndex:indexPath.row];
+//           cell.textLabel.text = [NSString stringWithFormat:@"%@",data.title];
+           cell.textLabel.text = @"---";
+           return cell;
+       };
+       _blockTableView.heightForRowAtIndexPath = ^CGFloat(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
+           return 44;
+       };
     
-    self.downBtn = [UIButton new];
-    [self addSubview:_downBtn];
-    [_downBtn setTitle:@"看跌" forState:UIControlStateNormal];
-    [_downBtn setBackgroundColor:UIColor.greenColor];
-    
-    self.igoBtn = [UIButton new];
-    [self addSubview:_igoBtn];
-    [_igoBtn setTitle:@"看平" forState:UIControlStateNormal];
-    [_igoBtn setBackgroundColor:UIColor.blueColor];
+
 }
 
 -(void)layoutSubviews{
-    [_upBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self);
-        make.top.mas_equalTo(self);
-        make.bottom.mas_equalTo(self);
-    }];
-    [_igoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.upBtn.mas_right);
-        make.top.mas_equalTo(self);
-        make.bottom.mas_equalTo(self);
-        make.width.mas_equalTo(self.upBtn);
-    }];
-    [_downBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self);
-        make.left.mas_equalTo(self.igoBtn.mas_right);
-        make.top.mas_equalTo(self);
-        make.bottom.mas_equalTo(self);
-        make.width.mas_equalTo(self.igoBtn);
+    [super layoutSubviews];
+    [_blockTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self);
     }];
 }
 @end
@@ -113,7 +110,7 @@
         make.top.mas_equalTo(self.titleLab.mas_bottom).mas_equalTo(100);
         make.left.mas_equalTo(self.contentView).mas_equalTo(KPAND_DEF);
         make.right.mas_equalTo(self.contentView).mas_equalTo(-KPAND_DEF);
-        make.height.mas_equalTo(44);
+        make.bottom.mas_equalTo(self).mas_equalTo(-KPAND_DEF);
     }];
     [_numberLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(self.contentView).mas_equalTo(-KPAND_DEF);

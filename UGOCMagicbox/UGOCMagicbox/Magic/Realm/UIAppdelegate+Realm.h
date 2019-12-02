@@ -13,6 +13,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)configRealm;
 
+-(NSString*)getsha;
+
+/**
+ 更新 realm 文件信息，下载路径，sha 等
+ */
+-(void)updateRealInfo;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

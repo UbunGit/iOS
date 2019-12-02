@@ -36,7 +36,7 @@ static NetWorkRequest *netWorkRequest = nil;
     [_afManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     //设置网络延时
-    _afManager.requestSerializer.timeoutInterval = 30;
+    _afManager.requestSerializer.timeoutInterval = 15;
 }
 
 -(void)post:(NSString*)url param:(NSDictionary *)param head:(NSDictionary *)head endblock:(NREndBlock)endblock{
@@ -108,22 +108,14 @@ static NetWorkRequest *netWorkRequest = nil;
 
 -(void)get:(NSString*)url param:(NSDictionary *)param head:(NSDictionary *)head endblock:(NREndBlock)endblock{
     
-//    if ([Global_Variable shared].token) {
-//        [afManager.requestSerializer setValue:[Global_Variable shared].token forHTTPHeaderField:@"Authorization"];
-//    }
-    NSString *cookie = [[NSUserDefaults standardUserDefaults] objectForKey:@"Set-Cookie"];
-    if (cookie != nil) {
-        [_afManager.requestSerializer setValue:cookie forHTTPHeaderField:@"Cookie"];
-    }
-    [_afManager.requestSerializer setValue:[self getclientAgent] forHTTPHeaderField:@"client_Agent"];
     [_afManager GET:url parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSHTTPURLResponse* response = (NSHTTPURLResponse* )task.response;
-        NSDictionary *allHeaderFieldsDic = response.allHeaderFields;
-        NSString *setCookie = allHeaderFieldsDic[@"Set-Cookie"];
-        if (setCookie != nil) {
-            NSString *cookie = [[setCookie componentsSeparatedByString:@";"] objectAtIndex:0];
-            [[NSUserDefaults standardUserDefaults]setObject:cookie forKey:@"Set-Cookie"];
-        }
+//        NSHTTPURLResponse* response = (NSHTTPURLResponse* )task.response;
+//        NSDictionary *allHeaderFieldsDic = response.allHeaderFields;
+//        NSString *setCookie = allHeaderFieldsDic[@"Set-Cookie"];
+//        if (setCookie != nil) {
+//            NSString *cookie = [[setCookie componentsSeparatedByString:@";"] objectAtIndex:0];
+//            [[NSUserDefaults standardUserDefaults]setObject:cookie forKey:@"Set-Cookie"];
+//        }
         /*
          * 解析请求返回码
          */

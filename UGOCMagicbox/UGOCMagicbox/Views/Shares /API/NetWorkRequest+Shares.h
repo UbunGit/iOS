@@ -16,7 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 创建新文件夹
  https://api.github.com/repos/用户名/仓库名/contents/文件路径
 */
--(void)createpath:(NSString*)path block:(NREndBlock)block;
+-(void)createpath:(NSString*)path sha:(NSString*)sha block:(NREndBlock)block;
+
+-(void)getfileInfo:(NSString*)path block:(NREndBlock)block;
 @end
 
 NS_ASSUME_NONNULL_END

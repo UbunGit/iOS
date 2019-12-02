@@ -23,7 +23,6 @@
     [self addSubview:_titleLab];
     _titleLab.text = @"添加测评股票";
     
-    
     self.titleTF = [UGRemarkView new];
     [self addSubview:_titleTF];
     _titleTF.titlaLabel.text = @"股票名称";

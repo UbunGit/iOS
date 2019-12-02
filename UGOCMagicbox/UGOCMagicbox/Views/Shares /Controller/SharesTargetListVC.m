@@ -10,6 +10,8 @@
 
 #import "SharesTargetData.h"
 #import "SharesTargetSettingVC.h"
+#import "NetWorkRequest+Shares.h"
+#import "UIAppdelegate+Realm.h"
 
 @interface SharesTargetListVC ()
 @property(strong, nonatomic) RLMResults<SharesTargetData *> *datalist; //历史测评记录
@@ -35,15 +37,36 @@
 -(void)configUI{
      UG_WEAKSELF
     self.title = @"指标库";
-     UIButton *itemButtom = [UIButton  buttonWithType:UIButtonTypeContactAdd];
-       [itemButtom setFrame:CGRectMake(0, 0, 30, 40)];
-    [itemButtom ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
+    
+    UIButton *itemButtom0 = [UIButton  new];
+    [itemButtom0 setFrame:CGRectMake(0, 0, 30, 40)];
+    NSString *bcaktitle = [NSString fontAwesomeIconStringForEnum:FAGithub];
+    [itemButtom0.titleLabel setFont:FONT_FA20];
+    [itemButtom0 setTitle:bcaktitle forState:UIControlStateNormal];
+    [itemButtom0 ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
+    
+        [[NetWorkRequest share] createpath:@"default.realm" sha:[[UIApplication sharedApplication] getsha] block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+            if (error) {
+                [self.view ug_msg:error.domain];
+            }else{
+                [[UIApplication sharedApplication] updateRealInfo];
+                [self.view ug_msg:@"备份成功"];
+            }
+        }];
+        
+    }];
+    UIBarButtonItem *button0 = [[UIBarButtonItem alloc]
+                               initWithCustomView:itemButtom0];
+    
+     UIButton *itemButtom1 = [UIButton  buttonWithType:UIButtonTypeContactAdd];
+       [itemButtom1 setFrame:CGRectMake(0, 0, 30, 40)];
+    [itemButtom1 ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
         
         [self.navigationController pushViewController:[SharesTargetSettingVC new] animated:YES];
     }];
-    UIBarButtonItem *button = [[UIBarButtonItem alloc]
-                               initWithCustomView:itemButtom];
-    [self.navigationItem setRightBarButtonItems:@[button]];
+    UIBarButtonItem *button1 = [[UIBarButtonItem alloc]
+                               initWithCustomView:itemButtom1];
+    [self.navigationItem setRightBarButtonItems:@[button0,button1]];
 
     self.blockTableView = [BlockTableView new];
     [self.view addSubview:_blockTableView];
