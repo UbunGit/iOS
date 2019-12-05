@@ -35,41 +35,21 @@
 }
 
 -(void)configUI{
-     UG_WEAKSELF
+    UG_WEAKSELF
     self.title = @"指标库";
     
-    UIButton *itemButtom0 = [UIButton  new];
-    [itemButtom0 setFrame:CGRectMake(0, 0, 30, 40)];
-    [itemButtom0 setTitleColor:COLOR23 forState:UIControlStateNormal];
-    NSString *bcaktitle = [NSString fontAwesomeIconStringForEnum:FAGithub];
-    [itemButtom0.titleLabel setFont:FONT_FA20];
-    [itemButtom0 setTitle:bcaktitle forState:UIControlStateNormal];
-    [itemButtom0 ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
     
-        [[NetWorkRequest share] createpath:@"default.realm" sha:[[UIApplication sharedApplication] getsha] block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
-            if (error) {
-                [self.view ug_msg:error.domain];
-            }else{
-                [[UIApplication sharedApplication] updateRealInfo];
-                [self.view ug_msg:@"备份成功"];
-            }
-        }];
-        
-    }];
-    UIBarButtonItem *button0 = [[UIBarButtonItem alloc]
-                               initWithCustomView:itemButtom0];
-    
-     UIButton *itemButtom1 = [UIButton  buttonWithType:UIButtonTypeContactAdd];
-       [itemButtom1 setFrame:CGRectMake(0, 0, 30, 40)];
+    UIButton *itemButtom1 = [UIButton  buttonWithType:UIButtonTypeContactAdd];
+    [itemButtom1 setFrame:CGRectMake(0, 0, 30, 40)];
     [itemButtom1 setTitleColor:COLORINFO forState:UIControlStateNormal];
     [itemButtom1 ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
         
         [self.navigationController pushViewController:[SharesTargetSettingVC new] animated:YES];
     }];
     UIBarButtonItem *button1 = [[UIBarButtonItem alloc]
-                               initWithCustomView:itemButtom1];
-    [self.navigationItem setRightBarButtonItems:@[button0,button1]];
-
+                                initWithCustomView:itemButtom1];
+    [self.navigationItem setRightBarButtonItems:@[button1]];
+    
     self.blockTableView = [BlockTableView new];
     [self.view addSubview:_blockTableView];
     
@@ -93,8 +73,8 @@
         return 44;
     };
     _blockTableView.didSelectRowAtIndexPath = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
-         SharesTargetData *data = [weakSelf.datalist objectAtIndex:indexPath.row];
-    
+        SharesTargetData *data = [weakSelf.datalist objectAtIndex:indexPath.row];
+        
         SharesTargetSettingVC *sharesTargetSettingVC = [SharesTargetSettingVC new];
         sharesTargetSettingVC.data = data;
         [weakSelf.navigationController pushViewController:sharesTargetSettingVC animated:YES];

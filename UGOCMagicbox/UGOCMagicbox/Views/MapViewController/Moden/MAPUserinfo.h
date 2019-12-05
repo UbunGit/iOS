@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Userinfo : RLMObject
+@interface MAPUserinfo : RLMObject
 
 @property NSString *name;//姓名
 

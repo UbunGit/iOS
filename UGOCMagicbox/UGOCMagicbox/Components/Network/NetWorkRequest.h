@@ -36,6 +36,15 @@ typedef void(^NREndBlock)(NSDictionary *_Nullable dataDict,  NSError *_Nullable 
 
 -(void)put:(NSString*)url param:(NSDictionary *)param head:(NSDictionary *)head endblock:(NREndBlock)endblock;
 
+/**
+ 下载文件
+ */
+-(void)download:(NSString*)urlstr
+       filepath:(NSString *)filepath
+       progress:(void (^)(NSProgress *downloadProgress)) downloadProgressBlock
+           head:(NSDictionary *)head
+       endblock:(NREndBlock)endblock;
+
 @end
 
 NS_ASSUME_NONNULL_END

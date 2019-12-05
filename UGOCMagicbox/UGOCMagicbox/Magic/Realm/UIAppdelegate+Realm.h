@@ -15,10 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(NSString*)getsha;
 
+-(NSString*)getDownurl;
+
 /**
  更新 realm 文件信息，下载路径，sha 等
  */
--(void)updateRealInfo;
+-(void)updateRealInfo:(void(^)(NSError*error,NSDictionary*result))endblock;
 
 
 @end

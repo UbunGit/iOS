@@ -6,8 +6,8 @@
 //  Copyright © 2019 UG. All rights reserved.
 //
 
-#import "Userinfo.h"
+#import "MAPUserinfo.h"
 
-@implementation Userinfo
+@implementation MAPUserinfo
 
 @end

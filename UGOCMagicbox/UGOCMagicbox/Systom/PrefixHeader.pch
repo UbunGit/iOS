@@ -23,5 +23,6 @@
 #import <YYKit/YYKit.h>
 #import "NetWorkRequest.h"
 #import <Realm/Realm.h>
+#import "UserInfo.h"
 
 #endif /* PrefixHeader_pch */

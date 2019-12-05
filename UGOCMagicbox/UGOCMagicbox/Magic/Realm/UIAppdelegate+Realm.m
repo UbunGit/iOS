@@ -39,18 +39,28 @@
     // 打开文件将会自动执行迁移
     [RLMRealm defaultRealm];
 }
+
 -(NSString*)getsha{
     
     NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultRealm"];
     return  [dic objectForKey:@"sha"];
 }
 
--(void)updateRealInfo{
-    [[NetWorkRequest share] getfileInfo:@"default.realm" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+-(NSString*)getDownurl{
+    NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultRealm"];
+    return  [dic objectForKey:@"download_url"];
+}
+/**
+ 获取数据库文件 sha
+ */
+-(void)updateRealInfo:(void(^)(NSError*error,NSDictionary*result))endblock{
+    [[NetWorkRequest share] getfileInfo:@"Shares/default.realm" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
         if (error) {
-            [UIView ug_msg:@"获取realm info 失败"];
+          
+            endblock(error,nil);
         }else{
             [[NSUserDefaults standardUserDefaults]setObject:dataDict forKey:@"defaultRealm"];
+            endblock(nil,dataDict);
         }
     }];
     

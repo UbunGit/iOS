@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 */
 -(void)createpath:(NSString*)path sha:(NSString*)sha block:(NREndBlock)block;
 
+/**
+ 获取文件信息
+  https://api.github.com/repos/UbunGit/UGFAFAFA/contents/Shares/
+ */
 -(void)getfileInfo:(NSString*)path block:(NREndBlock)block;
 @end
 
