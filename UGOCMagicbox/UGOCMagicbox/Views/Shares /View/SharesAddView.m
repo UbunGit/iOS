@@ -45,7 +45,7 @@
 
 -(SharesSimpleData *)data{
     
-    SharesSimpleData *temdata = [SharesSimpleData new];
+    SharesHistoryData *temdata = [SharesHistoryData new];
     temdata.name = _titleTF.text;
     temdata.number = _numberTF.text;
     temdata.date =  [_timeTF.text intValue];

@@ -83,7 +83,7 @@
     if (_heightForFooterInSection) {
        return _heightForFooterInSection(tableView, section);
     }else{
-        return 0;
+        return 1;
     }
 }
 
@@ -98,7 +98,7 @@
     if (_viewForFooterInSection) {
       return  _viewForFooterInSection(tableView, section);
     }else{
-        return nil;
+        return [UIView new];
     }
 }
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

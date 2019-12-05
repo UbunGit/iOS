@@ -10,22 +10,23 @@
 #import "SharesSimpleData.h"
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ 股票测评记录
+ */
 @interface SharesHistoryData : SharesSimpleData
 
 /** super
  @property(strong, nonatomic) NSString *name; // 股票名称
  @property(strong, nonatomic) NSString* number; //股票编码
- @property(assign, nonatomic) NSInteger date; //股票时间
  */
+@property(strong, nonatomic) NSString *key; //
 
-@property(strong, nonatomic) NSString *path; //本地存储相对路径
+@property(assign, nonatomic) NSInteger date; // 股票测评时间
 
 @property(assign, nonatomic) BOOL isCommit; //是否已提交至服务器
 
 @property(assign, nonatomic) NSTimeInterval edittime; //最后修改时间
-
-
-
+-(NSString*)makeKey;
 /**
  获取文件路径 不包括文件名
  */

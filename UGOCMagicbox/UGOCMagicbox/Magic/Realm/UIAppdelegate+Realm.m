@@ -16,12 +16,12 @@
     RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
     // 设置新的架构版本。必须大于之前所使用的版本
     // （如果之前从未设置过架构版本，那么当前的架构版本为 0）
-    config.schemaVersion = 1;
+    config.schemaVersion = 4;
     // 设置模块，如果 Realm 的架构版本低于上面所定义的版本，
     // 那么这段代码就会自动调用
     config.migrationBlock = ^(RLMMigration *migration, uint64_t oldSchemaVersion) {
         // 我们目前还未执行过迁移，因此 oldSchemaVersion == 0
-        if (oldSchemaVersion < 1) {
+        if (oldSchemaVersion < config.schemaVersion) {
             // enumerateObjects:block: 方法将会遍历
             // 所有存储在 Realm 文件当中的 `Person` 对象
 //            [migration enumerateObjects:Person.className

@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "UGRemarkView.h"
-#import "SharesSimpleData.h"
+#import "SharesHistoryData.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SharesAddView : UIView
-@property(strong, readonly) SharesSimpleData* data;
+@property(strong, readonly) SharesHistoryData* data;
 
 @property(strong, nonatomic) UILabel *titleLab; // 标题
 
@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(strong, nonatomic) UGRemarkView *timeTF; // 股票时间
 
 @property(strong, nonatomic) UIButton *commitBtn; // 股票时间
+
 @end
 
 NS_ASSUME_NONNULL_END

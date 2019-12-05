@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SharesSimpleData.h"
+#import "SharesHistoryData.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SharesViewController : SupleViewController
-@property(strong, nonatomic) SharesSimpleData* sharesdata;
-@property(strong, nonatomic)NSMutableDictionary *editDic;
+@property(strong, nonatomic) SharesHistoryData* sharesdata;
+
 @end
 
 NS_ASSUME_NONNULL_END

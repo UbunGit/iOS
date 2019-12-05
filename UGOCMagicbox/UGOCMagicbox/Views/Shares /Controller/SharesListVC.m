@@ -15,6 +15,8 @@
 #import "SharesHistoryData.h"
 #import "SharesViewController.h"
 #import "SharesTargetListVC.h"
+#import "SharesResuleVC.h"
+#import "ShareHistoryCell.h"
 
 @interface SharesListVC ()
 @property(strong, nonatomic) SharesAddView*sharesAddView;
@@ -39,25 +41,24 @@
     [_blockTableView reloadData];
 }
 
-
-
 -(void)configUI{
      UG_WEAKSELF
-    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    self.title = @"测评历史";
     //导航拦
     UIButton *itemButtom0 = [UIButton  new];
     [itemButtom0 setFrame:CGRectMake(0, 0, 30, 40)];
     NSString *bcaktitle = [NSString fontAwesomeIconStringForEnum:FACog];
     [itemButtom0.titleLabel setFont:FONT_FA20];
+    [itemButtom0 setTitleColor:COLORINFO forState:UIControlStateNormal];
     [itemButtom0 setTitle:bcaktitle forState:UIControlStateNormal];
     [itemButtom0 ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-        
         [self.navigationController pushViewController:[SharesTargetListVC new] animated:YES];
     }];
     UIBarButtonItem *button0 = [[UIBarButtonItem alloc]
                                initWithCustomView:itemButtom0];
     
     UIButton *itemButtom = [UIButton  buttonWithType:UIButtonTypeContactAdd];
+    [itemButtom setTitleColor:COLORINFO forState:UIControlStateNormal];
     [itemButtom setFrame:CGRectMake(0, 0, 30, 40)];
     [itemButtom ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
         
@@ -73,35 +74,39 @@
    
     self.blockTableView = [BlockTableView new];
     [self.view addSubview:_blockTableView];
+    _blockTableView.estimatedRowHeight = 100;
+    _blockTableView.rowHeight = UITableViewAutomaticDimension;
     
     _blockTableView.numberOfRowsInSection = ^NSInteger(UITableView * _Nonnull tableView, NSInteger section) {
         return weakSelf.datalist.count;
     };
     _blockTableView.cellForRowAtIndexPath = ^UITableViewCell * _Nonnull(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
         
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellid"];
+        ShareHistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ShareHistoryCell"];
         if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault
-                                          reuseIdentifier: @"cellid"];
+            cell = [[ShareHistoryCell alloc] initWithStyle: UITableViewCellStyleDefault
+                                          reuseIdentifier: @"ShareHistoryCell"];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         SharesHistoryData *data = [weakSelf.datalist objectAtIndex:indexPath.row];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ %@:%zd",data.name, data.number,data.date];
+//        cell.textLabel.text = [NSString stringWithFormat:@"%@ %@:%zd",data.name, data.number,data.date];
+        [cell reload:data];
         return cell;
     };
     _blockTableView.heightForRowAtIndexPath = ^CGFloat(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
-        return 44;
+        return 120;
     };
     _blockTableView.didSelectRowAtIndexPath = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
         SharesHistoryData *data = [weakSelf.datalist objectAtIndex:indexPath.row];
         NSData *filedata = [[NSFileManager defaultManager] contentsAtPath:data.absfilePath];
         if(filedata){
             NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:filedata options:NSJSONReadingMutableLeaves error:nil];
-             
-                 SharesViewController *sharesViewController = [SharesViewController new];
-                 sharesViewController.sharesdata = data;
-                 sharesViewController.editDic = dic;
-                 [weakSelf.navigationController pushViewController:sharesViewController animated:YES];
+            
+            SharesResuleVC *sharesViewController = [SharesResuleVC new];
+            sharesViewController.sharesdata = data;
+            sharesViewController.editDic = [dic objectForKey:@"data"];
+            sharesViewController.remarkDic = [dic objectForKey:@"remark"];
+            [weakSelf.navigationController pushViewController:sharesViewController animated:YES];
         }else{
             [weakSelf.view ug_msg:@"文件不存在或丢失"];
             RLMRealm *realm = [RLMRealm defaultRealm];
@@ -126,8 +131,6 @@
             [weakSelf updataData];
         }];
     };
-    
-    
 }
 
 /**
@@ -141,7 +144,7 @@
             weakSelf.sharesAddView.titleTF.titlaLabel.textColor = COLOR23;
             weakSelf.sharesAddView.numberTF.titlaLabel.textColor = COLOR23;
             weakSelf.sharesAddView.timeTF.titlaLabel.textColor = COLOR23;
-            SharesSimpleData *data = weakSelf.sharesAddView.data;
+            SharesHistoryData *data = weakSelf.sharesAddView.data;
             if (data.name.length==0) {
                 weakSelf.sharesAddView.titleTF.titlaLabel.textColor = COLORDANGER;
                 return ;

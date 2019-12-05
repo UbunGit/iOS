@@ -17,7 +17,7 @@
 @property(strong,nonatomic)BlockCollectionView *collectionView;
 @property(strong,nonatomic)UIButton *commitBtn;
 @property(strong, nonatomic)RLMResults<SharesTargetData *> *datalist;
-
+@property(strong, nonatomic)NSMutableDictionary *editDic;
 
 @end
 
@@ -25,25 +25,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self configUI];
 }
 -(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    if (!_editDic) {
-        self.editDic = [NSMutableDictionary new];
-    }
     
+    [super viewWillAppear:animated];
     [self updataData];
 }
--(void)setEditDic:(NSMutableDictionary *)editDic{
-    if (![editDic isKindOfClass:[NSMutableDictionary class]]) {
-        _editDic = [NSMutableDictionary dictionaryWithDictionary:editDic];
+-(void)setSharesdata:(SharesHistoryData *)sharesdata{
+    _sharesdata =sharesdata;
+    NSData *filedata = [[NSFileManager defaultManager] contentsAtPath:_sharesdata.absfilePath];
+    if(filedata){
+        self.editDic = [NSJSONSerialization JSONObjectWithData:filedata options:NSJSONReadingMutableLeaves error:nil];
     }else{
-        _editDic = editDic; 
+        self.editDic = [NSMutableDictionary new];
     }
 }
-
 
 -(void)updataData{
    
@@ -57,6 +54,7 @@
     //导航拦
     UIButton *itemButtom = [UIButton  buttonWithType:UIButtonTypeContactAdd];
     [itemButtom setFrame:CGRectMake(0, 0, 30, 40)];
+    [itemButtom setTitleColor:COLORINFO forState:UIControlStateNormal];
     
     [itemButtom ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
         SharesTargetSettingVC *vc = [SharesTargetSettingVC new];
@@ -83,22 +81,22 @@
     };
     _collectionView.ug_cellForItemAtIndexPath = ^__kindof UICollectionViewCell * _Nonnull(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
         SharesCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SharesCollectionCell" forIndexPath:indexPath];
-        SharesTargetData *data = [weakSelf.datalist objectAtIndex:indexPath.row];
+        SharesTargetData *targetdata = [weakSelf.datalist objectAtIndex:indexPath.row];
        
-        if ([weakSelf.editDic objectForKey:data.title]) {
-            cell.valueLab.text =[NSString stringWithFormat:@"%@",[weakSelf.editDic objectForKey:data.title]];
+        if ([weakSelf.editDic objectForKey:targetdata.title]) {
+            cell.valueLab.text =[NSString stringWithFormat:@"%@",[weakSelf.editDic objectForKey:targetdata.title]];
         }
-        cell.titleLab.text = [NSString stringWithFormat:@"%@",data.title];
+        cell.titleLab.text = [NSString stringWithFormat:@"%@",targetdata.title];
         cell.numberLab.text = [NSString stringWithFormat:@"%zd/%zd",indexPath.row+1,weakSelf.datalist.count];
-        [cell reloadData:data];
+        [cell reloadData:targetdata];
        
         __weak typeof(cell) weakcell = cell;
-        cell.toolView.blockTableView.didSelectRowAtIndexPath = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPath) {
-            SharesTargetOption *data = [weakcell.toolView.datalist objectAtIndex:indexPath.row];
+        cell.toolView.blockTableView.didSelectRowAtIndexPath = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPathx) {
+            SharesTargetOption *data = [weakcell.toolView.datalist objectAtIndex:indexPathx.row];
             weakcell.toolView.selectData = data;
             [weakcell.toolView.blockTableView reloadData];
             weakcell.valueLab.text = data.value;
-            [weakSelf.editDic setObject:@100 forKey:data.key];
+            [weakSelf.editDic setObject:data.value forKey:targetdata.key];
              [weakSelf cellHandleEnd:indexPath];
         };
         return cell;

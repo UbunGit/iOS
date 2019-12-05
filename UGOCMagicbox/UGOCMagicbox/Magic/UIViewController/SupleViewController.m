@@ -19,7 +19,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     //导航拦
-    if (self.navigationController.viewControllers.count > 0) {
+    if (self.navigationController.viewControllers.count > 1) {
             UIButton *itemButtom = [UIButton new];
         [itemButtom setFrame:CGRectMake(0, 0, 30, 40)];
         NSString *bcaktitle = [NSString fontAwesomeIconStringForEnum:FAAngleLeft];

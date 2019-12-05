@@ -15,9 +15,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SharesSimpleData : RLMObject
 
 @property(strong, nonatomic) NSString *name; // 股票名称
-@property(strong, nonatomic) NSString* number; //股票编码
-@property(assign, nonatomic) NSInteger date; //股票时间
+@property(strong, nonatomic) NSString* number; // 股票编码
 
 @end
+
+// 关注列表
+@interface SharesLikeData : SharesSimpleData
+
+
+@end
+
 
 NS_ASSUME_NONNULL_END

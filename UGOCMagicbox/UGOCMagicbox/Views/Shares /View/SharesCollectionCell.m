@@ -83,6 +83,8 @@
 -(void)configUI{
     self.toolView = [ToolView new];
     [self.contentView addSubview:_toolView];
+    [_toolView ug_borderColor:COLOR23 width:1];
+    [_toolView ug_radius:5];
     
     self.titleLab = [UILabel new];
     [self.contentView addSubview:_titleLab];
@@ -105,7 +107,7 @@
     _valueLab.textColor = UIColor.whiteColor;
     _valueLab.backgroundColor = COLORDANGER;
     _valueLab.text = @"未评分";
-    [_valueLab ug_radius:60];
+    [_valueLab ug_radius:40];
  
 }
 
@@ -115,21 +117,19 @@
 }
 
 -(void)layoutSubviews{
+    
+    [_valueLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(self.titleLab.mas_top).mas_equalTo(-KPAND_DEF);
+        make.size.mas_equalTo(CGSizeMake(80, 80));
+        make.centerX.mas_equalTo(self.contentView.mas_centerX);
+    }];
     [_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.center.mas_equalTo(self);
+        make.top.mas_equalTo(self).mas_offset(120);
         make.left.mas_equalTo(self.contentView).mas_equalTo(KPAND_DEF);
         make.right.mas_equalTo(self.contentView).mas_equalTo(-KPAND_DEF);
-        
-    }];
-    [_valueLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.titleLab.mas_top).mas_equalTo(-100);
-        make.size.mas_equalTo(CGSizeMake(120, 120));
-        make.centerX.mas_equalTo(self.contentView.mas_centerX);
-        
     }];
     [_toolView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLab.mas_bottom).mas_equalTo(100);
+        make.top.mas_equalTo(self.titleLab.mas_bottom).mas_equalTo(KPAND_DEF);
         make.left.mas_equalTo(self.contentView).mas_equalTo(KPAND_DEF);
         make.right.mas_equalTo(self.contentView).mas_equalTo(-KPAND_DEF);
         make.bottom.mas_equalTo(self).mas_equalTo(-KPAND_DEF);

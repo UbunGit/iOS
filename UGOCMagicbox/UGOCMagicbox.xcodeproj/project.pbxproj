@@ -30,6 +30,8 @@
 		2C9760CA239233B2003999BA /* NSObject+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9760C9239233B2003999BA /* NSObject+UG.m */; };
 		2C9760CE23925F53003999BA /* UIAppdelegate+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9760CD23925F52003999BA /* UIAppdelegate+Realm.m */; };
 		2C9760D5239396B5003999BA /* TargetOptionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9760D4239396B5003999BA /* TargetOptionHeadView.m */; };
+		2CA94C972397982B009876BC /* ShareRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA94C962397982B009876BC /* ShareRemarkView.m */; };
+		2CA94C9A2397A6F0009876BC /* ShareHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA94C992397A6F0009876BC /* ShareHistoryCell.m */; };
 		2CFDD019238EC14400E36BD0 /* SharesHistoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */; };
 		2CFDD0202390203700E36BD0 /* SharesTargetListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDD01F2390203700E36BD0 /* SharesTargetListVC.m */; };
 		841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE122CB2C5B00F6DC04 /* BlockMAMapView.m */; };
@@ -205,6 +207,10 @@
 		2C9760CD23925F52003999BA /* UIAppdelegate+Realm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAppdelegate+Realm.m"; sourceTree = "<group>"; };
 		2C9760D3239396B5003999BA /* TargetOptionHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetOptionHeadView.h; sourceTree = "<group>"; };
 		2C9760D4239396B5003999BA /* TargetOptionHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetOptionHeadView.m; sourceTree = "<group>"; };
+		2CA94C952397982B009876BC /* ShareRemarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareRemarkView.h; sourceTree = "<group>"; };
+		2CA94C962397982B009876BC /* ShareRemarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareRemarkView.m; sourceTree = "<group>"; };
+		2CA94C982397A6F0009876BC /* ShareHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareHistoryCell.h; sourceTree = "<group>"; };
+		2CA94C992397A6F0009876BC /* ShareHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareHistoryCell.m; sourceTree = "<group>"; };
 		2CFDD017238EC14400E36BD0 /* SharesHistoryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesHistoryData.h; sourceTree = "<group>"; };
 		2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesHistoryData.m; sourceTree = "<group>"; };
 		2CFDD01E2390203700E36BD0 /* SharesTargetListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesTargetListVC.h; sourceTree = "<group>"; };
@@ -695,6 +701,8 @@
 			children = (
 				849485D6238A830800846F46 /* SharesCollectionCell.h */,
 				849485D7238A830800846F46 /* SharesCollectionCell.m */,
+				2CA94C982397A6F0009876BC /* ShareHistoryCell.h */,
+				2CA94C992397A6F0009876BC /* ShareHistoryCell.m */,
 				849485DC238AC89C00846F46 /* SharesAddView.h */,
 				849485DD238AC89C00846F46 /* SharesAddView.m */,
 				2C9760D3239396B5003999BA /* TargetOptionHeadView.h */,
@@ -703,6 +711,8 @@
 				206604A02394B01F0012D263 /* TargetOptionAddView.m */,
 				20B629D2239506BF0007885F /* ShareOptionCell.h */,
 				20B629D3239506BF0007885F /* ShareOptionCell.m */,
+				2CA94C952397982B009876BC /* ShareRemarkView.h */,
+				2CA94C962397982B009876BC /* ShareRemarkView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1544,6 +1554,7 @@
 			files = (
 				84DB979122C347B10034A927 /* DoraemonTZImagePick.m in Sources */,
 				84DB975622C33F480034A927 /* UITextView+UG.m in Sources */,
+				2CA94C9A2397A6F0009876BC /* ShareHistoryCell.m in Sources */,
 				849485BE238A585E00846F46 /* SharesViewController.m in Sources */,
 				84BA50C422CCB0B9004F6621 /* FATableViewCell.m in Sources */,
 				84DB976322C3400E0034A927 /* ViewController.m in Sources */,
@@ -1563,6 +1574,7 @@
 				84DB975522C33F480034A927 /* UIView+Alert.m in Sources */,
 				84DB978F22C347B10034A927 /* UG_TZImagePickSwitch.m in Sources */,
 				20083D43237FA66900D3F6D3 /* UGZoneViewController.m in Sources */,
+				2CA94C972397982B009876BC /* ShareRemarkView.m in Sources */,
 				84ADE551230BF3ED00BE9215 /* LOTViewController.m in Sources */,
 				84DB973022C33F480034A927 /* BarcollectionView.m in Sources */,
 				84DB975B22C33F480034A927 /* DorRoutes.m in Sources */,

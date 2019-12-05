@@ -40,6 +40,7 @@
     
     UIButton *itemButtom0 = [UIButton  new];
     [itemButtom0 setFrame:CGRectMake(0, 0, 30, 40)];
+    [itemButtom0 setTitleColor:COLOR23 forState:UIControlStateNormal];
     NSString *bcaktitle = [NSString fontAwesomeIconStringForEnum:FAGithub];
     [itemButtom0.titleLabel setFont:FONT_FA20];
     [itemButtom0 setTitle:bcaktitle forState:UIControlStateNormal];
@@ -60,6 +61,7 @@
     
      UIButton *itemButtom1 = [UIButton  buttonWithType:UIButtonTypeContactAdd];
        [itemButtom1 setFrame:CGRectMake(0, 0, 30, 40)];
+    [itemButtom1 setTitleColor:COLORINFO forState:UIControlStateNormal];
     [itemButtom1 ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
         
         [self.navigationController pushViewController:[SharesTargetSettingVC new] animated:YES];
