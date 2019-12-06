@@ -176,22 +176,77 @@ static NetWorkRequest *netWorkRequest = nil;
     /* 下载地址 */
     NSURL *url = [NSURL URLWithString:urlstr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
+    NSString *tempath = NSTemporaryDirectory();
+    NSString *temfile = [tempath stringByAppendingPathComponent:url.lastPathComponent];
+    DDLogVerbose(@"开始下载：%@",urlstr);
+    DDLogVerbose(@"零时文件：%@",temfile);
+    DDLogVerbose(@"保存地址：%@",filepath);
    /* 开始请求下载 */
     NSURLSessionDownloadTask *downloadTask = [_afManager downloadTaskWithRequest:request progress:downloadProgressBlock destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         /* 设定下载到的位置 */
-        return [NSURL fileURLWithPath:filepath];
+        return [NSURL fileURLWithPath:temfile];
                 
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        endblock(nil,error);
+        if (!error) {
+            if (filepath) {
+                BOOL isSuccess = [NetWorkRequest copyItemAtPath:temfile toPath:filepath overwrite:YES error:&error];
+                if (isSuccess) {
+                    endblock(@{@"path":filepath},error);
+                }else{
+                    endblock(nil,error);
+                }
+            }else{
+                endblock(@{@"path":temfile},error);
+            }
+        }else{
+            endblock(nil,error);
+        }
     }];
      [downloadTask resume];
 }
 
 -(NSString*)getclientAgent{
-    NSDictionary *dic = @{@"verstion":@"v1.0.1",@"platform":@"iOS"};
     return @"{verstion:\"v1.0.1\",platform:\"iOS\"}";
     
+}
+
+/*参数1、被复制文件路径
+ *参数2、要复制到的目标文件路径
+ *参数3、当要复制到的文件路径文件存在，会复制失败，这里传入是否覆盖
+ *参数4、错误信息
+ */
++ (BOOL)copyItemAtPath:(NSString *)path toPath:(NSString *)toPath overwrite:(BOOL)overwrite error:(NSError *__autoreleasing *)error {
+    // 先要保证源文件路径存在，不然抛出异常
+    if (![self isExistsAtPath:path]) {
+        [NSException raise:@"非法的源文件路径" format:@"源文件路径%@不存在，请检查源文件路径", path];
+        return NO;
+    }
+    //获得目标文件的上级目录
+    NSString *toDirPath = [toPath stringByDeletingLastPathComponent];
+    if (![self isExistsAtPath:toDirPath]) {
+        NSFileManager *manager = [NSFileManager defaultManager];
+
+        BOOL isSuccess = [manager createDirectoryAtPath:toDirPath withIntermediateDirectories:YES attributes:nil error:error];
+        // 创建复制路径
+        if (!isSuccess) {
+            return NO;
+        }
+    }
+    // 如果覆盖，那么先删掉原文件
+    if (overwrite) {
+        if ([self isExistsAtPath:toPath]) {
+            [[NSFileManager defaultManager] removeItemAtPath:path error:error];
+        }
+    }
+    // 复制文件，如果不覆盖且文件已存在则会复制失败
+    BOOL isSuccess = [[NSFileManager defaultManager] copyItemAtPath:path toPath:toPath error:error];
+    
+    return isSuccess;
+}
+ 
+#pragma mark - 判断文件(夹)是否存在
++ (BOOL)isExistsAtPath:(NSString *)path {
+    return [[NSFileManager defaultManager] fileExistsAtPath:path];
 }
 
 @end

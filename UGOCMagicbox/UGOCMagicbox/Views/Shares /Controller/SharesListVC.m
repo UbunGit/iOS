@@ -176,6 +176,9 @@
  */
 -(SharesToolView *)sharesToolView{
     if (!_sharesToolView) {
+
+        UG_WEAKSELF
+
         _sharesToolView = [SharesToolView new];
         // 指标
         [_sharesToolView.addtargetbtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
@@ -204,13 +207,22 @@
         }];
         // 下载数据库
         [_sharesToolView.gitdownbtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-            NSString *filepath = [NSString stringWithFormat:@"%@/Shares/default.realm",PATHDOCUMENT];
+            weakSelf.sharesToolView.gitdownbtn.userInteractionEnabled = NO;
+            [weakSelf.sharesToolView.gitdownbtn setTitle:[NSString stringWithFormat:@"0.00％"] forState:UIControlStateNormal];
+            NSString *filepath = [NSString stringWithFormat:@"%@/shares/default1.realm",PATHDOCUMENT];
             [[NetWorkRequest share] download:[UIApplication sharedApplication].getDownurl filepath:filepath progress:^(NSProgress * _Nonnull downloadProgress) {
-                NSLog(@"下载进度：%.0f％", downloadProgress.fractionCompleted * 100);
+                DDLogVerbose(@"下载进度：%.0f％", downloadProgress.fractionCompleted * 100);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf.sharesToolView.gitdownbtn setTitle:[NSString stringWithFormat:@"%.0f％", downloadProgress.fractionCompleted * 100] forState:UIControlStateNormal];
+                 });
             } head:nil endblock:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
-                if (!error) {
-                    [[UIApplication sharedApplication] configRealm:UGURL(filepath)];
-                    [self.view ug_msg:@"下载成功"];
+                weakSelf.sharesToolView.gitdownbtn.userInteractionEnabled = YES;
+                if (error) {
+                 
+                    [self.view ug_msg:error.domain];
+                }else{
+                    DDLogVerbose(@"文件下载成功地址：%@",[dataDict objectForKey:@"path"]);
+                    [self.view ug_msg:@"成功"];
                 }
             }];
         }];

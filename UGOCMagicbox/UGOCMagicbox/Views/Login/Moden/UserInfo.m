@@ -14,7 +14,9 @@ static UserInfo *userinfo = nil;
 +(instancetype)share{
     if (!userinfo) {
         NSDictionary *endinfo = [[NSUserDefaults standardUserDefaults]objectForKey:@"enduserinfo"];
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"enduserinfo"];
+
+//        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"enduserinfo"];
+
         if (endinfo) {
             UserInfo *temdata = [UserInfo modelWithDictionary:endinfo];
             if (temdata.autoSave) {
