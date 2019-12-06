@@ -7,7 +7,7 @@
 //
 
 #import "MapViewController.h"
-#import "Userinfo.h"
+#import "MAPUserinfo.h"
 #import "UIGestureRecognizer+BlocksKit.h"
 #import "LocView.h"
 #import "UGDrawingView.h"
@@ -28,8 +28,8 @@
 }
 //从数据库获取已有用户数据
 -(void)reloaddata{
-    RLMResults *resArr = [Userinfo allObjects];
-    for (Userinfo* userinfo in resArr) {
+    RLMResults *resArr = [MAPUserinfo allObjects];
+    for (MAPUserinfo* userinfo in resArr) {
         [self mapaddAnnotationUserinfo:userinfo];
     }
 }
@@ -58,7 +58,7 @@
                 annotationView.centerOffset = CGPointMake(0, 0);
                 [annotationView.clickbtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
                     //点击取消标记
-                    Userinfo *userinfo = [Userinfo objectsWhere:[NSString stringWithFormat:@"name = '%@'",annotation.title]].firstObject;
+                    MAPUserinfo *userinfo = [MAPUserinfo objectsWhere:[NSString stringWithFormat:@"name = '%@'",annotation.title]].firstObject;
                     if(!userinfo){
                         return;
                     }
@@ -96,7 +96,7 @@
             RLMRealm *realm = [RLMRealm defaultRealm];
             [realm transactionWithBlock:^{
                 //添加一个用户
-                Userinfo *userinfo = [Userinfo new];
+                MAPUserinfo *userinfo = [MAPUserinfo new];
                 userinfo.name =[NSString stringWithFormat:@"%ld",random()%255];
                 userinfo.headimage =[NSString stringWithFormat:@"%ld",random()%255];
                 userinfo.latitude =touchMapCoordinate.latitude;
@@ -189,7 +189,7 @@
 }
 
 //添加标记
--(void)mapaddAnnotationUserinfo:(Userinfo*)userinfo{
+-(void)mapaddAnnotationUserinfo:(MAPUserinfo*)userinfo{
     
     MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
     pointAnnotation.coordinate = CLLocationCoordinate2DMake(userinfo.latitude, userinfo.longitude);

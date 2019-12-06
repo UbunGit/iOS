@@ -32,12 +32,15 @@
 		2C9760D5239396B5003999BA /* TargetOptionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9760D4239396B5003999BA /* TargetOptionHeadView.m */; };
 		2CA94C972397982B009876BC /* ShareRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA94C962397982B009876BC /* ShareRemarkView.m */; };
 		2CA94C9A2397A6F0009876BC /* ShareHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA94C992397A6F0009876BC /* ShareHistoryCell.m */; };
+		2CA94C9E2398AFB0009876BC /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA94C9D2398AFB0009876BC /* UserInfo.m */; };
+		2CA94CA12398D4B3009876BC /* SharesToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA94CA02398D4B3009876BC /* SharesToolView.m */; };
 		2CFDD019238EC14400E36BD0 /* SharesHistoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */; };
 		2CFDD0202390203700E36BD0 /* SharesTargetListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDD01F2390203700E36BD0 /* SharesTargetListVC.m */; };
 		841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE122CB2C5B00F6DC04 /* BlockMAMapView.m */; };
 		841B5EE622CB2DB300F6DC04 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE522CB2DB300F6DC04 /* MapViewController.m */; };
-		841B5EEA22CB363700F6DC04 /* Userinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE922CB363700F6DC04 /* Userinfo.m */; };
+		841B5EEA22CB363700F6DC04 /* MAPUserinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE922CB363700F6DC04 /* MAPUserinfo.m */; };
 		841B712722CC956100F6DC04 /* LocView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B712622CC956100F6DC04 /* LocView.m */; };
+		84413C86239A2D4D0030463C /* UGKeyValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84413C85239A2D4D0030463C /* UGKeyValueView.m */; };
 		8461E1D32306B14600764748 /* SVGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461E1D22306B14600764748 /* SVGViewController.m */; };
 		849485BE238A585E00846F46 /* SharesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485BD238A585E00846F46 /* SharesViewController.m */; };
 		849485CA238A66A200846F46 /* SharesTargetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485C9238A66A200846F46 /* SharesTargetData.m */; };
@@ -211,6 +214,10 @@
 		2CA94C962397982B009876BC /* ShareRemarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareRemarkView.m; sourceTree = "<group>"; };
 		2CA94C982397A6F0009876BC /* ShareHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareHistoryCell.h; sourceTree = "<group>"; };
 		2CA94C992397A6F0009876BC /* ShareHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareHistoryCell.m; sourceTree = "<group>"; };
+		2CA94C9C2398AFB0009876BC /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		2CA94C9D2398AFB0009876BC /* UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		2CA94C9F2398D4B3009876BC /* SharesToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesToolView.h; sourceTree = "<group>"; };
+		2CA94CA02398D4B3009876BC /* SharesToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesToolView.m; sourceTree = "<group>"; };
 		2CFDD017238EC14400E36BD0 /* SharesHistoryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesHistoryData.h; sourceTree = "<group>"; };
 		2CFDD018238EC14400E36BD0 /* SharesHistoryData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesHistoryData.m; sourceTree = "<group>"; };
 		2CFDD01E2390203700E36BD0 /* SharesTargetListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesTargetListVC.h; sourceTree = "<group>"; };
@@ -221,10 +228,12 @@
 		841B5EE122CB2C5B00F6DC04 /* BlockMAMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockMAMapView.m; sourceTree = "<group>"; };
 		841B5EE422CB2DB300F6DC04 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		841B5EE522CB2DB300F6DC04 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		841B5EE822CB363700F6DC04 /* Userinfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Userinfo.h; sourceTree = "<group>"; };
-		841B5EE922CB363700F6DC04 /* Userinfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Userinfo.m; sourceTree = "<group>"; };
+		841B5EE822CB363700F6DC04 /* MAPUserinfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAPUserinfo.h; sourceTree = "<group>"; };
+		841B5EE922CB363700F6DC04 /* MAPUserinfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAPUserinfo.m; sourceTree = "<group>"; };
 		841B712522CC956100F6DC04 /* LocView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocView.h; sourceTree = "<group>"; };
 		841B712622CC956100F6DC04 /* LocView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocView.m; sourceTree = "<group>"; };
+		84413C84239A2D4D0030463C /* UGKeyValueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGKeyValueView.h; sourceTree = "<group>"; };
+		84413C85239A2D4D0030463C /* UGKeyValueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGKeyValueView.m; sourceTree = "<group>"; };
 		8461E1D12306B14600764748 /* SVGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVGViewController.h; sourceTree = "<group>"; };
 		8461E1D22306B14600764748 /* SVGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVGViewController.m; sourceTree = "<group>"; };
 		849485BC238A585E00846F46 /* SharesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesViewController.h; sourceTree = "<group>"; };
@@ -483,6 +492,7 @@
 		206604812394AF470012D263 /* UGView */ = {
 			isa = PBXGroup;
 			children = (
+				84413C83239A2D2E0030463C /* UGKeyValueView */,
 				206604822394AF470012D263 /* UGRemarkView */,
 				206604852394AF470012D263 /* UGSpeekView */,
 				2066048B2394AF470012D263 /* UGPersentView */,
@@ -578,6 +588,7 @@
 		2C510833238D7E6F00F527C0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2CA94C9B2398AF67009876BC /* Moden */,
 				2C510834238D7E9200F527C0 /* LoginViewController.h */,
 				2C510835238D7E9200F527C0 /* LoginViewController.m */,
 			);
@@ -600,6 +611,15 @@
 				2C9760CD23925F52003999BA /* UIAppdelegate+Realm.m */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		2CA94C9B2398AF67009876BC /* Moden */ = {
+			isa = PBXGroup;
+			children = (
+				2CA94C9C2398AFB0009876BC /* UserInfo.h */,
+				2CA94C9D2398AFB0009876BC /* UserInfo.m */,
+			);
+			path = Moden;
 			sourceTree = "<group>";
 		};
 		5690AFE9D97DCD065C2E5393 /* Frameworks */ = {
@@ -634,8 +654,8 @@
 		841B5EE722CB361200F6DC04 /* Moden */ = {
 			isa = PBXGroup;
 			children = (
-				841B5EE822CB363700F6DC04 /* Userinfo.h */,
-				841B5EE922CB363700F6DC04 /* Userinfo.m */,
+				841B5EE822CB363700F6DC04 /* MAPUserinfo.h */,
+				841B5EE922CB363700F6DC04 /* MAPUserinfo.m */,
 			);
 			path = Moden;
 			sourceTree = "<group>";
@@ -647,6 +667,15 @@
 				841B712622CC956100F6DC04 /* LocView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		84413C83239A2D2E0030463C /* UGKeyValueView */ = {
+			isa = PBXGroup;
+			children = (
+				84413C84239A2D4D0030463C /* UGKeyValueView.h */,
+				84413C85239A2D4D0030463C /* UGKeyValueView.m */,
+			);
+			path = UGKeyValueView;
 			sourceTree = "<group>";
 		};
 		8461E1CF2306B10900764748 /* SVGAPlayer */ = {
@@ -713,6 +742,8 @@
 				20B629D3239506BF0007885F /* ShareOptionCell.m */,
 				2CA94C952397982B009876BC /* ShareRemarkView.h */,
 				2CA94C962397982B009876BC /* ShareRemarkView.m */,
+				2CA94C9F2398D4B3009876BC /* SharesToolView.h */,
+				2CA94CA02398D4B3009876BC /* SharesToolView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1592,7 +1623,9 @@
 				84DB978C22C347B10034A927 /* AppDelegate+NIMSDK.m in Sources */,
 				20083D48237FA6F900D3F6D3 /* UGZoneData.m in Sources */,
 				84DB975322C33F480034A927 /* UIView+WY_Extension.m in Sources */,
+				2CA94CA12398D4B3009876BC /* SharesToolView.m in Sources */,
 				84DB976422C3400E0034A927 /* main.m in Sources */,
+				84413C86239A2D4D0030463C /* UGKeyValueView.m in Sources */,
 				84DB979322C347B10034A927 /* AddressBookController.m in Sources */,
 				2C9760CE23925F53003999BA /* UIAppdelegate+Realm.m in Sources */,
 				84DB974E22C33F480034A927 /* UILabel+UG.m in Sources */,
@@ -1612,7 +1645,7 @@
 				2C510836238D7E9200F527C0 /* LoginViewController.m in Sources */,
 				20B629D12394BD180007885F /* UGAlignmentButtonVC.m in Sources */,
 				2066049E2394AF470012D263 /* UGZoneTableCell.m in Sources */,
-				841B5EEA22CB363700F6DC04 /* Userinfo.m in Sources */,
+				841B5EEA22CB363700F6DC04 /* MAPUserinfo.m in Sources */,
 				84DB974F22C33F480034A927 /* UIButton+UG.m in Sources */,
 				849485DE238AC89C00846F46 /* SharesAddView.m in Sources */,
 				84DB975722C33F480034A927 /* NSString+Encode.m in Sources */,
@@ -1627,6 +1660,7 @@
 				8461E1D32306B14600764748 /* SVGViewController.m in Sources */,
 				2066049D2394AF470012D263 /* UGWaverView.m in Sources */,
 				206604A12394B01F0012D263 /* TargetOptionAddView.m in Sources */,
+				2CA94C9E2398AFB0009876BC /* UserInfo.m in Sources */,
 				841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */,
 				84DB975822C33F480034A927 /* UITextField+UG.m in Sources */,
 				84DB975922C33F480034A927 /* NSDate+UG.m in Sources */,

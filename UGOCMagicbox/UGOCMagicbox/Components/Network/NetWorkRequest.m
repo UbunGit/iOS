@@ -41,9 +41,15 @@ static NetWorkRequest *netWorkRequest = nil;
 
 -(void)post:(NSString*)url param:(NSDictionary *)param head:(NSDictionary *)head endblock:(NREndBlock)endblock{
     
-//    if ([Global_Variable shared].token) {
-//        [afManager.requestSerializer setValue:[Global_Variable shared].token forHTTPHeaderField:@"Authorization"];
-//    }
+    if ([UserInfo share].islogin) {
+        [[NetWorkRequest share].afManager.requestSerializer setAuthorizationHeaderFieldWithUsername:[UserInfo share].name password:[UserInfo share].password];
+    }else{
+        NSError *error = [NSError errorWithDomain:@"用户未登陆" code:-1 userInfo:nil];
+        if (endblock) {
+            endblock(nil,error);
+        }
+    }
+ 
     NSString *cookie = [[NSUserDefaults standardUserDefaults] objectForKey:@"Set-Cookie"];
     if (cookie != nil) {
         [_afManager.requestSerializer setValue:cookie forHTTPHeaderField:@"Cookie"];
@@ -135,6 +141,14 @@ static NetWorkRequest *netWorkRequest = nil;
 }
 
 -(void)put:(NSString*)url param:(NSDictionary *)param head:(NSDictionary *)head endblock:(NREndBlock)endblock{
+    if ([UserInfo share].islogin) {
+        [[NetWorkRequest share].afManager.requestSerializer setAuthorizationHeaderFieldWithUsername:[UserInfo share].name password:[UserInfo share].password];
+    }else{
+        NSError *error = [NSError errorWithDomain:@"用户未登陆" code:-1 userInfo:nil];
+        if (endblock) {
+            endblock(nil,error);
+        }
+    }
     [_afManager PUT:url parameters:param success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         DDLogVerbose(@"{PUT}url:%@ \nparame:%@ \nresult:%@", url, param, responseObject);
         
@@ -148,6 +162,30 @@ static NetWorkRequest *netWorkRequest = nil;
         }
     }];
     
+}
+-(void)download:(NSString*)urlstr filepath:(NSString *)filepath progress:(void (^)(NSProgress *downloadProgress)) downloadProgressBlock head:(NSDictionary *)head endblock:(NREndBlock)endblock{
+    if ([UserInfo share].islogin) {
+        [[NetWorkRequest share].afManager.requestSerializer setAuthorizationHeaderFieldWithUsername:[UserInfo share].name password:[UserInfo share].password];
+    }else{
+        NSError *error = [NSError errorWithDomain:@"用户未登陆" code:-1 userInfo:nil];
+        if (endblock) {
+            endblock(nil,error);
+        }
+    }
+
+    /* 下载地址 */
+    NSURL *url = [NSURL URLWithString:urlstr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+   /* 开始请求下载 */
+    NSURLSessionDownloadTask *downloadTask = [_afManager downloadTaskWithRequest:request progress:downloadProgressBlock destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        /* 设定下载到的位置 */
+        return [NSURL fileURLWithPath:filepath];
+                
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        endblock(nil,error);
+    }];
+     [downloadTask resume];
 }
 
 -(NSString*)getclientAgent{

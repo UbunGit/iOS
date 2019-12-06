@@ -17,12 +17,15 @@
 #import "SharesTargetListVC.h"
 #import "SharesResuleVC.h"
 #import "ShareHistoryCell.h"
+#import "SharesToolView.h"
+#import "UIAppdelegate+Realm.h"
 
 @interface SharesListVC ()
 @property(strong, nonatomic) SharesAddView*sharesAddView;
 @property(strong, nonatomic) PersentViewController *persent;
 @property(strong, nonatomic) RLMResults<SharesHistoryData *> *datalist; //历史测评记录
 @property(strong, nonatomic) BlockTableView *blockTableView;
+@property(strong, nonatomic) SharesToolView *sharesToolView;
 @end
 
 @implementation SharesListVC
@@ -52,7 +55,9 @@
     [itemButtom0 setTitleColor:COLORINFO forState:UIControlStateNormal];
     [itemButtom0 setTitle:bcaktitle forState:UIControlStateNormal];
     [itemButtom0 ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-        [self.navigationController pushViewController:[SharesTargetListVC new] animated:YES];
+        self.persent = [PersentViewController new];
+        weakSelf.persent.cotentView = self.sharesToolView;
+        [weakSelf presentViewController:weakSelf.persent animated:YES completion:nil];
     }];
     UIBarButtonItem *button0 = [[UIBarButtonItem alloc]
                                initWithCustomView:itemButtom0];
@@ -166,6 +171,52 @@
     return _sharesAddView;
 }
 
+/**
+ 工具view
+ */
+-(SharesToolView *)sharesToolView{
+    if (!_sharesToolView) {
+        _sharesToolView = [SharesToolView new];
+        // 指标
+        [_sharesToolView.addtargetbtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
+            [self.persent dismissViewControllerAnimated:YES completion:^{
+                [self.navigationController pushViewController:[SharesTargetListVC new] animated:YES];
+            }];
+            
+        }];
+        // 上传数据库
+        [_sharesToolView.gitupbtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
+            [[NetWorkRequest share] createpath:@"Shares/default.realm" sha:[[UIApplication sharedApplication] getsha] block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+                if (error) {
+                    [self.persent.view ug_msg:error.domain];
+                }else{
+                    [[UIApplication sharedApplication] updateRealInfo:^(NSError * _Nonnull error, NSDictionary * _Nonnull result) {
+                        if (!error) {
+                            [self.persent dismissViewControllerAnimated:YES completion:^{
+                                [self.view ug_msg:@"备份成功"];
+                            }];
+                        }else{
+                            [self.persent.view ug_msg:@"备份失败"];
+                        }
+                    }];
+                }
+            }];
+        }];
+        // 下载数据库
+        [_sharesToolView.gitdownbtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
+            NSString *filepath = [NSString stringWithFormat:@"%@/Shares/default.realm",PATHDOCUMENT];
+            [[NetWorkRequest share] download:[UIApplication sharedApplication].getDownurl filepath:filepath progress:^(NSProgress * _Nonnull downloadProgress) {
+                NSLog(@"下载进度：%.0f％", downloadProgress.fractionCompleted * 100);
+            } head:nil endblock:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+                if (!error) {
+                    [[UIApplication sharedApplication] configRealm:UGURL(filepath)];
+                    [self.view ug_msg:@"下载成功"];
+                }
+            }];
+        }];
+    }
+    return _sharesToolView;
+}
 -(void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
     [_blockTableView mas_makeConstraints:^(MASConstraintMaker *make) {

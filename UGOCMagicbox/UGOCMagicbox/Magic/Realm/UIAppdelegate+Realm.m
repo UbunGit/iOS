@@ -12,10 +12,14 @@
 
 @implementation UIApplication (Realm)
 
--(void)configRealm{
+-(void)configRealm:(NSURL*)path{
+    
     RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
     // 设置新的架构版本。必须大于之前所使用的版本
     // （如果之前从未设置过架构版本，那么当前的架构版本为 0）
+    if (path) {
+        config.fileURL = path;
+    }
     config.schemaVersion = 4;
     // 设置模块，如果 Realm 的架构版本低于上面所定义的版本，
     // 那么这段代码就会自动调用
@@ -39,18 +43,28 @@
     // 打开文件将会自动执行迁移
     [RLMRealm defaultRealm];
 }
+
 -(NSString*)getsha{
     
     NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultRealm"];
     return  [dic objectForKey:@"sha"];
 }
 
--(void)updateRealInfo{
-    [[NetWorkRequest share] getfileInfo:@"default.realm" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+-(NSString*)getDownurl{
+    NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:@"defaultRealm"];
+    return  [dic objectForKey:@"download_url"];
+}
+/**
+ 获取数据库文件 sha
+ */
+-(void)updateRealInfo:(void(^)(NSError*error,NSDictionary*result))endblock{
+    [[NetWorkRequest share] getfileInfo:@"Shares/default.realm" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
         if (error) {
-            [UIView ug_msg:@"获取realm info 失败"];
+          
+            endblock(error,nil);
         }else{
             [[NSUserDefaults standardUserDefaults]setObject:dataDict forKey:@"defaultRealm"];
+            endblock(nil,dataDict);
         }
     }];
     

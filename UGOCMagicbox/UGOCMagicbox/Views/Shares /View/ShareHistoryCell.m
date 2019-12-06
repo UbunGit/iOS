@@ -31,10 +31,14 @@
     _titlelab.font = FONT_SYS12;
      _titlelab.textColor = COLOR23;
     
-    self.timelab = [UILabel new];
+    self.timelab = [UGKeyValueView new];
     [self.contentView addSubview:_timelab];
-    _timelab.font = FONT_SYS10;
-    _timelab.textColor = COLOR23;
+    _timelab.panding = KPAND_MIN;
+    _timelab.keylab.font = FONT_SYS10;
+    _timelab.keylab.textColor = COLOR23;
+    _timelab.key = @"测评时间";
+    _timelab.valuelab.font = FONT_SYS10;
+    _timelab.valuelab.textColor = COLOR23;
     
     self.handleTimelab = [UILabel new];
     [self.contentView addSubview:_handleTimelab];
@@ -62,7 +66,7 @@
 -(void)reload:(SharesHistoryData *)data{
     
     _titlelab.text = [NSString stringWithFormat:@"%@(%@)",data.name,data.number];
-    _timelab.text = [NSString stringWithFormat:@"测评时间:%zd",data.date];
+    _timelab.vlaue = [NSString stringWithFormat:@"%zd",data.date];
     NSData *filedata = [[NSFileManager defaultManager] contentsAtPath:data.absfilePath];
     if(filedata){
         NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:filedata options:NSJSONReadingMutableLeaves error:nil];
