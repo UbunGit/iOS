@@ -111,7 +111,9 @@
     if (_remarkDic) {
         [savedic setObject:_remarkDic forKey:@"remark"];
     }
-  
+
+    NSString *oldfiledata = [[[NSFileManager defaultManager] contentsAtPath:_sharesdata.absfilePath] md5String];
+    
     NSString *savestr = [savedic jsonStringEncoded];
     NSError *err = [[NSError alloc]init];
     NSFileManager *defaultManager = [NSFileManager defaultManager];
@@ -121,11 +123,6 @@
         [self.view ug_msg:@"文件夹创建失败"];
         return;
     }
-  
-    NSString *loctpath = [NSString stringWithFormat:@"%@/%@",PATHDOCUMENT,_sharesdata.relfilepath];
-    NSData *data = [[NSFileManager defaultManager] contentsAtPath:loctpath];
-    NSString *oldfiledata = [data md5String];
-    
     BOOL isok =[savestr writeToFile:_sharesdata.absfilePath atomically:YES encoding:NSUTF8StringEncoding error:&err];
     if (isok) {
         if (!_sharesdata.key) {
