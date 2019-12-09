@@ -18,9 +18,13 @@
     // 设置新的架构版本。必须大于之前所使用的版本
     // （如果之前从未设置过架构版本，那么当前的架构版本为 0）
     if (path) {
+        NSString *toDirPath = [[path absoluteString] stringByDeletingLastPathComponent];
+        if (![[NSFileManager defaultManager] fileExistsAtPath:[path absoluteString]]) {
+            [[NSFileManager defaultManager] createDirectoryAtPath:toDirPath withIntermediateDirectories:YES attributes:nil error:nil];
+        }
         config.fileURL = path;
     }
-    config.schemaVersion = 4;
+    config.schemaVersion = 6;
     // 设置模块，如果 Realm 的架构版本低于上面所定义的版本，
     // 那么这段代码就会自动调用
     config.migrationBlock = ^(RLMMigration *migration, uint64_t oldSchemaVersion) {
@@ -58,7 +62,7 @@
  获取数据库文件 sha
  */
 -(void)updateRealInfo:(void(^)(NSError*error,NSDictionary*result))endblock{
-    [[NetWorkRequest share] getfileInfo:@"Shares/default.realm" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+    [[NetWorkRequest share] getfileInfo:@"shares/default.realm" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
         if (error) {
           
             endblock(error,nil);

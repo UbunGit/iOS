@@ -235,7 +235,7 @@ static NetWorkRequest *netWorkRequest = nil;
     // 如果覆盖，那么先删掉原文件
     if (overwrite) {
         if ([self isExistsAtPath:toPath]) {
-            [[NSFileManager defaultManager] removeItemAtPath:path error:error];
+            [[NSFileManager defaultManager] removeItemAtPath:toPath error:error];
         }
     }
     // 复制文件，如果不覆盖且文件已存在则会复制失败

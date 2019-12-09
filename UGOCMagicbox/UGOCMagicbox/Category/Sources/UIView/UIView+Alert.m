@@ -151,20 +151,24 @@ static UGPersentView *perview = nil;
 
 static MBProgressHUD *loadinghud = nil;
 -(void)ug_starloading{
-
-    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        obj.alpha = 0.0;
-    }];
-    loadinghud = [MBProgressHUD showHUDAddedTo:self animated:YES];
-    loadinghud.mode = MBProgressHUDModeIndeterminate;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            obj.alpha = 0.0;
+        }];
+        loadinghud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+        loadinghud.mode = MBProgressHUDModeIndeterminate;
+    });
     
 }
 -(void)ug_stoploading{
     
-    [loadinghud hideAnimated:YES];
-    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        obj.alpha = 1.0;
-    }];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [loadinghud hideAnimated:YES];
+        [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            obj.alpha = 1.0;
+        }];
+    });
 }
 
 
@@ -183,10 +187,10 @@ static MBProgressHUD *loadinghud = nil;
     [perview mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self);
     }];
-
+    
     [customView setNeedsLayout];
     [perview setNeedsLayout];
- 
+    
     [self bk_performBlock:^(id obj) {
         
         [UIView animateWithDuration:5 animations:^{
@@ -203,7 +207,7 @@ static MBProgressHUD *loadinghud = nil;
         }];
         [customView setNeedsLayout];
     } afterDelay:0.2];
-  
+    
 }
 
 +(void)ug_dismisPersentView{
@@ -213,10 +217,10 @@ static MBProgressHUD *loadinghud = nil;
 -(void)ug_dismisPersentView{
     
     [UIView animateWithDuration:0.3 animations:^{
-
-       [perview setFrame:CGRectMake(0, self.bounds.size.height, self.bounds.size.width, self.bounds.size.height)];
-       [perview.contentView setFrame:CGRectMake(0, self.bounds.size.height, perview.contentView.bounds.size.width, perview.contentView.bounds.size.height)];
-         
+        
+        [perview setFrame:CGRectMake(0, self.bounds.size.height, self.bounds.size.width, self.bounds.size.height)];
+        [perview.contentView setFrame:CGRectMake(0, self.bounds.size.height, perview.contentView.bounds.size.width, perview.contentView.bounds.size.height)];
+        
     } completion:^(BOOL finished) {
         [perview.contentView removeFromSuperview];
         perview.contentView = nil;

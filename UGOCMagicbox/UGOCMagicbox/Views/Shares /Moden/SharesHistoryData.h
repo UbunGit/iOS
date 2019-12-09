@@ -26,6 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(assign, nonatomic) BOOL isCommit; //是否已提交至服务器
 
 @property(assign, nonatomic) NSTimeInterval edittime; //最后修改时间
+
+@property(strong, nonatomic) NSString *sha; //
+@property(strong, nonatomic) NSString *downurl; //
+
 -(NSString*)makeKey;
 /**
  获取文件路径 不包括文件名

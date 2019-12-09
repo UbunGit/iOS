@@ -12,6 +12,8 @@
 #import "SharesTargetData.h"
 #import "ShareRemarkView.h"
 #import "PersentViewController.h"
+#import "NetWorkRequest+Shares.h"
+#import "NSData+YYAdd.h"
 
 @interface SharesResuleVC ()
 
@@ -103,6 +105,7 @@
 
 
 -(void)savedata{
+    UG_WEAKSELF
     NSMutableDictionary *savedic = [NSMutableDictionary new];
     [savedic setObject:_editDic forKey:@"data"];
     if (_remarkDic) {
@@ -118,9 +121,12 @@
         [self.view ug_msg:@"文件夹创建失败"];
         return;
     }
+  
+    NSString *loctpath = [NSString stringWithFormat:@"%@/%@",PATHDOCUMENT,_sharesdata.relfilepath];
+    NSData *data = [[NSFileManager defaultManager] contentsAtPath:loctpath];
+    NSString *oldfiledata = [data md5String];
     
     BOOL isok =[savestr writeToFile:_sharesdata.absfilePath atomically:YES encoding:NSUTF8StringEncoding error:&err];
-    
     if (isok) {
         if (!_sharesdata.key) {
             SharesHistoryData *data = [SharesHistoryData new];
@@ -134,11 +140,30 @@
                 [realm addObject: data];
                 [self.view ug_msg:@"保存成功"];
             }];
+             weakSelf.sharesdata = data;
         }else{
             [self.view ug_msg:@"修改成功"];
         }
-     
         
+        NSString *newfiledata = [[[NSFileManager defaultManager] contentsAtPath:_sharesdata.absfilePath] md5String];
+        if (![newfiledata isEqualToString:oldfiledata]) {
+            [[NetWorkRequest share] createpath:_sharesdata.relfilepath lpath:_sharesdata.relfilepath sha:_sharesdata.sha message:@"评测" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+                if (error) {
+                    [self.view ug_msg:@"上传失败"];
+                }else{
+                    RLMRealm *realm = [RLMRealm defaultRealm];
+                    [realm transactionWithBlock:^{
+                        NSDictionary *dic = [dataDict objectForKey:@"content"];
+                        weakSelf.sharesdata.isCommit = YES;
+                        weakSelf.sharesdata.sha = [dic objectForKey:@"sha"];
+                        weakSelf.sharesdata.downurl = [dic objectForKey:@"download_url"];
+                        [self.view ug_msg:@"上传成功"];
+                    }];
+                }
+            }];
+        }
+       
+
     }else{
         [self.view ug_msg:@"保存失败"];
     }

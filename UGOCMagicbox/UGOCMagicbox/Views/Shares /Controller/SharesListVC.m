@@ -106,20 +106,36 @@
         NSData *filedata = [[NSFileManager defaultManager] contentsAtPath:data.absfilePath];
         if(filedata){
             NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:filedata options:NSJSONReadingMutableLeaves error:nil];
-            
             SharesResuleVC *sharesViewController = [SharesResuleVC new];
             sharesViewController.sharesdata = data;
             sharesViewController.editDic = [dic objectForKey:@"data"];
             sharesViewController.remarkDic = [dic objectForKey:@"remark"];
             [weakSelf.navigationController pushViewController:sharesViewController animated:YES];
         }else{
-            [weakSelf.view ug_msg:@"文件不存在或丢失"];
-            RLMRealm *realm = [RLMRealm defaultRealm];
-            // 删除单个模型
-            [realm transactionWithBlock:^{
-               [realm deleteObject:data];
-                [weakSelf updataData];
+             [weakSelf.view ug_starloading];
+            [[NetWorkRequest share] download:data.downurl filepath:data.absfilePath progress:^(NSProgress * _Nonnull downloadProgress) {
+               
+            } head:nil endblock:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+                [weakSelf.view ug_stoploading];
+                if (error) {
+                    [weakSelf.view ug_msg:@"文件不存在或丢失"];
+                }else{
+                    NSData *filedata = [[NSFileManager defaultManager] contentsAtPath:data.absfilePath];
+                    NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:filedata options:NSJSONReadingMutableLeaves error:nil];
+                    SharesResuleVC *sharesViewController = [SharesResuleVC new];
+                    sharesViewController.sharesdata = data;
+                    sharesViewController.editDic = [dic objectForKey:@"data"];
+                    sharesViewController.remarkDic = [dic objectForKey:@"remark"];
+                    [weakSelf.navigationController pushViewController:sharesViewController animated:YES];
+                }
             }];
+            
+//            RLMRealm *realm = [RLMRealm defaultRealm];
+//            // 删除单个模型
+//            [realm transactionWithBlock:^{
+//               [realm deleteObject:data];
+//                [weakSelf updataData];
+//            }];
         }
      
         
@@ -189,7 +205,7 @@
         }];
         // 上传数据库
         [_sharesToolView.gitupbtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-            [[NetWorkRequest share] createpath:@"Shares/default.realm" sha:[[UIApplication sharedApplication] getsha] block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+            [[NetWorkRequest share] createpath:@"shares/default.realm" lpath:@"default.realm" sha:[[UIApplication sharedApplication] getsha] message:@"UbunGit 备份本地数据库" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
                 if (error) {
                     [self.persent.view ug_msg:error.domain];
                 }else{
@@ -209,7 +225,7 @@
         [_sharesToolView.gitdownbtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
             weakSelf.sharesToolView.gitdownbtn.userInteractionEnabled = NO;
             [weakSelf.sharesToolView.gitdownbtn setTitle:[NSString stringWithFormat:@"0.00％"] forState:UIControlStateNormal];
-            NSString *filepath = [NSString stringWithFormat:@"%@/shares/default1.realm",PATHDOCUMENT];
+            NSString *filepath = [NSString stringWithFormat:@"%@/shares/default.realm",PATHDOCUMENT];
             [[NetWorkRequest share] download:[UIApplication sharedApplication].getDownurl filepath:filepath progress:^(NSProgress * _Nonnull downloadProgress) {
                 DDLogVerbose(@"下载进度：%.0f％", downloadProgress.fractionCompleted * 100);
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -222,6 +238,8 @@
                     [self.view ug_msg:error.domain];
                 }else{
                     DDLogVerbose(@"文件下载成功地址：%@",[dataDict objectForKey:@"path"]);
+                    [[UIApplication sharedApplication]configRealm:UGURL([dataDict objectForKey:@"path"])];
+                    [self updataData];
                     [self.view ug_msg:@"成功"];
                 }
             }];
