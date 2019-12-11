@@ -18,6 +18,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    self.definesPresentationContext = YES;//self 为presenting 视图
     //导航拦
     if (self.navigationController.viewControllers.count > 1) {
             UIButton *itemButtom = [UIButton new];

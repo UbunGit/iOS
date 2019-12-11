@@ -15,6 +15,7 @@ target 'UGOCMagicbox' do
   pod 'lottie-ios', '~> 2.5.3'
   pod 'IQKeyboardManager'
   pod 'YYKit'
+  pod 'OCBarrage'
   
   pod 'DoraemonKit/Core',  :configurations => ['Debug']
   pod 'DoraemonKit/WithLogger', :configurations => ['Debug']

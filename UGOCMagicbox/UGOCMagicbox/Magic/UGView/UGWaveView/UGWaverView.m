@@ -8,6 +8,9 @@
 
 #import "UGWaverView.h"
 
+/**
+ 水波动画
+ */
 
 @interface UGWaverView ()
 

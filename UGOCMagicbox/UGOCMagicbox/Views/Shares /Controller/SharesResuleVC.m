@@ -57,7 +57,6 @@
                                initWithCustomView:itemButtom];
      [self.navigationItem setRightBarButtonItems:@[button]];
 
-    
     //添加测评
     self.saveBtn = [UIButton new];
     [self.view addSubview:_saveBtn];

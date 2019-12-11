@@ -50,6 +50,9 @@
     
     [[DoraemonManager shareInstance] addPluginWithTitle:@"朋友圈" icon:@"doraemon_netflow_list_select" desc:@"朋友圈" pluginName:@"DorZoneViewPlugin" atModule:@"常用功能"];
     
+    [[DoraemonManager shareInstance] addPluginWithTitle:@"弹幕" icon:@"doraemon_netflow_list_select" desc:@"弹幕" pluginName:@"DorDanmuViewPlugin" atModule:@"常用功能"];
+    
+    
     
     
 #pragma -- 动画

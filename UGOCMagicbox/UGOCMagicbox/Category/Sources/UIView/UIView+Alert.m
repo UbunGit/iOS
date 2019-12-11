@@ -144,6 +144,11 @@ static UGPersentView *perview = nil;
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window ug_starloading];
 }
++(void)ug_loadingProgress:(NSString*)string{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [window ug_loadingProgress:string];
+}
+
 +(void)ug_stoploading{
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [window ug_stoploading];
@@ -161,9 +166,16 @@ static MBProgressHUD *loadinghud = nil;
     });
     
 }
+
+-(void)ug_loadingProgress:(NSString*)string{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        loadinghud.label.text = string;
+    });
+}
 -(void)ug_stoploading{
     
     dispatch_async(dispatch_get_main_queue(), ^{
+        loadinghud.label.text = nil;
         [loadinghud hideAnimated:YES];
         [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.alpha = 1.0;

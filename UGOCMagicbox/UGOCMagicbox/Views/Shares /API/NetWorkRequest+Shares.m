@@ -30,8 +30,7 @@ message:(NSString*)message
     }
     NSString *url = [NSString stringWithFormat:@"https://api.github.com/repos/%@/%@/contents/%@",[UserInfo share].name,[UserInfo share].repo, path];
     
-    NSString *loctpath = [NSString stringWithFormat:@"%@/%@",PATHDOCUMENT,lpath];
-    NSData *filedata = [[NSFileManager defaultManager] contentsAtPath:loctpath];
+    NSData *filedata = [[NSFileManager defaultManager] contentsAtPath:lpath];
     NSString *bath =  [filedata base64EncodedStringWithOptions:0];
     NSMutableDictionary *dic =[NSMutableDictionary dictionaryWithDictionary: @{
         @"message": message,

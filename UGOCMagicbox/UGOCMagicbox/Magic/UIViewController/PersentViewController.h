@@ -14,7 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PersentViewController : UIViewController
 
+@property(assign, nonatomic) NSInteger type; // 0 居中 1局下
+
 @property(strong, nonatomic)UIView *cotentView;
+
 @property(strong, nonatomic)UIButton *closeBtn;
 
 @end

@@ -77,4 +77,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface DorDanmuViewPlugin : NSObject<DoraemonPluginProtocol>
+
+
+@end
+
+
 NS_ASSUME_NONNULL_END

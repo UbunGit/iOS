@@ -41,6 +41,9 @@
 		841B5EEA22CB363700F6DC04 /* MAPUserinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE922CB363700F6DC04 /* MAPUserinfo.m */; };
 		841B712722CC956100F6DC04 /* LocView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B712622CC956100F6DC04 /* LocView.m */; };
 		84413C86239A2D4D0030463C /* UGKeyValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84413C85239A2D4D0030463C /* UGKeyValueView.m */; };
+		84501F17239F7F6500225D9F /* UGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 84501F15239F7F6500225D9F /* UGTextField.m */; };
+		84501F1A239F889500225D9F /* DanmuManCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84501F19239F889500225D9F /* DanmuManCell.m */; };
+		84501F1D239F88D900225D9F /* DanmuManDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84501F1C239F88D900225D9F /* DanmuManDescriptor.m */; };
 		8461E1D32306B14600764748 /* SVGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461E1D22306B14600764748 /* SVGViewController.m */; };
 		849485BE238A585E00846F46 /* SharesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485BD238A585E00846F46 /* SharesViewController.m */; };
 		849485CA238A66A200846F46 /* SharesTargetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485C9238A66A200846F46 /* SharesTargetData.m */; };
@@ -77,6 +80,8 @@
 		84BA50C622CCB0B9004F6621 /* FAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA50C222CCB0B8004F6621 /* FAViewController.m */; };
 		84BA50D022D2DBED004F6621 /* UGDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA50CF22D2DBEC004F6621 /* UGDrawingView.m */; };
 		84BA50D422D2DF50004F6621 /* UGDrawingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA50D322D2DF50004F6621 /* UGDrawingVC.m */; };
+		84D283E2239F436400DE0025 /* DamuSendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D283E1239F436400DE0025 /* DamuSendView.m */; };
+		84D283E5239F4CBA00DE0025 /* DanmuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D283E4239F4CBA00DE0025 /* DanmuViewController.m */; };
 		84DB96A422C33E7F0034A927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DB96A322C33E7F0034A927 /* Assets.xcassets */; };
 		84DB96B422C33E800034A927 /* UGOCMagicboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB96B322C33E800034A927 /* UGOCMagicboxTests.m */; };
 		84DB96BF22C33E800034A927 /* UGOCMagicboxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DB96BE22C33E800034A927 /* UGOCMagicboxUITests.m */; };
@@ -234,6 +239,12 @@
 		841B712622CC956100F6DC04 /* LocView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocView.m; sourceTree = "<group>"; };
 		84413C84239A2D4D0030463C /* UGKeyValueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGKeyValueView.h; sourceTree = "<group>"; };
 		84413C85239A2D4D0030463C /* UGKeyValueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGKeyValueView.m; sourceTree = "<group>"; };
+		84501F15239F7F6500225D9F /* UGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGTextField.m; sourceTree = "<group>"; };
+		84501F16239F7F6500225D9F /* UGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UGTextField.h; sourceTree = "<group>"; };
+		84501F18239F889500225D9F /* DanmuManCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanmuManCell.h; sourceTree = "<group>"; };
+		84501F19239F889500225D9F /* DanmuManCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanmuManCell.m; sourceTree = "<group>"; };
+		84501F1B239F88D900225D9F /* DanmuManDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanmuManDescriptor.h; sourceTree = "<group>"; };
+		84501F1C239F88D900225D9F /* DanmuManDescriptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanmuManDescriptor.m; sourceTree = "<group>"; };
 		8461E1D12306B14600764748 /* SVGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVGViewController.h; sourceTree = "<group>"; };
 		8461E1D22306B14600764748 /* SVGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVGViewController.m; sourceTree = "<group>"; };
 		849485BC238A585E00846F46 /* SharesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesViewController.h; sourceTree = "<group>"; };
@@ -290,6 +301,10 @@
 		84BA50CF22D2DBEC004F6621 /* UGDrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGDrawingView.m; sourceTree = "<group>"; };
 		84BA50D222D2DF50004F6621 /* UGDrawingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGDrawingVC.h; sourceTree = "<group>"; };
 		84BA50D322D2DF50004F6621 /* UGDrawingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGDrawingVC.m; sourceTree = "<group>"; };
+		84D283E0239F436400DE0025 /* DamuSendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DamuSendView.h; sourceTree = "<group>"; };
+		84D283E1239F436400DE0025 /* DamuSendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DamuSendView.m; sourceTree = "<group>"; };
+		84D283E3239F4CBA00DE0025 /* DanmuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanmuViewController.h; sourceTree = "<group>"; };
+		84D283E4239F4CBA00DE0025 /* DanmuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanmuViewController.m; sourceTree = "<group>"; };
 		84DB969722C33E710034A927 /* UGOCMagicbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UGOCMagicbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DB96A322C33E7F0034A927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DB96AF22C33E800034A927 /* UGOCMagicboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UGOCMagicboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -784,6 +799,7 @@
 		84AB5B7422C9FDEA002CDEF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84D283DA239F42CF00DE0025 /* DanMu */,
 				2C510833238D7E6F00F527C0 /* Login */,
 				849485BA238A583400846F46 /* Shares  */,
 				20083D3C237FA61400D3F6D3 /* UGZoneViewController */,
@@ -910,6 +926,37 @@
 				84BA50D322D2DF50004F6621 /* UGDrawingVC.m */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		84D283DA239F42CF00DE0025 /* DanMu */ = {
+			isa = PBXGroup;
+			children = (
+				84D283DF239F434B00DE0025 /* View */,
+				84D283DE239F432800DE0025 /* Controller */,
+			);
+			path = DanMu;
+			sourceTree = "<group>";
+		};
+		84D283DE239F432800DE0025 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84D283E3239F4CBA00DE0025 /* DanmuViewController.h */,
+				84D283E4239F4CBA00DE0025 /* DanmuViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84D283DF239F434B00DE0025 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84D283E0239F436400DE0025 /* DamuSendView.h */,
+				84D283E1239F436400DE0025 /* DamuSendView.m */,
+				84501F18239F889500225D9F /* DanmuManCell.h */,
+				84501F19239F889500225D9F /* DanmuManCell.m */,
+				84501F1B239F88D900225D9F /* DanmuManDescriptor.h */,
+				84501F1C239F88D900225D9F /* DanmuManDescriptor.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		84DB968E22C33E710034A927 = {
@@ -1191,6 +1238,8 @@
 		84DB971D22C33F480034A927 /* UITextView */ = {
 			isa = PBXGroup;
 			children = (
+				84501F16239F7F6500225D9F /* UGTextField.h */,
+				84501F15239F7F6500225D9F /* UGTextField.m */,
 				84DB971E22C33F480034A927 /* UITextView+UG.m */,
 				84DB971F22C33F480034A927 /* UITextView+UG.h */,
 			);
@@ -1592,6 +1641,7 @@
 				2066049B2394AF470012D263 /* UGPersentView.m in Sources */,
 				2C1330DF238B971500575155 /* SharesResuleVC.m in Sources */,
 				849485CA238A66A200846F46 /* SharesTargetData.m in Sources */,
+				84D283E2239F436400DE0025 /* DamuSendView.m in Sources */,
 				84DB978E22C347B10034A927 /* AppDelegate+TavBar.m in Sources */,
 				84DB973B22C33F480034A927 /* BlockCollectionViewFlowLayout.m in Sources */,
 				20083D1D237E70C900D3F6D3 /* UIView+Animation.m in Sources */,
@@ -1603,6 +1653,7 @@
 				849485CD238A688C00846F46 /* SharesTargetSettingVC.m in Sources */,
 				84DB979722C347B10034A927 /* MBProgressHUDTableVC.m in Sources */,
 				84DB975522C33F480034A927 /* UIView+Alert.m in Sources */,
+				84D283E5239F4CBA00DE0025 /* DanmuViewController.m in Sources */,
 				84DB978F22C347B10034A927 /* UG_TZImagePickSwitch.m in Sources */,
 				20083D43237FA66900D3F6D3 /* UGZoneViewController.m in Sources */,
 				2CA94C972397982B009876BC /* ShareRemarkView.m in Sources */,
@@ -1634,6 +1685,7 @@
 				84DB973522C33F480034A927 /* BlockCollectionViewTestVC.m in Sources */,
 				841B5EE622CB2DB300F6DC04 /* MapViewController.m in Sources */,
 				84DB979822C347B10034A927 /* DoraemonSuperPlay.m in Sources */,
+				84501F17239F7F6500225D9F /* UGTextField.m in Sources */,
 				84DB973E22C33F480034A927 /* DMViewController.m in Sources */,
 				84DB974D22C33F480034A927 /* UIImage+UG.m in Sources */,
 				849485E1238ACB7500846F46 /* PersentViewController.m in Sources */,
@@ -1643,6 +1695,7 @@
 				84DB972F22C33F480034A927 /* DORTestBarcollectionViewVC.m in Sources */,
 				84DB974822C33F480034A927 /* WelcomViewController.m in Sources */,
 				2C510836238D7E9200F527C0 /* LoginViewController.m in Sources */,
+				84501F1D239F88D900225D9F /* DanmuManDescriptor.m in Sources */,
 				20B629D12394BD180007885F /* UGAlignmentButtonVC.m in Sources */,
 				2066049E2394AF470012D263 /* UGZoneTableCell.m in Sources */,
 				841B5EEA22CB363700F6DC04 /* MAPUserinfo.m in Sources */,
@@ -1668,6 +1721,7 @@
 				84AB5B8D22CA121C002CDEF2 /* AboutMeVC.m in Sources */,
 				841B712722CC956100F6DC04 /* LocView.m in Sources */,
 				2CFDD019238EC14400E36BD0 /* SharesHistoryData.m in Sources */,
+				84501F1A239F889500225D9F /* DanmuManCell.m in Sources */,
 				2C1330DC238B948900575155 /* SharesSimpleData.m in Sources */,
 				84BA50D022D2DBED004F6621 /* UGDrawingView.m in Sources */,
 				206604972394AF470012D263 /* UGRemarkView.m in Sources */,

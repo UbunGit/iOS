@@ -156,6 +156,17 @@
 @end
 
 
+#import "DanmuViewController.h"
+
+@implementation DorDanmuViewPlugin
+
+- (void)pluginDidLoad{
+    DanmuViewController *vc = [DanmuViewController new];
+    [DoraemonHomeWindow openPlugin:vc];
+}
+@end
+
+
 
 
 

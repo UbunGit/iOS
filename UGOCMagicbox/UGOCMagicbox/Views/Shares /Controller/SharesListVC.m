@@ -113,8 +113,10 @@
             [weakSelf.navigationController pushViewController:sharesViewController animated:YES];
         }else{
              [weakSelf.view ug_starloading];
+            [weakSelf.view ug_loadingProgress:@"loding"];
             [[NetWorkRequest share] download:data.downurl filepath:data.absfilePath progress:^(NSProgress * _Nonnull downloadProgress) {
-               
+                DDLogVerbose(@"下载进度：%.0f％", downloadProgress.fractionCompleted * 100);
+                [weakSelf.view ug_loadingProgress:[NSString stringWithFormat:@"%.0f％", downloadProgress.fractionCompleted * 100]];
             } head:nil endblock:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
                 [weakSelf.view ug_stoploading];
                 if (error) {
@@ -178,10 +180,12 @@
                 weakSelf.sharesAddView.timeTF.titlaLabel.textColor = COLORDANGER;
                 return ;
             }
-            [weakSelf.persent dismissViewControllerAnimated:YES completion:nil];
-            SharesViewController *sharesViewController = [SharesViewController new];
-            sharesViewController.sharesdata = data;
-            [self.navigationController pushViewController:sharesViewController animated:YES];
+            [weakSelf.persent dismissViewControllerAnimated:YES completion:^{
+                SharesViewController *sharesViewController = [SharesViewController new];
+                sharesViewController.sharesdata = data;
+                [self.navigationController pushViewController:sharesViewController animated:YES];
+            }];
+           
         }];
     }
     return _sharesAddView;
@@ -205,7 +209,8 @@
         }];
         // 上传数据库
         [_sharesToolView.gitupbtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-            [[NetWorkRequest share] createpath:@"shares/default.realm" lpath:@"default.realm" sha:[[UIApplication sharedApplication] getsha] message:@"UbunGit 备份本地数据库" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+             NSString *filepath = [NSString stringWithFormat:@"%@/shares/default.realm",PATHDOCUMENT];
+            [[NetWorkRequest share] createpath:@"shares/default.realm" lpath:filepath sha:[[UIApplication sharedApplication] getsha] message:@"UbunGit 备份本地数据库" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
                 if (error) {
                     [self.persent.view ug_msg:error.domain];
                 }else{

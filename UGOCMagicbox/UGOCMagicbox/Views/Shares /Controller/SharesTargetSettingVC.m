@@ -176,9 +176,11 @@
                                      @"value": weakSelf.targetOptionAddView.valueTV.text
                 };
                 [SharesTargetOption createOrUpdateInRealm:realm withValue:dic];
-                [self.persent dismissViewControllerAnimated:YES completion:nil];
-                [self.view ug_msg:@"保存成功"];
-                [weakSelf reloadOptionData];
+                [self.persent dismissViewControllerAnimated:YES completion:^{
+                    [self.view ug_msg:@"保存成功"];
+                    [weakSelf reloadOptionData];
+                }];
+               
             }];
             
         }];

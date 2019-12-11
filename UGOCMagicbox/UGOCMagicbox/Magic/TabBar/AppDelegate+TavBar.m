@@ -14,6 +14,8 @@
 #import "MapViewController.h"
 #import "FATableViewController.h"
 #import "SharesListVC.h"
+#import "DanmuViewController.h"
+
 
 
 @implementation AppDelegate (TavBar)
@@ -47,6 +49,10 @@
     vc5.title = [NSString fontAwesomeIconStringForIconIdentifier:@"fa-user"];
     RTRootNavigationController *nav5 = [[RTRootNavigationController alloc] initWithRootViewController:vc5];
     
+    DanmuViewController *vc6 = [[DanmuViewController alloc] init];
+    vc6.title = [NSString fontAwesomeIconStringForIconIdentifier:@"fa-user"];
+    RTRootNavigationController *nav6 = [[RTRootNavigationController alloc] initWithRootViewController:vc6];
+    
     // 创建分栏(标签栏)控制器, 和导航控制器一样，都是用来管理视图控制器的容器类型的控制器。
     // 分栏控制器和导航控制器一样，也是通过viewControllers来管理其子视图控制器
     UITabBarController *tabBarCtrl = [[UITabBarController alloc] init];
@@ -55,7 +61,7 @@
     
     // 把数据中得视图器交给分栏控制器管理
     // 分栏控制器会自动将其管理的视图控制器的分栏按钮(UITabBarItem)放到分栏上显示
-    tabBarCtrl.viewControllers = @[nav4, nav2, nav3, nav1,nav5];
+    tabBarCtrl.viewControllers = @[nav4, nav2, nav3, nav1,nav5,nav6];
     
     // 设置窗口的跟视图控制器为分栏控制器
     self.window.rootViewController = tabBarCtrl;

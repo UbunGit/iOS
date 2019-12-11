@@ -43,6 +43,9 @@ typedef void(^AlertViewFinesh)(BOOL finished);
 +(void)ug_starloading;
 -(void)ug_starloading;
 
++(void)ug_loadingProgress:(NSString*)string;
+-(void)ug_loadingProgress:(NSString*)string;
+
 +(void)ug_stoploading;
 -(void)ug_stoploading;
 
