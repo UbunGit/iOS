@@ -10,16 +10,15 @@
 
 #import "PersentViewController.h"
 #import "DamuSendView.h"
-#import "OCBarrage.h"
+#import "DanMushowView.h"
 
-#import "DanmuManCell.h"
 
 
 @interface DanmuViewController ()
 @property(strong, nonatomic) UIButton *sendBtn;
 @property(strong, nonatomic) PersentViewController *persent;
-@property (nonatomic, strong) OCBarrageManager *barrageManager;
 @property (nonatomic, strong) DamuSendView *damuSendView;
+@property (nonatomic, strong) DanMushowView *danMushowView;
 @end
 
 @implementation DanmuViewController
@@ -43,11 +42,10 @@
         [weakSelf presentViewController:weakSelf.persent animated:YES completion:nil];
     }];
     
-    self.barrageManager = [OCBarrageManager new];
-//    _barrageManager.renderView.frame = CGRectMake(0.0, 64, KWidth, 100);
-//    _barrageManager.renderView.backgroundColor = UIColor.yellowColor;
-    [self.view addSubview:_barrageManager.renderView];
-    [_barrageManager start];
+    self.danMushowView = [DanMushowView new];
+    [self.view addSubview:_danMushowView];
+    
+  
 }
 -(PersentViewController *)persent{
     
@@ -61,37 +59,16 @@
     if (!_damuSendView) {
         _damuSendView = [DamuSendView new];
         [_damuSendView.inputView.sendBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-            [self addFixedSpeedAnimationCell];
+            NSString *str = [_damuSendView.inputView.textField.text copy];
+            [self.danMushowView.listarr insertObject:str atIndex:0];
+            DDLogVerbose(@"instre:%@",self.danMushowView.listarr);
         }];
     }
     return _damuSendView;
 }
 
 
-- (void)addFixedSpeedAnimationCell {
-    
 
-    DanmuManDescriptor *bannerDescriptor = [[DanmuManDescriptor alloc] init];
-      bannerDescriptor.cellTouchedAction = ^(OCBarrageDescriptor *__weak descriptor, OCBarrageCell *__weak cell) {
-          UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"OCBarrage" message:@"全民超人为您服务" delegate:nil cancelButtonTitle:@"朕知道了" otherButtonTitles:nil];
-          [alertView show];
-          
-          DanmuManCell *walkBannerCell = (DanmuManCell *)cell;
-          walkBannerCell.textLabel.backgroundColor = [UIColor redColor];
-      };
-      
-      bannerDescriptor.text = [NSString stringWithFormat:@"~欢迎全民超人大驾光临~"];
-      bannerDescriptor.textColor = UIColor.whiteColor;
-      bannerDescriptor.textFont = FONT_SYS14;
-      bannerDescriptor.positionPriority = OCBarragePositionMiddle;
-//      bannerDescriptor.strokeColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
-      bannerDescriptor.strokeWidth = -1;
-      bannerDescriptor.animationDuration = arc4random()%5 + 5;
-      bannerDescriptor.barrageCellClass = [DanmuManCell class];
-      [self.barrageManager renderBarrageDescriptor:bannerDescriptor];
-    
-//    [self performSelector:@selector(addFixedSpeedAnimationCell) withObject:nil afterDelay:2];
-}
 -(void)viewWillLayoutSubviews{
     
     [super viewWillLayoutSubviews];
@@ -103,11 +80,13 @@
         make.height.mas_equalTo(40);
     }];
     
-    [_barrageManager.renderView mas_makeConstraints:^(MASConstraintMaker *make) {
-         make.left.mas_equalTo(self.view);
-         make.right.mas_equalTo(self.view);
-         make.height.mas_equalTo(KAutoAcale(230));
-         make.top.mas_equalTo(self.view).mas_offset(KPAND_DEF);
-     }];
+    [_danMushowView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view);
+        make.right.mas_equalTo(self.view);
+        make.height.mas_equalTo(KAutoAcale(100));
+        make.top.mas_equalTo(self.view).mas_offset(KPAND_DEF);
+    }];
+    
+
 }
 @end

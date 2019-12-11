@@ -19,6 +19,7 @@
 #import "ShareHistoryCell.h"
 #import "SharesToolView.h"
 #import "UIAppdelegate+Realm.h"
+#import "SharesResultView.h"
 
 @interface SharesListVC ()
 @property(strong, nonatomic) SharesAddView*sharesAddView;
@@ -26,6 +27,7 @@
 @property(strong, nonatomic) RLMResults<SharesHistoryData *> *datalist; //历史测评记录
 @property(strong, nonatomic) BlockTableView *blockTableView;
 @property(strong, nonatomic) SharesToolView *sharesToolView;
+@property(strong, nonatomic) SharesResultView *sharesResultView;
 @end
 
 @implementation SharesListVC
@@ -105,16 +107,14 @@
         SharesHistoryData *data = [weakSelf.datalist objectAtIndex:indexPath.row];
         NSData *filedata = [[NSFileManager defaultManager] contentsAtPath:data.absfilePath];
         if(filedata){
-            NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:filedata options:NSJSONReadingMutableLeaves error:nil];
-            SharesResuleVC *sharesViewController = [SharesResuleVC new];
-            sharesViewController.sharesdata = data;
-            sharesViewController.editDic = [dic objectForKey:@"data"];
-            sharesViewController.remarkDic = [dic objectForKey:@"remark"];
-            [weakSelf.navigationController pushViewController:sharesViewController animated:YES];
+            weakSelf.persent = [PersentViewController new];
+            weakSelf.sharesResultView.sharesdata = data;
+            weakSelf.persent.cotentView = weakSelf.sharesResultView;
+            [weakSelf presentViewController:weakSelf.persent animated:YES completion:nil];
         }else{
              [weakSelf.view ug_starloading];
             [weakSelf.view ug_loadingProgress:@"loding"];
-            [[NetWorkRequest share] download:data.downurl filepath:data.absfilePath progress:^(NSProgress * _Nonnull downloadProgress) {
+            [[NetWorkRequest share] download:data.downurl filepath:data.absfilePath progress:^(NSProgress * downloadProgress) {
                 DDLogVerbose(@"下载进度：%.0f％", downloadProgress.fractionCompleted * 100);
                 [weakSelf.view ug_loadingProgress:[NSString stringWithFormat:@"%.0f％", downloadProgress.fractionCompleted * 100]];
             } head:nil endblock:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
@@ -122,22 +122,12 @@
                 if (error) {
                     [weakSelf.view ug_msg:@"文件不存在或丢失"];
                 }else{
-                    NSData *filedata = [[NSFileManager defaultManager] contentsAtPath:data.absfilePath];
-                    NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:filedata options:NSJSONReadingMutableLeaves error:nil];
-                    SharesResuleVC *sharesViewController = [SharesResuleVC new];
-                    sharesViewController.sharesdata = data;
-                    sharesViewController.editDic = [dic objectForKey:@"data"];
-                    sharesViewController.remarkDic = [dic objectForKey:@"remark"];
-                    [weakSelf.navigationController pushViewController:sharesViewController animated:YES];
+                    weakSelf.persent = [PersentViewController new];
+                    weakSelf.sharesResultView.sharesdata = data;
+                    weakSelf.persent.cotentView = weakSelf.sharesResultView;
+                    [weakSelf presentViewController:weakSelf.persent animated:YES completion:nil];
                 }
             }];
-            
-//            RLMRealm *realm = [RLMRealm defaultRealm];
-//            // 删除单个模型
-//            [realm transactionWithBlock:^{
-//               [realm deleteObject:data];
-//                [weakSelf updataData];
-//            }];
         }
      
         
@@ -155,7 +145,12 @@
         }];
     };
 }
-
+-(SharesResultView *)sharesResultView{
+    if (!_sharesResultView) {
+        _sharesResultView = [SharesResultView new];
+    }
+    return _sharesResultView;
+}
 /**
  添加测评股票
  */

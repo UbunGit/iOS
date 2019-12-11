@@ -14,6 +14,7 @@
 #import "PersentViewController.h"
 #import "NetWorkRequest+Shares.h"
 #import "NSData+YYAdd.h"
+#import "SharesResultView.h"
 
 @interface SharesResuleVC ()
 
@@ -22,8 +23,7 @@
 @property(strong,nonatomic) NSDictionary *resultDic;
 @property(strong, nonatomic) PersentViewController *persent;
 @property(strong, nonatomic)ShareRemarkView *shareRemarkView;
-@property(strong,nonatomic) BlockCollectionView *collectionView;
-@property(strong, nonatomic) RLMResults<SharesTargetData*> *targets;
+@property(strong,nonatomic) SharesResultView *sharesResultView;
 @end
 
 @implementation SharesResuleVC
@@ -31,9 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configUI];
-    self.targets = [SharesTargetData allObjects];
-    self.resultDic = [self calculate];
-    [self.collectionView reloadData];
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -43,20 +41,6 @@
 -(void)configUI{
     self.title = @"测评结果";
     UG_WEAKSELF
-    //关注
-    UIButton *itemButtom = [UIButton  new];
-    [itemButtom setFrame:CGRectMake(0, 0, 30, 40)];
-    NSString *bcaktitle = [NSString fontAwesomeIconStringForEnum:FAHeart];
-    [itemButtom setTitle:bcaktitle forState:UIControlStateNormal];
-    [itemButtom.titleLabel setFont:FONT_FA20];
-    [itemButtom setTitleColor:COLORDANGER forState:UIControlStateNormal];
-    [itemButtom ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-        
-    }];
-    UIBarButtonItem *button = [[UIBarButtonItem alloc]
-                               initWithCustomView:itemButtom];
-     [self.navigationItem setRightBarButtonItems:@[button]];
-
     //添加测评
     self.saveBtn = [UIButton new];
     [self.view addSubview:_saveBtn];
@@ -64,51 +48,27 @@
     [_saveBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
          self.persent = [PersentViewController new];
          weakSelf.persent.cotentView = self.shareRemarkView;
-        [self.shareRemarkView reload:[RemarkViewValue modelWithJSON:weakSelf.remarkDic]];
+        [self.shareRemarkView reload:[RemarkViewValue modelWithJSON:self.sharesResultView.remarkDic]];
          [weakSelf presentViewController:weakSelf.persent animated:YES completion:nil];
       }];
     [_saveBtn ug_radius:5];
     [_saveBtn setBackgroundColor:COLORDANGER];
     
     //
-    self.collectionView = [BlockCollectionView new];
-    [self.view addSubview:_collectionView];
+    self.sharesResultView = [SharesResultView new];
+    _sharesResultView.sharesdata = _sharesdata;
+    [self.view addSubview:_sharesResultView];
     
-    _collectionView.flowLayout.minimumLineSpacing = 2;
-    _collectionView.flowLayout.minimumInteritemSpacing = 2;
-    _collectionView.flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    _collectionView.flowLayout.cellType = AlignWithCenter;
-    _collectionView.ug_numberOfItemsInSection = ^NSInteger(UICollectionView * _Nonnull collectionView, NSInteger section) {
-        return weakSelf.resultDic.allKeys.count;
-    };
-    _collectionView.ug_sizeForItemAtIndexPath = ^CGSize(UICollectionView * _Nonnull collectionView, UICollectionViewLayout * _Nonnull layout, NSIndexPath * _Nonnull indexPath) {
-       
-            return CGSizeMake(KWidth/6, KWidth/6);
-        
-    };
-    _collectionView.ug_cellForItemAtIndexPath = ^__kindof UICollectionViewCell * _Nonnull(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
-         BlockCollectionViewCell*cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-        [cell ug_radius:KWidth/12];
-        NSString *key = [weakSelf.resultDic.allKeys objectAtIndex:indexPath.row];
-        NSArray *temarr = [weakSelf.resultDic objectForKey:key];
-        CGFloat vgavalue = [weakSelf vlaueAvg:temarr];
-        cell.titleLab.text = [NSString stringWithFormat:@"%0.2f\n%@",vgavalue,key];
-        if (vgavalue>50.0) {
-            cell.backgroundColor = COLORDANGER;
-        }else{
-            cell.backgroundColor = COLORPRIMARY;
-        }
-        return cell;
-    };
+    
 }
 
 
 -(void)savedata{
     UG_WEAKSELF
     NSMutableDictionary *savedic = [NSMutableDictionary new];
-    [savedic setObject:_editDic forKey:@"data"];
-    if (_remarkDic) {
-        [savedic setObject:_remarkDic forKey:@"remark"];
+    [savedic setObject:self.sharesResultView.editDic forKey:@"data"];
+    if (self.sharesResultView.remarkDic) {
+        [savedic setObject:self.sharesResultView.remarkDic forKey:@"remark"];
     }
 
     NSString *oldfiledata = [[[NSFileManager defaultManager] contentsAtPath:_sharesdata.absfilePath] md5String];
@@ -143,7 +103,7 @@
         
         NSString *newfiledata = [[[NSFileManager defaultManager] contentsAtPath:_sharesdata.absfilePath] md5String];
         if (![newfiledata isEqualToString:oldfiledata]) {
-            [[NetWorkRequest share] createpath:_sharesdata.relfilepath lpath:_sharesdata.relfilepath sha:_sharesdata.sha message:@"评测" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
+            [[NetWorkRequest share] createpath:_sharesdata.relfilepath lpath:_sharesdata.absfilePath sha:_sharesdata.sha message:@"评测" block:^(NSDictionary * _Nullable dataDict, NSError * _Nullable error) {
                 if (error) {
                     [self.view ug_msg:@"上传失败"];
                 }else{
@@ -164,53 +124,13 @@
         [self.view ug_msg:@"保存失败"];
     }
 }
-// 计算各指标平均值
--(CGFloat)vlaueAvg:(NSArray*)array{
-    if (array.count==0) {
-        return 0;
-    }
-    CGFloat allvalue = 0;
-    for (NSString *value in array) {
-        allvalue += [value floatValue];
-    }
-    return allvalue/array.count;
-}
-    
-// 根据指标标示计算对应值
--(NSDictionary *)calculate{
-    
-    NSMutableDictionary *remarkDic = [NSMutableDictionary new];
-    for (SharesTargetData *data in self.targets) {
-        
-        //获取该指标下股票的测评内容
-        NSString *value = [_editDic objectForKey:data.key];
-        if (!value) {
-            continue;
-        }
-        // 总数组添加
-        NSMutableArray *dataarr = [remarkDic objectForKey:@"综合"];
-        if (!dataarr) {
-            dataarr = [NSMutableArray new];
-        }
-        [dataarr addObject:value];
-        [remarkDic setObject:dataarr forKey:@"综合"];
-        for (NSString *remark in [data.remark componentsSeparatedByString:@","]) {
-            NSMutableArray *dataarr = [remarkDic objectForKey:remark];
-            if (!dataarr) {
-                dataarr = [NSMutableArray new];
-            }
-            [dataarr addObject:value];
-            [remarkDic setObject:dataarr forKey:remark];
-        }
-    }
-    return remarkDic;
-}
+
 -(ShareRemarkView *)shareRemarkView{
     UG_WEAKSELF
     if (!_shareRemarkView) {
         _shareRemarkView = [ShareRemarkView new];
         [_shareRemarkView.commitBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-            weakSelf.remarkDic = [weakSelf.shareRemarkView.value modelToJSONObject];
+            self.sharesResultView.remarkDic = [weakSelf.shareRemarkView.value modelToJSONObject];
             [weakSelf.persent dismissViewControllerAnimated:YES completion:^{
                 [weakSelf.navigationController popToRootViewControllerAnimated:YES];
             }];
@@ -229,7 +149,7 @@
         make.bottom.mas_equalTo(self.view).mas_offset(-KPAND_DEF);
     }];
 
-    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_sharesResultView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view);
         make.left.mas_equalTo(self.view);
         make.right.mas_equalTo(self.view);

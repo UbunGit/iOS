@@ -40,10 +40,14 @@
 		841B5EE622CB2DB300F6DC04 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE522CB2DB300F6DC04 /* MapViewController.m */; };
 		841B5EEA22CB363700F6DC04 /* MAPUserinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B5EE922CB363700F6DC04 /* MAPUserinfo.m */; };
 		841B712722CC956100F6DC04 /* LocView.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B712622CC956100F6DC04 /* LocView.m */; };
+		843C412023A0E2A500FCD0E9 /* UGImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C411F23A0E2A500FCD0E9 /* UGImageView.m */; };
+		843C412723A0F09000FCD0E9 /* SharesResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C412623A0F09000FCD0E9 /* SharesResultView.m */; };
 		84413C86239A2D4D0030463C /* UGKeyValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84413C85239A2D4D0030463C /* UGKeyValueView.m */; };
 		84501F17239F7F6500225D9F /* UGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 84501F15239F7F6500225D9F /* UGTextField.m */; };
 		84501F1A239F889500225D9F /* DanmuManCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84501F19239F889500225D9F /* DanmuManCell.m */; };
 		84501F1D239F88D900225D9F /* DanmuManDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84501F1C239F88D900225D9F /* DanmuManDescriptor.m */; };
+		84501F2023A081D400225D9F /* DanMushowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84501F1F23A081D400225D9F /* DanMushowView.m */; };
+		84501F2423A0829600225D9F /* UIApplication+Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84501F2323A0829600225D9F /* UIApplication+Timer.m */; };
 		8461E1D32306B14600764748 /* SVGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461E1D22306B14600764748 /* SVGViewController.m */; };
 		849485BE238A585E00846F46 /* SharesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485BD238A585E00846F46 /* SharesViewController.m */; };
 		849485CA238A66A200846F46 /* SharesTargetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 849485C9238A66A200846F46 /* SharesTargetData.m */; };
@@ -237,6 +241,10 @@
 		841B5EE922CB363700F6DC04 /* MAPUserinfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAPUserinfo.m; sourceTree = "<group>"; };
 		841B712522CC956100F6DC04 /* LocView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocView.h; sourceTree = "<group>"; };
 		841B712622CC956100F6DC04 /* LocView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocView.m; sourceTree = "<group>"; };
+		843C411E23A0E2A500FCD0E9 /* UGImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGImageView.h; sourceTree = "<group>"; };
+		843C411F23A0E2A500FCD0E9 /* UGImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGImageView.m; sourceTree = "<group>"; };
+		843C412523A0F09000FCD0E9 /* SharesResultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesResultView.h; sourceTree = "<group>"; };
+		843C412623A0F09000FCD0E9 /* SharesResultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharesResultView.m; sourceTree = "<group>"; };
 		84413C84239A2D4D0030463C /* UGKeyValueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UGKeyValueView.h; sourceTree = "<group>"; };
 		84413C85239A2D4D0030463C /* UGKeyValueView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UGKeyValueView.m; sourceTree = "<group>"; };
 		84501F15239F7F6500225D9F /* UGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UGTextField.m; sourceTree = "<group>"; };
@@ -245,6 +253,10 @@
 		84501F19239F889500225D9F /* DanmuManCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanmuManCell.m; sourceTree = "<group>"; };
 		84501F1B239F88D900225D9F /* DanmuManDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanmuManDescriptor.h; sourceTree = "<group>"; };
 		84501F1C239F88D900225D9F /* DanmuManDescriptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanmuManDescriptor.m; sourceTree = "<group>"; };
+		84501F1E23A081D400225D9F /* DanMushowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanMushowView.h; sourceTree = "<group>"; };
+		84501F1F23A081D400225D9F /* DanMushowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanMushowView.m; sourceTree = "<group>"; };
+		84501F2223A0829600225D9F /* UIApplication+Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Timer.h"; sourceTree = "<group>"; };
+		84501F2323A0829600225D9F /* UIApplication+Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Timer.m"; sourceTree = "<group>"; };
 		8461E1D12306B14600764748 /* SVGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVGViewController.h; sourceTree = "<group>"; };
 		8461E1D22306B14600764748 /* SVGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVGViewController.m; sourceTree = "<group>"; };
 		849485BC238A585E00846F46 /* SharesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharesViewController.h; sourceTree = "<group>"; };
@@ -684,6 +696,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		843C411D23A0E28B00FCD0E9 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				843C411E23A0E2A500FCD0E9 /* UGImageView.h */,
+				843C411F23A0E2A500FCD0E9 /* UGImageView.m */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
 		84413C83239A2D2E0030463C /* UGKeyValueView */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,6 +712,15 @@
 				84413C85239A2D4D0030463C /* UGKeyValueView.m */,
 			);
 			path = UGKeyValueView;
+			sourceTree = "<group>";
+		};
+		84501F2123A0829600225D9F /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				84501F2223A0829600225D9F /* UIApplication+Timer.h */,
+				84501F2323A0829600225D9F /* UIApplication+Timer.m */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 		8461E1CF2306B10900764748 /* SVGAPlayer */ = {
@@ -759,6 +789,8 @@
 				2CA94C962397982B009876BC /* ShareRemarkView.m */,
 				2CA94C9F2398D4B3009876BC /* SharesToolView.h */,
 				2CA94CA02398D4B3009876BC /* SharesToolView.m */,
+				843C412523A0F09000FCD0E9 /* SharesResultView.h */,
+				843C412623A0F09000FCD0E9 /* SharesResultView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -955,6 +987,8 @@
 				84501F19239F889500225D9F /* DanmuManCell.m */,
 				84501F1B239F88D900225D9F /* DanmuManDescriptor.h */,
 				84501F1C239F88D900225D9F /* DanmuManDescriptor.m */,
+				84501F1E23A081D400225D9F /* DanMushowView.h */,
+				84501F1F23A081D400225D9F /* DanMushowView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1161,6 +1195,7 @@
 		84DB970322C33F480034A927 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				843C411D23A0E28B00FCD0E9 /* UIImageView */,
 				84DB971122C33F480034A927 /* UIControl */,
 				84AB5B7322C9F1CA002CDEF2 /* NSObject */,
 				84DB970422C33F480034A927 /* UIImage */,
@@ -1303,6 +1338,7 @@
 		84DB976822C347B10034A927 /* Magic */ = {
 			isa = PBXGroup;
 			children = (
+				84501F2123A0829600225D9F /* Timer */,
 				206604812394AF470012D263 /* UGView */,
 				2C9760CB23925F18003999BA /* Realm */,
 				849485D2238A717500846F46 /* UIViewController */,
@@ -1701,6 +1737,7 @@
 				841B5EEA22CB363700F6DC04 /* MAPUserinfo.m in Sources */,
 				84DB974F22C33F480034A927 /* UIButton+UG.m in Sources */,
 				849485DE238AC89C00846F46 /* SharesAddView.m in Sources */,
+				843C412723A0F09000FCD0E9 /* SharesResultView.m in Sources */,
 				84DB975722C33F480034A927 /* NSString+Encode.m in Sources */,
 				84DB973D22C33F480034A927 /* BlockCollectionViewCell.m in Sources */,
 				84DB975122C33F480034A927 /* UIColor+UG.m in Sources */,
@@ -1715,14 +1752,17 @@
 				206604A12394B01F0012D263 /* TargetOptionAddView.m in Sources */,
 				2CA94C9E2398AFB0009876BC /* UserInfo.m in Sources */,
 				841B5EE222CB2C5B00F6DC04 /* BlockMAMapView.m in Sources */,
+				843C412023A0E2A500FCD0E9 /* UGImageView.m in Sources */,
 				84DB975822C33F480034A927 /* UITextField+UG.m in Sources */,
 				84DB975922C33F480034A927 /* NSDate+UG.m in Sources */,
 				2C9760CA239233B2003999BA /* NSObject+UG.m in Sources */,
 				84AB5B8D22CA121C002CDEF2 /* AboutMeVC.m in Sources */,
+				84501F2023A081D400225D9F /* DanMushowView.m in Sources */,
 				841B712722CC956100F6DC04 /* LocView.m in Sources */,
 				2CFDD019238EC14400E36BD0 /* SharesHistoryData.m in Sources */,
 				84501F1A239F889500225D9F /* DanmuManCell.m in Sources */,
 				2C1330DC238B948900575155 /* SharesSimpleData.m in Sources */,
+				84501F2423A0829600225D9F /* UIApplication+Timer.m in Sources */,
 				84BA50D022D2DBED004F6621 /* UGDrawingView.m in Sources */,
 				206604972394AF470012D263 /* UGRemarkView.m in Sources */,
 				84BA50D422D2DF50004F6621 /* UGDrawingVC.m in Sources */,

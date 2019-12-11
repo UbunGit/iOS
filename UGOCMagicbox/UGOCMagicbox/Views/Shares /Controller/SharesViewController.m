@@ -43,12 +43,12 @@
 }
 
 -(void)updataData{
-   
+    
     self.datalist = [SharesTargetData allObjects];
     [_collectionView reloadData];
 }
 -(void)configUI{
-     UG_WEAKSELF
+    UG_WEAKSELF
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     self.title = [NSString stringWithFormat:@"%@(%zd)",_sharesdata.name,_sharesdata.date];
     //导航拦
@@ -66,7 +66,7 @@
     
     self.collectionView = [BlockCollectionView new];
     [self.view addSubview:_collectionView];
-
+    
     _collectionView.flowLayout.minimumLineSpacing = 0;
     _collectionView.flowLayout.minimumInteritemSpacing = 0;
     [_collectionView registerClass:[SharesCollectionCell class] forCellWithReuseIdentifier:@"SharesCollectionCell"];
@@ -75,21 +75,21 @@
         return weakSelf.datalist.count;
     };
     _collectionView.ug_sizeForItemAtIndexPath = ^CGSize(UICollectionView * _Nonnull collectionView, UICollectionViewLayout * _Nonnull layout, NSIndexPath * _Nonnull indexPath) {
-       
-            return collectionView.bounds.size;
+        
+        return collectionView.bounds.size;
         
     };
     _collectionView.ug_cellForItemAtIndexPath = ^__kindof UICollectionViewCell * _Nonnull(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
         SharesCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SharesCollectionCell" forIndexPath:indexPath];
         SharesTargetData *targetdata = [weakSelf.datalist objectAtIndex:indexPath.row];
-       
+        
         if ([weakSelf.editDic objectForKey:targetdata.title]) {
             cell.valueLab.text =[NSString stringWithFormat:@"%@",[weakSelf.editDic objectForKey:targetdata.title]];
         }
         cell.titleLab.text = [NSString stringWithFormat:@"%@",targetdata.title];
         cell.numberLab.text = [NSString stringWithFormat:@"%zd/%zd",indexPath.row+1,weakSelf.datalist.count];
         [cell reloadData:targetdata];
-       
+        
         __weak typeof(cell) weakcell = cell;
         cell.toolView.blockTableView.didSelectRowAtIndexPath = ^(UITableView * _Nonnull tableView, NSIndexPath * _Nonnull indexPathx) {
             SharesTargetOption *data = [weakcell.toolView.datalist objectAtIndex:indexPathx.row];
@@ -97,7 +97,7 @@
             [weakcell.toolView.blockTableView reloadData];
             weakcell.valueLab.text = data.value;
             [weakSelf.editDic setObject:data.value forKey:targetdata.key];
-             [weakSelf cellHandleEnd:indexPath];
+            [weakSelf cellHandleEnd:indexPath];
         };
         return cell;
     };
@@ -106,18 +106,39 @@
     [self.view addSubview:_commitBtn];
     [_commitBtn setBackgroundColor:[UIColor ug_random]];
     [_commitBtn ug_addEvents:UIControlEventTouchUpInside andBlock:^(id  _Nonnull sender) {
-       
+        
     }];
 }
 
 -(void)cellHandleEnd:(NSIndexPath *)indexPath{
     if (indexPath.row == _datalist.count-1) {
-        SharesResuleVC *sharesResuleVC = [SharesResuleVC new];
-        sharesResuleVC.sharesdata = _sharesdata;
-        sharesResuleVC.editDic = _editDic;
-        [self.navigationController pushViewController:sharesResuleVC animated:YES];
+        [self savedata];
     }
     
+}
+-(void)savedata{
+    
+    NSMutableDictionary *savedic = [NSMutableDictionary new];
+    [savedic setObject:_editDic forKey:@"data"];
+    
+    
+    NSString *savestr = [savedic jsonStringEncoded];
+    NSError *err = [[NSError alloc]init];
+    NSFileManager *defaultManager = [NSFileManager defaultManager];
+    [defaultManager removeItemAtPath:_sharesdata.absfilePath error:nil];
+    BOOL create =[defaultManager createDirectoryAtPath:_sharesdata.abspath withIntermediateDirectories:YES attributes:nil error:&err];
+    if (!create) {
+        [self.view ug_msg:@"文件夹创建失败"];
+        return;
+    }
+    BOOL isok =[savestr writeToFile:_sharesdata.absfilePath atomically:YES encoding:NSUTF8StringEncoding error:&err];
+    if (isok) {
+        SharesResuleVC *sharesResuleVC = [SharesResuleVC new];
+        sharesResuleVC.sharesdata = _sharesdata;
+        [self.navigationController pushViewController:sharesResuleVC animated:YES];
+    }else{
+        [self.view ug_msg:@"文件保存失败"];
+    }
 }
 -(void)viewWillLayoutSubviews{
     

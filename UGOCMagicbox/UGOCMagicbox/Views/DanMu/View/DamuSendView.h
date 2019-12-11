@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface DamuHeadView : UIView
 
-@property(strong, nonatomic) UIImageView *headImageView; //头像
+@property(strong, nonatomic) UGImageView *headImageView; //头像
 
 @property(strong, nonatomic) UIImageView *remarkImageView; //贴纸
 
@@ -44,6 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(strong, nonatomic) UILabel *titleLab; //标题文字
 
 @property(strong, nonatomic) BlockCollectionView *collectionView; //贴纸选项卡
+@property(assign, nonatomic) NSIndexPath* selectdata; //选中的
 
 @end
 

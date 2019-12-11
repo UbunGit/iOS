@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "AppDelegate+Welcom.h"
 #import "UIAppdelegate+Realm.h"
-
+#import "UIApplication+Timer.h"
 @interface AppDelegate ()
 
 @end
@@ -18,14 +18,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self configDoraemonKit];//配置DoraemonKit 测试工具
-    [self configCocoaLumberjack];//配置CocoaLumberjack 日志
+    //配置DoraemonKit 测试工具
+    [self configDoraemonKit];
+    //配置CocoaLumberjack 日志
+    [self configCocoaLumberjack];
+    //全局定时器
+    [[UIApplication sharedApplication] startGloableTimer];
+    //配置Realm数据库
     NSString *filepath = [NSString stringWithFormat:@"%@/shares/default.realm",PATHDOCUMENT];
     [[UIApplication sharedApplication] configRealm:UGURL(filepath)];
+    
     [[UIApplication sharedApplication]configTABAnimated];
+    
     [self configRTRootNavigationController];
-    [self configTabBar];//配置tabbar
-    [self configNIMSDK];//配置网易云信
+    //配置tabbar
+    [self configTabBar];
+    //配置网易云信
+    [self configNIMSDK];
     
     //配置广告页
 //    [self configDMViewController:^(UIButton * _Nullable sender) {
@@ -35,12 +44,8 @@
 //            [self configTabBar];
 //        }];
 //    }];
+
     
-    [self configTabBar];
-
-
-    // open log
-    [TABAnimated sharedAnimated].openLog = YES;
     return YES;
 }
 

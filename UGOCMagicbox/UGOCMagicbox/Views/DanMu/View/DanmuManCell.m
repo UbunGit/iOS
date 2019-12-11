@@ -82,7 +82,7 @@
     if (!_leftImageView) {
         _leftImageView = [[UIImageView alloc] init];
         _leftImageView.contentMode = UIViewContentModeScaleAspectFit;
-        [_leftImageView ug_radius:11];
+        [_leftImageView ug_radius:ImageWidth/2];
         [_leftImageView ug_borderColor:[UIColor ug_hexString:@"#FF5825"] width:1];
     }
     return _leftImageView;

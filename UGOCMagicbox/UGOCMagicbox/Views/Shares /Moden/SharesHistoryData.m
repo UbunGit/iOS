@@ -9,7 +9,12 @@
 #import "SharesHistoryData.h"
 
 @implementation SharesHistoryData
-
+-(NSString *)key{
+    if (!_key) {
+        _key = [self makeKey];
+    }
+    return _key;
+}
 ///** 设置主键 */
 +(NSString *)primaryKey{
      return @"key";

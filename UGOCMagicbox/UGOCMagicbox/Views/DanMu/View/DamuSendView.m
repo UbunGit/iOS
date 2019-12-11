@@ -19,9 +19,9 @@
 -(void)confitUI{
 
     
-    self.headImageView = [UIImageView new];
+    self.headImageView = [UGImageView new];
     [self addSubview:_headImageView];
-    [_headImageView ug_radius:KAutoAcale(21)];
+    [_headImageView setIsround:YES];
     [_headImageView sd_setImageWithURL:UGURL(@"https://github.com/UbunGit/TestRepo/raw/master/image/animal/0.jpg") placeholderImage:UGIMAGE(@"img_1")];
     
     self.remarkImageView = [UIImageView new];
@@ -154,10 +154,19 @@
     };
     _collectionView.ug_cellForItemAtIndexPath = ^__kindof UICollectionViewCell * _Nonnull(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
         DamuHeadCell*cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DamuHeadCell" forIndexPath:indexPath];
-        cell.backgroundColor = UIColor.ug_random;
         [cell ug_radius:KAutoAcale(4)];
         [cell ug_borderColor:COLOREE width:1];
+       
+        if([indexPath isEqual:_selectdata]){
+            cell.backgroundColor = [UIColor ug_hexString:@"#FFEBE7"];
+        }else{
+            cell.backgroundColor = UIColor.whiteColor;
+        }
         return cell;
+    };
+    _collectionView.ug_didSelectItemAtIndexPath = ^(UICollectionView * _Nonnull collectionView, NSIndexPath * _Nonnull indexPath) {
+        self.selectdata = indexPath;
+        [_collectionView reloadData];
     };
 }
 

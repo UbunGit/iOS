@@ -23,6 +23,7 @@
 #import "UIColor+UG.h"
 #import "NSObject+UG.h"
 #import "UGTextField.h"
+#import "UGImageView.h"
 
 
 
