@@ -37,7 +37,7 @@ target 'UGOCMagicbox' do
   pod 'UGImagePickerController', :path => './Devpods/UGImagePickerController/'
 #  pod 'BlockCollectionView/Test', :path => './UIMagic/BlockCollectionView'
 
-  
+  pod 'UGBox', :path => '../UGBox.podspec'
 
 #
 
