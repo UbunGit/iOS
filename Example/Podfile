@@ -1,0 +1,43 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'Example' do
+  
+  pod "RTRootNavigationController"
+  pod 'NIMSDK'
+  pod 'MBProgressHUD'
+  pod 'SDWebImage'
+  pod 'Masonry'
+  pod 'AFNetworking'
+  pod 'TABAnimated'
+  pod 'PPGetAddressBook'
+  pod 'SVGAPlayer'
+  pod 'lottie-ios', '~> 2.5.3'
+  pod 'IQKeyboardManager'
+  pod 'YYKit'
+  pod 'OCBarrage'
+  
+  pod 'DoraemonKit/Core',  :configurations => ['Debug']
+  pod 'DoraemonKit/WithLogger', :configurations => ['Debug']
+  pod 'DoraemonKit/WithGPS',  :configurations => ['Debug']
+  pod 'DoraemonKit/WithLoad',  :configurations => ['Debug']
+#  pod 'DoraemonKit/WithWeex',  :configurations => ['Debug']
+
+  pod 'Realm'
+  pod 'BlocksKit'
+  
+  pod 'FontAwesome+iOS', :git => 'https://github.com/alexdrone/ios-fontawesome' #fontawesome字体
+  
+  pod 'AMapLocation-NO-IDFA'
+  pod 'AMap3DMap-NO-IDFA'
+  pod 'AMapSearch-NO-IDFA'
+
+  # pod 'SuperPlayerVC', :path => './Devpods/SuperPlayerVC/'
+
+  # pod 'UGImagePickerController', :path => './Devpods/UGImagePickerController/'
+
+  pod 'UGBox', :path => '../UGBox.podspec'
+
+#
+
+end

@@ -47,5 +47,15 @@
     self.layer.borderColor = acolor.CGColor;
 }
 
+-(void)ug_shadowColor:(UIColor *)acolor width:(CGFloat)width{
+    
+    self.layer.masksToBounds = NO;
+    self.layer.shadowOpacity=0.3;///不透明度
+    self.layer.shadowColor = acolor.CGColor;//阴影颜色
+    self.layer.shadowRadius = width;//半径大小
+    self.layer.shadowOffset = CGSizeZero; //设置偏移量为0,四周都有阴影
+ 
+}
+
 
 @end
