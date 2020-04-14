@@ -26,5 +26,4 @@
 #import "UGImageView.h"
 
 
-
 #endif /* Category_h */

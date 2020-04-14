@@ -7,6 +7,8 @@
 //
 
 #import "UGPersentView.h"
+#import "Masonry.h"
+#import "Defind.h"
 
 @implementation UGPersentView
 
@@ -19,10 +21,11 @@
 
 -(void)conficUI{
     
-    self.backgroundColor = COLOR00_04;
+    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
 }
 
 -(void)didAddSubview:(UIView *)subview{
+    
     [self mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(subview);
     }];

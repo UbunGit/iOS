@@ -8,6 +8,7 @@
 
 #import "ShareHistoryCell.h"
 #import "ShareRemarkView.h"
+
 @implementation ShareHistoryCell
 
 - (void)awakeFromNib {

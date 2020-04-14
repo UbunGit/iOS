@@ -7,6 +7,7 @@
 //
 
 #import "UITextView+UG.h"
+#import "NSString+Encode.h"
 #include <objc/runtime.h>
 
 @interface UITextView ()

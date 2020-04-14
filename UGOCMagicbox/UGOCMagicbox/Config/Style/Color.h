@@ -8,6 +8,7 @@
 
 #ifndef Color_h
 #define Color_h
+#import "UIColor+UG.h"
 
 //颜色
 #define COLOREE [UIColor ug_hexString:@"#eeeeee"] //线颜色

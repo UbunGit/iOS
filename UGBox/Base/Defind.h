@@ -9,8 +9,8 @@
 #ifndef Defind_h
 #define Defind_h
 
-#import "Font.h"
-#import "Color.h"
+//#import "Font.h"
+//#import "Color.h"
 
 
 #define UGIMAGE(str) [UIImage imageNamed:str]

@@ -10,7 +10,8 @@
 #import "MBProgressHUD.h"
 #import "Masonry.h"
 #import "UGPersentView.h"
-
+#import "UIControl+UG.h"
+#import <BlocksKit/BlocksKit.h>
 #include <objc/runtime.h>
 
 #ifndef dispatch_main_async_safe
@@ -215,7 +216,7 @@ static MBProgressHUD *loadinghud = nil;
             }];
             
         } completion:^(BOOL finished) {
-            DDLogVerbose(@"--");
+//            DDLogVerbose(@"--");
         }];
         [customView setNeedsLayout];
     } afterDelay:0.2];

@@ -11,18 +11,23 @@
 
 #import "Magic.h"
 #import "Masonry.h"
-#import "Category.h"
+
 #import "AppDelegate+CocoaLumberjack.h"
 #import "UIImage+FontAwesome.h"
 #import "NSString+FontAwesome.h"
 #import <BlocksKit/BlocksKit.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "Defind.h"
+
 #import "Components.h"
 #import <YYKit/YYKit.h>
 #import "NetWorkRequest.h"
 #import <Realm/Realm.h>
+
+#import "Color.h"
+#import "Font.h"
+
 #import "UserInfo.h"
+#import <UGBox/Base.h>
 
 #endif /* PrefixHeader_pch */
